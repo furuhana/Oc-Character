@@ -43,8 +43,10 @@ Image generation must use the final prompt tab as its source of truth. The image
 - Costume color hierarchy has priority over element-based color intuition: make the outfit wearable and attractive first, then use element colors mostly as props, trims, badges, hardware, or restrained low-glow accents.
 - The fantasy layer should be readable but restrained: one signature object, subtle aura, magical tool, abnormal material, compact familiar, small curse mark, or controlled ability.
 - Avoid making strong diffuse glow the default. Prefer compact, readable, low-glow fantasy markers unless the character concept truly needs bright light effects.
-- The preferred body direction is a bulky, soft-strong adult male: broad shoulders, thick chest, thick arms, visible strength, a substantial rounded body, and more muscle than a slim lead character.
+- Body floor: unless the user explicitly asks for a slimmer or average build, every new adult male character should be at least very bulky and muscular: extremely broad shoulders, heavy chest, thick neck/traps, large upper arms and forearms, strong thighs, and a substantial rounded power build. Do not drift back to ordinary anime-protagonist, fashion-model, or merely athletic proportions.
+- Escalation target: when the user asks for "more muscular", "stronger", "bigger", or similar, write the body as a giant thick power build, larger and heavier than the style reference, with the fitted top visibly stretched across chest, shoulders, and arms.
 - A recurring preferred garment is a tight white top wrapping the torso: fitted white T-shirt, sleeveless undershirt, fitted long-sleeve, or another clean close-fitting white top that can be tucked into pants, overalls, apron waist, harness, or belt structure. Keep it attractive, clean, non-realistic, non-photographic, and not explicit.
+- If the user says to remove outerwear, write `costumeSystem.outerwear` as no outerwear and keep the upper body focused on the tight white top. Do not reintroduce a jacket, coat, vest, open shirt, or overshirt in the final prompt.
 
 ## Concision Targets
 
@@ -75,5 +77,6 @@ Every full-body prompt must include these constraints:
 - `Pure flat chroma-key background only.`
 - `Clean anime cel shading, crisp linework, tidy modern urban fantasy design, minimal dirt and grime.`
 - `Urban first, fantasy second; no gritty industrial mood unless explicitly requested.`
-- `Bulky soft-strong adult male, not slender; fitted white top system is preferred, such as a tight T-shirt, sleeveless undershirt, or fitted long-sleeve tucked into the waist structure, with subtle torso contours in clean cel shading.`
+- `Very bulky muscular adult male as the body floor, not slender or merely athletic; extremely broad shoulders, heavy chest, thick arms and forearms, strong thighs, substantial rounded power build.`
+- `Fitted white top system is preferred, such as a tight T-shirt, sleeveless undershirt, or fitted long-sleeve tucked into the waist structure, with clean cel-shaded torso contours. If outerwear is removed, ban jacket/coat/vest/open shirt and make the tight white top the visible upper-body focus.`
 - `Choose a chroma-key background by contrast: avoid green key for green/cyan/healing/translucent effects; avoid magenta key for pink/violet elements.`

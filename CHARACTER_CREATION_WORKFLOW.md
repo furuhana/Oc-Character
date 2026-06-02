@@ -67,6 +67,12 @@ The costume pass must decide:
 - how the required fitted white top appears: T-shirt, sleeveless undershirt,
   fitted long-sleeve, or another clean close-fitting white top that can be tucked
   into pants, overalls, apron waist, harness, or belt structure
+- whether the current request requires the stronger body floor: very bulky muscular
+  adult male proportions, extremely broad shoulders, heavy chest, thick arms and
+  forearms, strong thighs, and a fitted top visibly stretched in clean cel shading
+- whether outerwear has been explicitly removed; if so, keep `costumeSystem.outerwear`
+  as no outerwear and ban jacket, coat, vest, open shirt, and overshirt from the
+  final image prompt
 - how color hierarchy keeps the outfit wearable first, with element colors limited
   mostly to props, trims, badges, hardware, lining, or restrained low-glow accents
 - what makes the outfit attractive as character design, not just practical clothing

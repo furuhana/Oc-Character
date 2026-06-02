@@ -40,8 +40,10 @@ The intended sequence is documented in `CHARACTER_CREATION_WORKFLOW.md`:
 - Keep the image visually denoised: no dirty overlays, no gritty texture passes, no dusty atmosphere, no heavy noise, no smudged shadows.
 - Use summarized, intentional shadow shapes rather than complex dirty rendering. The character should feel clean, polished, and easy to read at a glance.
 - Prefer restrained, readable magical effects over bright complex glows. Strong glow, diffuse light, translucent effects, or semi-transparent materials make chroma-key removal harder.
-- When body type is unspecified, prefer a bulky soft-strong adult male: broad shoulders, thick chest, thick arms, rounded muscular mass, and a warm substantial silhouette rather than slender fashion-model proportions.
-- If a fitted white top is included, it may be a tight T-shirt, sleeveless undershirt, fitted long-sleeve, or another clean white close-fitting top tucked into the waist structure. Show subtle torso contours with clean cel-shading. Avoid photoreal skin detail, wet-shirt effects, explicit framing, hyper-realistic anatomy, or glossy material rendering.
+- When body type is unspecified, use this body floor: a very bulky muscular adult male with extremely broad shoulders, heavy chest, thick neck/traps, large upper arms and forearms, strong thighs, rounded power mass, and a warm substantial silhouette. Avoid slender, merely athletic, fashion-model, or ordinary anime-protagonist proportions.
+- When the prompt asks for a bigger/stronger/more muscular character, push beyond the style reference: make the torso and arms visibly larger and heavier while keeping the design clean, non-photographic, and non-explicit.
+- If a fitted white top is included, it may be a tight T-shirt, sleeveless undershirt, fitted long-sleeve, or another clean white close-fitting top tucked into the waist structure. Show clean cel-shaded torso contours and tension across chest, shoulders, and arms. Avoid photoreal skin detail, wet-shirt effects, explicit framing, hyper-realistic anatomy, or glossy material rendering.
+- If the final prompt says no outerwear or removed outerwear, enforce it literally: no jacket, coat, vest, open shirt, overshirt, cape, or shoulder layer. The tight white top should be the visible upper-body garment.
 
 ## Chroma-Key Color Choice
 

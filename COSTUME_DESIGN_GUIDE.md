@@ -9,12 +9,19 @@ silhouette.
 
 - The outfit must look good first. Function and world logic should make the design
   more attractive, not plain or merely realistic.
-- The preferred body appeal is a bulky, soft-strong adult male with a fitted torso
-  layer. Keep the torso readable through clothing.
+- The preferred body appeal is a very bulky muscular adult male with a fitted torso
+  layer: extremely broad shoulders, heavy chest, thick arms, strong thighs, and
+  rounded power mass. Keep the torso readable through clothing.
+- Treat this as the body floor for adult male characters unless the user explicitly
+  asks for an average, slim, or delicate build.
 - A tight white top is strongly preferred: fitted white T-shirt, fitted sleeveless
   undershirt, fitted long-sleeve shirt, or another clean white close-fitting top.
+  It should visibly fit around the chest, shoulders, and arms in clean cel shading.
 - The fitted top should usually be tuckable or visibly tucked into pants, overalls,
   apron waist, harness, or belt structure.
+- If the user asks to remove outerwear, do not replace it with a vest, open shirt,
+  short jacket, coat, or overshirt. Let the tight white top become the main upper
+  body read.
 - The outfit should stay clean anime concept art, not photoreal fashion rendering.
 
 ## Required Costume Reasoning
