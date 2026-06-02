@@ -645,6 +645,25 @@ async function saveServerData() {
   }
 }
 
+async function deleteCharacterOnServer(id) {
+  if (!serverPersistenceAvailable) return null;
+  try {
+    const response = await fetch("/api/characters/delete", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    if (!response.ok) {
+      serverPersistenceAvailable = response.status !== 404;
+      return null;
+    }
+    return await response.json();
+  } catch {
+    serverPersistenceAvailable = false;
+    return null;
+  }
+}
+
 async function persistAllData() {
   for (const character of characters) await put(STORE_CHARACTERS, character);
   await put(STORE_SETTINGS, { id: "global", ...settings });
@@ -1142,10 +1161,11 @@ async function deleteCharacter(id) {
   if (!character) return;
   const ok = confirm(`\u5220\u9664\u89d2\u8272\u300c${character.coreIdentity?.name || "\u672a\u547d\u540d\u89d2\u8272"}\u300d\uff1f`);
   if (!ok) return;
+  const serverDeletion = await deleteCharacterOnServer(character.id);
   await remove(STORE_CHARACTERS, character.id);
   characters = characters.filter((item) => item.id !== character.id);
   if (currentId === character.id) currentId = characters[0]?.id || null;
-  await saveServerData();
+  if (!serverDeletion) await saveServerData();
   renderCharacter();
 }
 

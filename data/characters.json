@@ -1,6 +1,6 @@
 {
   "app": "OC Character Bible Workbench",
-  "savedAt": "2026-06-02T10:28:58.062Z",
+  "savedAt": "2026-06-02T13:40:07.790Z",
   "settings": {
     "starterPrompt": "正向提示：\n重点方向：都市为主，奇幻为辅\n壮壮的、肉肉的、肌肉多多的成年男性\n厚实大体格，宽肩厚胸，大手臂，圆润但有力量\n生成服装前先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭\n白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣\n现实职业或社会角色作为基底\n一个清晰的核心设计：招牌装备、异能、魔法道具或隐藏身份\n现代服装与轻量奇幻细节结合，服装必须好看而不只是实用\n用数值、世界阵营、战斗方式、身体轮廓和反重复交换来决定服装\n京都动画式清爽线条\n干净赛璐璐阴影，阴影概括明确\n整体干净、无灰尘、主动降噪\n颜色清透，角色轮廓易读\n\n默认禁止：\n少女\n萝莉\n萌系\n偶像风、女性化男性\n瘦弱体型\n修长纤细男主\n写实肌肉渲染\n照片感\n湿身效果\n写实布料纹理、写实材质反光、时装摄影语言\n油亮皮革、湿身材质、拟真塑料或乳胶感\n工业风作为主设计\n大量灰尘、油污、铁锈、脏污质感\n废土、煤灰、混浊阴影\n特效喧宾夺主",
     "styleReference": {
@@ -67,6 +67,818 @@
   },
   "characters": [
     {
+      "id": "04fa6d10-102a-49dd-9299-5b848405ea62",
+      "createdAt": "2026-06-02T13:34:52.764Z",
+      "updatedAt": "2026-06-02T13:38:28.126Z",
+      "agentMarks": [
+        {
+          "id": "8843aeef-cd30-4a94-a476-a9bd484a814d",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T13:34:52.764Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "新建角色。属性生成与图像生成均已开启；资料完整后继续生成全身图。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-04fa6d10.png",
+        "thumbnail": "./assets/characters/generated-fullbody-04fa6d10.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "镜庭栖原",
+        "codename": "叶听",
+        "alias": "栖原",
+        "faction": "城市绿检所",
+        "birthday": "04/17",
+        "age": "34",
+        "height": "189",
+        "weight": "101 KG",
+        "occupation": "社区植物检疫师",
+        "affiliation": "绿检所第七街区站",
+        "species": "人类"
+      },
+      "visualIdentity": {
+        "visualKeywords": "宽肩厚胸，柔壮成年男性，白色贴身无袖上衣，鼠尾草绿检疫衬衫，叶脉听诊环，低光绿叶纹，清爽社区绿检感",
+        "colorLanguage": "白色贴身上衣作为身体锚点，鼠尾草绿表现植物检疫身份，温灰宽裤稳住下盘，叶脉金色只在腕环和小徽记上出现",
+        "faceShape": "方圆脸，下颌厚实",
+        "expression": "温和警觉",
+        "eyes": "深眼窝，眼尾略垂",
+        "eyeColor": "茶褐带浅绿环",
+        "eyebrow": "浓平眉，眉峰柔和",
+        "lip": "厚唇，常抿成直线",
+        "scar": "左前臂有细小叶割痕",
+        "tattoo": "右肩后侧有绿检所叶脉编号",
+        "hairStyle": "蓬松后梳短发，鬓角修齐",
+        "hairLength": "短发",
+        "hairColor": "深栗黑",
+        "highlight": "浅苔绿细挑染",
+        "bodyType": "高大柔壮，胸背厚实",
+        "muscleLevel": "高，偏搬运与攀爬力量",
+        "bodyFat": "厚实柔和",
+        "shoulderWidth": "极宽",
+        "skinTone": "健康暖麦色",
+        "muscleFocus": "胸、背、肩、上臂、手掌"
+      },
+      "costumeSystem": {
+        "outerwear": "短袖鼠尾草绿检疫衬衫，敞开穿，袖口卷起",
+        "outerwearColor": "鼠尾草绿，领口有白色窄边和小叶徽",
+        "innerwear": "白色贴身无袖上衣，扎进高腰裤",
+        "innerwearColor": "干净白色，浅灰绿阴影",
+        "pants": "温灰高腰宽腿工作裤，侧边有采样袋",
+        "pantsColor": "温灰，侧袋边缘有浅叶金线",
+        "socks": "厚棉中筒袜",
+        "socksColor": "米白",
+        "shoes": "浅灰防滑园区鞋，鞋头宽圆",
+        "shoesColor": "浅灰，鞋底有叶脉纹",
+        "gloves": "半掌白色检疫手套，腕部固定采样环",
+        "glovesColor": "白色手套，叶金色腕环",
+        "necklace": "小型透明叶片标本坠",
+        "necklaceColor": "淡金框，透明浅绿叶片",
+        "belt": "窄型采样腰带，挂小剪和封样管",
+        "beltColor": "温灰布带，白色扣件，少量叶金",
+        "signatureItem": "叶脉听诊环与封样管",
+        "signatureItemColor": "叶金、透明浅绿、低光白"
+      },
+      "personality": {
+        "corePersonality": "温厚、谨慎、慢热、耐心",
+        "strengths": "能读懂细微变化，擅长安抚居民，对风险判断稳定",
+        "weaknesses": "太容易替别人收拾残局，遇到病株会忘记休息",
+        "hiddenPersonality": "喜欢给阳台植物写观察小卡，字迹很漂亮",
+        "emotionalStability": "中高，遇到植物异常时更冷静",
+        "confidenceLevel": "沉稳可靠，不主动表现",
+        "outwardPersona": "亲切但有距离感的社区绿检人员",
+        "trueCore": "想让城市里每一盆植物都不再被当成一次性装饰",
+        "surfaceFear": "大面积叶片同时枯萎",
+        "deepFear": "自己听不见真正求救的声音",
+        "traumaTrigger": "刺鼻杀虫剂味、封闭温室、被丢弃的病株",
+        "stressResponse": "先隔离样本，再用极低的声音复述观察项",
+        "trauma": "曾误判一株古树病情，导致整条街区的绿荫被砍除",
+        "traumaSource": "开发商伪造检疫报告，自己发现得太晚",
+        "recoveryStatus": "仍在工作，但对每份报告都会反复核对",
+        "traumaImpact": "对植物病害和城市开发有强烈责任感"
+      },
+      "lifestyle": {
+        "favoriteFood": "葱油拌面和温豆浆",
+        "hatedFood": "气味太冲的能量饮料",
+        "hiddenFavorite": "薄荷叶糖",
+        "appetite": "偏大，外勤后会吃很多主食",
+        "alcoholTolerance": "低，喝酒后会认真讲植物冷知识",
+        "cookingSkill": "会做朴素家常菜和花草茶",
+        "roomStyle": "标本夹、检疫报告、干净晾着的白色上衣",
+        "neatness": "样本区极整齐，生活区略随意",
+        "collections": "叶片标本、旧花盆标签、社区居民送的小卡片",
+        "pets": "养一盆被救回来的老龟背竹"
+      },
+      "socialSystem": {
+        "socialAbility": "中等偏高，适合一对一沟通",
+        "lyingAbility": "中等，能隐瞒风险细节但不擅长装轻松",
+        "boundarySense": "强，会先说明检疫原因和风险",
+        "popularity": "在老人、花店和物业之间口碑很好",
+        "romanceExperience": "很少，习惯把工作排在前面",
+        "preferredType": "尊重安静、也愿意照顾小生命的人",
+        "expressionStyle": "送修好的花盆、留观察卡、默默处理虫害",
+        "possessiveness": "低，但会记住对方所有过敏源"
+      },
+      "combatSystem": {
+        "combatType": "支援限制型",
+        "coreStyle": "用叶脉听诊环听取根系震动，标记危险路径并让藤影短暂缠住目标脚步",
+        "weaponPreference": "采样剪、封样管、叶脉听诊环、检疫手套",
+        "specialAbility": "能听见植物和根系的微弱低语，并把异常声纹压成短暂叶脉标记",
+        "painTolerance": "中高",
+        "aggression": "低，优先隔离和劝离",
+        "stamina": "高，适合长时间步行巡查",
+        "burstPower": "高，能抬动大盆景和倒伏树枝",
+        "pressure": "温和但很沉",
+        "reactionSpeed": "中上，靠环境预判行动"
+      },
+      "worldSetting": {
+        "origin": "第七街区旧温室社区",
+        "socialClass": "普通市民家庭",
+        "education": "城市园艺与植物病理专业",
+        "criminalRecord": "无",
+        "organizationRank": "第七街区站资深检疫员",
+        "enemyForces": "伪造绿化报告的地产外包公司",
+        "biggestRegret": "没能保住街口那棵老梧桐",
+        "biggestGoal": "建立不被商业项目删改的独立绿检档案",
+        "hiddenDream": "开一间只救濒死植物的小诊所",
+        "mostImportantPerson": "把第一盆病株交给他的退休花店老板",
+        "unforgettableExperience": "暴雨夜听见整排树根同时报警，提前疏散了居民",
+        "lifeStain": "曾为了保住工作，在报告里删掉过一次可疑承包商名字"
+      },
+      "hiddenInformation": {
+        "shameSecret": "害怕再也听不见植物声音的一天",
+        "hiddenHobby": "给居民的植物画康复前后对照图",
+        "weakness": "对被丢弃的病株无法置之不理",
+        "secretHabit": "每次进门先确认房间里植物是否缺水",
+        "contrastSide": "外表厚重稳妥，看到稀有叶形会像孩子一样兴奋",
+        "foodAllergy": "对强烈人工香精轻微过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 52,
+        "morality": 84,
+        "sanity": 74,
+        "confidence": 68,
+        "stress": 46,
+        "danger": 57,
+        "desire": 39,
+        "loyalty": 81,
+        "stability": 76,
+        "social": 63,
+        "doom": 42,
+        "violence": 24
+      },
+      "metaDesign": {
+        "characterHook": "社区植物检疫师，能用腕部叶脉听诊环听见病株和根系的低语，把异常声纹压成短暂叶脉标记。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Generate the character from the current attributes: Jingting Qiyuan, codename Leaf Listener. Single character only. Full body visible from head to boots. Bulky soft-strong adult male, broad shoulders, thick chest, substantial rounded powerful build, warm wheat skin, square-round face, deep chestnut-black short hair with a thin pale moss-green highlight, tea-brown eyes with a faint green ring, gentle alert expression. Modern urban fantasy community plant quarantine inspector. Outfit: clean fitted white sleeveless top tucked into high-waist pants, open sage-green short-sleeve quarantine shirt with rolled cuffs, warm gray high-waist wide-leg work pants with side sampling pouch, cream mid socks, pale gray slip-resistant garden-district shoes, half-palm white quarantine gloves, narrow sampling belt with small shears and sealed tubes, leaf-gold vein-listening wrist ring, transparent pale-green leaf specimen pendant. Subtle low-glow leaf-vein marks only on the wrist ring and tiny badge details, restrained and compact, no diffuse glow. Clean Kyoto Animation-like TV anime cel shading, crisp readable linework, tidy shadow shapes, fresh colors, clean modern urban fantasy design, minimal dirt and grime. Urban first, fantasy second; no gritty industrial mood. The style reference is only for body proportion and drawing style; do not copy the reference character. No UI, no infographic, no diagram, no character sheet, no text, no labels, no icons, no scenery. Pure flat chroma-key background only. Use flat solid #ff00ff chroma-key background; do not use #ff00ff or similar magenta, pink, rose, or violet anywhere on the character.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "生成当前属性中的角色：镜庭栖原，单人全身，从头到鞋完整可见。高大柔壮成年男性，宽肩厚胸，厚实圆润但有力量，暖麦色皮肤，方圆脸，深栗黑短发带浅苔绿细挑染，茶褐眼带浅绿环，温和警觉表情。现代都市幻想，社区植物检疫师。服装为干净白色贴身无袖上衣扎进高腰裤，敞开的鼠尾草绿短袖检疫衬衫，温灰高腰宽腿工作裤，米白中筒袜，浅灰防滑园区鞋，半掌白色检疫手套，窄型采样腰带，腕部叶金色叶脉听诊环，透明浅绿叶片标本坠和封样管。低光叶脉标记只出现在腕环和少量小徽记上，克制、不扩散。干净京都动画感 TV 动画赛璐璐，上色清爽，线条清晰，阴影整洁，城市优先、幻想其次，整体无灰尘无脏污。Single character only. Full body visible from head to boots. Generate the character from the current attributes. The style reference is only for body proportion and drawing style; do not copy the reference character. No UI, no infographic, no diagram, no character sheet, no text, no labels, no icons, no scenery. Pure flat chroma-key background only. Use flat solid #ff00ff chroma-key background; do not use #ff00ff or similar magenta/pink/violet on the character."
+      },
+      "behaviorSystem": {
+        "thinkingAction": "拇指轻敲腕环",
+        "irritatedAction": "把封样管排得过分整齐",
+        "nervousAction": "低头闻手套上的草木味",
+        "relaxedAction": "靠墙整理叶片标本",
+        "lyingAction": "避开视线，反复说观察数据",
+        "shyAction": "摸后颈，笑得很短",
+        "speechSpeed": "偏慢，句尾收得轻",
+        "speechTone": "低柔清晰，像在提醒而非命令",
+        "catchphrase": "先别剪，让我听一下。",
+        "battleLine": "根系已经告诉我，你站错地方了。",
+        "walkStyle": "步幅大但很轻，习惯避开花坛边缘",
+        "combatStance": "重心下压，左腕环贴近胸前",
+        "idleAction": "检查手套指尖和封样管标签",
+        "attackRhythm": "先标记、再限制、最后撤离"
+      }
+    },
+    {
+      "id": "3886c09b-9c34-4c16-8cc2-586eb9455304",
+      "createdAt": "2026-06-02T13:02:57.195Z",
+      "updatedAt": "2026-06-02T13:26:26.378Z",
+      "agentMarks": [
+        {
+          "id": "697e6b6d-d9fc-408b-9d38-c411e6f79737",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T13:02:57.195Z"
+        },
+        {
+          "id": "04e593f7-6c5a-4455-8d3a-5caf7b19d316",
+          "mark": "[TEST_CREATE_CHARACTER]",
+          "createdAt": "2026-06-02T13:02:57.195Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "测试创建角色。资料已完整填写；图片生成标记为 false，因此本次只验证角色创建与字段完整性。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-3886c09b.png",
+        "thumbnail": "./assets/characters/generated-fullbody-3886c09b.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "灯桥司澄",
+        "codename": "白弧",
+        "alias": "司澄",
+        "faction": "城市灯桥局",
+        "birthday": "10/08",
+        "age": "32",
+        "height": "187",
+        "weight": "94 KG",
+        "occupation": "夜间桥灯巡检员",
+        "affiliation": "灯桥局第三夜巡组",
+        "species": "人类"
+      },
+      "visualIdentity": {
+        "visualKeywords": "宽肩厚胸，柔壮成年男性，白色贴身长袖，薄荷青巡检背带，桥灯钥匙，低光白弧，清爽城市夜巡感",
+        "colorLanguage": "干净白色作为身体锚点，石墨灰裤装压稳重心，薄荷青背带和灯桥局标识带出夜间公共设施感，白弧光只做小面积幻想点",
+        "faceShape": "方圆脸，颧骨温和",
+        "expression": "安静专注",
+        "eyes": "下垂感深眼",
+        "eyeColor": "雾蓝灰",
+        "eyebrow": "浓直眉，眉尾略低",
+        "lip": "厚唇，嘴角平稳",
+        "scar": "右手虎口有旧烧痕",
+        "tattoo": "左腕内侧有灯桥局编号小纹样",
+        "hairStyle": "后梳短发，额前一缕自然垂下",
+        "hairLength": "短发",
+        "hairColor": "深黑褐",
+        "highlight": "冷灰蓝挑染",
+        "bodyType": "高大柔壮，厚实体格",
+        "muscleLevel": "高，偏实用力量",
+        "bodyFat": "厚实柔和",
+        "shoulderWidth": "极宽",
+        "skinTone": "暖麦色",
+        "muscleFocus": "胸、肩、上臂、前臂"
+      },
+      "costumeSystem": {
+        "outerwear": "短款薄荷青夜巡背带马甲，前襟半开",
+        "outerwearColor": "薄荷青为主，白色窄边，少量石墨灰扣件",
+        "innerwear": "白色贴身长袖上衣，扎进高腰裤",
+        "innerwearColor": "干净白色，浅灰蓝阴影",
+        "pants": "石墨灰高腰宽褶巡检裤，裤脚略收",
+        "pantsColor": "石墨灰，膝侧有简化白色反光线",
+        "socks": "厚棉短袜",
+        "socksColor": "深灰",
+        "shoes": "低帮防滑巡检鞋，鞋底带弧形纹",
+        "shoesColor": "深灰黑，鞋带白色",
+        "gloves": "单侧白色绝缘手套，另一手缠灰色腕带",
+        "glovesColor": "白色手套，灰色腕带",
+        "necklace": "小型桥灯钥匙坠",
+        "necklaceColor": "哑银色，钥匙孔有白色微光",
+        "belt": "窄工具腰带与灯桥局卡扣",
+        "beltColor": "石墨灰布带，薄荷青卡扣",
+        "signatureItem": "折叠桥灯钥匙与小型巡检灯",
+        "signatureItemColor": "哑银、薄荷青、低光白弧"
+      },
+      "personality": {
+        "corePersonality": "温和、专注、慢热、守时",
+        "strengths": "观察细致，记路能力强，能安抚紧张的人",
+        "weaknesses": "过度自责，不擅长拒绝临时委托",
+        "hiddenPersonality": "喜欢漂亮灯具，私下会给每座桥起昵称",
+        "emotionalStability": "中高，夜间工作时尤其稳定",
+        "confidenceLevel": "稳定但不张扬",
+        "outwardPersona": "沉默可靠的夜巡人员，像城市里准点亮起的灯",
+        "trueCore": "希望每个晚归的人都能看见回家的路",
+        "surfaceFear": "桥灯连续熄灭",
+        "deepFear": "有人因为自己晚到一步而消失在黑暗里",
+        "traumaTrigger": "突然全城停电、桥下回声、湿冷雾气",
+        "stressResponse": "立刻核对路线和备用电源，语速变慢",
+        "trauma": "曾在停电夜没能及时找到失踪学生",
+        "traumaSource": "旧城区桥灯维护预算被削减导致的连锁故障",
+        "recoveryStatus": "能正常工作，但会反复检查备用灯",
+        "traumaImpact": "对夜间公共设施有近乎执拗的责任感"
+      },
+      "lifestyle": {
+        "favoriteFood": "热汤面和煎蛋",
+        "hatedFood": "过苦的黑咖啡",
+        "hiddenFavorite": "薄荷糖",
+        "appetite": "偏大，夜班后会吃两份早餐",
+        "alcoholTolerance": "中等，喝酒后更安静",
+        "cookingSkill": "会做简单夜宵",
+        "roomStyle": "灯具零件、路线图和干净折好的制服",
+        "neatness": "工作区极整齐，床边常堆巡检记录",
+        "collections": "旧灯泡、桥牌照片、不同年代的钥匙扣",
+        "pets": "没有宠物，但常喂桥边流浪猫"
+      },
+      "socialSystem": {
+        "socialAbility": "中等偏高，熟人面前很温柔",
+        "lyingAbility": "弱，沉默太久会露馅",
+        "boundarySense": "强，会先确认对方是否需要帮助",
+        "popularity": "在夜班司机、便利店员和学生间口碑很好",
+        "romanceExperience": "很少，长期夜班让关系难维持",
+        "preferredType": "能享受安静、也愿意直接表达需求的人",
+        "expressionStyle": "用准时出现、留灯、带热饮表达关心",
+        "possessiveness": "低，更像稳定陪伴"
+      },
+      "combatSystem": {
+        "combatType": "支援控制型",
+        "coreStyle": "用白弧光短暂标记路径、干扰视线并保护撤离路线",
+        "weaponPreference": "折叠桥灯钥匙、巡检灯、绝缘手套",
+        "specialAbility": "能让桥灯钥匙投射短暂白弧，照出隐藏裂缝和异常通道",
+        "painTolerance": "中高",
+        "aggression": "低，优先护送和阻断",
+        "stamina": "高，适合长距离步行巡检",
+        "burstPower": "中高，短时间能强行抬起坠落灯架",
+        "pressure": "温和但不容忽视",
+        "reactionSpeed": "中上，靠路线预判补足速度"
+      },
+      "worldSetting": {
+        "origin": "旧城河桥区",
+        "socialClass": "普通市政家庭",
+        "education": "市政机电学院夜间设施维护专业",
+        "criminalRecord": "无",
+        "organizationRank": "第三夜巡组代理组长",
+        "enemyForces": "偷拆桥灯线缆的地下改装团伙",
+        "biggestRegret": "没能在停电夜提前发现备用线路被偷换",
+        "biggestGoal": "把旧城所有桥灯接入独立备用系统",
+        "hiddenDream": "开一家只在凌晨营业的小灯具店",
+        "mostImportantPerson": "曾被他救下的失踪学生，如今会定期寄明信片",
+        "unforgettableExperience": "大雾夜里用一串临时白弧灯引导整队人过桥",
+        "lifeStain": "曾为了保住巡检预算而替上级写过模糊报告"
+      },
+      "hiddenInformation": {
+        "shameSecret": "害怕完全无光的地下通道",
+        "hiddenHobby": "给老桥灯画小型维护插画",
+        "weakness": "对迷路的人几乎无法置之不理",
+        "secretHabit": "每晚出发前会按顺序摸钥匙、手套、巡检灯",
+        "contrastSide": "外表沉稳，看到新款灯具会明显兴奋",
+        "foodAllergy": "对某些廉价香精轻微过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 48,
+        "morality": 82,
+        "sanity": 72,
+        "confidence": 64,
+        "stress": 51,
+        "danger": 56,
+        "desire": 41,
+        "loyalty": 88,
+        "stability": 79,
+        "social": 58,
+        "doom": 31,
+        "violence": 29
+      },
+      "metaDesign": {
+        "characterHook": "夜间桥灯巡检员，能用桥灯钥匙投出短暂白弧，照出城市里本不该存在的断路和隐藏通道。",
+        "characterConsistencyPrompt": "始终保持宽肩厚胸的柔壮成年男性、白色贴身长袖、薄荷青夜巡背带马甲、石墨灰高腰宽褶裤、桥灯钥匙和低光白弧。",
+        "characterImagePrompt": "Single character only. Full body visible from head to boots. Generate the character from the current attributes. The style reference is only for body proportion and drawing style; do not copy the reference character. Create exactly one full-body clean anime cel-shaded character illustration of Dengqiao Sicheng, a 32-year-old male night bridge-light inspector in a modern urban fantasy city. He is a bulky soft-strong adult male, not slender: tall body, very broad shoulders, thick chest, thick arms, warm wheat skin, square-round face, deep slightly downturned fog blue-gray eyes, quiet focused expression, slicked-back short dark brown-black hair with one loose front lock and cool gray-blue highlights, an old burn scar on the tiger-mouth area of his right hand. Outfit: a clean fitted white long-sleeve top tucked into high-waist graphite-gray wide-pleated inspection trousers, a short mint-teal night-patrol harness vest worn half open with narrow white edging and a small bridge-light bureau mark, low-cut anti-slip inspection shoes, one white insulated glove, one gray wrist wrap, a narrow tool belt, and a small bridge-light key pendant close to the collar. Props: a folding bridge-light key and a compact inspection lamp. Fantasy anchor: restrained low-glow white arc marks only around the keyhole, the inspection lamp rim, and the simplified reflective line on the trousers. Clean anime color blocks, simple cel-shaded folds, crisp readable linework, tidy modern urban fantasy design, minimal dirt and grime. Urban first, fantasy second; no gritty industrial mood. Bulky soft-strong adult male with subtle torso contours in the fitted white top. Background: pure flat #ff00ff chroma-key background only, one solid color, no gradient, no texture, no floor, no shadow. No UI, no infographic, no diagram, no character sheet, no text, no labels, no icons, no scenery, no extra characters, no watermark. Do not use #ff00ff anywhere on the character.",
+        "referenceSheetPrompt": "正面、侧面、背面三视图，展示白色贴身长袖、薄荷青背带马甲、高腰宽褶裤、桥灯钥匙、巡检灯和灯桥局小标识。",
+        "propsPrompt": "折叠桥灯钥匙，小型巡检灯，哑银金属结构，薄荷青小扣件，钥匙孔有低光白弧。",
+        "costumePrompt": "白色贴身长袖扎进高腰石墨灰宽褶裤，短款薄荷青夜巡背带马甲，低帮防滑鞋，单侧白色绝缘手套，窄工具腰带，桥灯钥匙坠。",
+        "characterImagePromptCn": "只画一个角色：灯桥司澄，32岁男性，城市夜间桥灯巡检员。高大柔壮，宽肩厚胸，暖麦色皮肤，方圆脸，雾蓝灰下垂深眼，安静专注表情，后梳短黑褐发带冷灰蓝挑染，右手虎口旧烧痕。服装：干净白色贴身长袖扎进高腰石墨灰宽褶巡检裤，外搭短款薄荷青夜巡背带马甲，前襟半开，白色窄边和灯桥局小标识；低帮防滑巡检鞋，单侧白色绝缘手套，另一手灰色腕带，窄工具腰带，小型桥灯钥匙坠贴近领口。手持折叠桥灯钥匙和小型巡检灯，幻想锚点只在钥匙孔、巡检灯边缘和裤侧反光线出现少量低光白弧。材质为干净动画色块和简单赛璐璐褶皱，不要写实布料纹理、油亮皮革或照片光。Single character only. Full body visible from head to boots. Generate the character from the current attributes. The style reference is only for body proportion and drawing style; do not copy the reference character. No UI, no infographic, no diagram, no character sheet, no text, no labels, no icons, no scenery. Pure flat chroma-key background only. Clean anime cel shading, crisp linework, tidy modern urban fantasy design, minimal dirt and grime. Urban first, fantasy second; no gritty industrial mood unless explicitly requested. Bulky soft-strong adult male, not slender; fitted white top system is preferred, such as a tight T-shirt, sleeveless undershirt, or fitted long-sleeve tucked into the waist structure, with subtle torso contours in clean cel shading. Choose a chroma-key background by contrast: use pure #ff00ff flat magenta background and do not use #ff00ff on the character."
+      },
+      "behaviorSystem": {
+        "thinkingAction": "拇指摩挲桥灯钥匙齿边",
+        "irritatedAction": "反复扣紧马甲卡扣",
+        "nervousAction": "检查备用灯电量和路线表",
+        "relaxedAction": "靠在桥栏边慢慢吃薄荷糖",
+        "lyingAction": "会低头整理手套边缘",
+        "shyAction": "耳尖发红，假装在看灯杆编号",
+        "speechSpeed": "偏慢，停顿清楚",
+        "speechTone": "温和低沉，像夜里压低的广播",
+        "catchphrase": "灯亮着，路就在。",
+        "battleLine": "跟着白弧走，别回头。",
+        "walkStyle": "步幅稳定，肩背放松但重心很稳",
+        "combatStance": "一手举巡检灯，一手扣住折叠钥匙",
+        "idleAction": "定期抬头确认桥灯亮度",
+        "attackRhythm": "先照明标记，再短促阻断，随后护送撤离"
+      }
+    },
+    {
+      "id": "c4de692f-ac55-46cf-986d-6858c949f984",
+      "createdAt": "2026-06-02T12:45:41.322Z",
+      "updatedAt": "2026-06-02T12:52:54.617Z",
+      "agentMarks": [
+        {
+          "id": "7484f0ad-8d5f-4f52-9866-86cad34b434b",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T12:45:41.322Z"
+        },
+        {
+          "id": "e6097826-cb8c-44bc-b8fe-4c1849c46c7c",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-02T12:45:41.322Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "新角色：资料与最终提示词已补全；attributes/images 两个开关均为 true，可直接进入生图准备流程。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-c4de692f.png",
+        "thumbnail": "./assets/characters/generated-fullbody-c4de692f.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "沈砚歌",
+        "codename": "回声砝码",
+        "alias": "",
+        "faction": "临川声纹公证处",
+        "birthday": "11/03",
+        "age": "36",
+        "height": "189",
+        "weight": "104 KG",
+        "occupation": "声纹公证员",
+        "affiliation": "第七回声审录室",
+        "species": "人类"
+      },
+      "visualIdentity": {
+        "visualKeywords": "宽肩厚胸、白色贴身短袖、酒红短马甲、暖灰阔腿裤、音叉印章、悬浮小砝码、安静审录感",
+        "colorLanguage": "干净白、暖灰、深酒红、墨黑、小面积淡金声纹",
+        "faceShape": "宽圆方脸，下颌厚",
+        "expression": "含笑审视",
+        "eyes": "深眼窝圆杏眼",
+        "eyeColor": "淡金棕",
+        "eyebrow": "粗平眉",
+        "lip": "厚唇，嘴角微扬",
+        "scar": "鼻梁右侧短浅划痕",
+        "tattoo": "右胸口内侧有环形声纹印",
+        "hairStyle": "向后梳的蓬松短发，鬓角整齐",
+        "hairLength": "短发",
+        "hairColor": "乌黑",
+        "highlight": "暗酒红低调挑染",
+        "bodyType": "壮厚圆实",
+        "muscleLevel": "高，厚而不锐",
+        "bodyFat": "中等",
+        "shoulderWidth": "极宽",
+        "skinTone": "暖橄榄色",
+        "muscleFocus": "胸肌、肩颈、前臂、腰腹厚度"
+      },
+      "costumeSystem": {
+        "outerwear": "短款深酒红正式马甲，肩线宽，前襟略斜，背后有细小声纹刺绣",
+        "outerwearColor": "深酒红，刺绣为淡金",
+        "innerwear": "白色贴身短袖上衣，扎进裤腰，领口干净贴颈",
+        "innerwearColor": "干净白，阴影为暖灰",
+        "pants": "高腰暖灰阔腿西裤，裤褶利落，侧边有隐藏印章袋",
+        "pantsColor": "暖灰，口袋边为墨黑细线",
+        "socks": "中筒薄袜",
+        "socksColor": "墨黑",
+        "shoes": "厚底软面公证鞋，鞋面无亮面反光",
+        "shoesColor": "墨黑与暖灰鞋底",
+        "gloves": "右手白色审录手套，左手露指方便按印",
+        "glovesColor": "白色与墨黑腕扣",
+        "necklace": "贴颈短链，挂一枚小回声砝码",
+        "necklaceColor": "淡金与墨黑内芯",
+        "belt": "窄版墨黑腰封，侧挂音叉印章和小卷宗夹",
+        "beltColor": "墨黑，扣件为淡金",
+        "signatureItem": "音叉印章与三枚悬浮回声砝码",
+        "signatureItemColor": "淡金、白色声纹、小面积透明灰"
+      },
+      "personality": {
+        "corePersonality": "稳重、幽默、敏锐、守信",
+        "strengths": "听力惊人，能从语气里抓住矛盾",
+        "weaknesses": "太爱等对方自己露馅",
+        "hiddenPersonality": "喜欢把严肃场合讲得像茶话会",
+        "emotionalStability": "很高",
+        "confidenceLevel": "从容自信",
+        "outwardPersona": "亲切但不好糊弄的窗口公证员",
+        "trueCore": "相信承诺一旦被听见，就该有重量",
+        "surfaceFear": "录音设备失真",
+        "deepFear": "自己误判一句真话",
+        "traumaTrigger": "多人同时争辩的尖锐回声",
+        "stressResponse": "闭眼数拍，逐句复述现场话语",
+        "trauma": "伪证案导致无辜者失去监护权",
+        "traumaSource": "一份被剪辑过的亲属证词",
+        "recoveryStatus": "已重新执业，但拒绝快审",
+        "traumaImpact": "宁愿慢，也不轻易盖章"
+      },
+      "lifestyle": {
+        "favoriteFood": "热牛肉粉配酸豆角",
+        "hatedFood": "过酸水果",
+        "hiddenFavorite": "焦糖布丁",
+        "appetite": "很大",
+        "alcoholTolerance": "中等",
+        "cookingSkill": "擅长炖汤",
+        "roomStyle": "吸音墙、整齐卷宗、老式唱片机",
+        "neatness": "桌面极整洁，抽屉有点乱",
+        "collections": "不同年代的公证印章复制件",
+        "pets": "养一盆叫证人的厚叶植物"
+      },
+      "socialSystem": {
+        "socialAbility": "亲和力强",
+        "lyingAbility": "较强",
+        "boundarySense": "清楚而温柔",
+        "popularity": "街区居民很信任",
+        "romanceExperience": "有过一次和平分手",
+        "preferredType": "说话直接、愿意承担承诺的人",
+        "expressionStyle": "用陪伴、记住细节和实际帮忙表达",
+        "possessiveness": "中低，重视约定"
+      },
+      "combatSystem": {
+        "combatType": "声纹压制型",
+        "coreStyle": "用回声砝码标记谎言重量，限制对手动作",
+        "weaponPreference": "音叉印章",
+        "specialAbility": "把一句话的真实重量具象成短暂砝码",
+        "painTolerance": "高",
+        "aggression": "中低，先控场",
+        "stamina": "高",
+        "burstPower": "中高",
+        "pressure": "温和但越听越沉",
+        "reactionSpeed": "快"
+      },
+      "worldSetting": {
+        "origin": "临川回音巷",
+        "socialClass": "普通公务家庭",
+        "education": "法律公证学院声证专业",
+        "criminalRecord": "无",
+        "organizationRank": "二级声纹公证员",
+        "enemyForces": "黑市剪辑师与伪证经纪人",
+        "biggestRegret": "曾经相信一段过度干净的录音",
+        "biggestGoal": "建立不可剪辑的公共声证库",
+        "hiddenDream": "开一间只听故事不盖章的小茶馆",
+        "mostImportantPerson": "当年替他作证的盲人老师",
+        "unforgettableExperience": "在全城停电时靠脚步回声找出真证人",
+        "lifeStain": "曾私下保留一份未公开的反证录音"
+      },
+      "hiddenInformation": {
+        "shameSecret": "害怕自己的笑声被录下来反复播放",
+        "hiddenHobby": "给陌生人的声音写短评",
+        "weakness": "听见孩子哭腔会立刻心软",
+        "secretHabit": "每次盖章前都在心里道歉",
+        "contrastSide": "看似慢吞吞，其实记仇很准",
+        "foodAllergy": "轻微花生过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 61,
+        "morality": 82,
+        "sanity": 74,
+        "confidence": 78,
+        "stress": 44,
+        "danger": 57,
+        "desire": 49,
+        "loyalty": 86,
+        "stability": 81,
+        "social": 75,
+        "doom": 29,
+        "violence": 38
+      },
+      "metaDesign": {
+        "characterHook": "能把承诺与谎言的声纹称出重量的声纹公证员，温和地让每一句话落到回声砝码上。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Generate the character from the current attributes. Create exactly ONE full-body anime-style character illustration of Shen Yange, a 36-year-old voiceprint notary from the Linchuan Voiceprint Notary Office. The style reference is only for body proportion and drawing style; do not copy the reference character. He is a bulky soft-strong adult male, not slender: extremely broad shoulders, thick chest, powerful shoulder-neck area and forearms, substantial rounded waist and abdomen, warm olive skin, broad round-square face, heavy jaw, light golden-brown round almond eyes, thick straight brows, calm scrutinizing smile, black short voluminous slicked-back hair with subtle dark burgundy highlights, and a short shallow scratch on the right side of his nose bridge. Outfit: a clean fitted white short-sleeve top tucked into high-waist warm-gray wide-leg dress trousers, a cropped deep burgundy formal vest with broad shoulder line and slightly diagonal front opening, tiny pale-gold voiceprint embroidery on the back, a narrow matte-black waist cincher carrying a tuning-fork stamp and compact document clip, one white recording glove on the right hand, bare fingers on the left hand, thick-sole matte-black soft notary shoes, and a short collar chain with a small echo-weight pendant. Props: a tuning-fork stamp in hand and three small floating echo weights near him. Fantasy anchor: restrained low pale-gold voiceprint glow only on the echo-weight rims, stamp face, and vest embroidery. Material language: clean anime color blocks, simple cel-shaded folds, simplified small metal accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: clean Kyoto Animation-like TV anime cel shading, crisp readable linework, tidy modern urban fantasy design, minimal dirt and grime. Single character only. Full body visible from head to shoes. Centered standing pose with generous padding, no cropping. Pure flat chroma-key background only: solid #00ff00 green, one uniform color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. No UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no watermark. Do not use #00ff00 or similar chroma green anywhere on the character.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：沈砚歌，36岁男性，临川声纹公证处的声纹公证员。壮厚圆实的成年男性，极宽肩膀，厚胸，肩颈和前臂强壮，腰腹厚实，暖橄榄色皮肤，宽圆方脸，下颌厚，淡金棕圆杏眼，粗平眉，含笑审视的表情，乌黑向后梳的蓬松短发，暗酒红低调挑染，鼻梁右侧有短浅划痕。服装根据 COSTUME_DESIGN_GUIDE.md 判断：白色贴身短袖上衣扎进高腰暖灰阔腿西裤，外搭短款深酒红正式马甲，宽肩线，略斜前襟，背后有细小淡金声纹刺绣；窄版墨黑腰封侧挂音叉印章和小卷宗夹，右手白色审录手套，左手露指，厚底墨黑软面公证鞋，贴颈短链挂一枚小回声砝码。手持音叉印章，身旁有三枚小型悬浮回声砝码，幻想锚点只在砝码边缘、印章面和马甲刺绣上出现少量淡金声纹低光。材质是干净动画色块、简单赛璐璐褶皱、简化金属点缀，不要写实布料纹理、油亮皮革、潮湿材质或时装摄影。清爽京都动画式 TV 动画角色立绘，线条干净流畅，阴影块面概括，现代都市奇幻感，单人全身，从头到鞋完整可见，居中，留出边距。纯平面 #00ff00 绿幕背景，无渐变、无地面、无阴影、无文字、无标签、无 UI、无设定表、无多人；角色身上不要使用 #00ff00 或接近绿幕的颜色。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "轻敲音叉印章柄",
+        "irritatedAction": "把砝码按回掌心",
+        "nervousAction": "检查录音笔时间戳",
+        "relaxedAction": "用肩膀顶开马甲前襟透气",
+        "lyingAction": "笑得更温和，问题变短",
+        "shyAction": "摸一下贴颈短链",
+        "speechSpeed": "慢而清楚",
+        "speechTone": "低沉圆润",
+        "catchphrase": "这句话，有重量。",
+        "battleLine": "请把谎言放到秤上。",
+        "walkStyle": "步子稳，鞋底几乎无声",
+        "combatStance": "一手持音叉印章，一手托起砝码",
+        "idleAction": "让三枚小砝码绕手腕慢转",
+        "attackRhythm": "先听回声，再定重量，最后压住破绽"
+      }
+    },
+    {
+      "id": "39b15995-b0c9-4293-97fb-d8b14a6c5bbc",
+      "createdAt": "2026-06-02T12:13:20.082Z",
+      "updatedAt": "2026-06-02T12:38:06.905Z",
+      "agentMarks": [
+        {
+          "id": "b4223d8c-1dc6-45ad-8d01-b4610d10df47",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T12:13:20.082Z"
+        },
+        {
+          "id": "3286759e-c319-4da3-81a1-bda399b11131",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-02T12:13:20.082Z"
+        },
+        {
+          "id": "183e9999-559a-480d-8b86-942c1aeccc8b",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-02T12:33:41.263Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "测试角色：已按角色创建流程补全资料与最终提示词；当前不生成图片，使用占位图。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-39b15995.png",
+        "thumbnail": "./assets/characters/generated-fullbody-39b15995.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "岚衡司予",
+        "codename": "雨尺",
+        "alias": "",
+        "faction": "澄江市立气象档案馆",
+        "birthday": "04/12",
+        "age": "32",
+        "height": "186",
+        "weight": "98 KG",
+        "occupation": "市立气象档案员",
+        "affiliation": "雨证档案室",
+        "species": "人类"
+      },
+      "visualIdentity": {
+        "visualKeywords": "宽肩厚胸、白色贴身长袖、雾灰防雨长层、胸前雨尺背带、透明雨量管、清爽气象感",
+        "colorLanguage": "白、雾灰、湖蓝、深墨绿、小面积银色刻度",
+        "faceShape": "圆方脸，颧骨低",
+        "expression": "温和专注",
+        "eyes": "略下垂的杏眼",
+        "eyeColor": "浅湖蓝",
+        "eyebrow": "浓直眉",
+        "lip": "厚唇，唇峰柔和",
+        "scar": "右眉尾细小旧伤",
+        "tattoo": "左锁骨下有雨滴刻度印",
+        "hairStyle": "微卷短发，前额自然散落",
+        "hairLength": "短发",
+        "hairColor": "深墨绿黑",
+        "highlight": "湖蓝细挑染",
+        "bodyType": "厚实圆壮",
+        "muscleLevel": "中高，柔厚有力",
+        "bodyFat": "中等偏低",
+        "shoulderWidth": "很宽",
+        "skinTone": "干净暖白",
+        "muscleFocus": "胸背、上臂、腰腹厚度"
+      },
+      "costumeSystem": {
+        "outerwear": "开襟雾灰防雨长层，前短后长，侧边高开衩，袖口有湖蓝封边",
+        "outerwearColor": "雾灰，内侧为淡湖蓝",
+        "innerwear": "白色贴身长袖上衣，扎进高腰裤，胸腹轮廓清晰但干净",
+        "innerwearColor": "清白色，阴影为浅蓝灰",
+        "pants": "高腰深色锥形长裤，膝侧有平整防水拼片",
+        "pantsColor": "深墨绿黑，拼片为冷灰",
+        "socks": "短筒运动袜",
+        "socksColor": "白色带湖蓝细线",
+        "shoes": "低帮防滑通勤鞋，鞋底有简化雨纹",
+        "shoesColor": "银灰与深墨绿",
+        "gloves": "单手半掌记录手套，另一手戴透明雨滴戒",
+        "glovesColor": "冷灰手套，透明湖蓝戒面",
+        "necklace": "细银链雨滴坠",
+        "necklaceColor": "银色与浅湖蓝",
+        "belt": "胸前交叉雨尺背带，连接小型档案筒和笔袋",
+        "beltColor": "深墨绿带，银色刻度扣",
+        "signatureItem": "透明雨量管与折叠雨尺",
+        "signatureItemColor": "透明浅蓝、银色刻度、少量白光"
+      },
+      "personality": {
+        "corePersonality": "耐心、敏锐、克制、可靠",
+        "strengths": "记忆力强，能稳定安抚现场",
+        "weaknesses": "过度校准细节，容易拖延决断",
+        "hiddenPersonality": "其实很爱恶作剧式预报",
+        "emotionalStability": "高",
+        "confidenceLevel": "安静自信",
+        "outwardPersona": "温和的公共档案窗口职员",
+        "trueCore": "相信每一次雨都留下可被理解的证词",
+        "surfaceFear": "档案受潮损坏",
+        "deepFear": "无人相信灾前的细微信号",
+        "traumaTrigger": "连续误报的警报声",
+        "stressResponse": "立刻整理证据并降低语速",
+        "trauma": "旧城区暴雨错判事件",
+        "traumaSource": "一份被延迟归档的雨证记录",
+        "recoveryStatus": "能正常工作，但会反复复核天气数据",
+        "traumaImpact": "对模糊结论极不放心"
+      },
+      "lifestyle": {
+        "favoriteFood": "热豆花配咸味小料",
+        "hatedFood": "过腻奶油",
+        "hiddenFavorite": "薄荷苏打水",
+        "appetite": "大",
+        "alcoholTolerance": "低",
+        "cookingSkill": "会做清淡家常菜",
+        "roomStyle": "除湿箱、纸质档案、整齐雨具",
+        "neatness": "工作区极整齐，衣柜按颜色排列",
+        "collections": "旧天气票根和空白标签纸",
+        "pets": "无"
+      },
+      "socialSystem": {
+        "socialAbility": "温和有分寸",
+        "lyingAbility": "一般",
+        "boundarySense": "很强",
+        "popularity": "公共窗口评价很好",
+        "romanceExperience": "有过短暂稳定关系",
+        "preferredType": "直接、守约、能接受慢节奏的人",
+        "expressionStyle": "用细节照顾和准确提醒表达",
+        "possessiveness": "低，重视信任"
+      },
+      "combatSystem": {
+        "combatType": "测距控制型",
+        "coreStyle": "用雨尺划定湿度边界，限制移动",
+        "weaponPreference": "折叠雨尺",
+        "specialAbility": "读取物体表面的雨痕记忆",
+        "painTolerance": "中高",
+        "aggression": "低，偏防守",
+        "stamina": "高",
+        "burstPower": "中",
+        "pressure": "安静但压迫感逐渐增强",
+        "reactionSpeed": "快"
+      },
+      "worldSetting": {
+        "origin": "澄江旧雨井区",
+        "socialClass": "普通市民家庭",
+        "education": "市政档案学院",
+        "criminalRecord": "无",
+        "organizationRank": "雨证档案室二级管理员",
+        "enemyForces": "篡改灾害记录的保险商会",
+        "biggestRegret": "没能及时公开旧城区暴雨证据",
+        "biggestGoal": "建立不可篡改的城市雨证库",
+        "hiddenDream": "开一家只在雨天营业的档案咖啡店",
+        "mostImportantPerson": "曾收留他的老档案主任",
+        "unforgettableExperience": "在断电档案室里凭雨声找回关键卷宗",
+        "lifeStain": "曾删除一条会牵连同事的迟报备注"
+      },
+      "hiddenInformation": {
+        "shameSecret": "曾害怕雨声到整夜不睡",
+        "hiddenHobby": "给每场雨取正式编号",
+        "weakness": "对受潮旧纸特别心软",
+        "secretHabit": "把重要人的名字写进天气标签背面",
+        "contrastSide": "看似守规矩，其实会偷偷保留被要求销毁的证据",
+        "foodAllergy": "轻微芒果过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 55,
+        "morality": 78,
+        "sanity": 72,
+        "confidence": 69,
+        "stress": 48,
+        "danger": 52,
+        "desire": 43,
+        "loyalty": 80,
+        "stability": 76,
+        "social": 62,
+        "doom": 31,
+        "violence": 24
+      },
+      "metaDesign": {
+        "characterHook": "能读取雨痕记忆的市立气象档案员，用透明雨量管和折叠雨尺把城市灾害记录重新排成真相。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Generate the character from the current attributes. Create exactly ONE full-body anime-style character illustration of Lanheng Siyu, a 32-year-old municipal weather archivist. The style reference is only for body proportion and drawing style; do not copy the reference character. He is a bulky soft-strong adult male, not slender: broad shoulders, thick chest, substantial rounded torso, strong upper arms, clean warm pale skin, round-square face, slightly drooping light lake-blue almond eyes, thick straight brows, calm focused expression, short slightly wavy dark green-black hair with fine lake-blue highlights, and a tiny old scar at the right eyebrow tail. Outfit: a fitted white long-sleeve top tucked into high-waist dark green-black tapered trousers, an open mist-gray rainproof long layer with a shorter front, longer back, high side slits, and lake-blue sleeve edging; crossed rain-ruler chest straps connect a compact archive tube and pen pouch; low-cut silver-gray anti-slip commuter shoes; one cool-gray half-palm recording glove; a transparent lake-blue raindrop ring on the other hand; a slim silver raindrop pendant near the collar. Props: a transparent rain gauge tube and a folding rain ruler. Fantasy anchor: only a restrained low white-blue glow on the gauge marks, ring face, and silver strap buckle. Material language: clean anime color blocks, simple cel-shaded folds, simplified small metal accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: clean Kyoto Animation-like TV anime cel shading, crisp readable linework, tidy modern urban fantasy design, minimal dirt and grime. Single character only. Full body visible from head to boots. Centered standing pose with generous padding, no cropping. Pure flat chroma-key background only: solid #ff00ff magenta, one uniform color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. No UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no watermark. Do not use #ff00ff anywhere on the character.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：岚衡司予，32岁男性，澄江市立气象档案员。厚实圆壮的成年男性，宽肩厚胸，胸背和上臂有柔厚力量，干净暖白皮肤，圆方脸，浅湖蓝杏眼略下垂，浓直眉，温和专注表情，深墨绿黑微卷短发带湖蓝细挑染，右眉尾有细小旧伤。服装：白色贴身长袖上衣扎进高腰深墨绿锥形长裤，外搭开襟雾灰防雨长层，前短后长，侧边高开衩，袖口湖蓝封边；胸前交叉雨尺背带连接小型档案筒和笔袋，低帮银灰防滑通勤鞋，单手冷灰半掌记录手套，另一手戴透明湖蓝雨滴戒，细银链雨滴坠贴近领口。手持透明雨量管与折叠雨尺，幻想锚点只在雨量管刻度、戒面和背带银扣上有少量低亮白蓝光。干净动画色块、简单赛璐璐褶皱、简化金属点缀，不要写实布料纹理、油亮皮革、潮湿材质或时装摄影。清爽京都动画式TV动画角色立绘，线条干净流畅，阴影块面概括，现代都市奇幻感，单人全身，从头到鞋完整可见，居中，留出边距。纯平面色键背景，避免使用与角色湖蓝元素冲突的绿色，可用纯 #ff00ff 色键背景；无渐变、无地面、无阴影、无文字、无标签、无UI、无设定表、无多人。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指推雨尺刻度",
+        "irritatedAction": "把笔帽按得很响",
+        "nervousAction": "擦拭雨量管外壁",
+        "relaxedAction": "把外层衣摆搭在手臂上",
+        "lyingAction": "避开视线并报出过多数字",
+        "shyAction": "低头整理袖口封边",
+        "speechSpeed": "平稳偏慢",
+        "speechTone": "清亮温和",
+        "catchphrase": "先别急，雨会把顺序写出来。",
+        "battleLine": "请站到刻度之外。",
+        "walkStyle": "步幅稳，落脚轻",
+        "combatStance": "侧身护住雨量管，另一手展开雨尺",
+        "idleAction": "检查胸前背带是否对齐",
+        "attackRhythm": "先测距，再封路，最后压制"
+      }
+    },
+    {
       "id": "76430cee-a575-4757-9e1b-b40ebc2ba5d3",
       "createdAt": "2026-06-02T10:18:58.916Z",
       "updatedAt": "2026-06-02T10:22:59.746Z",
@@ -98,8 +910,8 @@
         "selectedPresetId": "urban-fantasy-default"
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-76430cee.png",
-        "thumbnail": "./assets/generated-fullbody-76430cee.png",
+        "fullBody": "./assets/characters/generated-fullbody-76430cee.png",
+        "thumbnail": "./assets/characters/generated-fullbody-76430cee.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -309,8 +1121,8 @@
         "selectedPresetId": "hidden-magic-default"
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-1c3a44c1.png",
-        "thumbnail": "./assets/generated-fullbody-1c3a44c1.png",
+        "fullBody": "./assets/characters/generated-fullbody-1c3a44c1.png",
+        "thumbnail": "./assets/characters/generated-fullbody-1c3a44c1.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -520,8 +1332,8 @@
         "selectedPresetId": "urban-fantasy-default"
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-698a13d7.png",
-        "thumbnail": "./assets/generated-fullbody-698a13d7.png",
+        "fullBody": "./assets/characters/generated-fullbody-698a13d7.png",
+        "thumbnail": "./assets/characters/generated-fullbody-698a13d7.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -731,8 +1543,8 @@
         "selectedPresetId": "urban-fantasy-default"
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-8cc8d832.png",
-        "thumbnail": "./assets/generated-fullbody-8cc8d832.png",
+        "fullBody": "./assets/characters/generated-fullbody-8cc8d832.png",
+        "thumbnail": "./assets/characters/generated-fullbody-8cc8d832.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -942,8 +1754,8 @@
         "selectedPresetId": "urban-fantasy-default"
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-719c8a20.png",
-        "thumbnail": "./assets/generated-fullbody-719c8a20.png",
+        "fullBody": "./assets/characters/generated-fullbody-719c8a20.png",
+        "thumbnail": "./assets/characters/generated-fullbody-719c8a20.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -1148,8 +1960,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-6fba2777.png",
-        "thumbnail": "./assets/generated-fullbody-6fba2777.png",
+        "fullBody": "./assets/characters/generated-fullbody-6fba2777.png",
+        "thumbnail": "./assets/characters/generated-fullbody-6fba2777.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -1345,8 +2157,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-ef696d55.png",
-        "thumbnail": "./assets/generated-fullbody-ef696d55.png",
+        "fullBody": "./assets/characters/generated-fullbody-ef696d55.png",
+        "thumbnail": "./assets/characters/generated-fullbody-ef696d55.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -1547,8 +2359,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-0e2ede47.png",
-        "thumbnail": "./assets/generated-fullbody-0e2ede47.png",
+        "fullBody": "./assets/characters/generated-fullbody-0e2ede47.png",
+        "thumbnail": "./assets/characters/generated-fullbody-0e2ede47.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -1747,8 +2559,8 @@
         "selectedPresetId": "soft-strong-male-default"
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-3921844a.png",
-        "thumbnail": "./assets/generated-fullbody-3921844a.png",
+        "fullBody": "./assets/characters/generated-fullbody-3921844a.png",
+        "thumbnail": "./assets/characters/generated-fullbody-3921844a.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -1940,8 +2752,8 @@
         "selectedPresetId": "soft-strong-male-default"
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-e5629038.png",
-        "thumbnail": "./assets/generated-fullbody-e5629038.png",
+        "fullBody": "./assets/characters/generated-fullbody-e5629038.png",
+        "thumbnail": "./assets/characters/generated-fullbody-e5629038.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -2138,8 +2950,8 @@
         "selectedPresetId": "urban-fantasy-default"
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-663c45ab.png",
-        "thumbnail": "./assets/generated-fullbody-663c45ab.png",
+        "fullBody": "./assets/characters/generated-fullbody-663c45ab.png",
+        "thumbnail": "./assets/characters/generated-fullbody-663c45ab.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -2346,8 +3158,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-1cf6bb0f.png",
-        "thumbnail": "./assets/generated-fullbody-1cf6bb0f.png",
+        "fullBody": "./assets/characters/generated-fullbody-1cf6bb0f.png",
+        "thumbnail": "./assets/characters/generated-fullbody-1cf6bb0f.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -2553,8 +3365,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-fcd5d20a.png",
-        "thumbnail": "./assets/generated-fullbody-fcd5d20a.png",
+        "fullBody": "./assets/characters/generated-fullbody-fcd5d20a.png",
+        "thumbnail": "./assets/characters/generated-fullbody-fcd5d20a.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -2748,8 +3560,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-a10509cf.png",
-        "thumbnail": "./assets/generated-fullbody-a10509cf.png",
+        "fullBody": "./assets/characters/generated-fullbody-a10509cf.png",
+        "thumbnail": "./assets/characters/generated-fullbody-a10509cf.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -3019,8 +3831,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-lanta-laofan.png",
-        "thumbnail": "./assets/generated-fullbody-lanta-laofan.png",
+        "fullBody": "./assets/characters/generated-fullbody-lanta-laofan.png",
+        "thumbnail": "./assets/characters/generated-fullbody-lanta-laofan.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -3232,8 +4044,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-xiuwan-laoyue.png",
-        "thumbnail": "./assets/generated-fullbody-xiuwan-laoyue.png",
+        "fullBody": "./assets/characters/generated-fullbody-xiuwan-laoyue.png",
+        "thumbnail": "./assets/characters/generated-fullbody-xiuwan-laoyue.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -3445,8 +4257,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-shagang-laoliao.png",
-        "thumbnail": "./assets/generated-fullbody-shagang-laoliao.png",
+        "fullBody": "./assets/characters/generated-fullbody-shagang-laoliao.png",
+        "thumbnail": "./assets/characters/generated-fullbody-shagang-laoliao.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -3640,8 +4452,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-hanqiao-laoqin.png",
-        "thumbnail": "./assets/generated-fullbody-hanqiao-laoqin.png",
+        "fullBody": "./assets/characters/generated-fullbody-hanqiao-laoqin.png",
+        "thumbnail": "./assets/characters/generated-fullbody-hanqiao-laoqin.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -3838,8 +4650,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-huijing-laozhou.png",
-        "thumbnail": "./assets/generated-fullbody-huijing-laozhou.png",
+        "fullBody": "./assets/characters/generated-fullbody-huijing-laozhou.png",
+        "thumbnail": "./assets/characters/generated-fullbody-huijing-laozhou.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -4040,8 +4852,8 @@
         "selectedPresetId": ""
       },
       "assets": {
-        "fullBody": "./assets/generated-fullbody-chef-guard.png",
-        "thumbnail": "./assets/generated-fullbody-chef-guard.png",
+        "fullBody": "./assets/characters/generated-fullbody-chef-guard.png",
+        "thumbnail": "./assets/characters/generated-fullbody-chef-guard.png",
         "referenceSheet": "",
         "costume": "",
         "props": "",
@@ -4213,433 +5025,6 @@
         "combatStance": "单手提锅护前",
         "idleAction": "检查火候",
         "attackRhythm": "慢压近身"
-      }
-    },
-    {
-      "id": "44eb5b9b-8d9b-4bdb-bc3a-ba45e95bdc92",
-      "createdAt": "2026-06-01T01:11:47.615Z",
-      "updatedAt": "2026-06-01T07:27:35.430Z",
-      "agentMarks": [
-        {
-          "id": "bee86e30-e895-4e6c-9ca8-ca6c7f042399",
-          "mark": "[GENERATE_IMAGES]",
-          "createdAt": "2026-06-01T01:11:59.996Z"
-        },
-        {
-          "id": "20f157cc-135c-4773-b983-d48d1e358b73",
-          "mark": "[GENERATE_ATTRIBUTES]",
-          "createdAt": "2026-06-01T01:12:00.505Z"
-        },
-        {
-          "id": "8b3580a9-792e-4d4a-9453-1fa506e20fc5",
-          "mark": "[GENERATE_IMAGES]",
-          "createdAt": "2026-06-01T01:39:12.063Z"
-        },
-        {
-          "id": "6ef92218-b970-475b-854a-c45a0fb89b8b",
-          "mark": "[GENERATE_ATTRIBUTES]",
-          "createdAt": "2026-06-01T01:39:14.085Z"
-        },
-        {
-          "id": "3fef8474-19cb-4ef9-b973-cd7160f121c6",
-          "mark": "[GENERATE_IMAGES]",
-          "createdAt": "2026-06-01T01:51:16.089372Z"
-        }
-      ],
-      "activeMarks": {
-        "attributes": true,
-        "images": true
-      },
-      "generationProfile": {
-        "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
-        "notesTemplateSeeded": true,
-        "selectedPresetId": ""
-      },
-      "assets": {
-        "fullBody": "./assets/generated-fullbody-raven-night-escort.png",
-        "thumbnail": "./assets/generated-fullbody-raven-night-escort.png",
-        "referenceSheet": "",
-        "costume": "",
-        "props": "",
-        "expression": ""
-      },
-      "coreIdentity": {
-        "name": "铁脊渡鸦",
-        "codename": "夜班",
-        "alias": "",
-        "faction": "夜运公会",
-        "birthday": "11/03",
-        "age": "32",
-        "height": "188",
-        "weight": "86 KG",
-        "occupation": "地下物流线路护送员",
-        "affiliation": "第七环夜运公会",
-        "species": "鸦翼亚人"
-      },
-      "visualIdentity": {
-        "visualKeywords": "成年男性，鸦翼亚人，修长但结实，黑灰长外套，工业护肩，金属脊柱支架，深色护目镜，夜间物流，沉默护送者，冷硬都市风",
-        "colorLanguage": "黑灰为主色，冷蓝反光作为夜间识别色，少量旧铜色金属扣件，整体低饱和、耐脏、带雨夜反光质感",
-        "faceShape": "瘦长脸，锋利下颌",
-        "expression": "冷淡警觉",
-        "eyes": "细长上挑眼",
-        "eyeColor": "冷蓝灰色",
-        "eyebrow": "细眉压低",
-        "lip": "薄唇，常抿直",
-        "scar": "右颈旧烧伤",
-        "tattoo": "锁骨编号纹身",
-        "hairStyle": "凌乱短发",
-        "hairLength": "短发偏长",
-        "hairColor": "黑色",
-        "highlight": "冷灰发尾",
-        "bodyType": "高挑结实",
-        "muscleLevel": "中高，紧实",
-        "bodyFat": "低",
-        "shoulderWidth": "偏宽不厚重",
-        "skinTone": "冷浅麦色，黑羽痕",
-        "muscleFocus": "背、肩、腿"
-      },
-      "costumeSystem": {
-        "outerwear": "黑灰色长款防雨运输外套",
-        "outerwearColor": "炭黑与暗灰，边缘有冷蓝反光条",
-        "innerwear": "贴身防割高领内衫",
-        "innerwearColor": "深黑色",
-        "pants": "多口袋机能束脚裤",
-        "pantsColor": "深灰黑，膝部旧铜护片",
-        "socks": "压缩防滑长袜",
-        "socksColor": "黑色",
-        "shoes": "轻型磁吸攀爬靴",
-        "shoesColor": "黑色鞋身，蓝灰鞋底灯带",
-        "gloves": "半指防割手套",
-        "glovesColor": "黑色，指节旧铜色",
-        "necklace": "短链身份牌",
-        "necklaceColor": "磨损银灰",
-        "belt": "窄型快拆战术腰带",
-        "beltColor": "黑色，扣件旧铜",
-        "signatureItem": "折叠式信号长杆与密封运输箱",
-        "signatureItemColor": "黑灰箱体，蓝色封条，旧铜锁扣"
-      },
-      "personality": {
-        "corePersonality": "寡言、谨慎、守时、守信",
-        "strengths": "路线记忆强，判断风险快，从不临阵加价",
-        "weaknesses": "过度怀疑别人，习惯独自处理危险",
-        "hiddenPersonality": "其实会默默记住每个客户的生活习惯，避免他们遇到麻烦",
-        "emotionalStability": "高，只有听到背叛契约时会明显变冷",
-        "confidenceLevel": "高，对自己的路线和夜间感知很自信",
-        "outwardPersona": "像只不愿停留的黑鸟，交易完成就消失",
-        "trueCore": "相信混乱城市里唯一能留下来的东西是准时和信用",
-        "surfaceFear": "货物延误",
-        "deepFear": "自己再次相信错误的人，导致整条线路被出卖",
-        "traumaTrigger": "假路标、被篡改的通行码、无人接听的联络频段",
-        "stressResponse": "立刻切断多余对话，只用手势和短句指挥撤离",
-        "trauma": "曾被搭档出卖，整支夜运小队在假安全屋遭到围捕",
-        "traumaSource": "一次高价护送任务中的内部泄密",
-        "recoveryStatus": "仍在恢复，对新同伴设置很长观察期",
-        "traumaImpact": "所有路线都会准备三套撤离方案和两套假目标"
-      },
-      "lifestyle": {
-        "favoriteFood": "深夜热汤面",
-        "hatedFood": "黏手的甜食",
-        "hiddenFavorite": "便宜便利店布丁",
-        "appetite": "中等，任务前只吃七分饱",
-        "alcoholTolerance": "低，几乎不喝酒",
-        "cookingSkill": "只会煮面和热罐头",
-        "roomStyle": "临时安全屋风格，床铺、地图、备用电源都能随时撤走",
-        "neatness": "极高，东西按撤离优先级摆放",
-        "collections": "旧线路牌、过期通行证、不同城区的雨水样本瓶",
-        "pets": "没有固定宠物，但会喂天台上的流浪鸟"
-      },
-      "socialSystem": {
-        "socialAbility": "中等偏低，不主动建立关系",
-        "lyingAbility": "高，能自然伪装成路人或送货员",
-        "boundarySense": "很强，交易和私生活分得清楚",
-        "popularity": "在地下委托圈信用很高，但朋友很少",
-        "romanceExperience": "有过一次失败关系，之后刻意保持距离",
-        "preferredType": "守信、聪明、不会追问过去的人",
-        "expressionStyle": "用提前准备和准时出现表达在意",
-        "possessiveness": "低，但保护欲隐蔽而持续"
-      },
-      "combatSystem": {
-        "combatType": "高速护送与撤离控制型",
-        "coreStyle": "利用地形、高低差和短时眩光制造撤离窗口",
-        "weaponPreference": "折叠信号长杆、烟雾钉、轻型电击装置",
-        "specialAbility": "短距离滑翔与夜视感知，能在雨夜识别微弱反光",
-        "painTolerance": "中高",
-        "aggression": "中等，不恋战",
-        "stamina": "高",
-        "burstPower": "中高，爆发集中在移动速度",
-        "pressure": "中等，更多来自难以捕捉的移动节奏",
-        "reactionSpeed": "极高"
-      },
-      "worldSetting": {
-        "origin": "第七环高架贫民区",
-        "socialClass": "边缘城区自由职业者",
-        "education": "非正规线路训练，熟悉城市管网和旧交通系统",
-        "criminalRecord": "有多次非法越区记录，但没有公开身份档案",
-        "organizationRank": "夜运公会独立护送员",
-        "enemyForces": "黑箱物流公司、假安全屋中介、旧搭档所属团伙",
-        "biggestRegret": "没有在第一次异常联络时取消任务",
-        "biggestGoal": "重建一条不受公司控制的安全夜运线路",
-        "hiddenDream": "有一天能白天正常走在街上，不再计算逃生路线",
-        "mostImportantPerson": "失踪的前队友，也是他仍在寻找的人",
-        "unforgettableExperience": "在暴雨夜背着密封箱从三座高架之间滑翔，身后整条街区断电，只剩反光路标指路",
-        "lifeStain": "曾为了完成委托放弃救下一个不在合同里的目标"
-      },
-      "hiddenInformation": {
-        "shameSecret": "他会收藏别人写给夜运员的感谢便签",
-        "hiddenHobby": "给旧地图做手写注释和天气记录",
-        "weakness": "听到儿童求救会打破自己的任务规则",
-        "secretHabit": "每次出发前把路线编号默念三遍",
-        "contrastSide": "私下很喜欢看夸张的深夜购物节目",
-        "foodAllergy": "对廉价能量饮料中的某种添加剂过敏"
-      },
-      "numericalAttributes": {
-        "wealth": 38,
-        "morality": 61,
-        "sanity": 73,
-        "confidence": 78,
-        "stress": 52,
-        "danger": 74,
-        "desire": 41,
-        "loyalty": 67,
-        "stability": 70,
-        "social": 35,
-        "doom": 46,
-        "violence": 49
-      },
-      "metaDesign": {
-        "characterHook": "一名从不迟到的地下夜运护送员，背负着小队被出卖的旧账，在每个雨夜把危险货物和危险的人送到该去的地方。",
-        "characterConsistencyPrompt": "始终保持成年男性鸦翼亚人、黑灰长外套、冷蓝反光条、金属脊柱支架、护目镜、密封运输箱、夜间物流气质。",
-        "characterImagePrompt": "全身立绘，透明背景，成熟硬派动画风，鸦翼亚人夜运护送员，黑灰防雨长外套，冷蓝反光条，金属脊柱支架，手持折叠信号长杆。",
-        "referenceSheetPrompt": "正面、侧面、背面三视图，展示鸦翼、长外套、金属脊柱支架、运输箱、护目镜和反光条细节。",
-        "propsPrompt": "密封运输箱、折叠式信号长杆、腕部终端、烟雾钉、旧通行证。",
-        "costumePrompt": "黑灰防雨长外套、高领防割内衫、多口袋束脚裤、磁吸攀爬靴、半指手套、短链身份牌。"
-      },
-      "behaviorSystem": {
-        "thinkingAction": "用指尖轻敲金属身份牌，按节奏回忆路线",
-        "irritatedAction": "翅羽会轻微炸开，语气变得非常平",
-        "nervousAction": "反复确认腕部终端的时间偏差",
-        "relaxedAction": "靠在高处栏杆边整理羽毛",
-        "lyingAction": "会提前结束句子，不给对方追问机会",
-        "shyAction": "把护目镜往下压，假装检查设备",
-        "speechSpeed": "偏快但清晰",
-        "speechTone": "冷静、低声、像报站提示",
-        "catchphrase": "时间到了，走。",
-        "battleLine": "别看我，看出口。",
-        "walkStyle": "脚步轻，贴墙走，随时能转向高处",
-        "combatStance": "侧身压低重心，一手护箱，一手握信号长杆",
-        "idleAction": "站在视野最高的位置观察街口反光",
-        "attackRhythm": "先闪避诱导，再短距离突刺，最后撤离"
-      }
-    },
-    {
-      "id": "66ed055a-8686-45da-bda1-327c31996ec4",
-      "createdAt": "2026-05-31T16:17:19.041Z",
-      "updatedAt": "2026-06-01T01:10:26.193858Z",
-      "agentMarks": [
-        {
-          "id": "74d789f8-e44d-4875-b14d-bdb82f91f31d",
-          "mark": "[GENERATE_IMAGES]",
-          "createdAt": "2026-05-31T16:17:22.672Z"
-        },
-        {
-          "id": "39fbded9-7d75-48e1-976f-8812edc469a0",
-          "mark": "[GENERATE_ATTRIBUTES]",
-          "createdAt": "2026-05-31T16:17:24.075Z"
-        },
-        {
-          "id": "6f0cbad7-803b-4f07-9993-b21dc77c6617",
-          "mark": "[GENERATE_IMAGES]",
-          "createdAt": "2026-05-31T16:28:32.524Z"
-        },
-        {
-          "id": "8a060037-e927-4b8d-a474-2cf8dc5f75c7",
-          "mark": "[GENERATE_IMAGES]",
-          "createdAt": "2026-06-01T00:40:48.566Z"
-        }
-      ],
-      "activeMarks": {
-        "attributes": true,
-        "images": true
-      },
-      "generationProfile": {
-        "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
-        "notesTemplateSeeded": true,
-        "selectedPresetId": ""
-      },
-      "assets": {
-        "fullBody": "./assets/generated-fullbody-bear-security.png",
-        "thumbnail": "./assets/generated-fullbody-bear-security.png",
-        "referenceSheet": "",
-        "costume": "",
-        "props": "",
-        "expression": ""
-      },
-      "coreIdentity": {
-        "name": "高能量放电",
-        "codename": "黑铁",
-        "alias": "老熊",
-        "faction": "重装安保队",
-        "birthday": "06/21",
-        "age": "35",
-        "height": "185",
-        "weight": "90 KG",
-        "occupation": "野外矿区重装安保队长",
-        "affiliation": "飞天面条安保承包部",
-        "species": "熊型兽人"
-      },
-      "visualIdentity": {
-        "visualKeywords": "成年熊型兽人，高大壮硕，宽肩厚胸，白色重装安保外套，黑色战术内搭，橙色工业构件，巨型冲击锤，硬派城市安保气质",
-        "colorLanguage": "冷色工业底色，白色防护服为主，黑色内搭压低重心，橙色金属构件作为视觉警示色，局部金色项链增加记忆点",
-        "faceShape": "宽厚熊型脸，下颌结实",
-        "expression": "冷静严肃，略带疲惫",
-        "eyes": "小而锐利的深眼",
-        "eyeColor": "深棕色",
-        "eyebrow": "厚重眉骨，短粗眉",
-        "lip": "紧闭嘴型，犬齿隐约可见",
-        "scar": "左眼下方旧划痕，手背擦伤",
-        "tattoo": "无明显纹身，胸口保留旧安保队标记",
-        "hairStyle": "厚重棕色熊毛",
-        "hairLength": "中等偏短",
-        "hairColor": "深棕",
-        "highlight": "浅棕毛尖",
-        "bodyType": "高大厚重的力量型",
-        "muscleLevel": "极高，以功能性肌肉为主",
-        "bodyFat": "厚实耐打",
-        "shoulderWidth": "极宽",
-        "skinTone": "棕色毛发与暖色皮质",
-        "muscleFocus": "胸、肩、手臂、背部"
-      },
-      "costumeSystem": {
-        "outerwear": "重装白色安保外套",
-        "outerwearColor": "白色主体，灰色阴影，局部黑色贴片",
-        "innerwear": "黑色紧身战术背心",
-        "innerwearColor": "碳黑色，胸前暗金图形",
-        "pants": "白色宽松工装裤",
-        "pantsColor": "白色主体，灰色折痕阴影",
-        "shoes": "露爪的重型防护靴",
-        "shoesColor": "深灰与棕色皮革",
-        "gloves": "黑色战术手套",
-        "glovesColor": "黑色为主，橙色小构件",
-        "necklace": "粗金属链条项链",
-        "necklaceColor": "暗金色",
-        "belt": "宽面工装腰带与工具包",
-        "beltColor": "黑色、深灰、红色标签",
-        "signatureItem": "巨型工业冲击锤",
-        "signatureItemColor": "银灰金属，橙色框架，黑色警示纹",
-        "socks": "黑色厚袜或内层防护袜",
-        "socksColor": "黑色"
-      },
-      "personality": {
-        "corePersonality": "沉稳、护短、寡言、责任感强",
-        "strengths": "可靠，临危不乱，对队友极其照顾",
-        "weaknesses": "不善表达情绪，容易把责任全部揽到自己身上",
-        "hiddenPersonality": "其实很会照顾小动物，对旧物有强烈留恋",
-        "emotionalStability": "高，但触及矿难事故时会瞬间压抑",
-        "confidenceLevel": "中高，更信任经验而非口头承诺",
-        "outwardPersona": "看起来像冷面打手，说话少，压迫感强",
-        "trueCore": "把保护他人当成自己的赎罪方式",
-        "surfaceFear": "任务失控",
-        "deepFear": "再次因为自己判断错误而失去需要保护的人",
-        "traumaTrigger": "密闭矿道、警报声、塔塞的呼救频道",
-        "stressResponse": "立刻进入指挥模式，声音变低，命令极短",
-        "trauma": "曾在矿区塌方中下达过错误撤离指令",
-        "traumaSource": "旧雇主隐瞒危险数据，但他仍然认为自己没有看出异常",
-        "recoveryStatus": "表面已经恢复，实际仍在重复做灾难复盘",
-        "traumaImpact": "对安全流程有近乎偏执的坚持"
-      },
-      "lifestyle": {
-        "favoriteFood": "烤肉和黑胡椒土豆",
-        "hatedFood": "过甜的奶油点心",
-        "hiddenFavorite": "热蜂蜜牛奶",
-        "appetite": "很大，但会先确认队友吃到",
-        "alcoholTolerance": "高，喝醉后变得比平时更安静",
-        "cookingSkill": "野外点火和大锅炖菜很熟练",
-        "roomStyle": "工具架、防护装备和旧照片收纳得很整齐",
-        "neatness": "高，但衣柜里有堆放的旧队章",
-        "collections": "废旧警示牌、旧通行证、损坏的锤头零件",
-        "pets": "曾收留过一只矿区流浪狗"
-      },
-      "socialSystem": {
-        "socialAbility": "中等，不主动热场，但能让人安心",
-        "lyingAbility": "弱，很容易被熟人看出来",
-        "boundarySense": "强，尊重他人不想说的事",
-        "popularity": "在工人和保安圈里很有信用",
-        "romanceExperience": "很少，更多把时间给了工作",
-        "preferredType": "说话直接、能理解责任感的人",
-        "expressionStyle": "行动型，会默默处理对方的麻烦",
-        "possessiveness": "中等，更像保护欲而非控制欲"
-      },
-      "combatSystem": {
-        "combatType": "重装前排防卫型",
-        "coreStyle": "以防线推进和重锤压制制造安全空间",
-        "weaponPreference": "巨型工业冲击锤、防爆护具",
-        "specialAbility": "短时间爆发式电磁冲击，能震开金属门或装甲",
-        "pressure": "极强，站在前方就像一面移动的墙",
-        "stamina": "极高",
-        "painTolerance": "极高",
-        "aggression": "中高，只在必要时主动压上",
-        "burstPower": "高，但爆发后需要短暂回气",
-        "reactionSpeed": "中上，主要靠预判弥补体型迟缓"
-      },
-      "worldSetting": {
-        "origin": "北部旧工业矿区",
-        "socialClass": "工人阶层出身",
-        "education": "职业安保训练与矿区应急救援证书",
-        "criminalRecord": "无正式犯罪记录，但曾因暴力阻止非法强拆被警告",
-        "organizationRank": "重装班组队长",
-        "enemyForces": "旧矿业雇主雇佣、走私机械团伙",
-        "biggestRegret": "没能在塌方前强行停工",
-        "biggestGoal": "建立一支不会被资本命令左右的独立救援安保队",
-        "hiddenDream": "退休后开一家深夜烤肉小店",
-        "mostImportantPerson": "曾经的副队长，也是矿难中没能救回来的人",
-        "unforgettableExperience": "矿难后背着三名工人穿过烟尘和裂缝，直到天亮才发现自己的手一直在抖",
-        "lifeStain": "曾经签字接受过一份不透明的安全评估报告"
-      },
-      "hiddenInformation": {
-        "shameSecret": "他会私下看手工布偶修复教程",
-        "hiddenHobby": "收集旧工业标识并重新上色",
-        "weakness": "对孩子和新手工人几乎没有拒绝能力",
-        "secretHabit": "出任务前会按顺序摸三次队章、通讯器、锤柄",
-        "contrastSide": "在熟人面前会很认真地给甜点评分",
-        "foodAllergy": "对某些人工香精会轻微打喷嚏"
-      },
-      "numericalAttributes": {
-        "wealth": 42,
-        "morality": 72,
-        "sanity": 64,
-        "confidence": 68,
-        "stress": 58,
-        "danger": 81,
-        "desire": 37,
-        "loyalty": 90,
-        "stability": 76,
-        "social": 46,
-        "doom": 28,
-        "violence": 63
-      },
-      "metaDesign": {
-        "characterHook": "曾经负责矿区事故撤离的重装安保队长，如今把每一次委托都当作“必须有人活着回去”的任务。",
-        "characterConsistencyPrompt": "始终保持成年熊兽人、宽肩壮硕、白色重装安保外套、黑色内搭、橙色工业结构、巨型冲击锤。",
-        "characterImagePrompt": "全身立绘，透明背景，成熟硬派动画风，重装工业安保熊兽人，巨型工业冲击锤扛在肩上。",
-        "referenceSheetPrompt": "正面、侧面、背面三视图，清晰展示白色安保外套、战术腰带、巨锤结构和队徽细节。",
-        "propsPrompt": "巨型工业冲击锤，金属灰多面锤头，橙色防护框架，黑色橡胶握把，黄色警示角。",
-        "costumePrompt": "白色重装安保外套、黑色战术背心、白色工装裤、黑色工靴、粗金链、多工具腰包。"
-      },
-      "behaviorSystem": {
-        "thinkingAction": "用大拇指摩擦锤柄上的旧划痕",
-        "irritatedAction": "下颚绷紧，指节敲击护甲",
-        "nervousAction": "反复检查通讯频道",
-        "relaxedAction": "坐下后把锤子靠在肩边，慢慢喝热茶",
-        "lyingAction": "视线会短暂移到左下方",
-        "shyAction": "装作没听见，但耳朵会明显动一下",
-        "speechSpeed": "偏慢，字数很少",
-        "speechTone": "低沉、稳、不容质疑",
-        "catchphrase": "别掉队。",
-        "battleLine": "我挡前面，你们撤。",
-        "walkStyle": "步幅大，重心稳，像推着阵地前进",
-        "combatStance": "单手扛锤，另一只手护在队友侧前方",
-        "idleAction": "定期扫视周围出口和掩体",
-        "attackRhythm": "慢起手、重压制、短爆发"
       }
     }
   ]

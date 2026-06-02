@@ -4,6 +4,8 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const dataPath = path.join(root, "data", "characters.json");
 const assetsDir = path.join(root, "assets");
+const characterAssetsDir = path.join(assetsDir, "characters");
+const generatedSourceDir = path.join(assetsDir, "generated-sources");
 const tmpDir = path.join(root, "tmp");
 const referenceOut = path.join(assetsDir, "current-style-reference.png");
 const requestJsonOut = path.join(tmpDir, "image-generation-request.json");
@@ -51,7 +53,23 @@ function getFinalPrompt(character) {
   return { en, cn, primary: en || cn };
 }
 
+function getExplicitChromaKey(prompt) {
+  const text = `${prompt.en}\n${prompt.cn}`;
+  const matches = [...text.matchAll(/#(?:[0-9a-fA-F]{6})\b/g)].map((match) => match[0].toLowerCase());
+  const explicitKey = matches.find((color) => color === "#00ff00" || color === "#ff00ff");
+  if (!explicitKey) return null;
+
+  return {
+    color: explicitKey,
+    name: explicitKey === "#00ff00" ? "green" : "magenta",
+    reason: "The final image prompt explicitly specifies this chroma-key color, so it overrides automatic color inference.",
+  };
+}
+
 function inferChromaKey(prompt) {
+  const explicit = getExplicitChromaKey(prompt);
+  if (explicit) return explicit;
+
   const rawText = `${prompt.en}\n${prompt.cn}`.toLowerCase();
   const text = rawText
     .split(/[\n.!?。！？]/)
@@ -132,8 +150,8 @@ function main() {
       ],
     },
     outputSuggestion: {
-      sourcePng: path.join(assetsDir, `generated-fullbody-${character.id.slice(0, 8)}-source.png`),
-      transparentPng: path.join(assetsDir, `generated-fullbody-${character.id.slice(0, 8)}.png`),
+      sourcePng: path.join(generatedSourceDir, `generated-fullbody-${character.id.slice(0, 8)}-source.png`),
+      transparentPng: path.join(characterAssetsDir, `generated-fullbody-${character.id.slice(0, 8)}.png`),
     },
     chromaKey,
   };

@@ -13,6 +13,24 @@ Generate in this order:
 
 The image generation step must not directly read every profile field. The completed profile is used to write `metaDesign.characterImagePrompt` and `metaDesign.characterImagePromptCn`. After that, those final prompt fields become the single source of truth for the image.
 
+## Completion Rule
+
+If a request creates or updates a character and leaves `activeMarks.images` set to
+`true`, the task is not complete at the attribute/profile stage. Continue into
+`IMAGE_GENERATION_WORKFLOW.md` in the same turn whenever image generation tools are
+available:
+
+1. run the completeness gate for that character
+2. prepare the image-generation package for that character
+3. generate the chroma-key source image
+4. remove the chroma-key background
+5. verify transparency
+6. write the transparent image back to `assets.fullBody` and `assets.thumbnail`
+
+Only stop after attributes are filled when `activeMarks.images` is false, the user
+explicitly asks not to generate, or image generation is blocked by a missing tool,
+missing style reference, failed validation, or another concrete error.
+
 ## Attribute Phase
 
 Fill every visible profile module for the current character:

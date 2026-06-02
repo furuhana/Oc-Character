@@ -3,6 +3,15 @@ const path = require("path");
 
 const root = path.resolve(__dirname, "..");
 const dataPath = path.join(root, "data", "characters.json");
+const characterAssetsDir = path.join(root, "assets", "characters");
+const generatedSourceDir = path.join(root, "assets", "generated-sources");
+
+function deleteGeneratedSource(characterId) {
+  const sourcePath = path.join(generatedSourceDir, `generated-fullbody-${characterId.slice(0, 8)}-source.png`);
+  if (!fs.existsSync(sourcePath)) return null;
+  fs.unlinkSync(sourcePath);
+  return `./${path.relative(root, sourcePath).replace(/\\/g, "/")}`;
+}
 
 function main() {
   const [characterId, imagePathArg] = process.argv.slice(2);
@@ -19,7 +28,13 @@ function main() {
   const character = data.characters.find((item) => item.id === characterId);
   if (!character) throw new Error(`Character not found: ${characterId}`);
 
-  const relativeImagePath = `./${path.relative(root, absoluteImagePath).replace(/\\/g, "/")}`;
+  fs.mkdirSync(characterAssetsDir, { recursive: true });
+  const finalImagePath = path.join(characterAssetsDir, `generated-fullbody-${character.id.slice(0, 8)}.png`);
+  if (path.resolve(finalImagePath) !== absoluteImagePath) {
+    fs.copyFileSync(absoluteImagePath, finalImagePath);
+  }
+
+  const relativeImagePath = `./${path.relative(root, finalImagePath).replace(/\\/g, "/")}`;
   character.assets = character.assets || {};
   character.assets.fullBody = relativeImagePath;
   character.assets.thumbnail = relativeImagePath;
@@ -30,6 +45,8 @@ function main() {
 
   fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
   console.log(`Updated ${characterId}: ${relativeImagePath}`);
+  const deletedSource = deleteGeneratedSource(character.id);
+  if (deletedSource) console.log(`Deleted temporary source: ${deletedSource}`);
 }
 
 main();

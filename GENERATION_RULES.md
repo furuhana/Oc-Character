@@ -21,6 +21,11 @@ Image generation must use the final prompt tab as its source of truth. The image
   - `attributes: true` means fill profile fields.
   - `images: true` means generate or update image assets.
   - If `images` is false, do not change image assets.
+- Completion rule: when `images: true` after profile fields and final prompts are
+  filled, continue into `IMAGE_GENERATION_WORKFLOW.md` immediately. Do not treat
+  creating the character, filling attributes, or toggling the image mark as a
+  stopping point unless the user explicitly asks not to generate or a concrete
+  blocker prevents image generation.
 - Keep ordinary form fields concise. Prefer keyword-like values over prose.
 - Use longer sentences only in textarea fields, prompts, notes, hooks, history, trauma, or other one-row narrative fields.
 - If a field needs a sentence, make the UI field span one full row.

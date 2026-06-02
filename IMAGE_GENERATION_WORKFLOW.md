@@ -101,18 +101,21 @@ Do not append:
    - If the character contains magenta, pink, rose, fuchsia, or violet elements, use green instead.
    - The chosen key color must not appear in the character, props, glow, reflections, semi-transparent materials, or aura.
 
-4. Copy the generated chroma-key PNG into `assets`.
+4. Copy the generated chroma-key PNG into `assets/generated-sources`.
+
+   This is a temporary file only. It should be deleted after the transparent PNG
+   is verified and written back to the character.
 
    Use a source name like:
 
    ```text
-   assets/generated-fullbody-<characterIdPrefix>-source.png
+   assets/generated-sources/generated-fullbody-<characterIdPrefix>-source.png
    ```
 
 5. Remove the chroma-key background.
 
    ```powershell
-   python C:\Users\m\.codex\skills\.system\imagegen\scripts\remove_chroma_key.py --input assets\generated-fullbody-<characterIdPrefix>-source.png --out assets\generated-fullbody-<characterIdPrefix>.png --auto-key border --soft-matte --transparent-threshold 12 --opaque-threshold 220 --despill
+   python C:\Users\m\.codex\skills\.system\imagegen\scripts\remove_chroma_key.py --input assets\generated-sources\generated-fullbody-<characterIdPrefix>-source.png --out assets\characters\generated-fullbody-<characterIdPrefix>.png --auto-key border --soft-matte --transparent-threshold 12 --opaque-threshold 220 --despill
    ```
 
 6. Verify transparency.
@@ -122,8 +125,11 @@ Do not append:
 7. Write the final transparent PNG back to the character.
 
    ```powershell
-   node scripts/apply-generated-image.js <characterId> assets\generated-fullbody-<characterIdPrefix>.png
+   node scripts/apply-generated-image.js <characterId> assets\characters\generated-fullbody-<characterIdPrefix>.png
    ```
+
+   This script also deletes the matching temporary chroma-key source file from
+   `assets/generated-sources`.
 
 8. Verify the app data endpoint.
 
