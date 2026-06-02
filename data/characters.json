@@ -1,6 +1,6 @@
 {
   "app": "OC Character Bible Workbench",
-  "savedAt": "2026-06-02T13:40:07.790Z",
+  "savedAt": "2026-06-02T15:40:33.241Z",
   "settings": {
     "starterPrompt": "正向提示：\n重点方向：都市为主，奇幻为辅\n壮壮的、肉肉的、肌肉多多的成年男性\n厚实大体格，宽肩厚胸，大手臂，圆润但有力量\n生成服装前先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭\n白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣\n现实职业或社会角色作为基底\n一个清晰的核心设计：招牌装备、异能、魔法道具或隐藏身份\n现代服装与轻量奇幻细节结合，服装必须好看而不只是实用\n用数值、世界阵营、战斗方式、身体轮廓和反重复交换来决定服装\n京都动画式清爽线条\n干净赛璐璐阴影，阴影概括明确\n整体干净、无灰尘、主动降噪\n颜色清透，角色轮廓易读\n\n默认禁止：\n少女\n萝莉\n萌系\n偶像风、女性化男性\n瘦弱体型\n修长纤细男主\n写实肌肉渲染\n照片感\n湿身效果\n写实布料纹理、写实材质反光、时装摄影语言\n油亮皮革、湿身材质、拟真塑料或乳胶感\n工业风作为主设计\n大量灰尘、油污、铁锈、脏污质感\n废土、煤灰、混浊阴影\n特效喧宾夺主",
     "styleReference": {
@@ -67,6 +67,831 @@
   },
   "characters": [
     {
+      "id": "e4a23ad2-8580-4d8c-99d7-40f2ce8b4b63",
+      "createdAt": "2026-06-02T15:21:25.016Z",
+      "updatedAt": "2026-06-02T15:26:41.098Z",
+      "agentMarks": [
+        {
+          "id": "824cbb77-7ac4-4fcf-954f-947f15584d9c",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T15:21:25.016Z"
+        },
+        {
+          "id": "8e682506-4484-458d-8201-b5f694a2a4f1",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-02T15:21:25.016Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-e4a23ad2.png",
+        "thumbnail": "./assets/characters/generated-fullbody-e4a23ad2.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "岳沉砺",
+        "codename": "压桩",
+        "alias": "",
+        "faction": "城基沉降监察处",
+        "birthday": "02/19",
+        "age": "41",
+        "height": "196",
+        "weight": "128 KG",
+        "occupation": "地基封桩监察员",
+        "affiliation": "西城区沉降监察一队",
+        "species": "人类",
+        "heritage": "华裔山城血统"
+      },
+      "visualIdentity": {
+        "visualKeywords": "极宽肩、厚胸、大臂、巨型壮实成年男性、超紧白色短袖T恤、无外套、封桩工具、城市地基监察",
+        "colorLanguage": "干净白、深炭灰、岩蓝灰、旧钢银、少量橙黄警戒刻度",
+        "facialHair": "下巴有短硬胡茬",
+        "faceShape": "宽厚方脸，下颌像石块一样重",
+        "expression": "沉默严肃，但不凶",
+        "eyes": "狭长深眼窝，目光稳",
+        "eyeColor": "深岩灰",
+        "eyebrow": "浓粗直眉，眉压低",
+        "lip": "厚度适中，嘴角平",
+        "scar": "鼻梁侧有一道短浅旧疤",
+        "tattoo": "左肩到上臂有黑色封桩编号纹身，被紧身袖口压住一部分",
+        "hairStyle": "极短寸头，发际线干净",
+        "hairLength": "寸头",
+        "hairColor": "黑色",
+        "highlight": "无明显挑染，仅有冷灰高光",
+        "bodyType": "巨型厚实体格，胸肩背非常宽，力量型壮汉",
+        "muscleLevel": "极高，胸肌、三角肌、肱二头肌和前臂非常明显",
+        "bodyFat": "中低，厚重有肉但肌肉轮廓清楚",
+        "shoulderWidth": "极宽，明显超过普通人体比例但仍自然",
+        "skinTone": "深暖麦色",
+        "muscleFocus": "胸口、肩膀、大臂、前臂、背阔肌和大腿"
+      },
+      "costumeSystem": {
+        "outerwear": "不穿外套，外套完全脱掉；上半身只保留紧身白色短袖T恤作为主体",
+        "outerwearColor": "无外套颜色；整体视觉重点落在白色紧身T恤和深色工装下装",
+        "innerwear": "非常紧的白色短袖T恤，贴住胸肌、肩膀和大臂，袖口被三角肌和肱二头肌撑紧，扎进高腰工装裤",
+        "innerwearColor": "干净白，阴影用浅冷灰强调拉伸和胸肩体积",
+        "pants": "高腰重型监察工装裤，宽腿直筒，膝侧有加固袋和短桩套",
+        "pantsColor": "岩蓝灰与深炭灰拼接，局部橙黄警戒线",
+        "socks": "厚工装短袜",
+        "socksColor": "炭灰",
+        "shoes": "重型防滑监察靴，鞋头宽厚但造型简洁",
+        "shoesColor": "黑炭色，鞋底深灰",
+        "gloves": "双手半指厚工装手套，露出粗壮手指",
+        "glovesColor": "深炭灰，掌心旧钢银护片",
+        "necklace": "短绳挂一枚旧钢封桩牌",
+        "necklaceColor": "旧钢银",
+        "belt": "宽工具腰带与斜挂短桩套，挂测压锤和折叠标尺",
+        "beltColor": "深炭灰布带，旧钢银扣件",
+        "signatureItem": "短柄测压锤和封桩刻度尺",
+        "signatureItemColor": "旧钢银、岩蓝灰、少量橙黄刻度"
+      },
+      "personality": {
+        "corePersonality": "寡言稳重，责任感重",
+        "strengths": "能承受高压现场并稳定判断结构风险",
+        "weaknesses": "太不爱解释自己的担心",
+        "hiddenPersonality": "其实很会照顾后辈",
+        "emotionalStability": "很高",
+        "confidenceLevel": "沉默自信",
+        "outwardPersona": "像一座不会移动的地基桩",
+        "trueCore": "相信城市能站稳，是因为有人愿意站在最重的位置",
+        "surfaceFear": "监察仪突然出现连锁红线",
+        "deepFear": "整片街区在自己判断错误后下沉",
+        "traumaTrigger": "地面空鼓的低频回声",
+        "stressResponse": "立刻压低声音，让所有人撤到安全线外",
+        "trauma": "旧楼沉降误判事故",
+        "traumaSource": "一次被忽略的小裂缝报告",
+        "recoveryStatus": "能继续工作，但永远会复查裂缝",
+        "traumaImpact": "极度重视细小结构信号"
+      },
+      "lifestyle": {
+        "favoriteFood": "大碗牛肉面",
+        "hatedFood": "太软的甜糕",
+        "hiddenFavorite": "温热豆浆",
+        "appetite": "非常大",
+        "alcoholTolerance": "高",
+        "cookingSkill": "会做大量简单扎实的饭",
+        "roomStyle": "结构图、工具箱、干净床铺和很重的训练器材",
+        "neatness": "工具区极整齐，衣物简单堆放",
+        "collections": "旧封桩牌和废弃测压头",
+        "pets": "没有宠物，但常给邻居搬重物"
+      },
+      "socialSystem": {
+        "socialAbility": "话少但让人安心",
+        "lyingAbility": "很差",
+        "boundarySense": "强，保护性很高",
+        "popularity": "同事和居民都很信赖",
+        "romanceExperience": "有过一段长期但沉默的关系",
+        "preferredType": "能直接表达需求、情绪稳定的人",
+        "expressionStyle": "帮忙、挡在前面、把事情做完",
+        "possessiveness": "中低，偏保护而非控制"
+      },
+      "combatSystem": {
+        "combatType": "重心压制与防线守护",
+        "coreStyle": "扎地、截停、推回、保护撤离线",
+        "weaponPreference": "短柄测压锤与封桩刻度尺",
+        "specialAbility": "用封桩牌短暂加固脚下地面，形成沉重的安全压线",
+        "painTolerance": "很高",
+        "aggression": "中低，守线优先",
+        "stamina": "极高",
+        "burstPower": "高",
+        "pressure": "非常强，沉默压迫感",
+        "reactionSpeed": "中高"
+      },
+      "worldSetting": {
+        "origin": "西城区旧楼群",
+        "socialClass": "基层工程家庭",
+        "education": "市政结构监察学院",
+        "criminalRecord": "无",
+        "organizationRank": "沉降监察一队主监察员",
+        "enemyForces": "违规加建承包商联盟",
+        "biggestRegret": "没有坚持封锁一栋旧楼",
+        "biggestGoal": "建立全城地基预警网",
+        "hiddenDream": "开一间只卖大碗饭的小店",
+        "mostImportantPerson": "事故后幸存的楼管老人",
+        "unforgettableExperience": "徒手撑住临时支架直到居民撤离",
+        "lifeStain": "曾为了不引起恐慌压下过风险通报"
+      },
+      "hiddenInformation": {
+        "shameSecret": "怕别人夸他身材",
+        "hiddenHobby": "夜里看老建筑修复纪录片",
+        "weakness": "对老人和孩子特别心软",
+        "secretHabit": "每次巡检后都会摸一下地面确认回声",
+        "contrastSide": "外表像硬石头，其实会认真记住每个人的门牌",
+        "foodAllergy": "无明显过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 40,
+        "morality": 83,
+        "sanity": 72,
+        "confidence": 78,
+        "stress": 57,
+        "danger": 68,
+        "desire": 44,
+        "loyalty": 88,
+        "stability": 84,
+        "social": 50,
+        "doom": 29,
+        "violence": 39
+      },
+      "metaDesign": {
+        "characterHook": "一个能用封桩牌短暂加固脚下地面的地基监察员，像活着的承重柱一样守住城市裂缝前线。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body clean anime-style character illustration of Yue Chenli, a 41-year-old foundation sealing inspector from a modern city subsidence bureau. He is an even larger, thicker, more muscular adult male than the reference: huge sturdy build, extremely broad shoulders, massive heavy chest, very large upper arms and forearms, thick back, powerful thighs, warm deep wheat skin, a heavy square face, narrow deep rock-gray eyes, a calm stern expression, a short scar beside the bridge of his nose, very short black buzz-cut hair, and short stiff stubble. Outfit focus: NO OUTERWEAR at all, the jacket is completely removed. His upper body wears only a very tight clean white short-sleeve T-shirt tucked into high-waist work trousers. The white T-shirt must cling tightly to his chest, shoulders, upper arms, and torso; the sleeves are visibly stretched by his deltoids and biceps, emphasizing extreme muscular bulk without being glossy or wet. Lower body: high-waist heavy rock-blue-gray inspection work trousers with wide straight legs, reinforced knee-side pockets and a short stake sleeve; heavy black-charcoal anti-slip work boots; thick half-finger work gloves on both hands; a short cord necklace with an old steel foundation-stake tag; a wide tool belt carrying a pressure hammer and folding ruler. Props: a short-handled pressure hammer and a foundation-stake measuring ruler, clearly readable as city foundation inspection tools. Fantasy anchor: only a few restrained orange-yellow low-glow calibration marks on the stake tag, belt ruler, and tool edges, compact and tidy, not a strong aura. Material language: clean anime color blocks, simple cel-shaded folds, simplified old steel accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: clean anime game character concept art, crisp outline, simple cel shading, strong readable silhouette, cutout-ready asset. Composition: single standing character, centered, full body visible from head to boots, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no jacket, no coat, no vest, no outerwear on upper body, no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no unrelated objects as the main subject, no watermark. Do not use #00ff00 anywhere on the character.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：岳沉砺，41岁男性，地基封桩监察员。巨型厚实体格，极宽肩、厚胸、粗壮大臂和前臂，深暖麦色皮肤，宽厚方脸，深岩灰狭长眼，鼻梁侧短疤，黑色寸头，短硬胡茬。服装重点：完全不穿外套，外套已经脱掉；上半身只穿非常紧的白色短袖T恤，T恤贴住胸肌、肩膀和大臂，袖口被三角肌和肱二头肌撑紧，下摆扎进高腰岩蓝灰重型工装裤。下装为高腰宽腿监察工装裤，膝侧加固袋和短桩套，黑炭重型防滑靴，双手半指厚工装手套，短绳旧钢封桩牌，宽工具腰带挂测压锤和折叠标尺。手持短柄测压锤和封桩刻度尺。幻想锚点只在封桩牌、腰带刻度和工具边缘有少量橙黄低光，不能强发光。材质为干净动画色块、概括褶皱、简化金属点缀，不要写实布料纹理、油亮皮革、湿身材质或摄影质感。干净动画游戏立绘，清晰线条，简单赛璐璐上色，单人全身，从头到脚完整可见，留出边距。背景必须是纯 #00ff00 平面绿幕，不能有渐变、纹理、地面、影子、文字或其他角色。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指按住封桩牌边缘",
+        "irritatedAction": "把测压锤轻轻敲在掌心",
+        "nervousAction": "拉紧腰带上的短桩套",
+        "relaxedAction": "靠墙站着闭目听地面声音",
+        "lyingAction": "会把视线移到地面裂缝",
+        "shyAction": "低头扯平被撑紧的T恤下摆",
+        "speechSpeed": "很慢，每句都短",
+        "speechTone": "低沉厚重，像压着回声",
+        "catchphrase": "站稳了再说。",
+        "battleLine": "线外，别进来。",
+        "walkStyle": "步子很重，重心极稳",
+        "combatStance": "双脚扎稳，一手测压锤，一手护住安全线",
+        "idleAction": "用折叠标尺轻碰地面",
+        "attackRhythm": "等对方靠近后短促截停"
+      }
+    },
+    {
+      "id": "97872116-c88c-47e1-9ccf-b45aae6d2c5d",
+      "createdAt": "2026-06-02T15:05:26.865Z",
+      "updatedAt": "2026-06-02T15:09:05.363Z",
+      "agentMarks": [
+        {
+          "id": "24976d63-21f6-4cc3-891f-b8ad6c858c8a",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T15:05:26.865Z"
+        },
+        {
+          "id": "338f0cef-0783-4bdc-8eec-2ffebb739208",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-02T15:05:26.865Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-97872116.png",
+        "thumbnail": "./assets/characters/generated-fullbody-97872116.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "祁砚舟",
+        "codename": "灰灯",
+        "alias": "",
+        "faction": "旧城夜巡灯务司",
+        "birthday": "11/08",
+        "age": "39",
+        "height": "192",
+        "weight": "112 KG",
+        "occupation": "夜巡煤气灯修缮官",
+        "affiliation": "北桥旧城灯务第三班",
+        "species": "人类",
+        "heritage": "华裔旧城血统"
+      },
+      "visualIdentity": {
+        "visualKeywords": "宽肩厚胸、壮实成年男性、白色贴身T恤、短款灯务夹克、黄铜检修灯、旧城夜巡感但画面干净",
+        "colorLanguage": "干净白、煤灰黑、雾蓝灰、旧黄铜金、少量暖白灯芯光",
+        "facialHair": "下巴和上唇有整齐短胡茬",
+        "faceShape": "厚重长方脸，下颌宽",
+        "expression": "疲惫但温和，眼神很稳",
+        "eyes": "细长内双眼，眼尾微垂",
+        "eyeColor": "暖灰褐",
+        "eyebrow": "浓黑平眉，眉尾略乱",
+        "lip": "薄唇，笑意很浅",
+        "scar": "左颧骨有一道淡淡的横向旧疤",
+        "tattoo": "右上臂有小型灯号纹身，被袖口半遮住",
+        "hairStyle": "短硬发向上抓起，后颈修得很干净",
+        "hairLength": "短发",
+        "hairColor": "黑色",
+        "highlight": "灰蓝色细挑染",
+        "bodyType": "高大厚实，结实圆润的力量型",
+        "muscleLevel": "高，肩臂胸背明显",
+        "bodyFat": "中低，厚重但不臃肿",
+        "shoulderWidth": "极宽",
+        "skinTone": "暖麦色偏深",
+        "muscleFocus": "斜方肌、胸口、前臂、大腿"
+      },
+      "costumeSystem": {
+        "outerwear": "短款煤灰黑灯务夹克，前襟敞开，袖口卷到前臂，胸前有小型灯务司布章",
+        "outerwearColor": "煤灰黑与雾蓝灰，布章为旧黄铜金线",
+        "innerwear": "白色贴身T恤，扎进高腰工装裤，清楚露出厚实胸肩轮廓",
+        "innerwearColor": "干净白，阴影用冷灰概括",
+        "pants": "高腰宽腿灯务工装裤，膝侧有扁平工具袋，裤脚微收",
+        "pantsColor": "雾蓝灰，侧缝为深煤黑",
+        "socks": "厚棉短袜",
+        "socksColor": "深灰",
+        "shoes": "低帮防滑灯务靴，鞋头圆厚",
+        "shoesColor": "黑灰色，鞋底深炭黑",
+        "gloves": "左手戴薄检修手套，右手缠白色腕带",
+        "glovesColor": "煤灰黑手套与白色腕带",
+        "necklace": "短链挂一枚小黄铜灯钥",
+        "necklaceColor": "旧黄铜金",
+        "belt": "窄工具腰带连接斜跨灯芯带，挂小扳手和备用灯芯盒",
+        "beltColor": "深灰布带，黄铜扣件",
+        "signatureItem": "黄铜检修灯和折叠灯杆钩",
+        "signatureItemColor": "旧黄铜金、暖白灯芯光、深黑握柄"
+      },
+      "personality": {
+        "corePersonality": "稳重耐心，有点嘴硬",
+        "strengths": "能在恐慌环境里把节奏压下来",
+        "weaknesses": "不擅长表达请求帮助",
+        "hiddenPersonality": "很容易被小善意打动",
+        "emotionalStability": "高",
+        "confidenceLevel": "低调自信",
+        "outwardPersona": "像总在加夜班的旧城师傅",
+        "trueCore": "相信只要灯还亮，人就能找到回家的路",
+        "surfaceFear": "整条街区同时熄灯",
+        "deepFear": "自己救不了迷路的人",
+        "traumaTrigger": "雾夜里忽明忽暗的灯芯声",
+        "stressResponse": "先检查出口，再把人群分流",
+        "trauma": "旧城大雾失踪事故",
+        "traumaSource": "一次灯网维护延误",
+        "recoveryStatus": "表面平静，仍坚持夜里巡完最后一盏灯",
+        "traumaImpact": "对灯光异常极敏感，不轻易离岗"
+      },
+      "lifestyle": {
+        "favoriteFood": "热牛肉粉",
+        "hatedFood": "冷掉的甜点",
+        "hiddenFavorite": "蜂蜜热茶",
+        "appetite": "很大",
+        "alcoholTolerance": "中高",
+        "cookingSkill": "会煮夜班简餐",
+        "roomStyle": "整齐工具墙、旧灯罩、厚窗帘和热水壶",
+        "neatness": "工具极整齐，衣柜略乱",
+        "collections": "退役灯牌和旧灯钥",
+        "pets": "没有宠物，会照顾灯务站门口的流浪猫"
+      },
+      "socialSystem": {
+        "socialAbility": "可靠但话少",
+        "lyingAbility": "一般",
+        "boundarySense": "强，不轻易打扰别人",
+        "popularity": "旧城居民很信任他",
+        "romanceExperience": "有过一段错过的暧昧",
+        "preferredType": "坦率、能接受夜班生活的人",
+        "expressionStyle": "用行动和很短的话表达关心",
+        "possessiveness": "低，重视安稳陪伴"
+      },
+      "combatSystem": {
+        "combatType": "照明控场与近距防守",
+        "coreStyle": "点亮安全线、逼退、卡位、保护撤离",
+        "weaponPreference": "折叠灯杆钩与黄铜检修灯",
+        "specialAbility": "用检修灯照出短暂的安全灯线，使异常雾影无法越过",
+        "painTolerance": "高",
+        "aggression": "低，防守和护送优先",
+        "stamina": "高",
+        "burstPower": "中高",
+        "pressure": "沉默而厚重",
+        "reactionSpeed": "中高"
+      },
+      "worldSetting": {
+        "origin": "北桥旧城煤气灯街区",
+        "socialClass": "手艺工人家庭",
+        "education": "市政灯务学校",
+        "criminalRecord": "无",
+        "organizationRank": "灯务第三班班长",
+        "enemyForces": "雾巷黑市占灯团伙",
+        "biggestRegret": "没有在大雾前多巡一次南街灯网",
+        "biggestGoal": "修复旧城完整夜巡灯线",
+        "hiddenDream": "开一家只在夜里营业的热茶铺",
+        "mostImportantPerson": "当年被他救回来的小巡灯员",
+        "unforgettableExperience": "大雾夜背着检修灯走完断电街区",
+        "lifeStain": "曾隐瞒一处灯网老化问题"
+      },
+      "hiddenInformation": {
+        "shameSecret": "怕在很多人面前唱歌",
+        "hiddenHobby": "修旧收音机和灯罩",
+        "weakness": "对迷路的人无法狠下心",
+        "secretHabit": "给每盏老灯记下点亮时间",
+        "contrastSide": "看起来粗糙，其实会写很细的巡灯日志",
+        "foodAllergy": "轻微花生过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 38,
+        "morality": 81,
+        "sanity": 67,
+        "confidence": 69,
+        "stress": 58,
+        "danger": 63,
+        "desire": 41,
+        "loyalty": 86,
+        "stability": 79,
+        "social": 55,
+        "doom": 34,
+        "violence": 33
+      },
+      "metaDesign": {
+        "characterHook": "一个能用黄铜检修灯点亮安全灯线的夜巡灯务官，在旧城雾夜里替迷路的人守住回家的路。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body clean anime-style character illustration of Qi Yanzhou, a 39-year-old night patrol gas-lamp repair officer from an old modern city district. He is a tall, thick, sturdy adult male with extremely broad shoulders, a heavy chest, powerful forearms, warm deep wheat skin, a heavy rectangular face, narrow warm gray-brown eyes, a tired but gentle steady expression, a faint horizontal scar on his left cheekbone, short stiff black hair brushed upward with subtle gray-blue highlights, and neat short stubble. Outfit: a clean white fitted T-shirt tucked into high-waist wide-leg mist-blue-gray lampworker trousers; an open cropped coal-black lamp-service jacket with sleeves rolled to the forearms and a small brass-thread lamp bureau patch on the chest; a diagonal wick strap connected to a narrow tool belt carrying a small wrench and spare wick box; low-cut black-gray anti-slip lampworker boots; one thin repair glove on the left hand and a clean white wrist wrap on the right hand; a short chain necklace with a small brass lamp key. Props: a brass inspection lamp and a folding lamp-pole hook, clearly readable as old city lamp repair tools. Fantasy anchor: only a few restrained warm-white low-glow marks inside the inspection lamp wick and on the chest patch, compact and tidy, not a strong aura. Material language: clean anime color blocks, simple cel-shaded folds, simplified brass accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: clean anime game character concept art, crisp outline, simple cel shading, strong readable silhouette, cutout-ready asset. Composition: single standing character, centered, full body visible from head to boots, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no unrelated objects as the main subject, no watermark. Do not use #00ff00 anywhere on the character.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：祁砚舟，39岁男性，夜巡煤气灯修缮官。高大厚实的成年男性，极宽肩、厚胸、强壮前臂，暖麦色偏深皮肤，厚重长方脸，暖灰褐细长眼，左颧骨淡疤，黑色短硬发带灰蓝挑染，整齐短胡茬。服装：白色贴身T恤扎进高腰雾蓝灰宽腿灯务工装裤，外搭敞开的短款煤灰黑灯务夹克，袖口卷到前臂，胸前小型黄铜线灯务司布章；斜跨灯芯带连接窄工具腰带，挂小扳手和备用灯芯盒；低帮黑灰防滑灯务靴，左手薄检修手套，右手白色腕带，短链黄铜灯钥。手持黄铜检修灯和折叠灯杆钩。幻想锚点只在检修灯灯芯和胸前布章上有少量暖白低光，不能强发光。材质是干净动画色块、概括褶皱、简化黄铜点缀，不要写实布料纹理、油亮皮革、湿身材质或摄影质感。干净动画游戏立绘，清晰线条，简单赛璐璐上色，单人全身，从头到脚完整可见，留出边距。背景必须是纯 #00ff00 平面绿幕，不能有渐变、纹理、地面、影子、文字或其他角色。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指拨动小灯钥",
+        "irritatedAction": "用指节轻敲检修灯玻璃罩",
+        "nervousAction": "重新压紧右手腕带",
+        "relaxedAction": "靠在灯柱旁喝热茶",
+        "lyingAction": "会把灯钥塞回衣领里",
+        "shyAction": "低头整理夹克领口",
+        "speechSpeed": "慢，偶尔停顿",
+        "speechTone": "低沉沙哑，带一点旧城口音",
+        "catchphrase": "灯亮着，就还能往前走。",
+        "battleLine": "退到灯线后面。",
+        "walkStyle": "步子重而稳，肩膀不晃",
+        "combatStance": "一手护灯，一手持折叠灯杆钩",
+        "idleAction": "检查灯芯盒扣带",
+        "attackRhythm": "先照明定位，再短距压制"
+      }
+    },
+    {
+      "id": "2f652985-3cd1-44aa-87e3-06e572a03b0b",
+      "createdAt": "2026-06-02T14:43:03.882Z",
+      "updatedAt": "2026-06-02T15:01:35.567Z",
+      "agentMarks": [
+        {
+          "id": "fd6c0b1c-4c3f-4a67-854e-d3be33d35092",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T14:43:03.882Z"
+        },
+        {
+          "id": "220801b6-a0f3-4d39-8aa3-cb5aadae31da",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-02T14:43:03.882Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-2f652985.png",
+        "thumbnail": "./assets/characters/generated-fullbody-2f652985.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "闻渡衡",
+        "codename": "潮尺",
+        "alias": "",
+        "faction": "临海秩序测绘署",
+        "birthday": "04/26",
+        "age": "36",
+        "height": "190",
+        "weight": "104 KG",
+        "occupation": "潮汐封印测量员",
+        "affiliation": "东岸旧堤测绘三队",
+        "species": "人类",
+        "heritage": "华裔港城血统"
+      },
+      "visualIdentity": {
+        "visualKeywords": "宽肩厚胸、强壮成年男性、白色贴身长袖、短款测绘背心、潮尺标尺、湿润海风但画面干净",
+        "colorLanguage": "干净白、深墨蓝、海盐灰、少量黄铜金、低亮青白刻度",
+        "facialHair": "干净短胡茬",
+        "faceShape": "宽长方脸，下颌稳重",
+        "expression": "克制温和，像在听远处潮声",
+        "eyes": "细长下垂眼，眼尾微沉",
+        "eyeColor": "浅海盐灰蓝",
+        "eyebrow": "浓直眉，眉峰平",
+        "lip": "薄唇，嘴角微压",
+        "scar": "右眉尾有一道很短的旧划痕",
+        "tattoo": "左前臂内侧有细小潮位刻度纹身",
+        "hairStyle": "向后梳的短发，额前一撮自然垂落",
+        "hairLength": "短发",
+        "hairColor": "深黑褐",
+        "highlight": "海盐灰细挑染",
+        "bodyType": "厚实高大，圆润但有力量",
+        "muscleLevel": "中高，胸肩和手臂明显",
+        "bodyFat": "中低，力量型而不干瘦",
+        "shoulderWidth": "很宽",
+        "skinTone": "被海风晒深的暖麦色",
+        "muscleFocus": "肩背、胸口、前臂和大腿"
+      },
+      "costumeSystem": {
+        "outerwear": "短款无袖测绘背心，肩部留出活动空间，胸前有测绘署小徽章",
+        "outerwearColor": "深墨蓝配海盐灰包边，徽章为低调黄铜金",
+        "innerwear": "白色贴身长袖上衣，扎进高腰裤，突出胸肩体量",
+        "innerwearColor": "干净白，阴影用浅灰蓝概括",
+        "pants": "高腰宽褶测绘工装裤，裤脚微收，侧边有折叠标尺袋",
+        "pantsColor": "海盐灰蓝，缝线为低饱和墨蓝",
+        "socks": "厚棉短袜",
+        "socksColor": "深灰蓝",
+        "shoes": "低帮防滑测绘靴，鞋头简化加固",
+        "shoesColor": "黑蓝色，鞋底为深石灰",
+        "gloves": "右手薄测量手套，左手缠白色腕带",
+        "glovesColor": "墨蓝手套和干净白腕带",
+        "necklace": "短绳挂一枚黄铜潮尺坠",
+        "necklaceColor": "旧黄铜金",
+        "belt": "窄工具腰带连接斜跨标尺带，挂小型卷尺和封印粉盒",
+        "beltColor": "深墨蓝布带，黄铜扣件",
+        "signatureItem": "可展开的潮尺罗盘和短柄测量杖",
+        "signatureItemColor": "黄铜金、青白刻度光、深蓝握柄"
+      },
+      "personality": {
+        "corePersonality": "沉稳可靠，判断细",
+        "strengths": "能在混乱现场快速找准边界",
+        "weaknesses": "太习惯把风险自己扛下",
+        "hiddenPersonality": "对年轻队员很护短",
+        "emotionalStability": "高",
+        "confidenceLevel": "安静自信",
+        "outwardPersona": "像慢半拍的海边工务员",
+        "trueCore": "害怕看见边界失控，所以总提前校准一切",
+        "surfaceFear": "潮位仪突然归零",
+        "deepFear": "旧堤再一次吞掉来不及撤离的人",
+        "traumaTrigger": "夜间防潮门的空响声",
+        "stressResponse": "先沉默，再用最短句子下命令",
+        "trauma": "旧堤封印误差事故",
+        "traumaSource": "一次被上级压缩的测量时限",
+        "recoveryStatus": "能正常工作，但对误差异常敏感",
+        "traumaImpact": "不轻信口头估算，坚持复测"
+      },
+      "lifestyle": {
+        "favoriteFood": "热汤云吞面",
+        "hatedFood": "过甜冰饮",
+        "hiddenFavorite": "咸柠汽水",
+        "appetite": "大",
+        "alcoholTolerance": "中",
+        "cookingSkill": "会做简单海边家常菜",
+        "roomStyle": "海图、卷尺、干净工具柜和旧堤照片",
+        "neatness": "工作区极整齐，床边随意",
+        "collections": "旧潮位牌和废弃罗盘针",
+        "pets": "没有固定宠物，会喂码头流浪猫"
+      },
+      "socialSystem": {
+        "socialAbility": "可靠但不热闹",
+        "lyingAbility": "一般",
+        "boundarySense": "强，尊重对方空间",
+        "popularity": "队里信任度很高",
+        "romanceExperience": "有过一段平静但错过的关系",
+        "preferredType": "直率、能一起承担现实的人",
+        "expressionStyle": "做事比说话多",
+        "possessiveness": "低，重视互相信任"
+      },
+      "combatSystem": {
+        "combatType": "边界封锁与短距压制",
+        "coreStyle": "定界、卡位、卸力、保护撤离路线",
+        "weaponPreference": "短柄测量杖与潮尺罗盘",
+        "specialAbility": "用潮尺罗盘标出短暂的潮汐封印边界",
+        "painTolerance": "中高",
+        "aggression": "低到中，防守优先",
+        "stamina": "高",
+        "burstPower": "中高",
+        "pressure": "安静但压迫感强",
+        "reactionSpeed": "快"
+      },
+      "worldSetting": {
+        "origin": "东岸旧堤区",
+        "socialClass": "技术工人家庭",
+        "education": "港城测绘学院",
+        "criminalRecord": "无",
+        "organizationRank": "测绘三队副队长",
+        "enemyForces": "走私改堤商会",
+        "biggestRegret": "没有坚持第三次复测",
+        "biggestGoal": "重建旧堤潮汐封印网",
+        "hiddenDream": "开一家靠海的测绘器材修理铺",
+        "mostImportantPerson": "事故中幸存的徒弟",
+        "unforgettableExperience": "台风夜独自守住旧堤三小时",
+        "lifeStain": "曾替上级签下误差报告"
+      },
+      "hiddenInformation": {
+        "shameSecret": "害怕公开演讲",
+        "hiddenHobby": "夜里听老式收音机海况播报",
+        "weakness": "对请求保护的人太容易心软",
+        "secretHabit": "给每一把修好的潮尺取编号",
+        "contrastSide": "看起来迟钝，其实记忆力惊人",
+        "foodAllergy": "轻微贝类过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 45,
+        "morality": 78,
+        "sanity": 70,
+        "confidence": 74,
+        "stress": 52,
+        "danger": 61,
+        "desire": 43,
+        "loyalty": 84,
+        "stability": 76,
+        "social": 58,
+        "doom": 31,
+        "violence": 37
+      },
+      "metaDesign": {
+        "characterHook": "一个能用潮尺罗盘短暂钉住潮汐封印边界的测量员，总在灾害真正越线前赶到。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body clean anime-style character illustration of Wen Duheng, a 36-year-old tidal seal surveyor from a modern harbor city. He is a tall, thick, sturdy adult male with broad shoulders, a heavy chest, powerful forearms, warm wheat skin, a broad rectangular face, narrow muted gray-blue eyes, a calm listening expression, a tiny scar at the end of his right eyebrow, short dark brown-black hair brushed back with one loose forelock and subtle sea-salt gray highlights, and neat short stubble. Outfit: a clean white fitted long-sleeve top tucked into high-waist wide-pleated sea-salt gray-blue surveyor work trousers; a cropped sleeveless deep ink-blue survey vest with sea-salt gray trim and a small brass survey bureau badge on the chest; a diagonal measuring-strap connected to a narrow tool belt carrying a compact tape measure and seal-powder box; low-cut black-blue anti-slip survey boots; one thin measuring glove on the right hand and a clean white wrist wrap on the left hand; a short cord necklace with a small brass tide-ruler pendant. Props: an unfolding tide-ruler compass and a short measuring staff, clearly readable as survey tools. Fantasy anchor: only a few restrained cyan-white low-glow calibration marks on the compass and trouser-side ruler marks, compact and tidy, not a strong aura. Material language: clean anime color blocks, simple cel-shaded folds, simplified small brass accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: clean anime game character concept art, crisp outline, simple cel shading, strong readable silhouette, cutout-ready asset. Composition: single standing character, centered, full body visible from head to boots, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no unrelated objects as the main subject, no watermark. Do not use #00ff00 anywhere on the character.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：闻渡衡，36岁男性，潮汐封印测量员。高大厚实的成年男性，宽肩厚胸，暖麦色皮肤，宽长方脸，细长灰蓝眼，右眉尾短疤，深黑褐短发向后梳并有海盐灰挑染，干净短胡茬。服装：白色贴身长袖上衣扎进高腰海盐灰蓝宽褶测绘工装裤，外搭深墨蓝短款无袖测绘背心，胸前小黄铜测绘署徽章；斜跨标尺带连接窄工具腰带，挂卷尺和封印粉盒；低帮黑蓝防滑测绘靴，右手薄测量手套，左手白色腕带，短绳黄铜潮尺坠。手持可展开潮尺罗盘和短柄测量杖。幻想锚点只在罗盘和裤侧刻度上有少量青白低光，不能强发光。材质为干净动画色块、概括褶皱、简化金属点缀，不要写实布料纹理、油亮反光或摄影质感。干净动画游戏立绘，清晰线条，简单赛璐璐上色，单人全身，从头到脚完整可见，留出边距。背景必须是纯 #00ff00 平面绿幕，不能有渐变、纹理、地面、影子、文字或其他角色。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指摩挲潮尺边缘",
+        "irritatedAction": "轻敲卷尺外壳三下",
+        "nervousAction": "重新拉紧左手腕带",
+        "relaxedAction": "靠着栏杆看海面线",
+        "lyingAction": "视线会落到地面刻度",
+        "shyAction": "低头整理胸前徽章",
+        "speechSpeed": "慢而准",
+        "speechTone": "低沉温和，句尾很稳",
+        "catchphrase": "先量边界，再谈办法。",
+        "battleLine": "潮线到这里为止。",
+        "walkStyle": "步幅大，落脚稳",
+        "combatStance": "侧身护住罗盘，测量杖压低",
+        "idleAction": "把折叠潮尺展开又合上",
+        "attackRhythm": "先定界，再短促压制"
+      }
+    },
+    {
+      "id": "edbde9b7-6a5f-4570-b8aa-c2451b9b94d7",
+      "createdAt": "2026-06-02T14:22:28.877Z",
+      "updatedAt": "2026-06-02T14:26:46.947Z",
+      "agentMarks": [
+        {
+          "id": "2a4dab9f-2aba-43a8-bc9e-36fd3ba07238",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T14:22:28.877Z"
+        },
+        {
+          "id": "1e500518-8b76-4066-aaa9-fe9995daf5f9",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-02T14:22:28.877Z"
+        },
+        {
+          "id": "53df3b33-b579-4479-b16e-9742a27b5afe",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-02T14:22:28.877Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "新建角色。属性生成与图像生成均已开启；资料完整后继续生成全身图。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-edbde9b7.png",
+        "thumbnail": "./assets/characters/generated-fullbody-edbde9b7.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "砚港澄介",
+        "codename": "潮印",
+        "alias": "",
+        "faction": "澄港潮务署",
+        "birthday": "04/18",
+        "age": "37",
+        "height": "186",
+        "weight": "103 KG",
+        "occupation": "城市潮汐印证员",
+        "affiliation": "澄港潮务署·岸线印证科",
+        "species": "人类",
+        "heritage": "东亚/南欧混血"
+      },
+      "visualIdentity": {
+        "visualKeywords": "成年壮厚男性，宽肩厚胸，深栗黑短发，修整短络腮胡，白色贴身短袖，海蓝灰署员外套，潮汐印章，都市潮务奇幻",
+        "colorLanguage": "干净白作为身体锚点，海蓝灰表现潮务身份，深墨裤稳定轮廓，旧铜和少量潮白低光作为幻想锚点",
+        "facialHair": "修整短络腮胡",
+        "faceShape": "宽方圆脸，下颌厚",
+        "expression": "沉稳带笑",
+        "eyes": "深眼窝圆杏眼",
+        "eyeColor": "暖榛褐",
+        "eyebrow": "浓直眉，眉尾微垂",
+        "lip": "厚唇，嘴角放松",
+        "scar": "左眉尾有一道短浅旧疤",
+        "tattoo": "右腕内侧有潮线圆印纹身",
+        "hairStyle": "自然后梳短发，鬓角修齐",
+        "hairLength": "短发",
+        "hairColor": "深栗黑",
+        "highlight": "无鲜艳挑染，仅发梢有极暗铜棕光泽",
+        "bodyType": "壮厚圆实",
+        "muscleLevel": "高，柔厚有力",
+        "bodyFat": "中等偏高",
+        "shoulderWidth": "极宽",
+        "skinTone": "暖橄榄麦色",
+        "muscleFocus": "肩颈、厚胸、前臂和腰腹"
+      },
+      "costumeSystem": {
+        "outerwear": "短款海蓝灰潮务署外套，敞开，袖口卷起，胸前有小型岸线印证徽记",
+        "outerwearColor": "海蓝灰，边线为潮白，徽记旧铜色",
+        "innerwear": "干净白色贴身短袖上衣，扎进高腰裤，胸腹轮廓用简洁赛璐璐阴影表现",
+        "innerwearColor": "干净白，浅灰蓝阴影",
+        "pants": "高腰深墨蓝宽褶长裤，裤脚微收，侧边有印证夹袋",
+        "pantsColor": "深墨蓝，少量灰蓝压线",
+        "socks": "厚实短袜",
+        "socksColor": "雾灰",
+        "shoes": "低帮防滑通勤鞋，厚底但不笨重",
+        "shoesColor": "深海军蓝与浅灰鞋底",
+        "gloves": "单侧白色印证手套，另一手露指",
+        "glovesColor": "白色与旧铜扣",
+        "necklace": "贴近领口的旧铜潮印短链",
+        "necklaceColor": "旧铜色",
+        "belt": "窄型深灰工具腰带，挂小型潮位尺和印泥盒",
+        "beltColor": "深灰布带，旧铜金属扣",
+        "signatureItem": "旧铜潮汐印章和透明潮位尺",
+        "signatureItemColor": "旧铜、透明浅蓝、潮白刻度低光"
+      },
+      "personality": {
+        "corePersonality": "稳重、亲和、判断快、护短",
+        "strengths": "观察细，能安抚人群，临场稳定",
+        "weaknesses": "过度承担，习惯替别人收尾",
+        "hiddenPersonality": "对浪漫和仪式感很认真",
+        "emotionalStability": "高",
+        "confidenceLevel": "沉稳自信",
+        "outwardPersona": "像随和可靠的市政窗口人员",
+        "trueCore": "把每一次确认都当成保护城市的签字",
+        "surfaceFear": "潮位记录突然归零",
+        "deepFear": "自己盖下错误印章导致岸线事故",
+        "traumaTrigger": "连续三声潮汐警报",
+        "stressResponse": "先沉默读数，再迅速分派任务",
+        "trauma": "早年一次虚假潮位证明引发堤岸坍塌",
+        "traumaSource": "上级要求他按旧数据盖章",
+        "recoveryStatus": "已能正常工作，但对印证流程极严格",
+        "traumaImpact": "不轻易相信口头承诺，只相信复核记录"
+      },
+      "lifestyle": {
+        "favoriteFood": "热柠檬烤鱼饭",
+        "hatedFood": "过甜奶油点心",
+        "hiddenFavorite": "盐渍橄榄",
+        "appetite": "大",
+        "alcoholTolerance": "中等",
+        "cookingSkill": "会做简单海港家常菜",
+        "roomStyle": "整齐的潮位图、旧印章盒、白色工作台",
+        "neatness": "工作区极整洁，生活区稍随意",
+        "collections": "旧港口印章和退役潮位尺",
+        "pets": "养一盆耐盐小榕树"
+      },
+      "socialSystem": {
+        "socialAbility": "高",
+        "lyingAbility": "一般，不爱说谎",
+        "boundarySense": "清楚但温和",
+        "popularity": "在社区很受信任",
+        "romanceExperience": "有过稳定长关系",
+        "preferredType": "坦率、可靠、能一起吃晚饭的人",
+        "expressionStyle": "实际照顾多于甜言蜜语",
+        "possessiveness": "中低，重视承诺"
+      },
+      "combatSystem": {
+        "combatType": "工具防卫型",
+        "coreStyle": "格挡、压腕、短距控制",
+        "weaponPreference": "潮位尺和印章柄",
+        "specialAbility": "能从水痕中读出最近一次异常潮动",
+        "painTolerance": "中高",
+        "aggression": "低，防卫优先",
+        "stamina": "高",
+        "burstPower": "中高",
+        "pressure": "温和但压迫感稳定",
+        "reactionSpeed": "快"
+      },
+      "worldSetting": {
+        "origin": "澄港旧岸线社区",
+        "socialClass": "市政技术职员家庭",
+        "education": "城市水务学院",
+        "criminalRecord": "无",
+        "organizationRank": "岸线印证科高级署员",
+        "enemyForces": "伪造潮位证明的地产财团",
+        "biggestRegret": "曾经晚了一步发现伪造数据",
+        "biggestGoal": "建立无人能篡改的潮线印证系统",
+        "hiddenDream": "开一家靠海的小食堂",
+        "mostImportantPerson": "退休的潮务老师",
+        "unforgettableExperience": "暴雨夜在旧堤上手动复核七十二个潮位点",
+        "lifeStain": "为了保护新人，曾替对方承担流程处分"
+      },
+      "hiddenInformation": {
+        "shameSecret": "害怕正式舞会",
+        "hiddenHobby": "收集旧港口餐券",
+        "weakness": "对求助的老人和孩子很难拒绝",
+        "secretHabit": "每次盖章前会轻声念日期",
+        "contrastSide": "外表沉稳，其实很会做饭也很爱照顾人",
+        "foodAllergy": "轻微贝类过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 48,
+        "morality": 82,
+        "sanity": 72,
+        "confidence": 70,
+        "stress": 52,
+        "danger": 44,
+        "desire": 50,
+        "loyalty": 84,
+        "stability": 78,
+        "social": 74,
+        "doom": 24,
+        "violence": 30
+      },
+      "metaDesign": {
+        "characterHook": "一名能用旧铜潮汐印章确认水痕真伪的城市署员，把每一次盖章都当作守住岸线的誓言。",
+        "characterConsistencyPrompt": "成年壮厚男性，东亚/南欧混血，深栗黑短发，修整短络腮胡，白色贴身短袖，海蓝灰潮务署外套，深墨蓝宽褶裤，旧铜潮汐印章。",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body anime-style character illustration of Yengang Chengjie, a 37-year-old male city tide-certification officer from the Chenggang Tide Affairs Bureau, human, East Asian / Southern European mixed heritage. He is a bulky soft-strong adult male, not slender: very broad shoulders, thick chest, strong forearms, substantial rounded waist and abdomen, warm olive-wheat skin, broad square-round face, heavy jaw, deep-set warm hazel round-almond eyes, thick straight brows, calm slightly smiling expression, deep chestnut-black naturally slicked-back short hair with neatly trimmed sideburns, no bright highlights, only an extremely dark copper-brown sheen at the tips, a neatly trimmed short full beard, and a short shallow old scar at the left eyebrow tail. Outfit: a clean fitted white short-sleeve top tucked into high-waist deep ink-blue wide-pleated trousers, an open cropped sea-blue-gray Tide Bureau jacket with rolled sleeves and a small shoreline-certification badge on the chest, one white certification glove, bare fingers on the other hand, a narrow dark-gray utility belt carrying a small tide ruler and ink-pad case, low-cut deep navy anti-slip commuter shoes, and a short old-copper tide-seal necklace close to the collar. Props: an old-copper tide seal stamp and a transparent tide ruler, clearly readable as his signature tools. Fantasy anchor: restrained low tide-white glow only on the stamp rim, tide-ruler marks, and small chest badge, compact and not diffuse. Material language: clean anime color blocks, simple cel-shaded folds, simplified small metal accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: clean Kyoto Animation-like TV anime cel shading, crisp readable linework, tidy modern urban fantasy design, minimal dirt and grime. Urban first, fantasy second. Single character only. Full body visible from head to boots. Centered standing pose with generous padding, no cropping. Pure flat chroma-key background only: solid #ff00ff magenta, one uniform color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. No UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no watermark. Do not use #ff00ff or similar magenta, pink, rose, fuchsia, or violet anywhere on the character.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：砚港澄介，37岁男性，澄港潮务署的城市潮汐印证员，人类，东亚/南欧混血。体型是壮厚圆实的成年男性，极宽肩，厚胸，前臂和腰腹有柔厚力量，暖橄榄麦色皮肤，宽方圆脸，下颌厚，深眼窝暖榛褐圆杏眼，浓直眉，沉稳带笑表情，深栗黑自然后梳短发，鬓角修齐，无鲜艳挑染，仅发梢有极暗铜棕光泽，修整短络腮胡，左眉尾一道短浅旧疤。服装：干净白色贴身短袖上衣扎进高腰深墨蓝宽褶长裤，外搭敞开的短款海蓝灰潮务署外套，袖口卷起，胸前有小型岸线印证徽记；单侧白色印证手套，另一手露指，窄型深灰工具腰带挂小型潮位尺和印泥盒，低帮深海军蓝防滑通勤鞋，贴近领口的旧铜潮印短链。手持旧铜潮汐印章和透明潮位尺。幻想锚点只在印章边缘、潮位尺刻度、胸前徽记出现少量潮白低光，克制、不扩散。材质为干净动画色块、简单赛璐璐褶皱和简化小金属点缀，不要写实布料纹理、油亮皮革、湿身材质或时装摄影。清爽京都动画式 TV 动画赛璐璐，线条干净流畅，阴影块面概括，现代都市奇幻感，城市优先、幻想其次，整体干净无灰尘。Single character only. Full body visible from head to boots. Generate the character from the current attributes. The style reference is only for body proportion and drawing style; do not copy the reference character. No UI, no infographic, no diagram, no character sheet, no text, no labels, no icons, no scenery, no extra characters. Pure flat chroma-key background only. Use flat solid #ff00ff chroma-key background; do not use #ff00ff or similar magenta/pink/violet on the character."
+      },
+      "behaviorSystem": {
+        "thinkingAction": "拇指摩挲潮印边缘",
+        "irritatedAction": "把潮位尺重新对齐三次",
+        "nervousAction": "检查手套扣是否扣紧",
+        "relaxedAction": "靠窗听远处港声",
+        "lyingAction": "视线短暂落到印泥盒",
+        "shyAction": "轻咳后整理袖口",
+        "speechSpeed": "中速，停顿清楚",
+        "speechTone": "温和低沉",
+        "catchphrase": "先别急，潮线会留下答案。",
+        "battleLine": "这枚印章，只盖真实。",
+        "walkStyle": "步伐稳，肩背放松",
+        "combatStance": "侧身护住印章和腰带工具",
+        "idleAction": "用潮位尺轻敲掌心",
+        "attackRhythm": "先格挡定位，再短距离压制"
+      }
+    },
+    {
       "id": "04fa6d10-102a-49dd-9299-5b848405ea62",
       "createdAt": "2026-06-02T13:34:52.764Z",
       "updatedAt": "2026-06-02T13:38:28.126Z",
@@ -79,8 +904,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "新建角色。属性生成与图像生成均已开启；资料完整后继续生成全身图。",
@@ -106,11 +931,13 @@
         "weight": "101 KG",
         "occupation": "社区植物检疫师",
         "affiliation": "绿检所第七街区站",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "宽肩厚胸，柔壮成年男性，白色贴身无袖上衣，鼠尾草绿检疫衬衫，叶脉听诊环，低光绿叶纹，清爽社区绿检感",
         "colorLanguage": "白色贴身上衣作为身体锚点，鼠尾草绿表现植物检疫身份，温灰宽裤稳住下盘，叶脉金色只在腕环和小徽记上出现",
+        "facialHair": "",
         "faceShape": "方圆脸，下颌厚实",
         "expression": "温和警觉",
         "eyes": "深眼窝，眼尾略垂",
@@ -282,8 +1109,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "测试创建角色。资料已完整填写；图片生成标记为 false，因此本次只验证角色创建与字段完整性。",
@@ -309,11 +1136,13 @@
         "weight": "94 KG",
         "occupation": "夜间桥灯巡检员",
         "affiliation": "灯桥局第三夜巡组",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "宽肩厚胸，柔壮成年男性，白色贴身长袖，薄荷青巡检背带，桥灯钥匙，低光白弧，清爽城市夜巡感",
         "colorLanguage": "干净白色作为身体锚点，石墨灰裤装压稳重心，薄荷青背带和灯桥局标识带出夜间公共设施感，白弧光只做小面积幻想点",
+        "facialHair": "",
         "faceShape": "方圆脸，颧骨温和",
         "expression": "安静专注",
         "eyes": "下垂感深眼",
@@ -485,8 +1314,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "新角色：资料与最终提示词已补全；attributes/images 两个开关均为 true，可直接进入生图准备流程。",
@@ -512,11 +1341,13 @@
         "weight": "104 KG",
         "occupation": "声纹公证员",
         "affiliation": "第七回声审录室",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "宽肩厚胸、白色贴身短袖、酒红短马甲、暖灰阔腿裤、音叉印章、悬浮小砝码、安静审录感",
         "colorLanguage": "干净白、暖灰、深酒红、墨黑、小面积淡金声纹",
+        "facialHair": "",
         "faceShape": "宽圆方脸，下颌厚",
         "expression": "含笑审视",
         "eyes": "深眼窝圆杏眼",
@@ -693,8 +1524,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "测试角色：已按角色创建流程补全资料与最终提示词；当前不生成图片，使用占位图。",
@@ -720,11 +1551,13 @@
         "weight": "98 KG",
         "occupation": "市立气象档案员",
         "affiliation": "雨证档案室",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "宽肩厚胸、白色贴身长袖、雾灰防雨长层、胸前雨尺背带、透明雨量管、清爽气象感",
         "colorLanguage": "白、雾灰、湖蓝、深墨绿、小面积银色刻度",
+        "facialHair": "",
         "faceShape": "圆方脸，颧骨低",
         "expression": "温和专注",
         "eyes": "略下垂的杏眼",
@@ -901,8 +1734,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -928,11 +1761,13 @@
         "weight": "112 kg",
         "occupation": "夜间电台气象播报员",
         "affiliation": "晴庭夜间电台气象频段",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "厚实壮壮成年男性，宽肩厚胸，大手臂，白色贴身短袖，午夜蓝短雨半斗篷，银灰斜挎设备带，酒红高腰宽褶裤，调频音叉麦克风，银蓝声波线，无围裙测试",
         "colorLanguage": "暖白、午夜蓝、银灰、酒红、深蓝棕、少量银蓝声波光，清爽夜间电台配色",
+        "facialHair": "",
         "faceShape": "方圆脸，脸颊饱满，下颌厚实",
         "expression": "沉静听雨",
         "eyes": "深蓝灰圆眼，像在听远处雷声",
@@ -1112,8 +1947,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -1139,11 +1974,13 @@
         "weight": "108 kg",
         "occupation": "夜间遗失物归还管理员",
         "affiliation": "晴庭市遗失物档案馆夜归窗口",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "壮壮软厚成年男性，宽肩厚胸，大手臂，白色贴身长袖，米灰短针织开衫，深松绿长围裙前片，棕红交叉背带，薄荷青档案票夹，干净市政档案馆气质",
         "colorLanguage": "暖白、米灰、深松绿、深橄榄、棕红、薄荷青小光，安静清透的夜间归还窗口配色",
+        "facialHair": "",
         "faceShape": "方圆脸，脸颊饱满，下颌厚实",
         "expression": "温和警觉",
         "eyes": "圆润松绿色眼，像在确认物主记忆",
@@ -1323,8 +2160,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -1350,11 +2187,13 @@
         "weight": "110 kg",
         "occupation": "夜间急药房值班药剂师",
         "affiliation": "白熊町夜急药房调配柜台",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "厚实壮壮的成年男性，宽肩厚胸，大手臂，自然暖桃肤色，白色紧身T-shirt，浅蓝灰短药房外套，深海军蓝围裙带，琥珀量药匙，夜间药柜灯，干净TV动画赛璐璐阴影",
         "colorLanguage": "暖白、浅蓝灰、深海军蓝、纸盒米白、琥珀金、柔和柜台白光，干净安静的夜间药房气质",
+        "facialHair": "",
         "faceShape": "方圆脸，脸颊饱满，下颌厚实",
         "expression": "温柔清醒",
         "eyes": "沉静圆眼，眼神像在核对剂量",
@@ -1534,8 +2373,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -1561,11 +2400,13 @@
         "weight": "116 kg",
         "occupation": "高层电梯调度员",
         "affiliation": "白熊町垂直交通课夜间班",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "厚实壮壮的成年男性，宽肩厚胸，大手臂，白色紧身T-shirt，浅灰短袖制服衬衫，深绿调度背带，黄铜楼层牌，电梯门缝金线，干净TV动画赛璐璐阴影",
         "colorLanguage": "暖白、浅灰、深绿、炭黑、黄铜金、柔和电梯灯暖光，安静有秩序的夜间高楼气质",
+        "facialHair": "",
         "faceShape": "方圆脸，下颌宽厚，脸颊饱满",
         "expression": "沉稳微笑",
         "eyes": "低垂圆眼，观察细致",
@@ -1745,8 +2586,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -1772,11 +2613,13 @@
         "weight": "112 kg",
         "occupation": "城市遗失物档案员",
         "affiliation": "白熊町夜间遗失物档案馆",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "厚实壮壮的成年男性，宽肩厚胸，大手臂，白色紧身T-shirt，短款藏蓝档案外套，米白围裙式档案带，黄铜书签钥匙，悬浮纸页微光，干净TV动画赛璐璐阴影",
         "colorLanguage": "暖白、藏蓝、墨黑、纸张米色、黄铜金、柔和月白光，安静清爽的夜间档案馆气质",
+        "facialHair": "",
         "faceShape": "方圆脸，脸颊饱满，下颌厚实",
         "expression": "温和专注",
         "eyes": "沉静圆钝眼，眼神像在读目录",
@@ -1951,8 +2794,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -1978,11 +2821,13 @@
         "weight": "108 kg",
         "occupation": "城市暴雨边界巡查员",
         "affiliation": "白熊町晴雨线巡查处",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "厚实壮壮的成年男性，宽肩厚胸，大手臂，白色紧身T-shirt，透明短雨披，深青灰巡查背心，石墨工装裤，黄铜雨尺，雨幕边界线，干净TV动画赛璐璐阴影",
         "colorLanguage": "暖白、深青灰、透明雨披、黄铜金、雨水蓝，清爽雨后都市感",
+        "facialHair": "",
         "faceShape": "方正偏圆的脸，下颌厚实，脸颊饱满",
         "expression": "平静耐心，像在等雨势说完",
         "eyes": "沉稳下垂眼，眼尾略钝",
@@ -2148,8 +2993,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -2175,11 +3020,13 @@
         "weight": "106 kg",
         "occupation": "夜间失物招领登记员",
         "affiliation": "白熊町中央失物招领局",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "厚实壮壮的成年男性，宽肩厚胸，大手臂圆润有力，短栗黑发，方圆温和脸，白色紧身T-shirt，深海军蓝短制服外套，米灰宽松工装裤，琥珀归还章，旧票据腰包，干净TV动画赛璐璐阴影",
         "colorLanguage": "暖白、深海军蓝、米灰、琥珀金、少量票据红，清爽都市感",
+        "facialHair": "",
         "faceShape": "方圆脸，下颌厚实，脸颊饱满，鼻梁端正",
         "expression": "温和专注",
         "eyes": "沉稳下垂眼，像在认真核对每一句话",
@@ -2350,8 +3197,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -2377,11 +3224,13 @@
         "weight": "104 kg",
         "occupation": "地下热水管线检修员",
         "affiliation": "白熊町市政热网班",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "厚实壮壮的成年男性，宽肩厚胸，圆润有力的大手臂，短黑发，温和但可靠的脸，白色紧身T-shirt，橙灰色市政检修背带，厚重防水工装裤，腰间工具包，黄铜温压符灯，干净动画赛璐璐阴影",
         "colorLanguage": "白色、橙灰、市政深蓝、黄铜暖金，整体清爽干净",
+        "facialHair": "",
         "faceShape": "方圆脸，下颌厚实，鼻梁直，脸颊有轻微工作晒痕",
         "expression": "常态是温和镇定的半笑；遇到危险时眼神会迅速变得专注，像先把现场压力读完再行动",
         "eyes": "略下垂的沉稳杏眼，眼神可靠，不锋利但有压场感",
@@ -2550,8 +3399,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -2577,11 +3426,13 @@
         "weight": "106 KG",
         "occupation": "旧书修复与夜间装订师",
         "affiliation": "南桥旧书修复所",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "都市旧书修复壮汉、白色紧身T恤、若隐若现腹肌轮廓、宽肩厚胸、大手臂、短围裙、黄铜书签锚、纸页护符、干净动画线条",
         "colorLanguage": "白色、纸张象牙色、浅咖啡、深墨蓝、黄铜金，少量干净淡琥珀纸页符纹",
+        "facialHair": "",
         "faceShape": "宽圆长方脸",
         "expression": "安静温和",
         "eyes": "温和圆眼",
@@ -2743,8 +3594,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -2770,11 +3621,13 @@
         "weight": "108 KG",
         "occupation": "社区夜巡急救骑手",
         "affiliation": "青岚社区急救站",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "都市急救壮汉、白色紧身T恤、若隐若现腹肌轮廓、宽肩厚胸、大手臂、心跳光纹、急救斜挎包、干净动画线条",
         "colorLanguage": "白色、急救薄荷绿、浅天蓝、深海军蓝，少量暖金心跳光点",
+        "facialHair": "",
         "faceShape": "宽圆方脸",
         "expression": "温柔坚定",
         "eyes": "圆润下垂眼",
@@ -2941,8 +3794,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -2968,11 +3821,13 @@
         "weight": "82 KG",
         "occupation": "夜间花店与植物养护师",
         "affiliation": "青栖花房",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "都市花店壮汉、肉肉厚实、宽肩厚胸、大手臂、透明折叠伞、露珠结界、干净白衬衫、薄荷绿围裙、清爽动画线条",
         "colorLanguage": "象牙白、薄荷绿、浅灰蓝、透明水光，少量暖金作为伞骨和胸针记忆点",
+        "facialHair": "",
         "faceShape": "柔和长方脸",
         "expression": "安静专注",
         "eyes": "细长下垂眼",
@@ -3149,8 +4004,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -3176,11 +4031,13 @@
         "weight": "112 KG",
         "occupation": "废船码头铆接工头",
         "affiliation": "北湾拆船联合班",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "厚肩、铆钉护具、焊痕、旧港铁锈感",
         "colorLanguage": "铁灰、暗红、旧铜、煤黑、少量警示白",
+        "facialHair": "",
         "faceShape": "宽方脸，颧骨硬",
         "expression": "沉稳审视",
         "eyes": "下压窄眼",
@@ -3356,8 +4213,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -3383,11 +4240,13 @@
         "weight": "108 KG",
         "occupation": "封锁区闸门指挥官",
         "affiliation": "北岸重闸第七队",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "高大厚实、宽肩厚胸、黑铁护甲、黄黑警戒带、闸门钥匙、沉默压迫感",
         "colorLanguage": "消光黑、旧铁灰、警戒黄、暗红信号灯",
+        "facialHair": "",
         "faceShape": "宽下颌方脸",
         "expression": "冷静审视",
         "eyes": "深陷锐眼",
@@ -3551,8 +4410,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -3578,11 +4437,13 @@
         "weight": "108 KG",
         "occupation": "低温库门禁巡守",
         "affiliation": "北环冷链枢纽",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "低温巡守、厚肩壮汉、冷白反光、门禁盾、安静压迫感",
         "colorLanguage": "冰白、钢蓝、深灰、警示黄",
+        "facialHair": "",
         "faceShape": "宽额方脸",
         "expression": "冷静警觉",
         "eyes": "窄长上挑",
@@ -3822,8 +4683,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -3849,11 +4710,13 @@
         "weight": "110 KG",
         "occupation": "冷链库区安保主管",
         "affiliation": "蓝塔冷库",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "冷链安保，壮硕主管，保温外套，电子门禁，霜白呼气，低温库区。",
         "colorLanguage": "冰蓝、冷白、深灰、警示黄、黑色",
+        "facialHair": "",
         "faceShape": "方脸宽颌",
         "expression": "温和警觉",
         "eyes": "圆钝深眼",
@@ -4035,8 +4898,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -4062,11 +4925,13 @@
         "weight": "98 KG",
         "occupation": "旧港吊机看场人",
         "affiliation": "锈湾吊场",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "旧港看场人，吊机工，雨披外套，钢索护腕，海风锈色，沉稳压迫感。",
         "colorLanguage": "铁锈红、旧黄、深海蓝、冷灰、焦黑",
+        "facialHair": "",
         "faceShape": "长方脸厚下巴",
         "expression": "沉默审视",
         "eyes": "窄长下垂眼",
@@ -4248,8 +5113,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -4275,11 +5140,13 @@
         "weight": "104 KG",
         "occupation": "外港重机回收师",
         "affiliation": "砂港回收码头",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "外港回收师，厚实壮汉，旧救生背心，拖缆钩，盐蚀金属，砂尘。",
         "colorLanguage": "旧橙、海雾灰、锈红、焦黑、褪色蓝",
+        "facialHair": "",
         "faceShape": "宽脸厚颧",
         "expression": "懒散警觉",
         "eyes": "小三角眼",
@@ -4443,8 +5310,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -4470,11 +5337,13 @@
         "weight": "96 KG",
         "occupation": "高架桥夜班焊工",
         "affiliation": "北环高架维修班",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "夜班焊工，厚实壮汉，防火工装，焊接面罩，火花灼痕，重型焊枪。",
         "colorLanguage": "烟灰、暗橙、焦黑、旧黄色反光带",
+        "facialHair": "",
         "faceShape": "方宽脸",
         "expression": "沉默警觉",
         "eyes": "细长眼",
@@ -4641,8 +5510,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -4668,11 +5537,13 @@
         "weight": "116 KG",
         "occupation": "地下管网巡检员",
         "affiliation": "旧城排水署",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "成年壮汉，地下管网巡检员，厚胸宽肩，粗壮前臂，灰色防水背带裤，橙色反光带，头灯，井盖钩，旧城工务气质",
         "colorLanguage": "水泥灰、暗橙反光、橡胶黑、旧铜金属、暖麦肤色",
+        "facialHair": "",
         "faceShape": "宽脸，厚下巴",
         "expression": "沉稳疲惫",
         "eyes": "小圆眼，目光稳",
@@ -4843,8 +5714,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -4870,11 +5741,13 @@
         "weight": "118 KG",
         "occupation": "流动食堂护卫厨师",
         "affiliation": "荒路补给车队",
-        "species": "人类"
+        "species": "人类",
+        "heritage": ""
       },
       "visualIdentity": {
         "visualKeywords": "成年壮汉，宽肩厚胸，圆厚肌肉，短黑发，浓眉，白背心，深色工装裤，围裙腰带，巨大铁锅，荒路补给车队，可靠厨师护卫",
         "colorLanguage": "白色背心、深灰工装、暖棕皮革、铁灰厨具、少量橙红火焰色",
+        "facialHair": "",
         "faceShape": "方脸，厚下巴",
         "expression": "爽朗沉稳",
         "eyes": "圆眼，目光直",

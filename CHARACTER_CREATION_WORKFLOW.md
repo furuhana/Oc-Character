@@ -67,6 +67,8 @@ The costume pass must decide:
 - how the required fitted white top appears: T-shirt, sleeveless undershirt,
   fitted long-sleeve, or another clean close-fitting white top that can be tucked
   into pants, overalls, apron waist, harness, or belt structure
+- how color hierarchy keeps the outfit wearable first, with element colors limited
+  mostly to props, trims, badges, hardware, lining, or restrained low-glow accents
 - what makes the outfit attractive as character design, not just practical clothing
 - what material language keeps the outfit in clean anime cel-shaded design instead
   of photoreal fabric, glossy fashion rendering, or gritty texture

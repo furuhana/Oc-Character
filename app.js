@@ -247,6 +247,7 @@ const identityProfileTemplate = `
         <label class="span-2">&#32844;&#19994; / OCCUPATION<input data-field="coreIdentity.occupation" /></label>
         <label class="span-2">&#32452;&#32455; / AFFILIATION<input data-field="coreIdentity.affiliation" /></label>
         <label class="span-2">&#31181;&#26063; / SPECIES<input data-field="coreIdentity.species" /></label>
+        <label class="span-2">&#22269;&#31821;&#34880;&#32479; / HERITAGE<input data-field="coreIdentity.heritage" /></label>
         <label class="span-4">&#24615;&#26684; / CORE PERSONALITY<input data-field="personality.corePersonality" /></label>
         <label class="span-4 textarea-field">&#29305;&#28857; / VISUAL KEYWORDS<textarea data-field="visualIdentity.visualKeywords"></textarea></label>
         <label class="span-4 textarea-field">&#38057;&#23376; / CHARACTER HOOK<textarea data-field="metaDesign.characterHook"></textarea></label>
@@ -277,6 +278,7 @@ const profileModuleFields = {
         ["\u53d1\u957f", "LENGTH", "visualIdentity.hairLength", "span-4"],
         ["\u53d1\u8272", "COLOR", "visualIdentity.hairColor"],
         ["\u6311\u67d3", "HIGHLIGHT", "visualIdentity.highlight"],
+        ["\u80e1\u5b50", "FACIAL", "visualIdentity.facialHair"],
       ],
     },
     {
@@ -725,10 +727,12 @@ function makeCharacter(seed = {}) {
       occupation: "",
       affiliation: "",
       species: "",
+      heritage: "",
     },
     visualIdentity: {
       visualKeywords: "",
       colorLanguage: "",
+      facialHair: "",
     },
     costumeSystem: {},
     personality: {

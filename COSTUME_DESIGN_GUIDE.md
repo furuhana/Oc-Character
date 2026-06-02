@@ -141,12 +141,61 @@ pendant, charm, or tool edge. Do not make the whole outfit shiny.
 
 ## Color Logic
 
-- Use a main clothing color, a support color, and one small accent or fantasy color.
-- The white fitted top is the clean body-reading anchor.
-- Do not default every outfit to navy, charcoal, brass, and black boots.
-- Let colors come from workplace, faction, weather, social class, personality, or
-  ability, but keep them readable as clean anime cel-shaded blocks.
-- Fantasy color should usually appear only on the anchor object or one clothing detail.
+Do not let element, ability, faction, or occupation keywords directly flood the
+full outfit palette. A water character should not automatically become all blue;
+a fire character should not automatically become all red; a plant character should
+not automatically become all green.
+
+Build color decisions in this order:
+
+1. Wearable base colors first.
+2. Stable lower-body colors second.
+3. Profession, faction, weather, or social context colors third.
+4. Element, magic, or ability colors last, usually as accents.
+
+Default palette ratio:
+
+- 60% base wearable color: black, charcoal, warm gray, off-white, navy-black,
+  olive gray, dark brown, muted khaki, or other low-saturation clothing colors.
+- 30% secondary clothing color: coat, vest, shirt layer, uniform panel, apron,
+  harness, trousers, or other large but controlled garment area.
+- 10% element, fantasy, or accent color: badge, cuff line, stitching, lining,
+  jewelry, tool, weapon, low-glow mark, seal, charm, gauge, rune, or small magical
+  detail.
+
+Element colors should usually appear on:
+
+- tools, weapons, stamps, meters, gauges, seals, charms, or signature props
+- badges, rank marks, embroidery, buttons, buckles, zipper pulls, or belt hardware
+- gloves, sleeve trim, inner lining, small stitching, or one controlled garment edge
+- low-glow marks, magical scales, tiny runes, or restrained aura details
+
+Element colors should not default to:
+
+- entire trousers
+- entire shoes
+- all major clothing layers
+- full-body monochrome or near-monochrome palettes
+- every accessory at once
+
+Shoes are the grounding color. Default footwear should use black, charcoal, dark
+brown, gray, off-white, muted workwear colors, or very dark navy. Use element-colored
+shoes only when the character concept specifically needs it, such as sportswear,
+a formal uniform rule, a ceremonial identity, or a deliberate loud fashion choice.
+
+The white fitted top is the clean body-reading anchor. It should be supported by
+surrounding colors rather than buried in a one-note palette.
+
+Do not default every outfit to navy, charcoal, brass, and black boots. Vary the
+base and secondary colors, but keep the final outfit wearable and attractive before
+adding element color.
+
+Before finalizing costume fields, ask:
+
+- If the magic or element color were removed, would the outfit still look good?
+- Do the pants and shoes stabilize the design instead of copying the element color?
+- Is the fantasy color limited to readable anchors, trims, tools, or low-glow marks?
+- Does the palette have enough contrast around the white fitted top?
 
 ## Anti-Repetition Checks
 

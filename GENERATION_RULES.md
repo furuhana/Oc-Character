@@ -36,9 +36,11 @@ Image generation must use the final prompt tab as its source of truth. The image
 - Default character direction is modern urban fantasy: a believable real-world occupation or public identity with one unusual supernatural ability, artifact, device, familiar, curse, or hidden role as the core design hook.
 - Do not default to industrial workers, dock workers, heavy laborers, guards, or grimy working-class archetypes unless the user explicitly asks for them.
 - Visual style should lean toward clean Kyoto Animation-like TV anime cel shading: crisp readable linework, clean shadow shapes, fresh colors, tidy clothing, and minimal dirt or dust.
+- Before finalizing heritage, hair, facial hair, skin tone, or other appearance cues, read `HERITAGE_APPEARANCE_RULES.md`. Use it as a probability and restraint guide, not as a stereotype lock.
 - Treat industrial texture, grime, dust, rust, oil, soot, distressed surfaces, and wasteland mood as minor optional accents only, never as the main design thesis.
 - Prefer modern uniforms, everyday streetwear, service-work clothing, office/public-role clothing, school-adjacent adult roles, municipal roles, medical roles, retail roles, creative jobs, delivery roles, or civic roles as the grounded base.
 - Before writing costume fields or outfit text in the final prompt, read `COSTUME_DESIGN_GUIDE.md` and use it to judge clothing type, silhouette, layering, accessories, material language, color logic, and anti-repetition swaps.
+- Costume color hierarchy has priority over element-based color intuition: make the outfit wearable and attractive first, then use element colors mostly as props, trims, badges, hardware, or restrained low-glow accents.
 - The fantasy layer should be readable but restrained: one signature object, subtle aura, magical tool, abnormal material, compact familiar, small curse mark, or controlled ability.
 - Avoid making strong diffuse glow the default. Prefer compact, readable, low-glow fantasy markers unless the character concept truly needs bright light effects.
 - The preferred body direction is a bulky, soft-strong adult male: broad shoulders, thick chest, thick arms, visible strength, a substantial rounded body, and more muscle than a slim lead character.
@@ -50,7 +52,7 @@ Image generation must use the final prompt tab as its source of truth. The image
 - Core personality: 3-5 short traits.
 - Face, eyes, eyebrow, lip, body, clothing fields: compact phrases.
 - Expression: 2-6 Chinese characters, or one very short phrase.
-- Scar, tattoo, hair, skin tone, muscle focus: compact phrases unless a specific story detail matters.
+- Scar, tattoo, hair, facial hair, skin tone, muscle focus: compact phrases unless a specific story detail matters.
 - Visual keywords and character hook may be longer.
 
 ## Image Generation
