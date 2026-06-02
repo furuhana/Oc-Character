@@ -41,7 +41,7 @@ The intended sequence is documented in `CHARACTER_CREATION_WORKFLOW.md`:
 - Use summarized, intentional shadow shapes rather than complex dirty rendering. The character should feel clean, polished, and easy to read at a glance.
 - Prefer restrained, readable magical effects over bright complex glows. Strong glow, diffuse light, translucent effects, or semi-transparent materials make chroma-key removal harder.
 - When body type is unspecified, prefer a bulky soft-strong adult male: broad shoulders, thick chest, thick arms, rounded muscular mass, and a warm substantial silhouette rather than slender fashion-model proportions.
-- If a tight white T-shirt is included, show subtle abdominal contours through the fabric with clean cel-shading. Avoid photoreal skin detail, wet-shirt effects, explicit framing, or hyper-realistic anatomy.
+- If a fitted white top is included, it may be a tight T-shirt, sleeveless undershirt, fitted long-sleeve, or another clean white close-fitting top tucked into the waist structure. Show subtle torso contours with clean cel-shading. Avoid photoreal skin detail, wet-shirt effects, explicit framing, hyper-realistic anatomy, or glossy material rendering.
 
 ## Chroma-Key Color Choice
 

@@ -7,9 +7,10 @@ Read this before generating attributes or images for this workbench.
 Use `CHARACTER_CREATION_WORKFLOW.md` as the top-level sequence:
 
 1. Fill all profile modules for the current character.
-2. Write `metaDesign.characterImagePromptCn` and `metaDesign.characterImagePrompt` from the completed profile.
-3. Run `node scripts/check-character-completeness.js`.
-4. Only then enter `IMAGE_GENERATION_WORKFLOW.md`.
+2. Before finalizing costume fields, read `COSTUME_DESIGN_GUIDE.md` and apply the costume design gate.
+3. Write `metaDesign.characterImagePromptCn` and `metaDesign.characterImagePrompt` from the completed profile.
+4. Run `node scripts/check-character-completeness.js`.
+5. Only then enter `IMAGE_GENERATION_WORKFLOW.md`.
 
 Image generation must use the final prompt tab as its source of truth. The image prompt is not built by appending every profile field at generation time.
 
@@ -32,10 +33,11 @@ Image generation must use the final prompt tab as its source of truth. The image
 - Visual style should lean toward clean Kyoto Animation-like TV anime cel shading: crisp readable linework, clean shadow shapes, fresh colors, tidy clothing, and minimal dirt or dust.
 - Treat industrial texture, grime, dust, rust, oil, soot, distressed surfaces, and wasteland mood as minor optional accents only, never as the main design thesis.
 - Prefer modern uniforms, everyday streetwear, service-work clothing, office/public-role clothing, school-adjacent adult roles, municipal roles, medical roles, retail roles, creative jobs, delivery roles, or civic roles as the grounded base.
+- Before writing costume fields or outfit text in the final prompt, read `COSTUME_DESIGN_GUIDE.md` and use it to judge clothing type, silhouette, layering, accessories, material language, color logic, and anti-repetition swaps.
 - The fantasy layer should be readable but restrained: one signature object, subtle aura, magical tool, abnormal material, compact familiar, small curse mark, or controlled ability.
 - Avoid making strong diffuse glow the default. Prefer compact, readable, low-glow fantasy markers unless the character concept truly needs bright light effects.
 - The preferred body direction is a bulky, soft-strong adult male: broad shoulders, thick chest, thick arms, visible strength, a substantial rounded body, and more muscle than a slim lead character.
-- A recurring preferred garment is a tight white T-shirt wrapping the torso, with subtle abs visible through the fabric. Keep it clean, non-realistic, non-photographic, and not explicit.
+- A recurring preferred garment is a tight white top wrapping the torso: fitted white T-shirt, sleeveless undershirt, fitted long-sleeve, or another clean close-fitting white top that can be tucked into pants, overalls, apron waist, harness, or belt structure. Keep it attractive, clean, non-realistic, non-photographic, and not explicit.
 
 ## Concision Targets
 
@@ -66,5 +68,5 @@ Every full-body prompt must include these constraints:
 - `Pure flat chroma-key background only.`
 - `Clean anime cel shading, crisp linework, tidy modern urban fantasy design, minimal dirt and grime.`
 - `Urban first, fantasy second; no gritty industrial mood unless explicitly requested.`
-- `Bulky soft-strong adult male, not slender; tight white T-shirt may show subtle abs through fabric.`
+- `Bulky soft-strong adult male, not slender; fitted white top system is preferred, such as a tight T-shirt, sleeveless undershirt, or fitted long-sleeve tucked into the waist structure, with subtle torso contours in clean cel shading.`
 - `Choose a chroma-key background by contrast: avoid green key for green/cyan/healing/translucent effects; avoid magenta key for pink/violet elements.`

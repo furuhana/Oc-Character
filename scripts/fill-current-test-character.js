@@ -38,8 +38,8 @@ Object.assign(character.coreIdentity, {
 });
 
 Object.assign(character.visualIdentity, {
-  visualKeywords: "宽肩、窄腰、铜色护具、管网工具、海风感",
-  colorLanguage: "深青灰、氧化铜绿、旧铜色、白色警示线",
+  visualKeywords: "宽肩厚胸、白色贴身背心、开襟短袖衬衫、胸前仪表背带、管网工具、海风感",
+  colorLanguage: "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
   faceShape: "长方脸，颧骨硬",
   expression: "平静带笑",
   eyes: "细长上挑眼",
@@ -61,24 +61,24 @@ Object.assign(character.visualIdentity, {
 });
 
 Object.assign(character.costumeSystem, {
-  outerwear: "短款防水工装夹克",
-  outerwearColor: "深青灰",
-  innerwear: "白色贴身背心",
-  innerwearColor: "旧白",
-  pants: "高腰耐磨工装裤",
-  pantsColor: "炭黑",
+  outerwear: "开襟短袖检修衬衫，袖口卷起，胸前有小型阀门局刺绣",
+  outerwearColor: "深青灰与雾蓝，刺绣为低调白线",
+  innerwear: "白色贴身背心，扎进高腰裤，强调厚实胸腹",
+  innerwearColor: "干净白，阴影为浅蓝灰",
+  pants: "高腰宽褶检修长裤，裤脚微收",
+  pantsColor: "深海灰蓝，膝侧有简化警示线",
   socks: "厚棉短袜",
   socksColor: "灰黑",
-  shoes: "防滑港务靴",
-  shoesColor: "黑色",
-  gloves: "半指检修手套",
-  glovesColor: "氧化铜绿",
+  shoes: "低筒防滑检修鞋，鞋底抓地纹清楚",
+  shoesColor: "黑蓝色，鞋带有白色小标",
+  gloves: "单侧薄检修手套，另一只手缠白色腕带",
+  glovesColor: "深青灰与白色腕带",
   necklace: "细链铜哨",
   necklaceColor: "旧铜色",
-  belt: "双层工具腰带",
-  beltColor: "黑与铜",
+  belt: "胸前斜背仪表带连接窄工具腰带",
+  beltColor: "深灰布带与小面积氧化铜扣",
   signatureItem: "压力表和阀门扳手",
-  signatureItemColor: "铜绿与银灰",
+  signatureItemColor: "银灰、氧化铜绿、少量白色刻度光",
 });
 
 Object.assign(character.personality, {
@@ -196,9 +196,9 @@ Object.assign(character.numericalAttributes, {
 Object.assign(character.metaDesign, {
   characterHook: "一个听得懂旧港管道声音的检修员，总能在事故发生前半拍出现在阀门旁。",
   characterImagePromptCn:
-    "只画一个人物：岚阀司昼，34岁男性，港区压力阀检修员。高挑结实，宽肩窄腰，暖麦色皮肤，长方脸，细长浅琥珀眼，平静带笑，后梳短发带铜棕挑染，左下颌短疤。穿深青灰短款防水工装夹克、旧白背心、炭黑高腰工装裤、黑色防滑港务靴、氧化铜绿半指手套，黑铜双层工具腰带，胸前挂细链铜哨。手持旧铜色阀门扳手和小压力表，像可靠但有压迫感的港区技术工人。干净动画游戏立绘，清晰线条，简单赛璐璐上色，单人全身，从头到脚完整可见，留出边距。背景必须是纯 #00ff00 平面绿幕。",
+    "只画一个人物：岚阀司昼，34岁男性，港区压力阀检修员。高挑结实，宽肩厚胸，暖麦色皮肤，长方脸，细长浅琥珀眼，平静带笑，后梳短发带铜棕挑染，左下颌短疤。服装根据 COSTUME_DESIGN_GUIDE.md 判断：白色贴身背心扎进高腰宽褶检修长裤，外搭开襟深青灰短袖检修衬衫，袖口卷起，胸前有小型阀门局白线刺绣；胸前斜背仪表带连接窄工具腰带，低筒防滑检修鞋，单侧薄检修手套，另一只手缠白色腕带，细链铜哨贴在领口内侧。手持阀门扳手和小压力表，幻想锚点只在压力表白色刻度和胸前刺绣上出现少量低光。材质是干净动画色块和概括褶皱，不要写实布料纹理或油亮反光。干净动画游戏立绘，清晰线条，简单赛璐璐上色，单人全身，从头到脚完整可见，留出边距。背景必须是纯 #00ff00 平面绿幕。",
   characterImagePrompt:
-    "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body anime-style character illustration of Lanfasi Zhou, a 34-year-old harbor pressure-valve repairman. He is a tall, sturdy adult male with broad shoulders, a narrow waist, practical worker muscle, warm wheat skin, a long rectangular face, narrow light-amber eyes, calm slightly smiling expression, slicked-back short dark brown-black hair with copper-brown highlights, and a short scar on his left jaw. Outfit: deep teal-gray short waterproof work jacket, worn white fitted tank top, charcoal high-waist utility pants, black anti-slip harbor boots, oxidized-copper-green fingerless repair gloves, black-and-copper double tool belt, and a thin necklace with an old copper whistle. Props: an old copper valve wrench and a small pressure gauge, clearly reading as harbor pipe-network maintenance tools. Mood: relaxed, reliable, technically sharp, quietly intimidating, like a man who can prevent an industrial accident before anyone else notices. Style: clean anime game character concept art, crisp outline, simple cel shading, strong readable silhouette, cutout-ready asset. Composition: single standing character, centered, full body visible from head to boots, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no unrelated objects as the main subject, no watermark. Do not use #00ff00 anywhere on the character.",
+    "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body anime-style character illustration of Lanfasi Zhou, a 34-year-old harbor pressure-valve repairman. Apply COSTUME_DESIGN_GUIDE.md costume judgment: keep the outfit attractive, clean, anime-stylized, and varied from the old short-jacket utility-pants template. He is a tall, sturdy adult male with broad shoulders, thick chest, practical worker strength, warm wheat skin, a long rectangular face, narrow light-amber eyes, calm slightly smiling expression, slicked-back short dark brown-black hair with copper-brown highlights, and a short scar on his left jaw. Outfit: a clean white fitted tank top tucked into high-waist wide-pleated inspection trousers, an open deep teal-gray short-sleeve inspection shirt with rolled sleeves and a small white valve-bureau embroidery on the chest, a diagonal chest instrument strap connected to a narrow tool belt, low-cut black-blue anti-slip inspection shoes, one thin repair glove, and a white wrist wrap on the other hand. A small old copper whistle necklace sits close to the collar. Props: a valve wrench and a small pressure gauge, clearly readable as harbor pipe-network maintenance tools. Fantasy anchor: only a few restrained white scale marks on the pressure gauge and chest embroidery, low glow, compact and tidy. Material language: clean anime color blocks, simple cel-shaded folds, simplified small metal accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: clean anime game character concept art, crisp outline, simple cel shading, strong readable silhouette, cutout-ready asset. Composition: single standing character, centered, full body visible from head to boots, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no unrelated objects as the main subject, no watermark. Do not use #00ff00 anywhere on the character.",
 });
 
 character.activeMarks = { attributes: true, images: true };

@@ -1,37 +1,4 @@
 {
-  "characterId": "698a13d7-c2c3-42f2-98eb-c0562ff4b8fb",
-  "characterName": "白石陆也",
-  "selectionWarning": "",
-  "reference": {
-    "mime": "image/png",
-    "fileName": "0_0.png",
-    "path": "/Users/huangzhenhua/Desktop/gemini/Oc-Character/assets/current-style-reference.png"
-  },
-  "prompt": {
-    "en": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body clean anime character illustration of Shiraishi Rikuya, a 34-year-old male night emergency pharmacy pharmacist. Single character only. He is a bulky soft-strong HUMAN adult man with natural healthy soft peach-beige warm skin, not yellow, not orange, not jaundiced, not green, not gray-green, a substantial rounded body, very broad shoulders, thick chest, thick arms, a square-round face, calm warm tea-brown eyes, a gentle awake expression, short dark brown-black hair with soft cool-brown highlights, and a short old burn mark on the outside of his left wrist. Outfit: a tight plain white T-shirt wrapping his thick torso with subtle abs visible through the fabric, a short light blue-gray pharmacy jacket, deep navy apron straps across the waist, charcoal straight utility pants, black soft-soled commuter boots, one white fingerless compounding glove, and a wide canvas utility belt. Signature props: an amber medicine-measuring spoon and a small plain medicine box with no text, clearly readable and not oversized. Keep amber/gold color only on the spoon and small metal details, never on the skin. Fantasy hook: only a few restrained milky-white safety scale lines near the amber spoon, low glow, compact and tidy. Style: Kyoto Animation-inspired fresh TV anime cel shading, crisp clean linework, simple readable shadow shapes, polished modern urban fantasy character design, urban first and fantasy second, visually denoised, minimal dirt and grime. Composition: centered standing pose, full body visible from head to boots, generous padding, no cropping, clean cutout-ready silhouette. The style reference is only for body proportion, line quality, coloring method, and drawing style; do not copy the reference character face, clothing, pose, props, colors, or identity. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform magenta color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no extra main objects, no watermark, no strong diffuse glow, no dust, no oil stains, no rust, no wasteland mood, no yellow skin, no orange skin, no jaundiced skin. Do not use #00ff00 anywhere on the character, props, effects, reflections, or aura.",
-    "cn": "只画一个人物：白石陆也，34岁男性，夜间急药房值班药剂师。软壮厚实的大体格，宽肩厚胸，大手臂，自然健康暖桃肤色，不偏黄不偏橙，方圆脸，温茶棕色沉静圆眼，温柔清醒表情，深棕黑短发带柔和冷棕高光，左手腕外侧有短浅旧烫痕。穿白色紧身T-shirt，衣料贴合厚实躯干并能看到若隐若现的腹肌轮廓；外搭浅蓝灰短药房外套，深海军蓝围裙带，炭黑直筒工装裤，黑色软底通勤靴，单侧白色半指调配手套，宽帆布调配腰带。手持琥珀量药匙和小药盒，身边只有少量乳白安全刻度线，表现夜间急药房药剂师的都市轻奇幻身份。京都动画式清爽TV动画赛璐璐，干净线条，概括阴影，现代都市为主、奇幻为辅。单人全身立绘，从头到脚完整可见，留出边距。背景必须是纯 #00ff00 平面绿幕。不要UI、信息图、设定表、文字、标签、场景、多人、强烈发光、灰尘、油污、铁锈、废土感。不要黄色皮肤、橙色皮肤、焦黄肤色。不要在角色或特效里使用 #00ff00。",
-    "primary": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body clean anime character illustration of Shiraishi Rikuya, a 34-year-old male night emergency pharmacy pharmacist. Single character only. He is a bulky soft-strong HUMAN adult man with natural healthy soft peach-beige warm skin, not yellow, not orange, not jaundiced, not green, not gray-green, a substantial rounded body, very broad shoulders, thick chest, thick arms, a square-round face, calm warm tea-brown eyes, a gentle awake expression, short dark brown-black hair with soft cool-brown highlights, and a short old burn mark on the outside of his left wrist. Outfit: a tight plain white T-shirt wrapping his thick torso with subtle abs visible through the fabric, a short light blue-gray pharmacy jacket, deep navy apron straps across the waist, charcoal straight utility pants, black soft-soled commuter boots, one white fingerless compounding glove, and a wide canvas utility belt. Signature props: an amber medicine-measuring spoon and a small plain medicine box with no text, clearly readable and not oversized. Keep amber/gold color only on the spoon and small metal details, never on the skin. Fantasy hook: only a few restrained milky-white safety scale lines near the amber spoon, low glow, compact and tidy. Style: Kyoto Animation-inspired fresh TV anime cel shading, crisp clean linework, simple readable shadow shapes, polished modern urban fantasy character design, urban first and fantasy second, visually denoised, minimal dirt and grime. Composition: centered standing pose, full body visible from head to boots, generous padding, no cropping, clean cutout-ready silhouette. The style reference is only for body proportion, line quality, coloring method, and drawing style; do not copy the reference character face, clothing, pose, props, colors, or identity. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform magenta color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no extra main objects, no watermark, no strong diffuse glow, no dust, no oil stains, no rust, no wasteland mood, no yellow skin, no orange skin, no jaundiced skin. Do not use #00ff00 anywhere on the character, props, effects, reflections, or aura."
-  },
-  "sourceRules": {
-    "readOnly": [
-      "metaDesign.characterImagePrompt",
-      "metaDesign.characterImagePromptCn",
-      "settings.styleReference.image"
-    ],
-    "forbidden": [
-      "GENERATION_RULES.md as prompt material",
-      "profile attributes appended directly to image prompt",
-      "generation notes appended directly to image prompt",
-      "old hard-coded style-reference-muscle.png"
-    ]
-  },
-  "outputSuggestion": {
-    "sourcePng": "/Users/huangzhenhua/Desktop/gemini/Oc-Character/assets/generated-fullbody-698a13d7-source.png",
-    "transparentPng": "/Users/huangzhenhua/Desktop/gemini/Oc-Character/assets/generated-fullbody-698a13d7.png"
-  },
-  "chromaKey": {
-    "color": "#00ff00",
-    "name": "green",
-    "reason": "Prompt includes magenta/pink/violet elements, so green is the safer contrasting key color."
-  }
+  "stale": true,
+  "reason": "Invalidated after costume design guide update. Regenerate with scripts/prepare-image-generation.js after updating the character final prompt."
 }

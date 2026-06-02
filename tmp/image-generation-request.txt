@@ -1,17 +1,5 @@
-Use imagegen in an isolated/projectless thread.
-Generate exactly one full-body character illustration.
-Style reference: /Users/huangzhenhua/Desktop/gemini/Oc-Character/assets/current-style-reference.png
-Before calling imagegen, load or attach the style reference as an actual image input; do not rely on this file path as text-only prompt content.
-The reference is only for drawing style, body proportion, linework, and coloring method.
-Do not copy the reference character identity, face, clothing, pose, props, colors, or background.
-
-Use ONLY this final prompt as the image subject:
-Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body clean anime character illustration of Shiraishi Rikuya, a 34-year-old male night emergency pharmacy pharmacist. Single character only. He is a bulky soft-strong HUMAN adult man with natural healthy soft peach-beige warm skin, not yellow, not orange, not jaundiced, not green, not gray-green, a substantial rounded body, very broad shoulders, thick chest, thick arms, a square-round face, calm warm tea-brown eyes, a gentle awake expression, short dark brown-black hair with soft cool-brown highlights, and a short old burn mark on the outside of his left wrist. Outfit: a tight plain white T-shirt wrapping his thick torso with subtle abs visible through the fabric, a short light blue-gray pharmacy jacket, deep navy apron straps across the waist, charcoal straight utility pants, black soft-soled commuter boots, one white fingerless compounding glove, and a wide canvas utility belt. Signature props: an amber medicine-measuring spoon and a small plain medicine box with no text, clearly readable and not oversized. Keep amber/gold color only on the spoon and small metal details, never on the skin. Fantasy hook: only a few restrained milky-white safety scale lines near the amber spoon, low glow, compact and tidy. Style: Kyoto Animation-inspired fresh TV anime cel shading, crisp clean linework, simple readable shadow shapes, polished modern urban fantasy character design, urban first and fantasy second, visually denoised, minimal dirt and grime. Composition: centered standing pose, full body visible from head to boots, generous padding, no cropping, clean cutout-ready silhouette. The style reference is only for body proportion, line quality, coloring method, and drawing style; do not copy the reference character face, clothing, pose, props, colors, or identity. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform magenta color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no extra main objects, no watermark, no strong diffuse glow, no dust, no oil stains, no rust, no wasteland mood, no yellow skin, no orange skin, no jaundiced skin. Do not use #00ff00 anywhere on the character, props, effects, reflections, or aura.
-
-Chroma-key choice:
-Use flat solid #00ff00 (green) because: Prompt includes magenta/pink/violet elements, so green is the safer contrasting key color.
-If the character has translucent, diffuse, glowing, or semi-transparent elements, keep those effects restrained and avoid using any color close to the chroma key on the character.
-Prefer subtle opaque or lightly luminous design elements over complex bright glows whenever the character concept allows it.
-
-Hard bans: no UI, no infographic, no chart, no diagram, no character sheet, no labels, no text, no scenery, no multiple characters.
-Background must be flat solid #00ff00 chroma key. Do not use #00ff00 or a visually similar color on the character.
+STALE IMAGE GENERATION REQUEST - DO NOT USE
+This request was invalidated after adding COSTUME_DESIGN_GUIDE.md and the costume design gate.
+Before generating any image, update the character profile and final prompt using COSTUME_DESIGN_GUIDE.md, then rerun:
+node scripts/check-character-completeness.js
+node scripts/prepare-image-generation.js
