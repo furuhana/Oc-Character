@@ -1,35 +1,17 @@
 Use imagegen in an isolated/projectless thread.
 Generate exactly one full-body character illustration.
-Style reference: /Users/huangzhenhua/Desktop/gemini/oc-character-bible-workbench/assets/current-style-reference.png
+Style reference: /Users/huangzhenhua/Desktop/gemini/Oc-Character/assets/current-style-reference.png
 Before calling imagegen, load or attach the style reference as an actual image input; do not rely on this file path as text-only prompt content.
 The reference is only for drawing style, body proportion, linework, and coloring method.
 Do not copy the reference character identity, face, clothing, pose, props, colors, or background.
 
 Use ONLY this final prompt as the image subject:
-Create exactly ONE full-body anime-style character illustration of Wen Yancheng, codename Page Anchor, a 36-year-old old-book restoration worker and night bookbinder in a modern city, human male.
-
-Most important body direction: bulky soft-strong adult male, not slim. He is big, chunky, broad, thick, and muscular in a stylized non-realistic anime way: very broad shoulders, thick chest, thick upper arms, thick forearms, large hands, sturdy waist, strong legs, and a warm substantial body.
-
-Key clothing preference: a clean tight plain white T-shirt wraps his thick torso. Through the fabric, show subtle abdominal contours and a strong chest shape with clean cel-shading, like faint abs visible under a fitted shirt. Keep it tasteful, non-explicit, dry, non-photorealistic, and not a wet-shirt effect.
-
-Design direction: urban first, fantasy second. He should look like a believable contemporary bookbinder and old-book restoration worker with one restrained magical core design: a brass bookmark anchor and opaque paper talismans that fold into a protective page wall. Avoid strong diffuse glow; use only a few small pale amber page marks if needed.
-
-Appearance: broad rounded rectangular face, clean warm wheat skin, short slightly messy dark ink-brown curly hair with warm coffee highlights, thick flat eyebrows, gentle deep tea-brown eyes, calm soft smile, no visible scar. A small folded-page sigil is on his left forearm.
-
-Clothing: open short dark ink-blue restoration-workshop jacket, tight plain white T-shirt, light coffee relaxed utility trousers, deep brown-black soft work shoes, ivory thin bookbinding gloves, dark brown tool belt with awl and thread spool, small brass bookmark pendant.
-
-Signature item: hold or display a brass bookmark anchor and several ivory paper talismans folded like clean book pages. The talismans are mostly opaque paper, not glowing glass, with tiny pale amber printed-like marks and no readable text.
-
-Style: non-realistic clean TV anime character design, Kyoto Animation-like clean cel shading, crisp smooth linework, summarized clean shadow shapes, polished edges, fresh readable colors, visually denoised. Tidy modern urban fantasy design. Avoid strong glow, photorealism, gritty rendering, dirty texture overlays, dust, grime, rust, oil stains, industrial mood, or muddy shadows.
-
-Style reference rule: use the uploaded reference image for bulky adult male proportion, friendly strongman mass, clean line quality, and polished cel-shading taste only. Do not copy the reference character identity, face, clothing, pose, cookware, props, colors, or background.
-
-Composition: single standing character, full body visible from head to shoes, centered, generous padding, cutout-ready game character asset. Pure flat chroma-key background only, chosen by contrast with the character. No shadow, no floor, no scenery, no UI, no infographic, no diagram, no character sheet, no text, no labels, no logo, no readable letters, no icons, no extra characters.
+Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body clean anime character illustration of Suhara Yosuke, a 36-year-old male high-rise elevator dispatcher. Single character only. Generate the character from the current attributes. He is a bulky soft-strong adult man with a substantial rounded body, very broad shoulders, thick chest, thick arms, warm clean skin, a square-round face, calm slightly drooping deep hazel-green eyes, a steady gentle smile, short dark brown-black hair with warm gold-gray highlights, and a short old scar on the web of his right hand. Outfit: a tight plain white T-shirt wrapping his thick torso with subtle abs visible through the fabric, a light gray short-sleeve dispatcher uniform shirt, deep green dispatcher suspenders, charcoal straight utility pants, black soft-soled commuter boots, deep green fingerless dispatcher gloves, and a wide canvas utility belt. Signature props: a brass floor-number plate and a compact radio, clearly readable and not oversized. Fantasy hook: only a few restrained warm-white elevator-door calibration lines near the brass floor plate, low glow, compact and tidy. Style: Kyoto Animation-inspired fresh TV anime cel shading, crisp clean linework, simple readable shadow shapes, polished modern urban fantasy character design, urban first and fantasy second, visually denoised, minimal dirt and grime. Composition: centered standing pose, full body visible from head to boots, generous padding, no cropping, clean cutout-ready silhouette. The style reference is only for body proportion, line quality, coloring method, and drawing style; do not copy the reference character face, clothing, pose, props, colors, or identity. Background: perfectly flat solid #ff00ff chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no extra main objects, no watermark, no strong diffuse glow, no dust, no oil stains, no rust, no wasteland mood. Do not use #ff00ff anywhere on the character, props, effects, reflections, or aura.
 
 Chroma-key choice:
-Use flat solid #00ff00 (green) because: No obvious green/cyan translucent effect conflict was detected, so green is the default key color.
+Use flat solid #ff00ff (magenta) because: Prompt includes green/cyan/healing or translucent light effects; magenta keeps those effects away from the removable key color.
 If the character has translucent, diffuse, glowing, or semi-transparent elements, keep those effects restrained and avoid using any color close to the chroma key on the character.
 Prefer subtle opaque or lightly luminous design elements over complex bright glows whenever the character concept allows it.
 
 Hard bans: no UI, no infographic, no chart, no diagram, no character sheet, no labels, no text, no scenery, no multiple characters.
-Background must be flat solid #00ff00 chroma key. Do not use #00ff00 or a visually similar color on the character.
+Background must be flat solid #ff00ff chroma key. Do not use #ff00ff or a visually similar color on the character.

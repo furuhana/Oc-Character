@@ -2,6 +2,17 @@
 
 Read this before generating attributes or images for this workbench.
 
+## Full Workflow
+
+Use `CHARACTER_CREATION_WORKFLOW.md` as the top-level sequence:
+
+1. Fill all profile modules for the current character.
+2. Write `metaDesign.characterImagePromptCn` and `metaDesign.characterImagePrompt` from the completed profile.
+3. Run `node scripts/check-character-completeness.js`.
+4. Only then enter `IMAGE_GENERATION_WORKFLOW.md`.
+
+Image generation must use the final prompt tab as its source of truth. The image prompt is not built by appending every profile field at generation time.
+
 ## Attribute Generation
 
 - Generate for the currently active character only.

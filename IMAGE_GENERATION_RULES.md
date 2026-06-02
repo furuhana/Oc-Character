@@ -2,6 +2,20 @@
 
 Use this file only when generating image assets for the workbench.
 
+## Workflow Boundary
+
+Do not start image generation until the character profile has been completed and checked with:
+
+```bash
+node scripts/check-character-completeness.js
+```
+
+The intended sequence is documented in `CHARACTER_CREATION_WORKFLOW.md`:
+
+1. Fill all character profile modules.
+2. Write the final image prompt from the completed profile.
+3. Generate the image from the final image prompt only.
+
 ## Source Of Truth
 
 - For full-body generation, read only:
