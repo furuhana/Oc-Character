@@ -87,7 +87,10 @@ Useful silhouette change points:
 - fitted white top tucked into high-waist trousers
 - sleeveless white undershirt with open shirt or vest
 - fitted white long-sleeve with rolled outer sleeves
-- apron front panel over thick torso and waist
+- apron front panel over thick torso and waist, but treat this as a high-repetition
+  choice for service, archive, pharmacy, florist, kitchen, and shop roles; do not
+  use it again if recent characters already used apron straps, apron fronts, or
+  waist-covering cloth panels
 - suspenders or harness crossing the chest
 - overalls with one strap loose or both straps tight
 - long coat with open front showing the fitted top
@@ -156,6 +159,8 @@ Before finalizing, check whether the outfit repeats too many recent defaults:
 - fingerless gloves
 - wide utility belt
 - brass or amber signature item
+- apron, apron front, apron straps, apron-like archive straps, florist apron,
+  kitchen apron, pharmacy apron, or any large cloth panel covering the waist/belly
 
 The tight white top can stay. If it stays, vary at least two other major elements:
 layering structure, pants silhouette, footwear, accessory source, faction marking,
@@ -165,20 +170,23 @@ color logic, or fantasy anchor location.
 
 ### Night Pharmacist
 
-Avoid only writing pharmacy jacket plus utility pants. Decide whether he needs quiet
+Avoid only writing pharmacy jacket plus utility pants, and avoid defaulting to an
+apron if recent service characters already used one. Decide whether he needs quiet
 movement, hygiene, long standing, drawer access, and a calm public face. Keep a fitted
-white top tucked into soft trousers or apron structure. Possible variations include a
-short pharmacy cardigan, clean apron, sleeve guards, soft indoor shoes, key cord,
-stamp pouch, or medicine tag. The fantasy anchor can live on a measuring spoon,
-cuff mark, chest badge back, or apron inner pocket.
+white top tucked into soft trousers, a vest, suspenders, or a compact belt structure.
+Possible variations include a short pharmacy cardigan, sleeve guards, soft indoor
+shoes, key cord, stamp pouch, or medicine tag. The fantasy anchor can live on a
+measuring spoon, cuff mark, chest badge back, belt pouch, or pocket tag.
 
 ### Lost-Property Archivist
 
 The outfit should show careful sorting and memory work, not just office uniform.
-Use a fitted white top as the base, then choose a vest, cardigan, long apron, sleeve
-guards, high-waist trousers, or document strap. Accessories can be index tags, old
-keys, a ticket clip, repaired button, or bookmark charm. The fantasy anchor can be
-an archive tag, bookmark, glove fingertip, or belt notebook.
+Use a fitted white top as the base, then choose a vest, cardigan, sleeve guards,
+high-waist trousers, suspenders, a document strap, or a compact crossbody case.
+Avoid defaulting to an apron or apron-like front panel unless the character concept
+specifically depends on one. Accessories can be index tags, old keys, a ticket clip,
+repaired button, or bookmark charm. The fantasy anchor can be an archive tag,
+bookmark, glove fingertip, belt notebook, or crossbody case clasp.
 
 ### Municipal Patrol Worker
 

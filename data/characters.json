@@ -1,6 +1,6 @@
 {
   "app": "OC Character Bible Workbench",
-  "savedAt": "2026-06-02T10:05:34.902Z",
+  "savedAt": "2026-06-02T10:28:58.062Z",
   "settings": {
     "starterPrompt": "正向提示：\n重点方向：都市为主，奇幻为辅\n壮壮的、肉肉的、肌肉多多的成年男性\n厚实大体格，宽肩厚胸，大手臂，圆润但有力量\n生成服装前先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭\n白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣\n现实职业或社会角色作为基底\n一个清晰的核心设计：招牌装备、异能、魔法道具或隐藏身份\n现代服装与轻量奇幻细节结合，服装必须好看而不只是实用\n用数值、世界阵营、战斗方式、身体轮廓和反重复交换来决定服装\n京都动画式清爽线条\n干净赛璐璐阴影，阴影概括明确\n整体干净、无灰尘、主动降噪\n颜色清透，角色轮廓易读\n\n默认禁止：\n少女\n萝莉\n萌系\n偶像风、女性化男性\n瘦弱体型\n修长纤细男主\n写实肌肉渲染\n照片感\n湿身效果\n写实布料纹理、写实材质反光、时装摄影语言\n油亮皮革、湿身材质、拟真塑料或乳胶感\n工业风作为主设计\n大量灰尘、油污、铁锈、脏污质感\n废土、煤灰、混浊阴影\n特效喧宾夺主",
     "styleReference": {
@@ -66,6 +66,428 @@
     }
   },
   "characters": [
+    {
+      "id": "76430cee-a575-4757-9e1b-b40ebc2ba5d3",
+      "createdAt": "2026-06-02T10:18:58.916Z",
+      "updatedAt": "2026-06-02T10:22:59.746Z",
+      "agentMarks": [
+        {
+          "id": "f86da01c-4e01-4db0-9694-2d0840ba7092",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T10:18:58.916Z"
+        },
+        {
+          "id": "74a50fa7-f746-4679-8888-a62b44c71110",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-02T10:18:58.916Z"
+        },
+        {
+          "id": "c6d3858a-fb63-4c39-befa-a08d4d2ef88f",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-02T10:18:58.916Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": "urban-fantasy-default"
+      },
+      "assets": {
+        "fullBody": "./assets/generated-fullbody-76430cee.png",
+        "thumbnail": "./assets/generated-fullbody-76430cee.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "久世鸣央",
+        "codename": "雨频",
+        "alias": "鸣央",
+        "faction": "晴庭夜间电台",
+        "birthday": "2月16日",
+        "age": "37",
+        "height": "189 cm",
+        "weight": "112 kg",
+        "occupation": "夜间电台气象播报员",
+        "affiliation": "晴庭夜间电台气象频段",
+        "species": "人类"
+      },
+      "visualIdentity": {
+        "visualKeywords": "厚实壮壮成年男性，宽肩厚胸，大手臂，白色贴身短袖，午夜蓝短雨半斗篷，银灰斜挎设备带，酒红高腰宽褶裤，调频音叉麦克风，银蓝声波线，无围裙测试",
+        "colorLanguage": "暖白、午夜蓝、银灰、酒红、深蓝棕、少量银蓝声波光，清爽夜间电台配色",
+        "faceShape": "方圆脸，脸颊饱满，下颌厚实",
+        "expression": "沉静听雨",
+        "eyes": "深蓝灰圆眼，像在听远处雷声",
+        "eyeColor": "深蓝灰色",
+        "eyebrow": "浓而平直的眉",
+        "lip": "嘴唇厚度适中，说话前会轻轻吸气",
+        "scar": "右耳后有一道短浅旧疤",
+        "tattoo": "左锁骨下有小型声波刻度纹身，衣领边缘半露",
+        "hairStyle": "深蓝黑短发，额前自然起伏",
+        "hairLength": "短发，耳侧干净，后颈略厚",
+        "hairColor": "深蓝黑色",
+        "highlight": "发梢有银灰挑染",
+        "bodyType": "软壮厚实的大体格，胸背宽阔，腰腹结实圆润",
+        "muscleLevel": "肌肉量高，偏搬电台设备和长期站播练出的日常力量型",
+        "bodyFat": "中等偏高，白色短袖贴合时有柔和腹部轮廓",
+        "shoulderWidth": "很宽，短雨半斗篷和斜挎设备带强化肩胸体量",
+        "skinTone": "自然健康暖桃米色，不偏黄不偏橙，整体干净",
+        "muscleFocus": "胸、肩、上臂、前臂、厚实手掌和腰腹"
+      },
+      "costumeSystem": {
+        "dailyWear": "白色贴身短袖搭配午夜蓝短雨半斗篷，银灰斜挎设备带横过胸口，高腰酒红宽褶长裤，深蓝棕厚底乐福鞋，明确无围裙、无围裙前片、无腰腹布片",
+        "outerwear": "短款午夜蓝防雨半斗篷，从肩部展开，前胸敞开，止于腰线上方",
+        "outerwearColor": "午夜蓝色，边缘为银灰压线",
+        "innerwear": "白色贴身短袖上衣，贴合厚实躯干并扎进裤腰",
+        "innerwearColor": "暖白色，阴影为浅蓝灰",
+        "pants": "高腰酒红宽褶长裤，完整露出干净裤腰，无任何覆盖前腹的布片",
+        "pantsColor": "低饱和酒红色，褶线为暗紫灰",
+        "socks": "柔软短袜，藏在乐福鞋内",
+        "socksColor": "深蓝灰色",
+        "shoes": "深蓝棕厚底乐福鞋，适合电台和屋顶短距离快走",
+        "shoesColor": "深蓝棕色，鞋扣为暗银",
+        "gloves": "单侧深蓝无指收音手套，另一只手缠白色腕带",
+        "glovesColor": "深蓝色与白色腕带",
+        "necklace": "短绳挂一枚小型旧耳机转换头",
+        "necklaceColor": "暗银色和黑绳",
+        "belt": "窄银灰设备腰带，仅固定小收音腰包，不形成围裙或前片",
+        "beltColor": "银灰色与暗蓝扣",
+        "signatureItem": "银灰调频音叉麦克风，可以把雨声调成短暂保护频率",
+        "signatureItemColor": "银灰金属小点缀，刻线为克制银蓝微光"
+      },
+      "personality": {
+        "corePersonality": "沉稳、敏锐、温和、守时",
+        "strengths": "听觉记忆强，能从雨声和电流噪声里判断天气变化，播报时很能安抚人",
+        "weakness": "过度依赖自己听到的细节，容易把普通杂音也当成预兆",
+        "weaknesses": "过度依赖自己听到的细节，容易把普通杂音也当成预兆",
+        "hiddenPersonality": "外表可靠，其实很喜欢收集旧电台广告曲",
+        "emotionalStability": "高，突发天气越近越会把声音压稳",
+        "confidenceLevel": "中高，对播报判断自信，对私人邀约反应很慢",
+        "outwardPersona": "像深夜电台里让人安心的大个子主播，声音低稳，动作不急。",
+        "trueCore": "相信准确的提醒能让陌生人在雨夜少走一段危险路。",
+        "surfaceFear": "怕播错天气，让听众误判出行。",
+        "deepFear": "怕自己有一天听不出真正危险的频率。",
+        "traumaTrigger": "听见信号突然断成白噪声，或屋顶天线发出尖锐回响。",
+        "stressResponse": "会先按住音叉麦克风，再重新校准耳机线。",
+        "trauma": "新人时期一次突发暴雨，他延迟播报了屋顶强风警报，导致维修员被困在天线层。",
+        "traumaSource": "他认为自己当晚如果更相信异常噪声，就能提前提醒撤离。",
+        "recoveryStatus": "基本恢复，把夜间天气和异常频率记录得非常细致。",
+        "traumaImpact": "让他对每一次不自然的雨声都格外认真，也不喜欢别人把天气预警当玩笑。"
+      },
+      "lifestyle": {
+        "favoriteFood": "热乌龙茶、盐饭团、烤芝士吐司",
+        "hatedFood": "太甜的汽水和气味刺鼻的罐头",
+        "hiddenFavorite": "喜欢儿童电台剧，会说只是研究播音节奏",
+        "appetite": "食量大，夜班后会吃两份热饭团",
+        "alcoholTolerance": "低，怕影响听觉判断所以几乎不喝",
+        "cookingSkill": "会做简单夜宵和大份热汤",
+        "roomStyle": "房间像小型录音间，墙上挂吸音板和旧天气图",
+        "neatness": "高，线材、衣物和唱片都有固定位置",
+        "collections": "旧耳机转换头、退役调频旋钮、手写天气卡",
+        "pets": "没有宠物，会照顾电台屋顶的耐雨盆栽"
+      },
+      "socialSystem": {
+        "socialAbility": "安静亲和型，擅长用稳定声音让人冷静",
+        "lyingAbility": "低，撒谎时会不自觉进入播报腔",
+        "boundarySense": "强，涉及天气预警和屋顶安全时绝不退让",
+        "popularity": "在夜班司机、便利店店员、巡逻员和通宵学生中很有名",
+        "romanceExperience": "少，夜班和慢热性格让关系推进很慢",
+        "preferredType": "喜欢说话直接、听得进提醒、愿意一起等雨停的人",
+        "expressionStyle": "用行动表达，会提前发提醒、备伞和热饮",
+        "possessiveness": "中低，不控制人，但会记住对方所有容易冒雨出门的习惯"
+      },
+      "combatSystem": {
+        "signatureAbility": "调频音叉麦克风能把雨声调成短暂保护频率，形成贴身的银蓝声波屏障",
+        "combatType": "控制支援型远近结合",
+        "coreStyle": "用声波线标出安全频段，配合厚实体格卡位、护人和打断目标节奏",
+        "weaponPreference": "调频音叉麦克风、耳机线、小型收音腰包",
+        "specialAbility": "能听见天气噪声里的危险频率，并把伪装信号固定成银蓝断续线",
+        "painTolerance": "中高，能忍受撞击和长时间屋顶站立",
+        "aggression": "低，优先预警和截停，不喜欢主动伤人",
+        "stamina": "高，能连续完成整夜播报和屋顶巡检",
+        "burstPower": "中高，关键时能用肩背挡住天线层冲撞",
+        "pressure": "中高，声音放低时有让人立刻停步的压迫感",
+        "reactionSpeed": "中上，对电流噪声、雨滴节奏和脚步回响很敏感"
+      },
+      "worldSetting": {
+        "origin": "晴庭市旧广播塔旁的居民区，童年常听夜间天气频段入睡",
+        "socialClass": "普通工薪阶层，靠夜班经验和稳定播报口碑站稳脚跟",
+        "education": "传媒专科学历，后续取得异常气象频段播报资格",
+        "criminalRecord": "无犯罪记录，曾因强行插播屋顶撤离警报被投诉，事后证明判断正确",
+        "organizationRank": "夜间气象频段主播播报员兼屋顶天线巡检负责人",
+        "enemyForces": "伪造天气信号的广告黑频段、偷接异常天线的空频道团伙",
+        "biggestRegret": "新人时期没能及时播出强风警报，导致一名维修员被困天线层。",
+        "biggestGoal": "建立一套能让夜间出行者避开异常天气的城市播报流程",
+        "hiddenDream": "白天开一家只播旧广告曲和卖热吐司的小电台咖啡间",
+        "mostImportantPerson": "教他第一次独立播报暴雨预警的前任导播",
+        "unforgettableExperience": "凌晨用三分钟插播让一整排夜班车避开积水路段",
+        "lifeStain": "曾私自保留一段异常白噪声录音，避免它被流程删除"
+      },
+      "hiddenInformation": {
+        "shameSecret": "害怕现场即兴唱广告曲",
+        "hiddenHobby": "给旧调频旋钮按音色分类",
+        "weakness": "对雨夜真心求助的人太心软",
+        "secretHabit": "每次开播前会把音叉麦克风轻碰三下桌面",
+        "contrastSide": "看起来慢，其实能在几秒内听出三层背景噪声",
+        "foodAllergy": "轻微猕猴桃过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 48,
+        "morality": 80,
+        "sanity": 70,
+        "confidence": 72,
+        "stress": 54,
+        "danger": 51,
+        "desire": 44,
+        "loyalty": 84,
+        "stability": 79,
+        "social": 65,
+        "doom": 31,
+        "violence": 25
+      },
+      "metaDesign": {
+        "characterHook": "一个夜间电台气象播报员，能用调频音叉麦克风把雨声调成短暂保护频率。",
+        "characterConsistencyPrompt": "久世鸣央始终是厚实软壮、宽肩厚胸的成年男性，夜间电台气象播报员，白色贴身短袖、午夜蓝短雨半斗篷、银灰斜挎设备带、高腰酒红宽褶裤和调频音叉麦克风是核心识别点；明确没有围裙、围裙前片或腰围裙。",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Generate the character from the current attributes. Create exactly ONE full-body clean anime character illustration of Kuze Nario, a 37-year-old male night radio weather announcer in a modern city. Single character only. He is a bulky soft-strong HUMAN adult man with natural healthy warm peach-beige skin, not yellow, not orange, not jaundiced, not green, not gray-green, a substantial rounded body, very broad shoulders, thick chest, thick arms, thick hands, a square-round face, deep blue-gray eyes, a calm expression as if listening to distant thunder, short deep blue-black hair with silver-gray highlights, a short old scar behind his right ear, and a small sound-wave scale tattoo partly visible below the left collarbone. Costume test requirement: absolutely NO apron, NO apron front, NO waist apron, NO chef apron, NO florist apron, NO archive apron, NO apron straps, and NO large cloth panel covering the waist or belly. His life scene is a night radio studio and rooftop weather antenna; movement needs include standing broadcast posture, climbing a short ladder, adjusting radio gear, and walking quickly through rain; social visibility is a modern media worker, not a service-window clerk. Outfit: a fitted plain white short-sleeve top wrapping his thick torso; a short midnight-blue rain half-cape over the shoulders, open at the front and stopping above the waist; a silver-gray diagonal equipment sling across the thick chest connected to a compact radio pouch; high-waist wine-red wide-pleated trousers with a clean waistband fully visible, no front cloth panel; deep blue-brown thick-soled loafer shoes; one dark blue fingerless radio glove and a white wrist wrap on the other hand. Signature prop: a silver-gray tuning-fork microphone that can tune rain noise into a short protective frequency. Fantasy anchor: only a few restrained silver-blue sound-wave lines near the tuning-fork microphone and earphone cord, compact low glow, tidy and urban first. Use a clean anime material language: flat color blocks, simple cel-shaded folds, tidy weatherproof cloth shape, small simplified metal accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: Kyoto Animation-inspired fresh TV anime cel shading, crisp clean linework, simple readable shadow shapes, polished modern urban fantasy character design, visually denoised, minimal dirt and grime. Composition: centered standing pose, full body visible from head to shoes, generous padding, no cropping, clean cutout-ready silhouette. The style reference is only for bulky adult male body proportion, clean line quality, coloring method, and drawing style; do not copy the reference character face, clothing, pose, props, colors, or identity. Background: perfectly flat solid #ff00ff chroma-key background only, one uniform magenta color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no extra main objects, no watermark, no strong diffuse glow, no dust, no oil stains, no rust, no wasteland mood, no apron, no waist apron, no apron front, no belly-covering apron panel, no yellow skin, no orange skin, no jaundiced skin. Do not use #ff00ff anywhere on the character, props, effects, reflections, or aura.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：久世鸣央，37岁男性，城市夜间电台气象播报员。Generate the character from the current attributes. 他是壮壮软厚的成年男性，宽肩厚胸，大手臂，暖桃米色健康肤色，方圆脸，深蓝灰眼，像在听远处雷声的沉静表情，深蓝黑短发带银灰挑染，右耳后有一道短浅旧疤，左锁骨下有小型声波刻度纹身。服装设计门槛测试：本角色明确禁止围裙、围裙前片、围裙带、厨师围裙、花店围裙、档案围裙或任何覆盖腰腹的工作围裙结构。生活场景是夜间电台与屋顶气象天线，动作需要站立播报、攀上短梯、调节收音设备和避雨快走；社会可见度是都市媒体工作者，不是服务窗口职员。穿白色贴身短袖上衣，外搭短款午夜蓝防雨半斗篷，半斗篷从肩部展开但前胸敞开；银灰斜挎设备带横过厚实胸口，连接小型收音腰包；下装是高腰酒红宽褶长裤，裤脚利落，深蓝棕色厚底乐福鞋。单侧深蓝无指收音手套，另一只手缠白色腕带。招牌道具是银灰调频音叉麦克风，可以把雨声调成短暂的保护频率。幻想锚点只在音叉麦克风和耳机线附近出现少量银蓝声波线。京都动画式清爽 TV 动画赛璐璐，线条干净，阴影块面概括，现代都市为主、轻量奇幻为辅。单人全身，从头到鞋完整可见，留足边距。背景必须是纯 #ff00ff 平面洋红绿幕。禁止 UI、信息图、图表、设定表、文字、标签、图标、多人、裁切、水印、围裙、腰围裙、围裙前片、脏污、油亮写实材质。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指轻敲音叉麦克风尾端",
+        "irritatedAction": "把耳机线重新绕整齐，语气变低",
+        "nervousAction": "反复确认设备带扣没有松开",
+        "relaxedAction": "靠在播音台旁听旧广告曲",
+        "lyingAction": "会把播报腔带进日常回答",
+        "shyAction": "用手背碰一下耳机转换头，视线移开",
+        "speechSpeed": "中慢，关键字会压得很清楚",
+        "speechTone": "低沉清晰，带一点夜间电台的柔和颗粒感",
+        "catchphrase": "雨声变调了，今晚别走高架。",
+        "battleLine": "频率锁住，别靠近天线。",
+        "walkStyle": "步幅稳，肩背厚实，设备带随动作贴住胸口",
+        "combatStance": "侧身护住音叉麦克风，另一手压低耳机线",
+        "idleAction": "把调频旋钮按固定节奏转回原点",
+        "attackRhythm": "先用低频声波打断节奏，再短促逼退"
+      }
+    },
+    {
+      "id": "1c3a44c1-f4d1-45f8-9301-0be749bd406c",
+      "createdAt": "2026-06-02T10:10:55.911Z",
+      "updatedAt": "2026-06-02T10:16:07.468Z",
+      "agentMarks": [
+        {
+          "id": "6a41474f-9ab7-4b2d-bb5b-01e938f89d79",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T10:10:55.911Z"
+        },
+        {
+          "id": "954b6c11-e7f0-4b37-86fa-7531175c92ac",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-02T10:10:55.911Z"
+        },
+        {
+          "id": "9a842958-13dd-44e5-a555-e8459d422d61",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-02T10:10:55.911Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 服装设计门槛\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用它判断穿搭，而不是把它当固定服装库。\n- 服装必须好看；功能、世界逻辑和战斗逻辑应该服务角色设计魅力。\n- 数值会影响服装：贫富、危险、欲望、暴力倾向、纪律性和公共压力都要参与判断。\n- 与世界/阵营会影响服装：家徽、logo、徽章、刺绣、阶级纹样、量产制服、禁用色、隐藏身份痕迹都可使用。\n- 战斗方式会影响服装：近战、远程、支援、潜行或仪式型能力会改变衣摆、袖口、鞋、手套、腰带、口袋和垂坠物。\n- 白色贴身上衣是核心偏好：T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；但必须通过层次、裤型、鞋履、配饰、图案或幻想锚点做反重复变化。\n- 材质使用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n\n2. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n3. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n4. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": "hidden-magic-default"
+      },
+      "assets": {
+        "fullBody": "./assets/generated-fullbody-1c3a44c1.png",
+        "thumbnail": "./assets/generated-fullbody-1c3a44c1.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "藤泽澄央",
+        "codename": "归票",
+        "alias": "澄央",
+        "faction": "晴庭市遗失物档案馆",
+        "birthday": "11月04日",
+        "age": "36",
+        "height": "187 cm",
+        "weight": "108 kg",
+        "occupation": "夜间遗失物归还管理员",
+        "affiliation": "晴庭市遗失物档案馆夜归窗口",
+        "species": "人类"
+      },
+      "visualIdentity": {
+        "visualKeywords": "壮壮软厚成年男性，宽肩厚胸，大手臂，白色贴身长袖，米灰短针织开衫，深松绿长围裙前片，棕红交叉背带，薄荷青档案票夹，干净市政档案馆气质",
+        "colorLanguage": "暖白、米灰、深松绿、深橄榄、棕红、薄荷青小光，安静清透的夜间归还窗口配色",
+        "faceShape": "方圆脸，脸颊饱满，下颌厚实",
+        "expression": "温和警觉",
+        "eyes": "圆润松绿色眼，像在确认物主记忆",
+        "eyeColor": "松绿色",
+        "eyebrow": "浓而略弯的眉",
+        "lip": "嘴唇厚度适中，说话时会先停半拍",
+        "scar": "左眉尾有一道细小旧伤",
+        "tattoo": "右锁骨下有被衣领半遮住的归还印章纹身",
+        "hairStyle": "深栗色短卷发，额前自然蓬起",
+        "hairLength": "短发，耳侧修整干净，后颈微卷",
+        "hairColor": "深栗色",
+        "highlight": "发梢有柔和暖棕高光",
+        "bodyType": "软壮厚实的大体格，胸背宽阔，腰腹结实圆润",
+        "muscleLevel": "肌肉量高，偏长期搬档案箱和站窗口练出的日常力量型",
+        "bodyFat": "中等偏高，白色长袖贴合时有柔和腹部轮廓",
+        "shoulderWidth": "很宽，交叉背带和围裙前片强化厚实上身",
+        "skinTone": "自然健康暖桃米色，不偏黄不偏橙，整体干净",
+        "muscleFocus": "胸、肩、上臂、前臂、厚实手掌和腰腹"
+      },
+      "costumeSystem": {
+        "dailyWear": "白色贴身长袖扎进高腰深橄榄宽褶裤，外搭米灰短针织开衫，深松绿长围裙前片覆盖腰腹，棕红交叉背带固定索引卡盒，深棕乐福鞋式软底工作鞋",
+        "outerwear": "短款米灰针织开衫，开襟露出白色贴身长袖和交叉背带",
+        "outerwearColor": "温米灰色，阴影为浅灰绿",
+        "innerwear": "白色贴身长袖上衣，袖口微卷，扎进腰部结构",
+        "innerwearColor": "暖白色，阴影为浅薄荷灰",
+        "pants": "高腰深橄榄宽褶长裤，裤脚利落收在鞋面上方",
+        "pantsColor": "深橄榄色，褶线为低饱和灰绿",
+        "socks": "柔软短袜，藏在乐福鞋内",
+        "socksColor": "深灰绿色",
+        "shoes": "深棕乐福鞋式软底工作鞋，适合夜间窗口和档案室长站",
+        "shoesColor": "深棕色，鞋面有小面积暗银扣",
+        "gloves": "左手薄白棉手套用于托起失物，右手裸露方便确认触感",
+        "glovesColor": "白色，边缘有浅灰绿包边",
+        "necklace": "短绳挂一枚无字失物柜小钥匙",
+        "necklaceColor": "旧银色和深棕绳",
+        "belt": "棕红皮质交叉背带连接窄腰带，挂索引卡盒、票夹和小印章袋",
+        "beltColor": "棕红色与暗银扣",
+        "signatureItem": "薄荷青档案票夹，可以夹住失物残留的一瞬记忆",
+        "signatureItemColor": "薄荷青透明边缘，刻线为克制乳白微光"
+      },
+      "personality": {
+        "corePersonality": "温和、细致、慢热、守信",
+        "strengths": "记忆力强，能从微小物件习惯里推回物主线索，安抚失主很有耐心",
+        "weakness": "太容易替别人保存遗憾，常把不该留下的情绪带回家",
+        "weaknesses": "太容易替别人保存遗憾，常把不该留下的情绪带回家",
+        "hiddenPersonality": "外表沉稳，其实喜欢给无主物件编很短的临时故事",
+        "emotionalStability": "高，越多人焦急时越会把语速放慢",
+        "confidenceLevel": "中高，对归还判断很自信，对自己的愿望表达偏迟钝",
+        "outwardPersona": "像夜间窗口后可靠的大个子管理员，安静、礼貌、很会等人说完。",
+        "trueCore": "相信每件失物都不只是物品，而是某个人生活里没来得及合上的一页。",
+        "surfaceFear": "怕把东西交错给不该拿走的人。",
+        "deepFear": "怕自己保存的记忆有一天再也没有人来认领。",
+        "traumaTrigger": "听见空柜门连续合上的声音，或看到无人认领的儿童票夹。",
+        "stressResponse": "会先扶正围裙胸口的归还章，再重新核对索引卡顺序。",
+        "trauma": "早年一次暴雨夜，他把一只旧书包按流程封存，第二天才知道失主一直在车站寻找里面的病历。",
+        "traumaSource": "他认为自己当晚如果多问一句，就能更早把书包送回去。",
+        "recoveryStatus": "基本恢复，把夜间归还流程训练得非常细致。",
+        "traumaImpact": "让他对每一次含糊的寻找都格外认真，也不轻易销毁无人认领物。"
+      },
+      "lifestyle": {
+        "favoriteFood": "热豆花、烤饭团、淡盐柠檬水",
+        "hatedFood": "太甜的奶油蛋糕和香味过重的罐头",
+        "hiddenFavorite": "喜欢便利店薄荷糖，但会说只是提神",
+        "appetite": "食量大，夜班后会吃两份热饭团",
+        "alcoholTolerance": "低，怕混淆归还记录所以很少喝",
+        "cookingSkill": "会做简单热汤和大份蔬菜烩饭",
+        "roomStyle": "房间像小型档案室，抽屉里全是无字卡盒和干燥袋",
+        "neatness": "高，公共区域极整齐，私人物品也按颜色分层",
+        "collections": "无人认领后合法转赠的旧钥匙牌、车票夹、空白索引卡",
+        "pets": "没有宠物，会照顾档案馆窗台上的夜香草"
+      },
+      "socialSystem": {
+        "socialAbility": "安静亲和型，擅长让急着找东西的人慢下来",
+        "lyingAbility": "低，隐瞒担心可以，编造归还线索会立刻露出核对习惯",
+        "boundarySense": "强，涉及认领规则时绝不通融",
+        "popularity": "在夜班站员、学生、老人和失物常客中口碑很好",
+        "romanceExperience": "少，长期夜班和慢热性格让关系推进很慢",
+        "preferredType": "喜欢说话真诚、珍惜小物件、愿意等待确认的人",
+        "expressionStyle": "用行动表达，会提前备好热水、临时袋和备用卡套",
+        "possessiveness": "中低，不控制人，但会记住对方所有容易遗失的小习惯"
+      },
+      "combatSystem": {
+        "signatureAbility": "薄荷青档案票夹能夹住失物残留的一瞬记忆，短暂显出物主最后触碰的方向",
+        "combatType": "支援控制型近身防护",
+        "coreStyle": "用记忆线标出不可拿错的归还路径，配合厚实体格卡位、护物和截停目标",
+        "weaponPreference": "薄荷青档案票夹、索引卡盒、无字归还章",
+        "specialAbility": "能看见失物周围断续的记忆线，并把伪造认领固定成乳白错位标记",
+        "painTolerance": "中高，能忍受撞击和长时间搬档案箱",
+        "aggression": "低，优先截停和确认，不喜欢主动伤人",
+        "stamina": "高，能连续值完整个夜间归还窗口",
+        "burstPower": "中高，关键时能用肩背挡住抢夺动作",
+        "pressure": "中高，站在柜台前有不许乱拿别人东西的沉稳压迫感",
+        "reactionSpeed": "中上，对钥匙声、拉链声和脚步迟疑很敏感"
+      },
+      "worldSetting": {
+        "origin": "晴庭市旧车站旁的市政家属区，童年常帮邻居送还遗落的小物件",
+        "socialClass": "普通工薪阶层，靠夜班资历和稳定口碑站稳脚跟",
+        "education": "市政档案管理专科学历，后续取得异常失物归还资格",
+        "criminalRecord": "无犯罪记录，曾因拒绝违规认领被投诉，事后证明判断正确",
+        "organizationRank": "夜归窗口二级管理员兼异常失物临时封存负责人",
+        "enemyForces": "伪造认领证明的转卖团伙、偷取记忆票据的空柜客",
+        "biggestRegret": "暴雨夜没能及时追问一只旧书包的主人线索，错过了归还病历的最佳时间。",
+        "biggestGoal": "建立一套能让夜间失主安全找回重要物件的归还流程",
+        "hiddenDream": "白天开一家只卖空白卡套和热豆花的小店",
+        "mostImportantPerson": "教他第一次独立封存异常失物的前任馆长",
+        "unforgettableExperience": "凌晨把一枚结婚戒指稳稳归还给找了一整夜的老人",
+        "lifeStain": "曾私自延长一件无人认领物的保存期，避免它被流程销毁"
+      },
+      "hiddenInformation": {
+        "shameSecret": "害怕在公开仪式上念出失主姓名",
+        "hiddenHobby": "给无字索引卡设计颜色分类",
+        "weakness": "对深夜真心寻找东西的人太心软",
+        "secretHabit": "每次换班前会把票夹轻放在柜台正中",
+        "contrastSide": "看起来慢，其实能在几秒内记住一整柜失物位置",
+        "foodAllergy": "轻微芒果过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 45,
+        "morality": 82,
+        "sanity": 71,
+        "confidence": 69,
+        "stress": 52,
+        "danger": 47,
+        "desire": 43,
+        "loyalty": 86,
+        "stability": 81,
+        "social": 61,
+        "doom": 30,
+        "violence": 22
+      },
+      "metaDesign": {
+        "characterHook": "一个夜间遗失物归还管理员，能用薄荷青档案票夹夹住失物残留的一瞬记忆。",
+        "characterConsistencyPrompt": "藤泽澄央始终是厚实软壮、宽肩厚胸的成年男性，晴庭市遗失物档案馆夜间归还管理员，白色贴身长袖、米灰短针织开衫、深松绿长围裙前片、棕红交叉背带和薄荷青档案票夹是核心识别点。",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Generate the character from the current attributes. Create exactly ONE full-body clean anime character illustration of Fujisawa Sumio, a 36-year-old male night return clerk at the Haregarden Municipal Lost-Property Archive. Single character only. He is a bulky soft-strong HUMAN adult man with natural healthy warm peach-beige skin, not yellow, not orange, not jaundiced, not green, not gray-green, a substantial rounded body, very broad shoulders, thick chest, thick arms, thick hands, a square-round face, gentle but alert mint-green eyes, a calm watchful expression, short deep chestnut curly hair, a tiny old scar at the tail of his left eyebrow, and a small return-stamp tattoo partly hidden under the right collar. Costume judgment: his life scene is a quiet archive and late-night station return window; movement needs include standing, lifting boxes, searching files, and protecting lost items; social visibility is a semi-public municipal service uniform; anti-repetition swaps replace the recent short-jacket utility-pants template with a long apron front, soft cardigan, wide pleated trousers, and loafer-like work shoes. Outfit: a fitted plain white long-sleeve top wrapping his thick torso, sleeves slightly rolled and tucked into high-waist deep olive wide-pleated trousers; a short warm gray knit cardigan worn open; a long deep pine-green archive apron front with a small plain silver return badge with NO letters; reddish-brown leather-like crossed shoulder straps holding a small index-card case; deep brown loafer-style soft-soled work shoes; one thin white cotton glove on the left hand and a bare right hand. Signature prop: a mint-cyan archive ticket clip and a few blank index cards, clearly readable and not oversized. Fantasy anchor: only a few restrained mint-cyan memory lines around the ticket clip and return badge, compact low glow, tidy and urban first. Use a clean anime material language: flat color blocks, simple cel-shaded folds, tidy uniform cloth, soft knit shape, small simplified metal accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: Kyoto Animation-inspired fresh TV anime cel shading, crisp clean linework, simple readable shadow shapes, polished modern urban fantasy character design, visually denoised, minimal dirt and grime. Composition: centered standing pose, full body visible from head to shoes, generous padding, no cropping, clean cutout-ready silhouette. The style reference is only for body proportion, line quality, coloring method, and drawing style; do not copy the reference character face, clothing, pose, props, colors, or identity. Background: perfectly flat solid #ff00ff chroma-key background only, one uniform magenta color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no extra main objects, no watermark, no strong diffuse glow, no dust, no oil stains, no rust, no wasteland mood, no yellow skin, no orange skin, no jaundiced skin. Do not use #ff00ff anywhere on the character, props, effects, reflections, or aura.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：藤泽澄央，36岁男性，晴庭市遗失物档案馆的夜间归还管理员。Generate the character from the current attributes. 他是壮壮软厚的成年男性，宽肩厚胸，圆润结实，暖桃米色健康肤色，方圆脸，松绿色圆眼，温和但警觉的表情，深栗色短卷发，左眉尾有一道细小旧伤，右锁骨下有被衣领半遮住的归还印章纹身。服装经过服装设计门槛判断：生活场景是安静档案馆和夜间车站归还窗口，动作需要站立、搬箱、查档和保护失物；社会可见度是半公开市政服务制服；用深松绿长围裙前片和米灰针织开衫替代短夹克工具裤模板。穿白色贴身长袖上衣，袖口微卷并扎进高腰深橄榄宽褶裤；外搭短款米灰针织开衫，前方覆盖深松绿长围裙前片，围裙胸口有无字银色归还章，棕红色皮质交叉背带固定索引卡盒；穿深棕乐福鞋式软底工作鞋，左手戴白色薄棉手套，右手裸露。招牌道具是一枚能让失物记忆微微发光的薄荷青档案票夹和无字索引卡。幻想锚点只出现在票夹边缘、归还章和少量薄荷青记忆线，不要大面积光效。京都动画式清爽 TV 动画赛璐璐，线条干净，阴影块面概括，现代都市为主、轻量奇幻为辅，完整全身从头到鞋可见，留足边距。风格参考只用于体型比例、线条和上色，不复制参考角色。背景必须是纯 #ff00ff 平面洋红绿幕，无地面、无阴影、无场景。禁止 UI、信息图、图表、设定表、文字、标签、图标、多人、裁切、水印、脏污、油亮写实材质。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指摩挲薄荷青票夹边缘",
+        "irritatedAction": "轻轻合上索引卡盒，声音很低",
+        "nervousAction": "反复确认左手白棉手套是否平整",
+        "relaxedAction": "靠在柜台旁慢慢整理无字索引卡",
+        "lyingAction": "会把视线移到归还章上，回答变得过分完整",
+        "shyAction": "用票夹挡住嘴角，耳尖微红",
+        "speechSpeed": "偏慢，句尾会留一点等待对方确认的停顿",
+        "speechTone": "温和低沉，像夜间广播前的人工提示",
+        "catchphrase": "别急，东西记得路。",
+        "battleLine": "这份记忆，还不能被拿走。",
+        "walkStyle": "步幅稳，肩背厚实，转身时会护住围裙前片",
+        "combatStance": "左手托票夹护在胸前，右手压低索引卡盒",
+        "idleAction": "把无字索引卡按颜色重新排齐",
+        "attackRhythm": "先确认对方拿错记忆的瞬间，再短促截停"
+      }
+    },
     {
       "id": "698a13d7-c2c3-42f2-98eb-c0562ff4b8fb",
       "createdAt": "2026-06-02T09:14:40.445Z",
