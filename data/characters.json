@@ -1,6 +1,6 @@
 {
   "app": "OC Character Bible Workbench",
-  "savedAt": "2026-06-02T09:10:06.181Z",
+  "savedAt": "2026-06-02T09:27:25.119Z",
   "settings": {
     "starterPrompt": "正向提示：\n重点方向：壮壮的、肉肉的、肌肉多多的成年男性\n厚实大体格，宽肩厚胸，大手臂，圆润但有力量\n白色紧身 T-shirt 包裹躯干，可以看到若隐若现的腹肌轮廓\n都市为主，奇幻为辅\n现实职业或社会角色作为基底\n一个清晰的核心设计：招牌装备、异能、魔法道具或隐藏身份\n不写实，偏干净 TV 动画角色设计\n京都动画式清爽线条\n干净赛璐璐阴影，阴影概括明确\n整体干净、无灰尘、主动降噪\n\n默认禁止：少女\n萝莉\n萌系\n偶像风、女性化男性\n瘦弱体型\n修长纤细男主\n写实肌肉渲染\n照片感\n湿身效果\n工业风作为主设计\n大量灰尘、油污、铁锈、脏污质感\n废土、煤灰、混浊阴影\n特效",
     "styleReference": {
@@ -66,6 +66,217 @@
     }
   },
   "characters": [
+    {
+      "id": "698a13d7-c2c3-42f2-98eb-c0562ff4b8fb",
+      "createdAt": "2026-06-02T09:14:40.445Z",
+      "updatedAt": "2026-06-02T09:25:24.780Z",
+      "agentMarks": [
+        {
+          "id": "22ff71cc-0ce5-4985-885a-61c43385b736",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-02T09:14:40.445Z"
+        },
+        {
+          "id": "4c00fea3-87ac-4e40-b5c2-fa8336678f21",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-02T09:14:40.445Z"
+        },
+        {
+          "id": "37f513a6-e18b-4fc7-9561-ed6ca8396581",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-02T09:14:40.445Z"
+        },
+        "[GENERATE_IMAGES]"
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型是壮壮的、肉肉的、肌肉多多的成年男性，而不是修长瘦男主。\n- 服装可以优先使用白色紧身 T-shirt：衣料包裹厚实躯干，腹肌轮廓若隐若现，但不要写实健美或露骨情色化。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n2. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n3. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": "urban-fantasy-default"
+      },
+      "assets": {
+        "fullBody": "./assets/generated-fullbody-698a13d7.png",
+        "thumbnail": "./assets/generated-fullbody-698a13d7.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "白石陆也",
+        "codename": "药灯",
+        "alias": "陆也",
+        "faction": "白熊町夜急药房",
+        "birthday": "8月23日",
+        "age": "34",
+        "height": "188 cm",
+        "weight": "110 kg",
+        "occupation": "夜间急药房值班药剂师",
+        "affiliation": "白熊町夜急药房调配柜台",
+        "species": "人类"
+      },
+      "visualIdentity": {
+        "visualKeywords": "厚实壮壮的成年男性，宽肩厚胸，大手臂，自然暖桃肤色，白色紧身T-shirt，浅蓝灰短药房外套，深海军蓝围裙带，琥珀量药匙，夜间药柜灯，干净TV动画赛璐璐阴影",
+        "colorLanguage": "暖白、浅蓝灰、深海军蓝、纸盒米白、琥珀金、柔和柜台白光，干净安静的夜间药房气质",
+        "faceShape": "方圆脸，脸颊饱满，下颌厚实",
+        "expression": "温柔清醒",
+        "eyes": "沉静圆眼，眼神像在核对剂量",
+        "eyeColor": "温茶棕色",
+        "eyebrow": "浓而平直的眉",
+        "lip": "嘴唇厚度适中，说话前会轻轻抿住",
+        "scar": "左手腕外侧有一道短浅旧烫痕",
+        "tattoo": "右上臂内侧有细小量杯刻度纹身，平时被袖口遮住",
+        "hairStyle": "深棕黑短发，额前自然分缝，发尾整齐",
+        "hairLength": "短发，耳侧干净，后颈略厚",
+        "hairColor": "深棕黑色",
+        "highlight": "发梢有柔和冷棕高光",
+        "bodyType": "软壮厚实的大体格，胸背宽阔，腰腹结实圆润",
+        "muscleLevel": "肌肉量高，偏搬药箱和长期站柜台练出的日常力量型",
+        "bodyFat": "中等偏高，白T贴合时有若隐若现的腹肌轮廓",
+        "shoulderWidth": "很宽，短外套和围裙带强化稳定上半身",
+        "skinTone": "自然健康暖桃肤色，不偏黄不偏橙，整体干净",
+        "muscleFocus": "胸、肩、上臂、前臂和厚实手掌"
+      },
+      "costumeSystem": {
+        "dailyWear": "白色紧身T-shirt外搭浅蓝灰短药房外套，深海军蓝围裙带斜扣在腰腹，炭黑直筒工装裤，黑色软底通勤靴，腰间挂琥珀量药匙、小药盒和无字标签夹",
+        "outerwear": "浅蓝灰短药房外套，袖口整洁，胸前有小型无字药房徽章",
+        "outerwearColor": "浅蓝灰色，徽章为琥珀金和白色",
+        "innerwear": "白色紧身T-shirt，贴合厚实躯干，干净无图案",
+        "innerwearColor": "暖白色，阴影为浅蓝灰",
+        "pants": "炭黑直筒工装裤，侧袋装无字标签夹",
+        "pantsColor": "炭黑色，细节为浅灰缝线",
+        "socks": "柔软短袜，藏在靴内",
+        "socksColor": "深灰色",
+        "shoes": "黑色软底通勤靴，适合夜间药房值班",
+        "shoesColor": "黑色与暗银扣",
+        "gloves": "单侧白色半指调配手套，另一只手裸露方便确认触感",
+        "glovesColor": "白色，边缘有浅蓝灰小扣",
+        "necklace": "短绳挂一枚旧药柜钥匙牌",
+        "necklaceColor": "旧银色和黑绳",
+        "belt": "宽帆布调配腰带，挂小药盒、琥珀量药匙、防水笔和无字标签夹",
+        "beltColor": "深海军蓝帆布与暗银扣",
+        "signatureItem": "琥珀量药匙，可以量出情绪和疼痛之间的安全刻度",
+        "signatureItemColor": "透明琥珀金，刻线为克制的乳白微光"
+      },
+      "personality": {
+        "corePersonality": "温和、谨慎、可靠、慢热",
+        "strengths": "记忆力强，能迅速核对用药风险，安抚焦急病人很有耐心",
+        "weakness": "太习惯照顾深夜求助的人，容易忽略自己的休息",
+        "weaknesses": "太习惯照顾深夜求助的人，容易忽略自己的休息",
+        "hiddenPersonality": "外表稳重，其实喜欢收集可爱的无字便签",
+        "emotionalStability": "高，越是深夜越会把声音放轻",
+        "confidenceLevel": "中高，对调配判断很自信，对私人情绪表达偏慢",
+        "outwardPersona": "像夜间药柜后的可靠大个子药剂师，安静但让人放心。",
+        "trueCore": "相信真正的照顾不是替人决定，而是让人清醒地撑过最难的半小时。",
+        "surfaceFear": "怕看错剂量，让求助者状况变坏。",
+        "deepFear": "怕自己又一次只能递出太晚的药。",
+        "traumaTrigger": "听见药瓶滚落地面的空响，或看到凌晨未接来电。",
+        "stressResponse": "会先按住琥珀量药匙，再重新核对所有标签。",
+        "trauma": "实习时期，一位常来的夜班司机没有及时取走药，他第二天才知道对方在路边昏倒。",
+        "traumaSource": "他一直认为自己当晚如果多问一句，就能更早发现异常。",
+        "recoveryStatus": "基本恢复，把夜间询问流程训练得非常细致。",
+        "traumaImpact": "让他对每一次含糊其辞的求助都格外认真，也不喜欢别人把小症状随口带过。"
+      },
+      "lifestyle": {
+        "favoriteFood": "热豆乳、厚蛋三明治、微甜燕麦粥",
+        "hatedFood": "过苦的能量饮料和太油的炸物",
+        "hiddenFavorite": "喜欢草莓牛奶，但会说只是补糖",
+        "appetite": "食量大，夜班后会吃两份热早餐",
+        "alcoholTolerance": "低，熟悉药物禁忌所以很少喝酒",
+        "cookingSkill": "会做简单热粥和大份汤面",
+        "roomStyle": "房间像干净的小药房，抽屉贴着无字色块标签",
+        "neatness": "高，药箱、衣物、便签都有固定位置",
+        "collections": "旧药柜钥匙牌、无字标签纸、停产的玻璃量杯",
+        "pets": "没有宠物，会照顾药房门口的夜间盆栽"
+      },
+      "socialSystem": {
+        "socialAbility": "安静亲和型，擅长让焦急的人慢下来",
+        "lyingAbility": "低，隐瞒担心可以，编假情况会立刻露出核对习惯",
+        "boundarySense": "强，涉及危险用药时绝不退让",
+        "popularity": "在夜班司机、便利店店员、学生和老人中口碑很好",
+        "romanceExperience": "少，长期夜班和慢热性格让关系推进很慢",
+        "preferredType": "喜欢说话真诚、愿意听提醒、能照顾自己节奏的人",
+        "expressionStyle": "用行动表达，会提前备好热水、便签和备用药盒",
+        "possessiveness": "中低，不控制人，但会记住对方所有容易忘记的禁忌"
+      },
+      "combatSystem": {
+        "signatureAbility": "琥珀量药匙能量出疼痛和情绪波动的安全刻度，短暂稳定即将失控的身体反应",
+        "combatType": "稳定支援型近战防护",
+        "coreStyle": "用量药匙标出不可越过的安全距离，配合厚实体格卡位、护人和逼退目标",
+        "weaponPreference": "琥珀量药匙、小药盒、厚封面药册",
+        "specialAbility": "能看见呼吸节奏里的断续刻度，并把危险波动固定成乳白安全线",
+        "painTolerance": "中高，能忍受撞击和长时间站立",
+        "aggression": "低，优先稳住和转移，不喜欢主动伤人",
+        "stamina": "高，能连续值完整个夜间急药窗口",
+        "burstPower": "中高，关键时能用肩背挡住柜台冲撞",
+        "pressure": "中高，站在药柜前有不许乱拿药的沉稳压迫感",
+        "reactionSpeed": "中上，对呼吸停顿、瓶罐声和脚步发软很敏感"
+      },
+      "worldSetting": {
+        "origin": "白熊町旧商业街旁的药房家庭，童年常帮邻居送常备药",
+        "socialClass": "普通工薪阶层，靠夜班资历和稳定口碑站稳脚跟",
+        "education": "药学专科学历，后续取得异常夜急调配资格",
+        "criminalRecord": "无犯罪记录，曾因拒绝出售危险组合药被投诉，事后证明判断正确",
+        "organizationRank": "夜急药房二级药剂师兼深夜调配柜台负责人",
+        "enemyForces": "倒卖异常药方的空瓶商人、伪造急症证明的黑处方中介",
+        "biggestRegret": "实习期没能及时追问一位夜班司机的异常状态，第二天只收到一通未接来电。",
+        "biggestGoal": "建立一套能让深夜求助者安全撑到天亮的急药流程",
+        "hiddenDream": "白天开一家只卖热饮和无字便签的小药房",
+        "mostImportantPerson": "教他第一次独立调配夜急药的前任店长",
+        "unforgettableExperience": "凌晨把一位惊慌的学生稳稳陪到救护车抵达",
+        "lifeStain": "曾私自延长一份急药的保留时间，避免它被流程销毁"
+      },
+      "hiddenInformation": {
+        "shameSecret": "害怕公开朗读药品说明",
+        "hiddenHobby": "给无字标签设计颜色分类",
+        "weakness": "对深夜真心求助的人太心软",
+        "secretHabit": "每次换班前会把量药匙轻放在柜台正中",
+        "contrastSide": "看起来慢，其实能在几秒内记住一整排药柜位置",
+        "foodAllergy": "轻微花生过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 46,
+        "morality": 84,
+        "sanity": 74,
+        "confidence": 70,
+        "stress": 49,
+        "danger": 50,
+        "desire": 39,
+        "loyalty": 87,
+        "stability": 83,
+        "social": 63,
+        "doom": 27,
+        "violence": 24
+      },
+      "metaDesign": {
+        "characterHook": "一个夜间急药房值班药剂师，能用琥珀量药匙量出疼痛与情绪之间的安全刻度。",
+        "characterConsistencyPrompt": "白石陆也始终是厚实软壮、宽肩厚胸的成年男性，夜间急药房药剂师，白色紧身T-shirt、浅蓝灰短外套、深海军蓝围裙带和琥珀量药匙是核心识别点。",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body clean anime character illustration of Shiraishi Rikuya, a 34-year-old male night emergency pharmacy pharmacist. Single character only. He is a bulky soft-strong HUMAN adult man with natural healthy soft peach-beige warm skin, not yellow, not orange, not jaundiced, not green, not gray-green, a substantial rounded body, very broad shoulders, thick chest, thick arms, a square-round face, calm warm tea-brown eyes, a gentle awake expression, short dark brown-black hair with soft cool-brown highlights, and a short old burn mark on the outside of his left wrist. Outfit: a tight plain white T-shirt wrapping his thick torso with subtle abs visible through the fabric, a short light blue-gray pharmacy jacket, deep navy apron straps across the waist, charcoal straight utility pants, black soft-soled commuter boots, one white fingerless compounding glove, and a wide canvas utility belt. Signature props: an amber medicine-measuring spoon and a small plain medicine box with no text, clearly readable and not oversized. Keep amber/gold color only on the spoon and small metal details, never on the skin. Fantasy hook: only a few restrained milky-white safety scale lines near the amber spoon, low glow, compact and tidy. Style: Kyoto Animation-inspired fresh TV anime cel shading, crisp clean linework, simple readable shadow shapes, polished modern urban fantasy character design, urban first and fantasy second, visually denoised, minimal dirt and grime. Composition: centered standing pose, full body visible from head to boots, generous padding, no cropping, clean cutout-ready silhouette. The style reference is only for body proportion, line quality, coloring method, and drawing style; do not copy the reference character face, clothing, pose, props, colors, or identity. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform magenta color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no extra main objects, no watermark, no strong diffuse glow, no dust, no oil stains, no rust, no wasteland mood, no yellow skin, no orange skin, no jaundiced skin. Do not use #00ff00 anywhere on the character, props, effects, reflections, or aura.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：白石陆也，34岁男性，夜间急药房值班药剂师。软壮厚实的大体格，宽肩厚胸，大手臂，自然健康暖桃肤色，不偏黄不偏橙，方圆脸，温茶棕色沉静圆眼，温柔清醒表情，深棕黑短发带柔和冷棕高光，左手腕外侧有短浅旧烫痕。穿白色紧身T-shirt，衣料贴合厚实躯干并能看到若隐若现的腹肌轮廓；外搭浅蓝灰短药房外套，深海军蓝围裙带，炭黑直筒工装裤，黑色软底通勤靴，单侧白色半指调配手套，宽帆布调配腰带。手持琥珀量药匙和小药盒，身边只有少量乳白安全刻度线，表现夜间急药房药剂师的都市轻奇幻身份。京都动画式清爽TV动画赛璐璐，干净线条，概括阴影，现代都市为主、奇幻为辅。单人全身立绘，从头到脚完整可见，留出边距。背景必须是纯 #00ff00 平面绿幕。不要UI、信息图、设定表、文字、标签、场景、多人、强烈发光、灰尘、油污、铁锈、废土感。不要黄色皮肤、橙色皮肤、焦黄肤色。不要在角色或特效里使用 #00ff00。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指轻敲琥珀量药匙柄端",
+        "irritatedAction": "把无字标签夹合上，动作很短",
+        "nervousAction": "反复确认小药盒卡扣",
+        "relaxedAction": "靠在柜台边整理药盒",
+        "lyingAction": "会把视线落到剂量表上",
+        "shyAction": "低头整理围裙带",
+        "speechSpeed": "偏慢，字句清楚",
+        "speechTone": "温和低沉，像深夜柜台提醒",
+        "catchphrase": "先坐下，慢慢说。",
+        "battleLine": "这份剂量，不给你碰。",
+        "walkStyle": "步伐稳，转身时会护住药盒",
+        "combatStance": "侧身护住腰侧调配盒",
+        "idleAction": "把空药瓶按高度排齐",
+        "attackRhythm": "先判断距离，再短促拦截"
+      }
+    },
     {
       "id": "8cc8d832-a38b-478f-be52-210e43613010",
       "createdAt": "2026-06-02T08:32:19.428Z",
