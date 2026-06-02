@@ -1,0 +1,35 @@
+Use imagegen in an isolated/projectless thread.
+Generate exactly one full-body character illustration.
+Style reference: /Users/huangzhenhua/Desktop/gemini/oc-character-bible-workbench/assets/current-style-reference.png
+Before calling imagegen, load or attach the style reference as an actual image input; do not rely on this file path as text-only prompt content.
+The reference is only for drawing style, body proportion, linework, and coloring method.
+Do not copy the reference character identity, face, clothing, pose, props, colors, or background.
+
+Use ONLY this final prompt as the image subject:
+Create exactly ONE full-body anime-style character illustration of Wen Yancheng, codename Page Anchor, a 36-year-old old-book restoration worker and night bookbinder in a modern city, human male.
+
+Most important body direction: bulky soft-strong adult male, not slim. He is big, chunky, broad, thick, and muscular in a stylized non-realistic anime way: very broad shoulders, thick chest, thick upper arms, thick forearms, large hands, sturdy waist, strong legs, and a warm substantial body.
+
+Key clothing preference: a clean tight plain white T-shirt wraps his thick torso. Through the fabric, show subtle abdominal contours and a strong chest shape with clean cel-shading, like faint abs visible under a fitted shirt. Keep it tasteful, non-explicit, dry, non-photorealistic, and not a wet-shirt effect.
+
+Design direction: urban first, fantasy second. He should look like a believable contemporary bookbinder and old-book restoration worker with one restrained magical core design: a brass bookmark anchor and opaque paper talismans that fold into a protective page wall. Avoid strong diffuse glow; use only a few small pale amber page marks if needed.
+
+Appearance: broad rounded rectangular face, clean warm wheat skin, short slightly messy dark ink-brown curly hair with warm coffee highlights, thick flat eyebrows, gentle deep tea-brown eyes, calm soft smile, no visible scar. A small folded-page sigil is on his left forearm.
+
+Clothing: open short dark ink-blue restoration-workshop jacket, tight plain white T-shirt, light coffee relaxed utility trousers, deep brown-black soft work shoes, ivory thin bookbinding gloves, dark brown tool belt with awl and thread spool, small brass bookmark pendant.
+
+Signature item: hold or display a brass bookmark anchor and several ivory paper talismans folded like clean book pages. The talismans are mostly opaque paper, not glowing glass, with tiny pale amber printed-like marks and no readable text.
+
+Style: non-realistic clean TV anime character design, Kyoto Animation-like clean cel shading, crisp smooth linework, summarized clean shadow shapes, polished edges, fresh readable colors, visually denoised. Tidy modern urban fantasy design. Avoid strong glow, photorealism, gritty rendering, dirty texture overlays, dust, grime, rust, oil stains, industrial mood, or muddy shadows.
+
+Style reference rule: use the uploaded reference image for bulky adult male proportion, friendly strongman mass, clean line quality, and polished cel-shading taste only. Do not copy the reference character identity, face, clothing, pose, cookware, props, colors, or background.
+
+Composition: single standing character, full body visible from head to shoes, centered, generous padding, cutout-ready game character asset. Pure flat chroma-key background only, chosen by contrast with the character. No shadow, no floor, no scenery, no UI, no infographic, no diagram, no character sheet, no text, no labels, no logo, no readable letters, no icons, no extra characters.
+
+Chroma-key choice:
+Use flat solid #00ff00 (green) because: No obvious green/cyan translucent effect conflict was detected, so green is the default key color.
+If the character has translucent, diffuse, glowing, or semi-transparent elements, keep those effects restrained and avoid using any color close to the chroma key on the character.
+Prefer subtle opaque or lightly luminous design elements over complex bright glows whenever the character concept allows it.
+
+Hard bans: no UI, no infographic, no chart, no diagram, no character sheet, no labels, no text, no scenery, no multiple characters.
+Background must be flat solid #00ff00 chroma key. Do not use #00ff00 or a visually similar color on the character.

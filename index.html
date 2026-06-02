@@ -1,0 +1,229 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OC Character Bible Workbench</title>
+    <link rel="stylesheet" href="./styles.css?v=20260601-big-prompt-boxes" />
+  </head>
+  <body>
+    <main class="workbench" aria-label="OC Character Bible Workbench">
+      <aside class="panel left-panel" aria-label="Character list">
+        <header class="left-head">
+          <div class="left-search-block">
+            <div class="system-title"><img src="./assets/decor-icon.svg" alt="" />KUMA_LIST</div>
+            <input id="searchInput" class="top-search-input" type="search" placeholder="Name / Alias / Occupation" aria-label="&#25628;&#32034;&#35282;&#33394;" />
+          </div>
+          <button class="icon-button search-toggle" title="&#25628;&#32034;&#35282;&#33394;" aria-label="&#25628;&#32034;&#35282;&#33394;">
+            <img src="./assets/search-icon.svg" alt="" />
+          </button>
+        </header>
+        <section id="characterList" class="character-list"></section>
+        <footer class="left-actions">
+          <button id="newCharacterBtn" class="add-button" title="&#21019;&#24314;&#35282;&#33394;" aria-label="&#21019;&#24314;&#35282;&#33394;">
+            <img src="./assets/add-icon.svg" alt="" />
+          </button>
+        </footer>
+      </aside>
+
+      <section class="center-panel" aria-label="Character showcase">
+        <nav id="assetTabs" class="asset-tabs" aria-label="&#36164;&#28304;&#31867;&#22411;">
+          <button class="asset-tab active" data-asset="fullBody">
+            <span>&#20840;&#36523;</span><small>FULL BODY</small>
+          </button>
+          <button class="asset-tab" data-asset="referenceSheet">
+            <span>&#22810;&#35270;&#22270;</span><small>REFERENCE SHEET</small>
+          </button>
+          <button class="asset-tab" data-asset="costume">
+            <span>&#26381;&#35013;</span><small>COSTUME</small>
+          </button>
+          <button class="asset-tab" data-asset="props">
+            <span>&#36947;&#20855;</span><small>PROPS</small>
+          </button>
+          <button class="asset-tab" data-asset="expression">
+            <span>&#34920;&#24773;</span><small>EXPRESSION</small>
+          </button>
+        </nav>
+
+        <section class="showcase">
+          <div class="showcase-bg"></div>
+          <div class="showcase-copy">
+            <div id="heroName" class="hero-name" aria-label="&#35282;&#33394;&#26631;&#39064;"></div>
+            <div id="heroFaction" class="hero-faction" aria-label="&#32844;&#19994;"></div>
+          </div>
+          <img id="characterImage" class="character-image" src="./assets/character-placeholder.png" alt="Character preview" />
+          <div class="image-actions">
+            <label class="image-tool" title="&#19978;&#20256;&#22270;&#20687;">
+              <img src="./assets/upload-icon.svg" alt="" />
+              <input id="imageUpload" type="file" accept="image/*" hidden />
+            </label>
+            <button id="clearImageBtn" class="image-tool" title="&#21024;&#38500;&#22270;&#20687;">
+              <img src="./assets/delete-icon.svg" alt="" />
+            </button>
+          </div>
+          <img class="barcode" src="./assets/barcode.svg" alt="" />
+          <div class="dossier-label">CHARACTER<br />DOSSIER</div>
+          <div class="gold-strip"></div>
+        </section>
+        <nav id="profileModuleSwitch" class="profile-module-switch" aria-label="Profile modules">
+          <button class="active" type="button" data-profile-module="identity">&#36523;&#20221;</button>
+          <button type="button" data-profile-module="appearance">&#29305;&#24449;</button>
+          <button type="button" data-profile-module="personality">&#20154;&#26684;</button>
+          <button type="button" data-profile-module="behavior">&#34892;&#20026;</button>
+          <button type="button" data-profile-module="costume">&#26381;&#35013;</button>
+          <button type="button" data-profile-module="life">&#29983;&#27963;</button>
+          <button type="button" data-profile-module="social">&#31038;&#20132;</button>
+          <button type="button" data-profile-module="combat">&#25112;&#26007;</button>
+          <button type="button" data-profile-module="world">&#19982;&#19990;&#30028;</button>
+          <button type="button" data-profile-module="unlock">&#35299;&#38145;&#39033;</button>
+          <button type="button" data-profile-module="stats">&#25968;&#20540;</button>
+          <button type="button" data-profile-module="prompt">&#25552;&#31034;&#35789;</button>
+        </nav>
+      </section>
+
+      <aside class="right-column" aria-label="Agent and profile">
+        <section class="panel mark-panel">
+          <header class="mark-head">
+            <span>&#24403;&#21069;&#26631;&#35760;</span>
+            <span id="savedAt" class="saved-at">&#24050;&#20445;&#23384;</span>
+          </header>
+          <div class="mark-summary-shell">
+            <button id="markSummary" class="mark-summary">[ATTRIBUTES] + [IMAGES]</button>
+            <button id="profileOpenBtn" class="dots-button" title="&#29983;&#25104;&#37197;&#32622;" aria-label="&#29983;&#25104;&#37197;&#32622;">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+          <div class="agent-row">
+            <span>Agent &#23558;&#20808;&#26816;&#26597;&#23646;&#24615;&#65292;&#20877;&#29983;&#25104;&#22270;&#20687; Prompt</span>
+            <span id="agentLamp" class="lamp on" aria-hidden="true"></span>
+          </div>
+          <div class="mark-tabs">
+            <button id="attributeMarkBtn" class="mark-tab">&#23646;&#24615;&#29983;&#25104;<small>OFF</small></button>
+            <button id="imageMarkBtn" class="mark-tab active">&#22270;&#20687;&#29983;&#25104; <small>ON</small></button>
+          </div>
+        </section>
+
+        <section class="panel profile-panel">
+          <header class="section-head">
+            <span>&#26680;&#24515;&#36523;&#20221;</span>
+            <span id="profileSectionTitleEn">CORE PROFILE</span>
+          </header>
+          <form id="profileForm" class="profile-form">
+            <label class="span-2">&#21517;&#23383; / NAME<input data-field="coreIdentity.name" /></label>
+            <label class="span-2">&#20195;&#21495; / CODENAME<input data-field="coreIdentity.codename" /></label>
+            <label>&#29983;&#26085; / B<input data-field="coreIdentity.birthday" /></label>
+            <label>&#24180;&#40836; / A<input data-field="coreIdentity.age" /></label>
+            <label>&#36523;&#39640; / H<input data-field="coreIdentity.height" /></label>
+            <label>&#20307;&#37325; / W<input data-field="coreIdentity.weight" /></label>
+            <label class="span-2">&#32844;&#19994; / OCCUPATION<input data-field="coreIdentity.occupation" /></label>
+            <label class="span-2">&#32452;&#32455; / AFFILIATION<input data-field="coreIdentity.affiliation" /></label>
+            <label class="span-2">&#31181;&#26063; / SPECIES<input data-field="coreIdentity.species" /></label>
+            <label class="span-2">&#24615;&#26684; / CORE PERSONALITY<input data-field="personality.corePersonality" /></label>
+            <label class="span-4 textarea-field">&#29305;&#28857; / VISUAL KEYWORDS<textarea data-field="visualIdentity.visualKeywords"></textarea></label>
+            <label class="span-4 textarea-field">&#38057;&#23376; / CHARACTER HOOK<textarea data-field="metaDesign.characterHook"></textarea></label>
+          </form>
+          <div class="profile-scrollbar" aria-hidden="true"></div>
+        </section>
+      </aside>
+    </main>
+
+    <dialog id="generationDialog" class="generation-dialog">
+      <form method="dialog" class="dialog-shell">
+        <header class="dialog-head">
+          <div>
+            <h2>&#29983;&#25104;&#37197;&#32622;</h2>
+            <p>GENERATION PROFILE</p>
+          </div>
+          <button class="icon-button" value="close" aria-label="&#20851;&#38381;">&#215;</button>
+        </header>
+        <div class="dialog-tabs" role="tablist">
+          <button type="button" class="dialog-tab active" data-profile-tab="starter">&#36215;&#25163;&#24335;</button>
+          <button type="button" class="dialog-tab" data-profile-tab="notes">&#29983;&#25104;&#22791;&#27880;</button>
+        </div>
+        <section class="profile-tab-page active" data-profile-page="starter">
+          <section class="style-reference-box">
+            <header>
+              <div>
+                <strong>&#22766;&#27721;&#39118;&#26684;&#21442;&#32771;</strong>
+                <span>MUSCLE STYLE REFERENCE</span>
+              </div>
+              <div class="style-reference-actions">
+                <label class="style-reference-upload">&#19978;&#20256;<input id="styleReferenceInput" type="file" accept="image/*" hidden /></label>
+                <button id="styleReferenceClearBtn" type="button">&#21024;&#38500;</button>
+              </div>
+            </header>
+            <div class="style-reference-body">
+              <div id="styleReferencePreview" class="style-reference-preview"></div>
+              <p id="styleReferenceName">&#26410;&#19978;&#20256;&#21442;&#32771;&#22270;</p>
+            </div>
+          </section>
+          <div class="starter-prompt-grid">
+            <label>&#27491;&#21521;&#25552;&#31034; / POSITIVE PROMPT<textarea id="starterPositivePrompt"></textarea></label>
+            <label>&#20840;&#23616;&#31105;&#27490; / GLOBAL NEGATIVE<textarea id="starterNegativePrompt"></textarea></label>
+          </div>
+        </section>
+        <section class="profile-tab-page" data-profile-page="notes">
+          <label>&#29983;&#25104;&#22791;&#27880; / GENERATION NOTES<textarea id="generationNotes"></textarea></label>
+        </section>
+        <footer class="dialog-actions">
+          <button id="exportBtn" type="button">&#23548;&#20986; JSON / EXPORT</button>
+          <label class="import-label">&#23548;&#20837; JSON / IMPORT<input id="importInput" type="file" accept="application/json" hidden /></label>
+        </footer>
+      </form>
+    </dialog>
+
+    <aside id="devPanel" class="dev-panel" aria-label="&#24320;&#21457;&#32773;&#27169;&#24335;">
+      <header id="devDragHandle">
+        <strong>&#24320;&#21457;&#32773;&#27169;&#24335;</strong>
+        <button id="devCloseBtn" type="button" aria-label="&#20851;&#38381;&#24320;&#21457;&#32773;&#27169;&#24335;">&#215;</button>
+      </header>
+      <div class="dev-sections">
+        <fieldset>
+          <legend>&#20027;&#26631;&#39064; / HERO TEXT</legend>
+          <div class="dev-grid">
+            <label>&#26631;&#39064; X<span data-dev-value="heroTextX"></span><input data-dev="heroTextX" type="range" min="-80" max="220" step="1" /></label>
+            <label>&#26631;&#39064; Y<span data-dev-value="heroTextY"></span><input data-dev="heroTextY" type="range" min="-80" max="220" step="1" /></label>
+            <label>&#26631;&#39064;&#23485;&#24230;<span data-dev-value="heroTextWidth"></span><input data-dev="heroTextWidth" type="range" min="220" max="1400" step="10" /></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>&#31435;&#32472; / CHARACTER IMAGE</legend>
+          <div class="dev-grid">
+            <label>&#31435;&#32472;&#22823;&#23567;<span data-dev-value="characterScale"></span><input data-dev="characterScale" type="range" min="20" max="220" step="1" /></label>
+            <label>&#31435;&#32472; X<span data-dev-value="characterX"></span><input data-dev="characterX" type="range" min="20" max="80" step="1" /></label>
+            <label>&#31435;&#32472; Y<span data-dev-value="characterY"></span><input data-dev="characterY" type="range" min="-80" max="160" step="1" /></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>&#22270;&#20687;&#25805;&#20316; / IMAGE ACTIONS</legend>
+          <div class="dev-grid">
+            <label>&#19978;&#20256;&#25353;&#38062; X<span data-dev-value="uploadX"></span><input data-dev="uploadX" type="range" min="-80" max="160" step="1" /></label>
+            <label>&#19978;&#20256;&#25353;&#38062; Y<span data-dev-value="uploadY"></span><input data-dev="uploadY" type="range" min="-80" max="160" step="1" /></label>
+            <label>&#21024;&#38500;&#25353;&#38062; X<span data-dev-value="deleteX"></span><input data-dev="deleteX" type="range" min="-80" max="220" step="1" /></label>
+            <label>&#21024;&#38500;&#25353;&#38062; Y<span data-dev-value="deleteY"></span><input data-dev="deleteY" type="range" min="-80" max="160" step="1" /></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>&#21491;&#19979;&#35013;&#39280; / DOSSIER DECOR</legend>
+          <div class="dev-grid">
+            <label>&#26465;&#24418;&#30721; X<span data-dev-value="barcodeX"></span><input data-dev="barcodeX" type="range" min="-220" max="40" step="1" /></label>
+            <label>&#26465;&#24418;&#30721; Y<span data-dev-value="barcodeY"></span><input data-dev="barcodeY" type="range" min="-120" max="80" step="1" /></label>
+            <label>&#26465;&#24418;&#30721;&#22823;&#23567;<span data-dev-value="barcodeScale"></span><input data-dev="barcodeScale" type="range" min="40" max="220" step="1" /></label>
+            <label>&#33521;&#25991; X<span data-dev-value="dossierX"></span><input data-dev="dossierX" type="range" min="-140" max="80" step="1" /></label>
+            <label>&#33521;&#25991; Y<span data-dev-value="dossierY"></span><input data-dev="dossierY" type="range" min="-120" max="80" step="1" /></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>&#21015;&#34920;&#26174;&#31034; / LIST TEXT</legend>
+          <div class="dev-grid">
+            <label>&#21015;&#34920;&#25991;&#23383;&#23485;&#24230;<span data-dev-value="listTextWidth"></span><input data-dev="listTextWidth" type="range" min="80" max="190" step="1" /></label>
+          </div>
+        </fieldset>
+      </div>
+      <button id="devResetBtn" class="dev-reset" type="button">&#24674;&#22797;&#40664;&#35748;</button>
+    </aside>
+
+    <script src="./app.js?v=20260601-bilingual-prompt"></script>
+  </body>
+</html>
+
