@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 const root = path.resolve(__dirname, "..");
 const dataPath = path.join(root, "data", "characters.json");
@@ -39,7 +40,12 @@ function main() {
   character.assets.fullBody = relativeImagePath;
   character.assets.thumbnail = relativeImagePath;
   character.activeMarks = { ...(character.activeMarks || {}), images: true };
-  character.agentMarks = Array.from(new Set([...(character.agentMarks || []), "[GENERATE_IMAGES]"]));
+  character.agentMarks = (character.agentMarks || []).filter((mark) => typeof mark === "object" && mark);
+  character.agentMarks.push({
+    id: crypto.randomUUID(),
+    mark: "[GENERATE_IMAGES]",
+    createdAt: new Date().toISOString(),
+  });
   character.updatedAt = new Date().toISOString();
   data.savedAt = new Date().toISOString();
 

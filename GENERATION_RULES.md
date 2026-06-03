@@ -7,10 +7,12 @@ Read this before generating attributes or images for this workbench.
 Use `CHARACTER_CREATION_WORKFLOW.md` as the top-level sequence:
 
 1. Fill all profile modules for the current character.
-2. Before finalizing costume fields, read `COSTUME_DESIGN_GUIDE.md` and apply the costume design gate.
-3. Write `metaDesign.characterImagePromptCn` and `metaDesign.characterImagePrompt` from the completed profile.
-4. Run `node scripts/check-character-completeness.js`.
-5. Only then enter `IMAGE_GENERATION_WORKFLOW.md`.
+2. Before finalizing expression and mouth fields, read `EXPRESSION_DESIGN_GUIDE.md`
+   and apply the expression design gate.
+3. Before finalizing costume fields, read `COSTUME_DESIGN_GUIDE.md` and apply the costume design gate.
+4. Write `metaDesign.characterImagePromptCn` and `metaDesign.characterImagePrompt` from the completed profile.
+5. Run `node scripts/check-character-completeness.js`.
+6. Only then enter `IMAGE_GENERATION_WORKFLOW.md`.
 
 Image generation must use the final prompt tab as its source of truth. The image prompt is not built by appending every profile field at generation time.
 
@@ -39,6 +41,33 @@ Image generation must use the final prompt tab as its source of truth. The image
 - Before finalizing heritage, hair, facial hair, skin tone, or other appearance cues, read `HERITAGE_APPEARANCE_RULES.md`. Use it as a probability and restraint guide, not as a stereotype lock.
 - Treat industrial texture, grime, dust, rust, oil, soot, distressed surfaces, and wasteland mood as minor optional accents only, never as the main design thesis.
 - Prefer modern uniforms, everyday streetwear, service-work clothing, office/public-role clothing, school-adjacent adult roles, municipal roles, medical roles, retail roles, creative jobs, delivery roles, or civic roles as the grounded base.
+- Before writing `visualIdentity.expression`, `visualIdentity.lip`, or the
+  expression sentence in the final prompt, read `EXPRESSION_DESIGN_GUIDE.md`.
+  Choose expression exposure from the numerical attributes and character concept.
+  Do not default every character to calm/gentle/focused closed-mouth faces.
+  Stable characters can speak, smile with teeth, command, breathe through a
+  slightly open mouth, or clench their teeth as long as the face remains
+  character-appropriate.
+- Every final image prompt must include a draw-able expression phrase with:
+  expression family, mouth shape, and brow/eye action. Avoid writing only
+  `calm expression`, `gentle expression`, `focused expression`, or `tired expression`.
+  If those mood words are used, pair them with visible mouth and brow/eye action.
+- Check the last five recent characters before choosing a mouth shape. If closed
+  mouths, flat mouth lines, or slight closed-mouth smiles are overrepresented,
+  choose speaking mid-sentence, toothy grin, clenched teeth, open-mouth command,
+  wide laugh, or another specific non-closed mouth shape when the character
+  concept allows it.
+- Fatigue is capped. Before using tired, sleepy, weary, exhausted, drowsy,
+  `困`, `困倦`, `疲惫`, or similar wording in `visualIdentity.expression`,
+  `visualIdentity.eyes`, or the final prompt, inspect the last eight recent
+  characters. If any recent character already uses a tired/sleepy/weary face,
+  choose another expression family. Night work, civic work, protective duty,
+  older age, calm personality, and trauma history do not by themselves justify a
+  tired-looking face.
+- Preferred replacements for overused fatigue: alert steady gaze, low speaking
+  command, protective focus, controlled pressure, weathered but awake eyes,
+  firm closed-mouth resolve, small reassuring smile, clenched-teeth endurance,
+  or watchful side glance.
 - Before writing costume fields or outfit text in the final prompt, read `COSTUME_DESIGN_GUIDE.md` and use it to judge clothing type, silhouette, layering, accessories, material language, color logic, and anti-repetition swaps.
 - Costume color hierarchy has priority over element-based color intuition: make the outfit wearable and attractive first, then use element colors mostly as props, trims, badges, hardware, or restrained low-glow accents.
 - The fantasy layer should be readable but restrained: one signature object, subtle aura, magical tool, abnormal material, compact familiar, small curse mark, or controlled ability.
@@ -53,7 +82,8 @@ Image generation must use the final prompt tab as its source of truth. The image
 - Name, codename, species, faction: 2-8 Chinese characters when possible.
 - Core personality: 3-5 short traits.
 - Face, eyes, eyebrow, lip, body, clothing fields: compact phrases.
-- Expression: 2-6 Chinese characters, or one very short phrase.
+- Expression: one short draw-able phrase, not just a mood word. Prefer a compact
+  combination such as expression family + mouth shape + brow/eye action.
 - Scar, tattoo, hair, facial hair, skin tone, muscle focus: compact phrases unless a specific story detail matters.
 - Visual keywords and character hook may be longer.
 

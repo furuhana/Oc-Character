@@ -7,9 +7,10 @@ This is the top-level workflow for creating or updating a character in the OC Ch
 Generate in this order:
 
 1. Fill the character profile.
-2. Apply the costume design gate before finalizing costume fields.
-3. Write the final image prompt from that completed profile.
-4. Generate the image from the final image prompt only.
+2. Apply the expression design gate before finalizing face and prompt expression text.
+3. Apply the costume design gate before finalizing costume fields.
+4. Write the final image prompt from that completed profile.
+5. Generate the image from the final image prompt only.
 
 The image generation step must not directly read every profile field. The completed profile is used to write `metaDesign.characterImagePrompt` and `metaDesign.characterImagePromptCn`. After that, those final prompt fields become the single source of truth for the image.
 
@@ -49,7 +50,30 @@ Fill every visible profile module for the current character:
 - Prompt
 
 Use `GENERATION_RULES.md` for attribute-writing style, naming, tone, body direction, and field concision.
+Use `EXPRESSION_DESIGN_GUIDE.md` before writing `visualIdentity.expression`,
+`visualIdentity.lip`, or the expression sentence in the final prompt.
 Use `COSTUME_DESIGN_GUIDE.md` before writing costume fields or outfit text in the final prompt.
+
+## Expression Design Gate
+
+Before filling or revising `visualIdentity.expression`, `visualIdentity.lip`, or
+the expression sentence in `metaDesign.characterImagePrompt`, read
+`EXPRESSION_DESIGN_GUIDE.md`.
+
+The expression pass must decide:
+
+- how numerical attributes affect expression exposure, especially morality, sanity,
+  confidence, stress, danger, desire, loyalty, stability, social, and violence
+- whether danger reads as protective, controlled, charming, unstable, or threatening
+- which expression family fits the character
+- which visible mouth shape is used: closed, speaking, toothy, clenched, shouting,
+  laughing, or another specific shape
+- which brow or eye action makes the expression draw-able
+- whether recent characters overused closed-mouth calm faces
+
+Most characters may remain emotionally stable, but stable does not mean every
+character should be closed-mouth. The final prompt must include visible face action:
+expression family, mouth shape, and brow/eye action.
 
 ## Costume Design Gate
 

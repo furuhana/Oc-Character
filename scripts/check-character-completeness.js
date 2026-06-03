@@ -153,7 +153,15 @@ function getPath(object, dottedPath) {
 }
 
 function isFilled(value) {
-  return value !== undefined && value !== null && String(value).trim() !== "";
+  if (value === undefined || value === null) return false;
+  const text = String(value).trim();
+  if (!text) return false;
+
+  const compact = text.replace(/\s+/g, "");
+  if (/^\?+$/.test(compact)) return false;
+  if (/\?{3,}/.test(compact)) return false;
+
+  return true;
 }
 
 function pickCharacter(data, requestedId) {
