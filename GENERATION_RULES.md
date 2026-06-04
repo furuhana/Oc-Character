@@ -77,6 +77,157 @@ Image generation must use the final prompt tab as its source of truth. The image
 - A recurring preferred garment is a tight white top wrapping the torso: fitted white T-shirt, sleeveless undershirt, fitted long-sleeve, or another clean close-fitting white top that can be tucked into pants, overalls, apron waist, harness, or belt structure. Keep it attractive, clean, non-realistic, non-photographic, and not explicit.
 - If the user says to remove outerwear, write `costumeSystem.outerwear` as no outerwear and keep the upper body focused on the tight white top. Do not reintroduce a jacket, coat, vest, open shirt, or overshirt in the final prompt.
 
+## Weapon Logic
+
+Weapons must not be decided by occupation alone, but they also must not become
+pure rules, permissions, boundaries, routes, processes, or concepts. The final
+weapon must first be a visual physical object that an ordinary person could
+understand and sketch within three seconds. Add fantasy logic after the object
+exists.
+
+Generate combat equipment in this order:
+
+1. Decide `combatSystem.battleArchetype`: how the character fights.
+2. Decide `combatSystem.visualWeapon`: the visible weapon object. It must be a
+   concrete noun or object phrase, such as bell, umbrella, staff, hammer, shield,
+   key, lamp, bag, rope, stamp, cane, bracer, road sign, mailbag, dagger, or
+   gauntlet.
+3. Decide `combatSystem.combatFunction`: what the object does in combat, such as
+   defend, pull, lock down, navigate, reflect, track, bind, heal, summon, or
+   reinforce the body.
+4. Decide `combatSystem.fantasyExplanation`: why the object can do that. This is
+   where abstract rules, permissions, contracts, routes, boundaries, fate, or
+   workflows may appear.
+5. Decide `combatSystem.weaponSource`: where the power, material, rule, or
+   authority comes from. Keep this as explanation, not the weapon itself.
+6. Read `coreIdentity.occupation` only after those choices. Use the occupation for
+   materials, symbols, procedures, social rituals, or disguise.
+7. Fill `combatSystem.forbiddenDirectTool` with the most obvious direct tools
+   implied by the occupation.
+8. If the visual weapon is just a common job tool, reject it and transform it at
+   least once through structure, scale, function, medium, or disguise.
+9. Fill `combatSystem.weaponTransformation` with the reasoning.
+10. Fill `combatSystem.weaponPreference` as `finalWeapon`. It must contain the
+   visible entity noun from `combatSystem.visualWeapon`.
+
+Forbidden shortcut:
+
+- Do not use `occupation -> common tool -> weapon` as the design path.
+- Do not use `occupation -> common tool -> abstract rule` as the design path.
+- Do not let `combatSystem.weaponPreference` be only an abstract concept.
+
+Required path:
+
+- `battle archetype -> weapon function`
+- `visualWeapon -> concrete object`
+- `combatFunction -> what the object does`
+- `fantasyExplanation -> why the object can do it`
+- `occupation -> material, visual packaging, ritual, or disguise`
+
+Final weapon rules:
+
+- `combatSystem.weaponPreference` is the final weapon.
+- The final weapon must include a clear entity noun.
+- The final weapon must be draw-able as a prop or carried equipment.
+- Abstract words may appear in `fantasyExplanation`, `weaponSource`, or
+  `weaponTransformation`, but not as the subject of `weaponPreference`.
+- Banned pure-concept final weapons include: `回路线边界`, `归处法则`,
+  `退件规则`, `路径概念体`, `封印流程`, `权限规则`, `命运回路`.
+- If a generated weapon becomes too abstract, automatically downgrade it to:
+  `entity prop + fantasy ability`. Example: change `退件规则` into
+  `旧邮袋盾`, or change `回路线边界` into `黄铜邮差铃与折叠路签`.
+
+Weapon source examples:
+
+- occupation tool transformed
+- occupation material altered
+- occupation workflow weaponized
+- occupation symbol made physical
+- private keepsake
+- family inheritance
+- illegal modification
+- contract gift
+- disaster remnant
+- otherworld contamination
+- ritual medium
+- corporate or military prototype
+- body byproduct
+- environmental leverage
+- debt, contract, or permission system
+
+Transformation examples:
+
+- Structure: tool parts become a shield, staff, ring, armor, trap, or mechanism.
+- Scale: a large workplace system becomes a handheld device, or a small tool
+  becomes an oversized weapon.
+- Function: repair, cooking, healing, accounting, or delivery becomes attack,
+  defense, control, summoning, or terrain editing.
+- Medium: use pressure, thread, scent, ledger entries, stamps, signals, light,
+  keys, routes, or timing instead of the tool itself.
+- Disguise: the item still looks ordinary until unfolded, authorized, or
+  triggered.
+
+Correction examples:
+
+- Wrong final weapon: `退件铃与折叠路签组成的回路线边界`
+- Correct fields:
+  - `visualWeapon`: `黄铜邮差铃`
+  - `combatFunction`: `导航、封锁、反射攻击`
+  - `fantasyExplanation`: `摇响后能听见失物真正归处的方向，退回的信件会折成短暂路标。`
+  - `weaponPreference`: `黄铜邮差铃与折叠路签`
+
+- Wrong final weapon: `失物回路局授权的退件规则`
+- Correct fields:
+  - `visualWeapon`: `旧邮袋盾`
+  - `combatFunction`: `防御、收纳、反弹`
+  - `fantasyExplanation`: `被挡下的攻击会像退件一样被送回原处。`
+  - `weaponPreference`: `旧邮袋盾`
+
+Archetype association samples:
+
+- Mage: ranged control, medium, symbol, ritual, formation. Forms may include
+  charm rings, floating media, folded staves, notation plates, paper barriers,
+  steam circles, light arrays, or ink lines.
+- Warrior: heavy weapons, armor, frontal pressure. Forms may include pressure
+  shields, valve hammers, weighted guards, folding barricades, impact frames, or
+  reinforced carriers.
+- Assassin: short weapons, hidden weapons, poison, speed. Forms may include
+  sleeve needles, folding blades, wire knives, ring mechanisms, silent valve
+  plates, toxic capsules, or concealed launchers.
+- Boxer: close range, guard, elbow strikes, knee strikes, body reinforcement.
+  Forms may include bracers, gloves, heavy boots, arm plates, shoulder plates,
+  binding wraps, or impact rings.
+- Tycoon: authorization, dispatch, contracts, pressure through rules. Forms may
+  include ceremonial canes, metal name cards, contract folders, seals,
+  permission terminals, bodyguard devices, or numbered access tokens.
+- Doctor: precision, diagnosis, anesthesia, repair, life monitoring. Forms may
+  include needles, surgical thread, medicine vials, diagnostic frames,
+  monitor charms, or sterile binding tools.
+- Summoner: contract, call, vessel, remote body. Forms may include bells, cards,
+  flutes, contract tokens, media containers, marked cages, or proxy puppets.
+- Guardian: protection, boundary, interception, counterforce. Forms may include
+  shields, door panels, ward plates, talismans, safety rails, barrier anchors,
+  or portable thresholds.
+- Hunter: pursuit, distance, traps, routes, bait. Forms may include bows, guns,
+  snares, ropes, lures, trackers, marked paths, or capture frames.
+- Craftsperson: conversion, mechanism, modular tools, repair logic. Forms may
+  include changed tools, folding structures, socket weapons, workbench modules,
+  clamps, gear arrays, or replaceable heads.
+- Dancer: rhythm, footwork, spiral motion, feint. Forms may include ribbons,
+  bell chains, shoe blades, rhythm marks, rotating rings, or movement trails.
+- Priest: purification, ritual authority, blessing, sealing. Forms may include
+  sacred implements, scripture strips, censers, prayer cords, seals, or
+  cleansing vessels.
+- Gambler: odds, risk, debt, exchange. Forms may include chips, cards, dice,
+  probability marks, wager contracts, or payout counters.
+- Actor: misdirection, masks, props, false bodies, triggered lines. Forms may
+  include masks, stage props, doubles, spotlights, cue scripts, or voice keys.
+- Courier: route, delivery, seal, message timing. Forms may include envelopes,
+  stamps, sealing wax, delivery paths, signal devices, or return tags.
+- Hacker or intelligence agent: signal, key, remote action, data made visible.
+  Forms may include terminals, signals, keys, drones, data constructs, or
+  permission exploits.
+
 ## Concision Targets
 
 - Name, codename, species, faction: 2-8 Chinese characters when possible.

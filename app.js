@@ -62,6 +62,9 @@ const generationNotesDefault = [
   "- \u5fc5\u987b\u660e\u786e\u5199\u6210\uff1a\u5355\u4e2a\u4eba\u7269\u3001\u5168\u8eab\u7acb\u7ed8\u3001\u5934\u5230\u811a\u5b8c\u6574\u53ef\u89c1\u3002",
   "- \u8981\u628a\u89d2\u8272\u7684\u8eab\u4efd\u3001\u8eab\u5f62\u3001\u8138\u90e8\u3001\u53d1\u578b\u3001\u670d\u88c5\u3001\u5de5\u5177\u6216\u6b66\u5668\u8f6c\u6210\u53ef\u89c6\u5316\u63cf\u8ff0\u3002",
   "- \u9ed8\u8ba4\u5199\u6210\u73b0\u4ee3\u90fd\u5e02\u89d2\u8272\uff0c\u7528\u4e00\u4e2a\u62db\u724c\u88c5\u5907\u3001\u5f02\u80fd\u3001\u9b54\u6cd5\u9053\u5177\u6216\u9690\u85cf\u8eab\u4efd\u505a\u6838\u5fc3\u8bbe\u8ba1\u94a9\u5b50\u3002",
+  "- 武器生成必须先决定战斗原型，再决定武器来源，最后才读取职业元素进行包装；禁止直接把职业常见工具当成最终武器。",
+  "- 如果职业暗示了扳手、菜刀、书本、手术刀等直译工具，先写入禁用直译，再通过结构、尺度、功能、媒介或伪装至少变形一次。",
+  "- 战斗字段填写顺序：战斗原型 -> 武器来源 -> 禁用直译 -> 变形逻辑 -> 最终武器。",
   "- \u9ed8\u8ba4\u4f53\u578b\u4e0b\u9650\u662f\u975e\u5e38\u58ee\u3001\u975e\u5e38\u539a\u5b9e\u3001\u808c\u8089\u91cf\u5f88\u5927\u7684\u6210\u5e74\u7537\u6027\uff1a\u6781\u5bbd\u80a9\u3001\u539a\u80f8\u3001\u7c97\u8116\u659c\u65b9\u808c\u3001\u5927\u4e0a\u81c2\u3001\u7c97\u524d\u81c2\u548c\u5f3a\u58ee\u5927\u817f\uff0c\u4e0d\u662f\u4fee\u957f\u7626\u7537\u4e3b\uff0c\u4e5f\u4e0d\u662f\u666e\u901a\u8fd0\u52a8\u578b\u3002",
   "- \u5199\u670d\u88c5\u5b57\u6bb5\u524d\u5fc5\u987b\u5148\u8bfb COSTUME_DESIGN_GUIDE.md\uff0c\u7528\u670d\u88c5\u8bbe\u8ba1\u95e8\u69db\u5224\u65ad\u7a7f\u642d\uff0c\u4e0d\u628a\u5b83\u5f53\u6210\u56fa\u5b9a\u670d\u88c5\u5e93\u3002",
   "- \u767d\u8272\u8d34\u8eab\u4e0a\u8863\u662f\u6838\u5fc3\u504f\u597d\uff1a\u7d27\u8eabT-shirt\u3001\u80cc\u5fc3\u3001\u957f\u8896\u6216\u5176\u4ed6\u53ef\u624e\u8fdb\u8170\u90e8\u7ed3\u6784\u7684\u7d27\u8eab\u767d\u8272\u4e0a\u8863\uff1b\u8981\u7528\u5e72\u51c0\u8d5b\u7490\u7490\u9634\u5f71\u8bfb\u51fa\u80f8\u80a9\u624b\u81c2\u4f53\u79ef\uff0c\u4e0d\u8981\u6e7f\u8eab\u6216\u5199\u5b9e\u808c\u8089\u3002",
@@ -88,6 +91,15 @@ const presetDefaults = [
   { id: makeId(), name: "Signature Gear", content: "\u62db\u724c\u88c5\u5907\n\u53ef\u8bc6\u522b\u8f6e\u5ed3\n\u73b0\u4ee3\u670d\u88c5\n\u4e00\u4e2a\u8bb0\u5fc6\u70b9" },
   { id: makeId(), name: "Hidden Magic", content: "\u65e5\u5e38\u8eab\u4efd\n\u9690\u85cf\u9b54\u6cd5\n\u4f4e\u5947\u5e7b\u5bc6\u5ea6\n\u5e72\u51c0\u90fd\u5e02\u611f" },
 ];
+
+const battleArchetypeTranslations = {
+  "Guardian Responder": "\u5b88\u62a4\u578b\u54cd\u5e94\u8005",
+  "Guardian Route Setter": "\u5b88\u62a4\u578b\u8def\u7ebf\u89c4\u5212\u8005",
+  "Guardian Archivist": "\u5b88\u62a4\u578b\u6863\u6848\u7ba1\u7406\u8005",
+  "Guardian Civic Mediator": "\u5b88\u62a4\u578b\u57ce\u5e02\u8c03\u505c\u8005",
+  "Guardian Transit Warden": "\u5b88\u62a4\u578b\u4ea4\u901a\u7ba1\u5236\u8005",
+  "Guardian Courier": "\u5b88\u62a4\u578b\u9012\u9001\u8005",
+};
 
 let db;
 let characters = [];
@@ -447,10 +459,22 @@ const profileModuleFields = {
     {
       title: "COMBAT STYLE",
       fields: [
+        ["\u6218\u6597\u539f\u578b", "\u539f\u578b", "combatSystem.battleArchetype"],
         ["\u6218\u6597\u7c7b\u578b", "TYPE", "combatSystem.combatType"],
         ["\u6838\u5fc3\u6253\u6cd5", "CORE STYLE", "combatSystem.coreStyle"],
-        ["\u6b66\u5668\u504f\u597d", "WEAPON", "combatSystem.weaponPreference"],
         ["\u7279\u6b8a\u80fd\u529b", "ABILITY", "combatSystem.specialAbility"],
+      ],
+    },
+    {
+      title: "WEAPON LOGIC",
+      fields: [
+        ["\u89c6\u89c9\u6b66\u5668", "VISUAL WEAPON", "combatSystem.visualWeapon"],
+        ["\u6218\u6597\u529f\u80fd", "COMBAT FUNCTION", "combatSystem.combatFunction"],
+        ["\u6b66\u5668\u6765\u6e90", "SOURCE", "combatSystem.weaponSource"],
+        ["\u7981\u7528\u76f4\u8bd1", "NO DIRECT TOOL", "combatSystem.forbiddenDirectTool"],
+        ["\u53d8\u5f62\u903b\u8f91", "TRANSFORM", "combatSystem.weaponTransformation", "span-4 textarea-field"],
+        ["\u5947\u5e7b\u89e3\u91ca", "FANTASY WHY", "combatSystem.fantasyExplanation", "span-4 textarea-field"],
+        ["\u6700\u7ec8\u6b66\u5668", "FINAL WEAPON", "combatSystem.weaponPreference", "span-4 textarea-field"],
       ],
     },
     {
@@ -744,7 +768,9 @@ function makeCharacter(seed = {}) {
     },
     lifestyle: {},
     socialSystem: {},
-    combatSystem: {},
+    combatSystem: {
+      battleArchetype: "\u5b88\u62a4\u578b\u54cd\u5e94\u8005",
+    },
     worldSetting: {},
     hiddenInformation: {},
     numericalAttributes: { ...numericalAttributeDefaults },
@@ -789,6 +815,10 @@ function normalizeCharacter(character = {}) {
   if (!normalized.generationProfile.notesTemplateSeeded && !String(normalized.generationProfile.notes || "").trim()) {
     normalized.generationProfile.notes = generationNotesDefault;
     normalized.generationProfile.notesTemplateSeeded = true;
+  }
+  const battleArchetype = normalized.combatSystem.battleArchetype;
+  if (battleArchetypeTranslations[battleArchetype]) {
+    normalized.combatSystem.battleArchetype = battleArchetypeTranslations[battleArchetype];
   }
   return normalized;
 }

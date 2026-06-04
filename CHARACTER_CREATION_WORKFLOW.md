@@ -9,8 +9,9 @@ Generate in this order:
 1. Fill the character profile.
 2. Apply the expression design gate before finalizing face and prompt expression text.
 3. Apply the costume design gate before finalizing costume fields.
-4. Write the final image prompt from that completed profile.
-5. Generate the image from the final image prompt only.
+4. Apply the weapon logic gate before finalizing combat equipment.
+5. Write the final image prompt from that completed profile.
+6. Generate the image from the final image prompt only.
 
 The image generation step must not directly read every profile field. The completed profile is used to write `metaDesign.characterImagePrompt` and `metaDesign.characterImagePromptCn`. After that, those final prompt fields become the single source of truth for the image.
 
@@ -53,6 +54,8 @@ Use `GENERATION_RULES.md` for attribute-writing style, naming, tone, body direct
 Use `EXPRESSION_DESIGN_GUIDE.md` before writing `visualIdentity.expression`,
 `visualIdentity.lip`, or the expression sentence in the final prompt.
 Use `COSTUME_DESIGN_GUIDE.md` before writing costume fields or outfit text in the final prompt.
+Use the Weapon Logic section in `GENERATION_RULES.md` before writing
+`combatSystem.weaponPreference` or describing combat equipment in the final prompt.
 
 ## Expression Design Gate
 
@@ -107,6 +110,38 @@ The costume pass must decide:
 
 After this gate, write concise `costumeSystem` fields and make sure the final prompt
 outfit text reflects the same decisions.
+
+## Weapon Logic Gate
+
+Before filling or revising `combatSystem.weaponPreference`, read the Weapon Logic
+section in `GENERATION_RULES.md`.
+
+The weapon pass must decide:
+
+- `combatSystem.battleArchetype`: how the character fights
+- `combatSystem.visualWeapon`: the concrete visible weapon object, understandable
+  and draw-able within three seconds
+- `combatSystem.combatFunction`: what that object does in battle
+- `combatSystem.fantasyExplanation`: why the object can do that
+- `combatSystem.weaponSource`: where the weapon's power, material, rule, or
+  authority comes from, kept as explanation rather than the weapon itself
+- how `coreIdentity.occupation` contributes material, symbols, workflow, social
+  ritual, or disguise after the archetype and source are chosen
+- `combatSystem.forbiddenDirectTool`: the direct job-tool cliches that must not
+  be used as the final weapon
+- `combatSystem.weaponTransformation`: how the final weapon avoids direct
+  occupation translation through structure, scale, function, medium, or disguise
+- `combatSystem.weaponPreference`: the final weapon, which must contain a clear
+  entity noun from `visualWeapon`
+
+Do not design weapons as `occupation -> obvious tool -> weapon`, and do not solve
+that problem by jumping to pure abstraction such as rules, routes, boundaries, or
+permissions. The correct sequence is:
+
+`battle archetype -> visual weapon object -> combat function -> fantasy explanation -> occupation packaging`.
+
+If the final weapon reads as a concept rather than a prop, downgrade it to
+`entity prop + fantasy ability` before writing the final image prompt.
 
 The final step of attribute generation is writing:
 

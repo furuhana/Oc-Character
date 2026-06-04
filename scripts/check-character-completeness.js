@@ -164,6 +164,126 @@ function isFilled(value) {
   return true;
 }
 
+const abstractFinalWeaponPhrases = [
+  "回路线边界",
+  "归处法则",
+  "退件规则",
+  "路径概念体",
+  "封印流程",
+  "权限规则",
+  "命运回路",
+];
+
+const abstractWeaponTerms = [
+  "规则",
+  "法则",
+  "边界",
+  "流程",
+  "权限",
+  "概念",
+  "回路",
+  "路线",
+  "命运",
+  "授权",
+  "契约",
+  "系统",
+  "原则",
+  "秩序",
+];
+
+const visualWeaponTerms = [
+  "铃",
+  "伞",
+  "杖",
+  "锤",
+  "盾",
+  "钥匙",
+  "灯",
+  "包",
+  "绳",
+  "印章",
+  "手杖",
+  "护腕",
+  "路牌",
+  "路签",
+  "邮袋",
+  "短刀",
+  "拳套",
+  "手套",
+  "枪",
+  "弓",
+  "刀",
+  "剑",
+  "棍",
+  "槌",
+  "斧",
+  "钩",
+  "链",
+  "牌",
+  "夹",
+  "盒",
+  "匣",
+  "轮",
+  "环",
+  "针",
+  "瓶",
+  "书",
+  "bag",
+  "bell",
+  "umbrella",
+  "staff",
+  "hammer",
+  "shield",
+  "key",
+  "lamp",
+  "rope",
+  "stamp",
+  "cane",
+  "bracer",
+  "sign",
+  "mailbag",
+  "dagger",
+  "gauntlet",
+  "knife",
+  "sword",
+  "club",
+  "hook",
+  "chain",
+];
+
+function validateWeaponLogic(character) {
+  const issues = [];
+  const combatSystem = character.combatSystem || {};
+  const finalWeapon = String(combatSystem.weaponPreference || "").trim();
+  if (!finalWeapon) return issues;
+
+  const compactFinalWeapon = finalWeapon.replace(/\s+/g, "");
+  const hasBannedPhrase = abstractFinalWeaponPhrases.some((phrase) => compactFinalWeapon.includes(phrase));
+  if (hasBannedPhrase) {
+    issues.push(
+      "combatSystem.weaponPreference: final weapon uses a banned pure-concept phrase; use entity prop + fantasy ability."
+    );
+  }
+
+  const lowerFinalWeapon = finalWeapon.toLowerCase();
+  const hasVisualNoun = visualWeaponTerms.some((term) => lowerFinalWeapon.includes(term.toLowerCase()));
+  const hasAbstractTerm = abstractWeaponTerms.some((term) => compactFinalWeapon.includes(term));
+  if (!hasVisualNoun && hasAbstractTerm) {
+    issues.push(
+      "combatSystem.weaponPreference: final weapon appears abstract and lacks a clear visible object noun."
+    );
+  }
+
+  const visualWeapon = String(combatSystem.visualWeapon || "").trim();
+  if (visualWeapon && !finalWeapon.includes(visualWeapon) && !hasVisualNoun) {
+    issues.push(
+      "combatSystem.weaponPreference: final weapon should include the concrete object named in combatSystem.visualWeapon."
+    );
+  }
+
+  return issues;
+}
+
 function pickCharacter(data, requestedId) {
   if (requestedId) {
     const found = data.characters.find((character) => character.id === requestedId);
@@ -177,15 +297,23 @@ function main() {
   const data = JSON.parse(fs.readFileSync(dataPath, "utf8"));
   const character = pickCharacter(data, process.argv[2]);
   const missing = requiredPaths.filter((fieldPath) => !isFilled(getPath(character, fieldPath)));
+  const weaponIssues = validateWeaponLogic(character);
 
   console.log(`${character.coreIdentity?.name || "未命名角色"} (${character.id})`);
-  if (!missing.length) {
+  if (!missing.length && !weaponIssues.length) {
     console.log("Complete: all current profile modules are filled.");
     return;
   }
 
-  console.log(`Missing ${missing.length} field(s):`);
-  for (const fieldPath of missing) console.log(`- ${fieldPath}`);
+  if (missing.length) {
+    console.log(`Missing ${missing.length} field(s):`);
+    for (const fieldPath of missing) console.log(`- ${fieldPath}`);
+  }
+
+  if (weaponIssues.length) {
+    console.log("Weapon logic issue(s):");
+    for (const issue of weaponIssues) console.log(`- ${issue}`);
+  }
   process.exitCode = 1;
 }
 
