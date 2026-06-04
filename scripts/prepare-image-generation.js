@@ -162,11 +162,12 @@ function main() {
     [
       "Use imagegen in an isolated/projectless thread.",
       "Generate exactly one full-body character illustration.",
-      `Character: ${request.characterName} (${request.characterId})`,
+      `Subject record id: ${request.characterId}`,
       `Style reference: ${reference.path}`,
       "Before calling imagegen, load or attach the style reference as an actual image input; do not rely on this file path as text-only prompt content.",
       "The reference is only for drawing style, body proportion, linework, and coloring method.",
       "Do not copy the reference character identity, face, clothing, pose, props, colors, or background.",
+      "Do not include or infer the character's name, codename, alias, or romanized name in the generated image.",
       "",
       "Use ONLY these final prompt fields as the image subject:",
       "Chinese final prompt:",

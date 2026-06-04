@@ -42,6 +42,10 @@ Do not append:
 - module names
 - old hard-coded references such as `assets/style-reference-muscle.png`
 
+Do not include or append the character's name, codename, alias, or romanized
+name in the image prompt package. Use visible role and appearance descriptors
+instead.
+
 ## Required Steps
 
 1. Confirm the character is complete.

@@ -35,6 +35,15 @@ Image generation must use the final prompt tab as its source of truth. The image
 - Names should feel like designed character names, not casual worker nicknames.
 - Avoid overusing `老X`, `小X`, `阿X`, or other generic age-based aliases unless the user explicitly asks for that tone.
 - Prefer names with stronger visual identity, faction flavor, or memorable rhythm.
+- Before choosing or revising names, read `NAME_GENERATION_RULES.md` and use
+  `data/name-samples.json` as a flavor anchor. The sample library is not a hard
+  vocabulary limit; extend from it when the result still matches the character's
+  nationality, heritage, world, and imagination level.
+- For candidate generation, use `numericalAttributes.imagination`,
+  `numericalAttributes.worldBinding`, `numericalAttributes.identityMix`, and
+  `numericalAttributes.nameRealism` to choose naming template freedom. Preview
+  candidates with `node scripts/generate-name.js [characterId] [count]` when a
+  name needs to be generated or revised.
 - Default character direction is modern urban fantasy: a believable real-world occupation or public identity with one unusual supernatural ability, artifact, device, familiar, curse, or hidden role as the core design hook.
 - Do not default to industrial workers, dock workers, heavy laborers, guards, or grimy working-class archetypes unless the user explicitly asks for them.
 - Visual style should lean toward clean Kyoto Animation-like TV anime cel shading: crisp readable linework, clean shadow shapes, fresh colors, tidy clothing, and minimal dirt or dust.
@@ -245,6 +254,10 @@ Archetype association samples:
 - Before image generation, fill the final prompt tab (`metaDesign.characterImagePrompt` and `metaDesign.characterImagePromptCn`) as the last attribute-generation step.
 - The final prompt tab is the single source of truth for the character image.
 - Profile attributes and generation notes may guide how the final prompt is written, but must not be appended to the image prompt.
+- Final image prompts must not include the character's name, codename, alias, or
+  romanized name. Names are identity metadata, not visible image content. Start
+  from visual facts such as age range, heritage, role, body type, face, outfit,
+  props, expression, and fantasy anchor.
 
 ## Full-Body Prompt Guardrails
 
@@ -252,7 +265,7 @@ Every full-body prompt must include these constraints:
 
 - `Single character only.`
 - `Full body visible from head to boots.`
-- `Generate the character from the current attributes.`
+- `Generate the character from the current visual attributes, without writing or referencing the character's name.`
 - `The style reference is only for body proportion and drawing style; do not copy the reference character.`
 - `No UI, no infographic, no diagram, no character sheet, no text, no labels, no icons, no scenery.`
 - `Pure flat chroma-key background only.`

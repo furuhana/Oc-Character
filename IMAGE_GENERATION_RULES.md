@@ -25,6 +25,9 @@ The intended sequence is documented in `CHARACTER_CREATION_WORKFLOW.md`:
 - Do not read scattered profile fields during image generation.
 - Do not append generation notes, starter prompt, attribute rules, module labels, UI text, or markdown documentation to the image prompt.
 - Profile attributes are used only before this step, when writing the final prompt.
+- Final prompt fields must not include the character's name, codename, alias, or
+  romanized name. Names are not visual content and can encourage unwanted text,
+  labels, or identity drift.
 
 ## Full-Body Task
 

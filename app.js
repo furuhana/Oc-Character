@@ -4,6 +4,7 @@ const STORE_CHARACTERS = "characters";
 const STORE_SETTINGS = "settings";
 const CHARACTER_PLACEHOLDER = "./assets/character-placeholder.png";
 const SERVER_DATA_URL = "/api/data";
+const NAME_SAMPLES_URL = "/api/name-samples";
 
 function makeId() {
   if (globalThis.crypto?.randomUUID) return globalThis.crypto.randomUUID();
@@ -72,7 +73,7 @@ const generationNotesDefault = [
   "- \u6750\u8d28\u7528\u5e72\u51c0\u52a8\u753b\u8bbe\u8ba1\u8bed\u8a00\uff1a\u5e73\u9762\u8272\u5757\u3001\u6982\u62ec\u8936\u76b1\u3001\u7b80\u5316\u91d1\u5c5e\u5c0f\u70b9\u7f00\uff1b\u4e0d\u8981\u5199\u5b9e\u5e03\u6599\u7eb9\u7406\u3001\u6cb9\u4eae\u53cd\u5149\u6216\u65f6\u88c5\u6444\u5f71\u8bed\u8a00\u3002",
   "- \u753b\u98ce\u8981\u660e\u786e\u5199\u6210\u4eac\u90fd\u52a8\u753b\u5f0f\u6e05\u723d TV \u52a8\u753b\u8d5b\u7490\u7490\uff1a\u7ebf\u6761\u5e72\u51c0\u6d41\u7545\uff0c\u9634\u5f71\u5757\u9762\u6982\u62ec\uff0c\u6574\u4f53\u5e72\u51c0\u65e0\u7070\u5c18\u3002",
   "- \u82f1\u6587\u63d0\u793a\u8bcd\u4f5c\u4e3a\u751f\u56fe\u4e3b\u6587\u672c\uff0c\u4e2d\u6587\u4f5c\u4e3a\u7406\u89e3\u5907\u4efd\u3002",
-  "- \u540d\u5b57\u8981\u50cf\u6b63\u5f0f\u89d2\u8272\u540d\uff0c\u907f\u514d\u9ed8\u8ba4\u4f7f\u7528\u300c\u8001X\u300d\u300c\u5c0fX\u300d\u300c\u963fX\u300d\u8fd9\u7c7b\u901a\u7528\u5916\u53f7\u3002",
+  "- \u6700\u7ec8\u63d0\u793a\u8bcd\u4e0d\u8981\u5199\u89d2\u8272\u540d\u5b57\u3001\u4ee3\u53f7\u3001\u522b\u540d\u6216\u7f57\u9a6c\u97f3\uff1b\u7528\u5e74\u9f84\u3001\u8840\u7edf\u3001\u804c\u4e1a\u3001\u4f53\u578b\u3001\u8138\u3001\u670d\u88c5\u3001\u9053\u5177\u548c\u5947\u5e7b\u6807\u8bb0\u63cf\u8ff0\u53ef\u89c6\u5185\u5bb9\u3002",
   "",
   "2. \u98ce\u683c\u53c2\u8003\u56fe",
   "- \u53ea\u53c2\u8003\u4f53\u578b\u6bd4\u4f8b\u3001\u7ebf\u6761\u3001\u4e0a\u8272\u548c\u753b\u98ce\u3002",
@@ -103,9 +104,12 @@ const battleArchetypeTranslations = {
 
 let db;
 let characters = [];
+let nameSamples = { cultures: {} };
 let currentId = null;
 let currentAsset = "fullBody";
 let currentProfileModule = "identity";
+let currentSampleCulture = "japanese";
+let currentSampleCategory = "realSurnames";
 let profileModulePinned = false;
 let serverPersistenceAvailable = false;
 let settings = {
@@ -196,6 +200,31 @@ const els = {
   devReset: document.querySelector("#devResetBtn"),
   devControls: document.querySelectorAll("[data-dev]"),
   devValues: document.querySelectorAll("[data-dev-value]"),
+  sampleDialog: document.querySelector("#sampleLibraryDialog"),
+  sampleCultureTabs: document.querySelector("#sampleCultureTabs"),
+  sampleCategoryTabs: document.querySelector("#sampleCategoryTabs"),
+  sampleTextarea: document.querySelector("#sampleLibraryTextarea"),
+  sampleStatus: document.querySelector("#sampleLibraryStatus"),
+  sampleSave: document.querySelector("#sampleLibrarySaveBtn"),
+  sampleDedupe: document.querySelector("#sampleLibraryDedupeBtn"),
+};
+
+const sampleCategoryLabels = {
+  realSurnames: "\u5b9e\u59d3",
+  surname1: "\u59d31",
+  surname2: "\u59d32",
+  given1: "\u540d1",
+  connectors: "\u8fde\u63a5",
+  suffixes: "\u5c3e",
+  concepts: "\u6982\u5ff5\u8bcd",
+  anomalySuffixes: "\u5f02\u5e38\u540e\u7f00",
+};
+
+const sampleCultureFallbacks = {
+  japanese: "\u65e5\u672c",
+  chinese: "\u4e2d\u56fd",
+  american: "\u7f8e\u56fd",
+  mixed: "\u6df7\u8840",
 };
 
 const developerDefaults = { ...settings.developer };
@@ -219,6 +248,35 @@ function normalizeSettings(raw = {}) {
   return merged;
 }
 
+function normalizeNameSamples(raw = {}) {
+  const cultures = raw.cultures && typeof raw.cultures === "object" ? raw.cultures : {};
+  for (const [cultureKey, culture] of Object.entries(cultures)) {
+    culture.label ||= sampleCultureFallbacks[cultureKey] || cultureKey;
+    culture.categories ||= {};
+    for (const categoryKey of Object.keys(sampleCategoryLabels)) {
+      const value = culture.categories[categoryKey];
+      culture.categories[categoryKey] = Array.isArray(value) ? dedupeTokens(value) : [];
+    }
+  }
+  return { cultures };
+}
+
+function dedupeTokens(tokens) {
+  const seen = new Set();
+  const cleaned = [];
+  for (const token of tokens || []) {
+    const value = String(token || "").trim();
+    if (!value || seen.has(value)) continue;
+    seen.add(value);
+    cleaned.push(value);
+  }
+  return cleaned;
+}
+
+function splitSampleText(text) {
+  return dedupeTokens(String(text || "").split(/[\s,，、;；]+/u));
+}
+
 const numericalAttributeDefaults = {
   wealth: 30,
   morality: 30,
@@ -232,6 +290,10 @@ const numericalAttributeDefaults = {
   social: 30,
   doom: 30,
   violence: 30,
+  imagination: 30,
+  worldBinding: 30,
+  identityMix: 30,
+  nameRealism: 70,
 };
 
 const profileModules = {
@@ -542,6 +604,10 @@ const profileModuleFields = {
         ["\u793e\u4ea4\u80fd\u529b", "SOCIAL", "numericalAttributes.social", "green"],
         ["\u81ea\u6bc1\u503e\u5411", "DOOM", "numericalAttributes.doom", "doom", "span-4"],
         ["\u66b4\u529b\u503e\u5411", "VIOLENCE", "numericalAttributes.violence", "violence", "span-4"],
+        ["\u8111\u6d1e", "IMAGINATION", "numericalAttributes.imagination", "purple"],
+        ["\u4e16\u754c\u7ed1\u5b9a", "WORLD BIND", "numericalAttributes.worldBinding", "indigo"],
+        ["\u6587\u5316\u6df7\u5408", "CULTURE MIX", "numericalAttributes.identityMix", "green"],
+        ["\u540d\u5b57\u73b0\u5b9e\u611f", "NAME REAL", "numericalAttributes.nameRealism", "brown"],
       ],
     },
   ],
@@ -653,6 +719,28 @@ async function loadServerData() {
     serverPersistenceAvailable = false;
     return null;
   }
+}
+
+async function loadNameSamples() {
+  try {
+    const response = await fetch(NAME_SAMPLES_URL, { cache: "no-store" });
+    if (!response.ok) return;
+    nameSamples = normalizeNameSamples(await response.json());
+  } catch {
+    nameSamples = normalizeNameSamples(nameSamples);
+  }
+}
+
+async function saveNameSamples() {
+  const payload = normalizeNameSamples(nameSamples);
+  nameSamples = payload;
+  const response = await fetch(NAME_SAMPLES_URL, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+  if (!response.ok) throw new Error("\u6837\u672c\u5e93\u4fdd\u5b58\u5931\u8d25");
+  return response.json();
 }
 
 async function saveServerData() {
@@ -774,6 +862,15 @@ function makeCharacter(seed = {}) {
     worldSetting: {},
     hiddenInformation: {},
     numericalAttributes: { ...numericalAttributeDefaults },
+    namingProfile: {
+      primaryCulture: "",
+      secondaryCulture: "",
+      templateFamily: "",
+      registeredName: "",
+      displayName: "",
+      alias: "",
+      codename: "",
+    },
     metaDesign: {
       characterHook: "",
       characterConsistencyPrompt: "",
@@ -804,6 +901,7 @@ function normalizeCharacter(character = {}) {
     "worldSetting",
     "hiddenInformation",
     "numericalAttributes",
+    "namingProfile",
     "metaDesign",
   ]) {
     normalized[key] = { ...(base[key] || {}), ...(character[key] || {}) };
@@ -882,6 +980,7 @@ function renderProfileModule() {
 
   if (currentProfileModule === "identity") {
     els.form.classList.remove("is-empty");
+    els.form.classList.remove("is-prompt");
     els.form.classList.add("is-identity");
     els.form.innerHTML = identityProfileTemplate;
     const character = getCurrent();
@@ -890,8 +989,9 @@ function renderProfileModule() {
     return;
   }
 
-  els.form.classList.add("is-empty");
+  els.form.classList.toggle("is-empty", currentProfileModule !== "prompt");
   els.form.classList.remove("is-identity");
+  els.form.classList.toggle("is-prompt", currentProfileModule === "prompt");
   const groups = profileModuleFields[currentProfileModule] || [{ title: module.titleEn, fields: [] }];
   els.form.innerHTML = `
     <div class="profile-category-list">
@@ -908,6 +1008,11 @@ function renderProfileModule() {
         )
         .join("")}
     </div>
+    ${
+      currentProfileModule === "prompt"
+        ? `<button id="nameSamplesOpenBtn" class="sample-library-open" type="button">\u6837\u672c\u5e93</button>`
+        : ""
+    }
   `;
   const character = getCurrent();
   if (character) fillProfileFields(character);
@@ -1310,6 +1415,72 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
+function getCurrentSampleCulture() {
+  const cultures = nameSamples.cultures || {};
+  if (!cultures[currentSampleCulture]) currentSampleCulture = Object.keys(cultures)[0] || "japanese";
+  if (!cultures[currentSampleCulture]) {
+    cultures[currentSampleCulture] = { label: sampleCultureFallbacks[currentSampleCulture] || currentSampleCulture, categories: {} };
+  }
+  cultures[currentSampleCulture].categories ||= {};
+  return cultures[currentSampleCulture];
+}
+
+function getCurrentSampleTokens() {
+  const culture = getCurrentSampleCulture();
+  return culture.categories?.[currentSampleCategory] || [];
+}
+
+function setCurrentSampleTokens(tokens) {
+  const culture = getCurrentSampleCulture();
+  culture.categories ||= {};
+  culture.categories[currentSampleCategory] = dedupeTokens(tokens);
+}
+
+function renderSampleCultureTabs() {
+  if (!els.sampleCultureTabs) return;
+  const cultures = nameSamples.cultures || {};
+  const entries = Object.entries(cultures);
+  els.sampleCultureTabs.innerHTML = entries
+    .map(
+      ([key, culture]) =>
+        `<button type="button" class="${key === currentSampleCulture ? "active" : ""}" data-sample-culture="${escapeHtml(key)}">${escapeHtml(culture.label || sampleCultureFallbacks[key] || key)}</button>`,
+    )
+    .join("");
+}
+
+function renderSampleCategoryTabs() {
+  if (!els.sampleCategoryTabs) return;
+  els.sampleCategoryTabs.innerHTML = Object.entries(sampleCategoryLabels)
+    .map(
+      ([key, label]) =>
+        `<button type="button" class="${key === currentSampleCategory ? "active" : ""}" data-sample-category="${escapeHtml(key)}">${escapeHtml(label)}</button>`,
+    )
+    .join("");
+}
+
+function renderSampleLibrary() {
+  renderSampleCultureTabs();
+  renderSampleCategoryTabs();
+  if (els.sampleTextarea) els.sampleTextarea.value = getCurrentSampleTokens().join(" ");
+  if (els.sampleStatus) {
+    const culture = getCurrentSampleCulture();
+    const label = sampleCategoryLabels[currentSampleCategory] || currentSampleCategory;
+    els.sampleStatus.textContent = `${culture.label || currentSampleCulture} / ${label} / ${getCurrentSampleTokens().length} \u9879`;
+  }
+}
+
+function openSampleLibrary() {
+  renderSampleLibrary();
+  els.sampleDialog?.showModal();
+}
+
+async function persistSampleLibraryFromTextarea() {
+  setCurrentSampleTokens(splitSampleText(els.sampleTextarea?.value || ""));
+  renderSampleLibrary();
+  await saveNameSamples();
+  if (els.sampleStatus) els.sampleStatus.textContent += " / \u5df2\u4fdd\u5b58";
+}
+
 function bindEvents() {
   const searchToggle = document.querySelector(".search-toggle");
   const syncSearchToggle = () => searchToggle?.classList.toggle("has-value", !!els.search.value.trim());
@@ -1394,6 +1565,10 @@ function bindEvents() {
     updateField(field.dataset.field, field.value);
     if (["coreIdentity.name", "coreIdentity.occupation"].includes(field.dataset.field)) renderCharacter();
     updateProfileScrollbar();
+  });
+  els.form?.addEventListener("click", (event) => {
+    if (!event.target.closest("#nameSamplesOpenBtn")) return;
+    openSampleLibrary();
   });
   let activeStatMeter = null;
   els.form?.addEventListener("pointerdown", (event) => {
@@ -1502,6 +1677,29 @@ function bindEvents() {
     const file = els.import.files?.[0];
     if (file) importJson(file);
   });
+  els.sampleCultureTabs?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-sample-culture]");
+    if (!button) return;
+    setCurrentSampleTokens(splitSampleText(els.sampleTextarea?.value || ""));
+    currentSampleCulture = button.dataset.sampleCulture;
+    renderSampleLibrary();
+  });
+  els.sampleCategoryTabs?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-sample-category]");
+    if (!button) return;
+    setCurrentSampleTokens(splitSampleText(els.sampleTextarea?.value || ""));
+    currentSampleCategory = button.dataset.sampleCategory;
+    renderSampleLibrary();
+  });
+  els.sampleDedupe?.addEventListener("click", () => {
+    setCurrentSampleTokens(splitSampleText(els.sampleTextarea?.value || ""));
+    renderSampleLibrary();
+  });
+  els.sampleSave?.addEventListener("click", () => {
+    persistSampleLibraryFromTextarea().catch((error) => {
+      if (els.sampleStatus) els.sampleStatus.textContent = error?.message || "\u6837\u672c\u5e93\u4fdd\u5b58\u5931\u8d25";
+    });
+  });
   els.devOpen?.addEventListener("click", () => {
     els.devPanel?.classList.toggle("open");
   });
@@ -1549,6 +1747,7 @@ function bindEvents() {
 
 async function init() {
   db = await openDb();
+  await loadNameSamples();
   const loadedFromServer = await hydrateFromServerData(true);
   if (!loadedFromServer) {
     const savedSettings = await getAll(STORE_SETTINGS);

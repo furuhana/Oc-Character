@@ -7,11 +7,13 @@ This is the top-level workflow for creating or updating a character in the OC Ch
 Generate in this order:
 
 1. Fill the character profile.
-2. Apply the expression design gate before finalizing face and prompt expression text.
-3. Apply the costume design gate before finalizing costume fields.
-4. Apply the weapon logic gate before finalizing combat equipment.
-5. Write the final image prompt from that completed profile.
-6. Generate the image from the final image prompt only.
+2. Apply the naming gate before finalizing `coreIdentity.name`,
+   `coreIdentity.codename`, or `coreIdentity.alias`.
+3. Apply the expression design gate before finalizing face and prompt expression text.
+4. Apply the costume design gate before finalizing costume fields.
+5. Apply the weapon logic gate before finalizing combat equipment.
+6. Write the final image prompt from that completed profile.
+7. Generate the image from the final image prompt only.
 
 The image generation step must not directly read every profile field. The completed profile is used to write `metaDesign.characterImagePrompt` and `metaDesign.characterImagePromptCn`. After that, those final prompt fields become the single source of truth for the image.
 
@@ -51,11 +53,34 @@ Fill every visible profile module for the current character:
 - Prompt
 
 Use `GENERATION_RULES.md` for attribute-writing style, naming, tone, body direction, and field concision.
+Use `NAME_GENERATION_RULES.md` and `data/name-samples.json` before writing
+`coreIdentity.name`, `coreIdentity.codename`, or `coreIdentity.alias`.
 Use `EXPRESSION_DESIGN_GUIDE.md` before writing `visualIdentity.expression`,
 `visualIdentity.lip`, or the expression sentence in the final prompt.
 Use `COSTUME_DESIGN_GUIDE.md` before writing costume fields or outfit text in the final prompt.
 Use the Weapon Logic section in `GENERATION_RULES.md` before writing
 `combatSystem.weaponPreference` or describing combat equipment in the final prompt.
+
+## Naming Gate
+
+Before filling or revising `coreIdentity.name`, `coreIdentity.codename`, or
+`coreIdentity.alias`, read `NAME_GENERATION_RULES.md` and
+`data/name-samples.json`.
+
+The naming pass must decide:
+
+- the primary naming culture from nationality, heritage, species, and origin
+- whether the character is pure-culture or mixed-culture
+- which sample library culture applies
+- whether the name should be a legal name, display name, common address, or
+  codename
+- how much freedom the name gets from the character's imagination, world
+  binding, hidden identity, and occupation concept
+
+Use the Japanese sample library only when Japanese is the primary naming culture,
+or when Japanese is a secondary culture and the mixed-heritage naming rule calls
+for a Japanese suffix, title, middle element, or codename flavor. Do not use the
+Japanese library as the default for non-Japanese characters.
 
 ## Expression Design Gate
 
@@ -150,6 +175,11 @@ The final step of attribute generation is writing:
 
 These prompts should summarize the completed character into a direct image-generation instruction. They should include the visual identity, outfit, body type, core fantasy hook, style, composition, and image bans.
 
+Do not include the character's name, codename, alias, or romanized name in
+`metaDesign.characterImagePromptCn` or `metaDesign.characterImagePrompt`. The
+image model should receive only visualizable subject information such as age,
+heritage, role, body, face, outfit, props, and fantasy markers.
+
 ## Completeness Gate
 
 Before image generation, run:
@@ -177,6 +207,9 @@ During image generation, read only:
 - `settings.styleReference.image`
 
 Do not append profile modules, notes, rules documents, UI labels, or raw field lists to the image prompt.
+
+Do not append or restate the character's name, codename, alias, or romanized
+name during image generation.
 
 The style reference decides drawing language only: body proportion, line quality, rendering style, and coloring method. The final prompt decides the character.
 

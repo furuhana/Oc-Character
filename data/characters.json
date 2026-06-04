@@ -1,6 +1,6 @@
 {
   "app": "OC Character Bible Workbench",
-  "savedAt": "2026-06-04T00:24:53.151Z",
+  "savedAt": "2026-06-04T09:31:44.819Z",
   "settings": {
     "starterPrompt": "重点方向：都市为主，奇幻为辅\n体型下限：非常壮、非常厚实、肌肉量很大的成年男性，不要只是普通运动型\n极宽肩、厚胸、粗脖和斜方肌、大上臂、粗前臂、强壮大腿，圆润但有压重力量\n如果用户要更壮，要写成比参考图更大、更厚、更有力量的巨型力量感体格\n生成服装前先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭\n白色贴身上衣是核心偏好：紧身T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣，要读出胸肩和手臂体积\n如果用户说脱掉外套，就不要再补回夹克、外套、背心、开襟衬衫或其他上身外层\n现实职业或社会角色作为基底\n一个清晰的核心设计：招牌装备、异能、魔法道具或隐藏身份\n现代服装与轻量奇幻细节结合，服装必须好看而不只是实用\n用数值、世界阵营、战斗方式、身体轮廓和反重复交换来决定服装\n京都动画式清爽线条\n干净赛璐璐阴影，阴影概括明确\n整体干净、无灰尘、主动降噪\n颜色清透，角色轮廓易读\n\n默认禁止：少女\n萝莉\n萌系\n偶像风、女性化男性\n瘦弱体型\n普通运动型体格\n修长纤细男主\n写实肌肉渲染\n照片感\n湿身效果\n写实布料纹理、写实材质反光、时装摄影语言\n油亮皮革、湿身材质、拟真塑料或乳胶感\n工业风作为主设计\n大量灰尘、油污、铁锈、脏污质感\n废土、煤灰、混浊阴影",
     "styleReference": {
@@ -72,9 +72,923 @@
   },
   "characters": [
     {
+      "id": "7501930b-16de-42ae-869a-33856cce9698",
+      "createdAt": "2026-06-04T09:10:08.833Z",
+      "updatedAt": "2026-06-04T09:15:47.994Z",
+      "agentMarks": [
+        {
+          "id": "99ce0e19-8a7b-4e4f-9641-dac483006493",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-04T09:10:22.959Z"
+        },
+        {
+          "id": "46768b51-0ef9-4e3c-91eb-7cbf0cb7eeb2",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-04T09:10:22.960Z"
+        },
+        {
+          "id": "eac20249-bf5a-418b-b131-4addff4612f2",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-04T09:15:47.992Z"
+        }
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 武器生成必须先决定战斗原型，再决定武器来源，最后才读取职业元素进行包装；禁止直接把职业常见工具当成最终武器。\n- 如果职业暗示了扳手、菜刀、书本、手术刀等直译工具，先写入禁用直译，再通过结构、尺度、功能、媒介或伪装至少变形一次。\n- 战斗字段填写顺序：战斗原型 -> 武器来源 -> 禁用直译 -> 变形逻辑 -> 最终武器。\n- 默认体型下限是非常壮、非常厚实、肌肉量很大的成年男性：极宽肩、厚胸、粗脖斜方肌、大上臂、粗前臂和强壮大腿，不是修长瘦男主，也不是普通运动型。\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭，不把它当成固定服装库。\n- 白色贴身上衣是核心偏好：紧身T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；要用干净赛璐璐阴影读出胸肩手臂体积，不要湿身或写实肌肉。\n- 如果用户说脱掉外套，最终提示词要明确禁止 jacket/coat/vest/open shirt/overshirt，让紧身白色上衣成为上身主视觉。\n- 材质用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 最终提示词不要写角色名字、代号、别名或罗马音；用年龄、血统、职业、体型、脸、服装、道具和奇幻标记描述可视内容。\n\n2. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n3. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-7501930b.png",
+        "thumbnail": "./assets/characters/generated-fullbody-7501930b.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "岚阀司昼",
+        "codename": "铜哨",
+        "alias": "",
+        "faction": "南港阀门局",
+        "birthday": "09/17",
+        "age": "34",
+        "height": "188",
+        "weight": "96 KG",
+        "occupation": "港区压力阀检修员",
+        "affiliation": "南港旧管网维护队",
+        "species": "人类",
+        "heritage": "中国南港工人家庭"
+      },
+      "visualIdentity": {
+        "visualKeywords": "宽肩厚胸、白色贴身背心、开襟短袖衬衫、胸前仪表背带、管网工具、海风感",
+        "colorLanguage": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "facialHair": "干净短胡茬，贴合下颌线",
+        "faceShape": "长方脸，颧骨硬",
+        "expression": "平静带笑",
+        "eyes": "细长上挑眼",
+        "eyeColor": "浅琥珀",
+        "eyebrow": "浓直眉",
+        "lip": "薄唇，嘴角微扬",
+        "scar": "左下颌一道短疤",
+        "tattoo": "右前臂有阀门编号纹身",
+        "hairStyle": "后梳短发，发尾微卷",
+        "hairLength": "短发",
+        "hairColor": "深褐黑",
+        "highlight": "铜棕挑染",
+        "bodyType": "结实高挑",
+        "muscleLevel": "中高，线条紧",
+        "bodyFat": "低",
+        "shoulderWidth": "宽",
+        "skinTone": "被海风晒深的暖麦色",
+        "muscleFocus": "肩背、前臂、腰腹"
+      },
+      "costumeSystem": {
+        "outerwear": "开襟短袖检修衬衫，袖口卷起，胸前有小型阀门局刺绣",
+        "outerwearColor": "深青灰与雾蓝，刺绣为低调白线",
+        "innerwear": "白色贴身背心，扎进高腰裤，强调厚实胸腹",
+        "innerwearColor": "干净白，阴影为浅蓝灰",
+        "pants": "高腰宽褶检修长裤，裤脚微收",
+        "pantsColor": "深海灰蓝，膝侧有简化警示线",
+        "socks": "厚棉短袜",
+        "socksColor": "灰黑",
+        "shoes": "低筒防滑检修鞋，鞋底抓地纹清楚",
+        "shoesColor": "黑蓝色，鞋带有白色小标",
+        "gloves": "单侧薄检修手套，另一只手缠白色腕带",
+        "glovesColor": "深青灰与白色腕带",
+        "necklace": "细链铜哨",
+        "necklaceColor": "旧铜色",
+        "belt": "胸前斜背仪表带连接窄工具腰带",
+        "beltColor": "深灰布带与小面积氧化铜扣",
+        "signatureItem": "压力表和阀门扳手",
+        "signatureItemColor": "银灰、氧化铜绿、少量白色刻度光"
+      },
+      "personality": {
+        "corePersonality": "松弛可靠",
+        "strengths": "判断快，能稳场",
+        "weaknesses": "习惯独自扛事",
+        "hiddenPersonality": "很会照顾人",
+        "emotionalStability": "高",
+        "confidenceLevel": "稳定自信",
+        "outwardPersona": "像什么都不急的港区师傅",
+        "trueCore": "怕系统失控，所以总提前准备",
+        "surfaceFear": "设备突发爆压",
+        "deepFear": "再次听见管道爆裂声",
+        "traumaTrigger": "尖锐泄压声",
+        "stressResponse": "立刻沉默并接管现场",
+        "trauma": "旧港爆阀事故",
+        "traumaSource": "一次错误维护指令",
+        "recoveryStatus": "能工作，但仍警觉",
+        "traumaImpact": "不轻信口头命令"
+      },
+      "lifestyle": {
+        "favoriteFood": "热辣鱼丸汤",
+        "hatedFood": "过甜点心",
+        "hiddenFavorite": "薄荷汽水",
+        "appetite": "大",
+        "alcoholTolerance": "中",
+        "cookingSkill": "会做海边简餐",
+        "roomStyle": "旧工具、海图、干净工作台",
+        "neatness": "工具区极整齐，生活区随意",
+        "collections": "废弃铜阀铭牌",
+        "pets": "养一只总睡工具箱的黑猫"
+      },
+      "socialSystem": {
+        "socialAbility": "自然亲切",
+        "lyingAbility": "一般",
+        "boundarySense": "强但不冷",
+        "popularity": "港区人缘好",
+        "romanceExperience": "有过一段长关系",
+        "preferredType": "聪明、敢直说的人",
+        "expressionStyle": "开玩笑和实际帮忙",
+        "possessiveness": "低，重视自由"
+      },
+      "combatSystem": {
+        "battleArchetype": "守护型响应者",
+        "combatType": "工具反制型",
+        "coreStyle": "卡位、卸力、短距离压制",
+        "weaponPreference": "阀门扳手",
+        "specialAbility": "听声判断压力和结构弱点",
+        "painTolerance": "中高",
+        "aggression": "低，防守为主",
+        "stamina": "高",
+        "burstPower": "中高",
+        "pressure": "温和但压迫感强",
+        "reactionSpeed": "快"
+      },
+      "worldSetting": {
+        "origin": "南港旧管网区",
+        "socialClass": "技术工人家庭",
+        "education": "港务技校",
+        "criminalRecord": "无",
+        "organizationRank": "检修小队副负责人",
+        "enemyForces": "走私改管团伙",
+        "biggestRegret": "没能阻止师傅接下危险检修",
+        "biggestGoal": "重建旧港安全管网",
+        "hiddenDream": "开一间靠海修理铺",
+        "mostImportantPerson": "已退休的老队长",
+        "unforgettableExperience": "台风夜独自关停主压力阀",
+        "lifeStain": "曾篡改记录保护新人"
+      },
+      "hiddenInformation": {
+        "shameSecret": "怕正式演讲",
+        "hiddenHobby": "夜里吹口琴",
+        "weakness": "对求助的人太心软",
+        "secretHabit": "给每个修好的阀门起绰号",
+        "contrastSide": "看起来随性，其实记忆力惊人",
+        "foodAllergy": "轻微贝类过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 42,
+        "morality": 76,
+        "sanity": 68,
+        "confidence": 73,
+        "stress": 55,
+        "danger": 58,
+        "desire": 46,
+        "loyalty": 82,
+        "stability": 77,
+        "social": 66,
+        "doom": 28,
+        "violence": 34,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
+      },
+      "metaDesign": {
+        "characterHook": "一个听得懂旧港管道声音的检修员，总能在事故发生前半拍出现在阀门旁。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body anime-style character illustration of Lanfasi Zhou, a 34-year-old harbor pressure-valve repairman. Apply COSTUME_DESIGN_GUIDE.md costume judgment: keep the outfit attractive, clean, anime-stylized, and varied from the old short-jacket utility-pants template. He is a tall, sturdy adult male with broad shoulders, thick chest, practical worker strength, warm wheat skin, a long rectangular face, narrow light-amber eyes, calm slightly smiling expression, slicked-back short dark brown-black hair with copper-brown highlights, and a short scar on his left jaw. Outfit: a clean white fitted tank top tucked into high-waist wide-pleated inspection trousers, an open deep teal-gray short-sleeve inspection shirt with rolled sleeves and a small white valve-bureau embroidery on the chest, a diagonal chest instrument strap connected to a narrow tool belt, low-cut black-blue anti-slip inspection shoes, one thin repair glove, and a white wrist wrap on the other hand. A small old copper whistle necklace sits close to the collar. Props: a valve wrench and a small pressure gauge, clearly readable as harbor pipe-network maintenance tools. Fantasy anchor: only a few restrained white scale marks on the pressure gauge and chest embroidery, low glow, compact and tidy. Material language: clean anime color blocks, simple cel-shaded folds, simplified small metal accents; no photoreal fabric grain, no glossy leather, no wet material, no fashion-photo rendering. Style: clean anime game character concept art, crisp outline, simple cel shading, strong readable silhouette, cutout-ready asset. Composition: single standing character, centered, full body visible from head to boots, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no unrelated objects as the main subject, no watermark. Do not use #00ff00 anywhere on the character.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：岚阀司昼，34岁男性，港区压力阀检修员。高挑结实，宽肩厚胸，暖麦色皮肤，长方脸，细长浅琥珀眼，平静带笑，后梳短发带铜棕挑染，左下颌短疤。服装根据 COSTUME_DESIGN_GUIDE.md 判断：白色贴身背心扎进高腰宽褶检修长裤，外搭开襟深青灰短袖检修衬衫，袖口卷起，胸前有小型阀门局白线刺绣；胸前斜背仪表带连接窄工具腰带，低筒防滑检修鞋，单侧薄检修手套，另一只手缠白色腕带，细链铜哨贴在领口内侧。手持阀门扳手和小压力表，幻想锚点只在压力表白色刻度和胸前刺绣上出现少量低光。材质是干净动画色块和概括褶皱，不要写实布料纹理或油亮反光。干净动画游戏立绘，清晰线条，简单赛璐璐上色，单人全身，从头到脚完整可见，留出边距。背景必须是纯 #00ff00 平面绿幕。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "转动铜哨链",
+        "irritatedAction": "用指节敲压力表壳",
+        "nervousAction": "检查扳手卡扣",
+        "relaxedAction": "靠栏杆吹海风",
+        "lyingAction": "笑得太轻",
+        "shyAction": "压低帽檐",
+        "speechSpeed": "慢中带顿",
+        "speechTone": "温和沙哑",
+        "catchphrase": "别急，先听管子怎么说。",
+        "battleLine": "阀门归我，人往后退。",
+        "walkStyle": "步子长，重心低",
+        "combatStance": "侧身护住工具箱",
+        "idleAction": "拇指擦过铜哨",
+        "attackRhythm": "等对方失衡后出手"
+      }
+    },
+    {
+      "id": "8badeaea-b523-4f5d-af60-4ee14307b1cd",
+      "createdAt": "2026-06-04T08:21:36.030Z",
+      "updatedAt": "2026-06-04T08:27:48.220Z",
+      "agentMarks": [
+        {
+          "id": "43a9fcd4-75c0-4658-9444-79b83df90bed",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-04T08:23:26.744Z"
+        },
+        {
+          "id": "aec175f3-02cf-47a2-b062-a39d075d6c22",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-04T08:23:26.745Z"
+        },
+        {
+          "id": "8fe9570d-de41-4af5-82f5-d14f184735d1",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-04T08:27:48.220Z"
+        }
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 武器生成必须先决定战斗原型，再决定武器来源，最后才读取职业元素进行包装；禁止直接把职业常见工具当成最终武器。\n- 如果职业暗示了扳手、菜刀、书本、手术刀等直译工具，先写入禁用直译，再通过结构、尺度、功能、媒介或伪装至少变形一次。\n- 战斗字段填写顺序：战斗原型 -> 武器来源 -> 禁用直译 -> 变形逻辑 -> 最终武器。\n- 默认体型下限是非常壮、非常厚实、肌肉量很大的成年男性：极宽肩、厚胸、粗脖斜方肌、大上臂、粗前臂和强壮大腿，不是修长瘦男主，也不是普通运动型。\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭，不把它当成固定服装库。\n- 白色贴身上衣是核心偏好：紧身T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；要用干净赛璐璐阴影读出胸肩手臂体积，不要湿身或写实肌肉。\n- 如果用户说脱掉外套，最终提示词要明确禁止 jacket/coat/vest/open shirt/overshirt，让紧身白色上衣成为上身主视觉。\n- 材质用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 最终提示词不要写角色名字、代号、别名或罗马音；用年龄、血统、职业、体型、脸、服装、道具和奇幻标记描述可视内容。\n\n2. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n3. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": ""
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-8badeaea.png",
+        "thumbnail": "./assets/characters/generated-fullbody-8badeaea.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "桥温段朗",
+        "codename": "折温牌",
+        "alias": "段师傅",
+        "faction": "城际桥务温控段",
+        "birthday": "02/19",
+        "age": "36",
+        "height": "190",
+        "weight": "104 KG",
+        "occupation": "城市桥梁伸缩缝温控巡检员",
+        "affiliation": "北环高架桥务夜班队",
+        "species": "人类",
+        "heritage": "中国华东城市工人家庭"
+      },
+      "visualIdentity": {
+        "visualKeywords": "极宽肩、厚胸、白色贴身长袖、半身桥务温控马甲、折叠测温牌、琥珀热纹",
+        "colorLanguage": "干净白、石墨黑、暖灰、暗赤褐、少量琥珀橙低光",
+        "facialHair": "干净短胡茬，沿下颌很淡",
+        "faceShape": "方长脸，下颌厚实",
+        "expression": "保护性低声指令表情，嘴微张像在提醒路人后退，眉峰轻压，眼神警觉",
+        "eyes": "深眼窝的细长眼，视线向前压住场面",
+        "eyeColor": "深茶色带琥珀亮点",
+        "eyebrow": "浓而平直的黑眉，眉尾略低",
+        "lip": "中等厚度嘴唇，微张的低声说话口型",
+        "scar": "右眉上方一道很短的浅疤",
+        "tattoo": "左上臂内侧有小型桥梁编号纹身",
+        "hairStyle": "短寸向后梳，鬓角修得很干净",
+        "hairLength": "短发",
+        "hairColor": "黑色",
+        "highlight": "发梢有少量暖棕挑染",
+        "bodyType": "非常魁梧的成年男性，肩背宽厚，站姿稳重",
+        "muscleLevel": "很高，厚胸、粗臂和强壮大腿清楚可见",
+        "bodyFat": "中低，力量型体脂",
+        "shoulderWidth": "极宽",
+        "skinTone": "暖麦色",
+        "muscleFocus": "胸肩、前臂、背阔肌和大腿"
+      },
+      "costumeSystem": {
+        "outerwear": "无袖短款桥务温控马甲，前襟敞开，肩部有硬挺反光边，背后不画大字",
+        "outerwearColor": "暖灰与石墨黑，边线是低饱和银白",
+        "innerwear": "白色贴身长袖功能上衣，扎进裤腰，胸肩和粗臂被干净赛璐璐褶皱撑起",
+        "innerwearColor": "干净白，阴影为浅暖灰",
+        "pants": "高腰直筒桥务工装裤，膝侧有折叠护片，裤脚束进靴筒上方",
+        "pantsColor": "暗赤褐与黑灰拼接，护片为暖灰",
+        "socks": "厚针织短袜，只在靴口露出一点",
+        "socksColor": "深灰",
+        "shoes": "重底短筒桥面防滑靴，鞋头宽，鞋底纹路清楚",
+        "shoesColor": "石墨黑，鞋底边缘有少量暖灰",
+        "gloves": "右手半掌测温手套，左手白色腕带缠住护腕下缘",
+        "glovesColor": "黑灰手套与白色腕带",
+        "necklace": "贴近锁骨的小型桥钉吊坠",
+        "necklaceColor": "钝银色",
+        "belt": "窄工具腰带加一条斜跨胸带，挂着小温度计盒和编号扣",
+        "beltColor": "黑灰布带，扣件为钝银与琥珀橙小标",
+        "signatureItem": "折叠测温牌与短柄桥缝护盾",
+        "signatureItemColor": "石墨黑、暖灰、少量琥珀橙刻度低光"
+      },
+      "personality": {
+        "corePersonality": "沉稳护短",
+        "strengths": "判断危险快，能在混乱路面稳住人群",
+        "weaknesses": "太习惯把责任揽到自己身上",
+        "hiddenPersonality": "喜欢听年轻队员讲无聊笑话",
+        "emotionalStability": "高",
+        "confidenceLevel": "安静自信",
+        "outwardPersona": "不多话但很有安全感的夜班桥务师傅",
+        "trueCore": "害怕桥面突然失控，所以总提前半小时到岗",
+        "surfaceFear": "热胀冷缩警报误报",
+        "deepFear": "亲眼看见桥缝夹住救援通道",
+        "traumaTrigger": "金属伸缩缝连续尖响",
+        "stressResponse": "压低声音发布指令，身体先挡在危险边缘",
+        "trauma": "早年高架连环追尾时守过断裂桥缝",
+        "traumaSource": "一次被延误的温控维修申请",
+        "recoveryStatus": "工作状态稳定，但对夜间桥面异响极敏感",
+        "traumaImpact": "从不忽略任何温差读数"
+      },
+      "lifestyle": {
+        "favoriteFood": "热葱油拌面",
+        "hatedFood": "冰镇甜汤",
+        "hiddenFavorite": "烤栗子",
+        "appetite": "很大",
+        "alcoholTolerance": "中等偏高",
+        "cookingSkill": "会做简单耐饿的夜班饭",
+        "roomStyle": "桥梁模型、维修记录夹、折叠椅和干净工具墙",
+        "neatness": "工作物品极整齐，衣柜随意",
+        "collections": "退役桥钉和旧温度牌",
+        "pets": "无固定宠物，会喂桥下流浪猫"
+      },
+      "socialSystem": {
+        "socialAbility": "不主动热络，但说话让人安心",
+        "lyingAbility": "低，不擅长编故事",
+        "boundarySense": "强，保护人也保持距离",
+        "popularity": "夜班队和附近司机都信任他",
+        "romanceExperience": "有过稳定关系，因长期夜班分开",
+        "preferredType": "直接、守时、能理解责任感的人",
+        "expressionStyle": "少说漂亮话，多做实际安排",
+        "possessiveness": "低，重视彼此独立"
+      },
+      "combatSystem": {
+        "battleArchetype": "Guardian",
+        "visualWeapon": "短柄桥缝护盾",
+        "combatFunction": "防御、封路、反推冲击、短暂固定危险裂缝",
+        "fantasyExplanation": "护盾展开时会读取桥面温差，把即将错位的受力线压回安全区。",
+        "weaponSource": "由退役伸缩缝钢片和桥务温控许可改造而来",
+        "forbiddenDirectTool": "普通红外测温枪、普通警示牌、维修扳手",
+        "weaponTransformation": "把桥梁伸缩缝系统缩成可携带的护盾和折叠牌，职业工具只成为外观与读数仪式。",
+        "weaponPreference": "短柄桥缝护盾与折叠测温牌",
+        "combatType": "守护封控型",
+        "coreStyle": "卡线、挡冲击、压回危险边缘",
+        "specialAbility": "能从金属热响中判断桥面受力和下一处裂缝",
+        "painTolerance": "高",
+        "aggression": "低到中，先护人后反制",
+        "stamina": "高",
+        "burstPower": "中高",
+        "pressure": "安静但很难越过",
+        "reactionSpeed": "快"
+      },
+      "worldSetting": {
+        "origin": "北环高架桥下的桥务家属区",
+        "socialClass": "技术工人家庭",
+        "education": "市政桥梁维护专科",
+        "criminalRecord": "无",
+        "organizationRank": "夜班巡检小队负责人",
+        "enemyForces": "非法改装桥面热源的地下车队",
+        "biggestRegret": "当年没能让维修申请提前通过",
+        "biggestGoal": "建立不会被预算压下去的桥梁温控预警线",
+        "hiddenDream": "白天开一间小模型修理店",
+        "mostImportantPerson": "曾救过他的老桥务队长",
+        "unforgettableExperience": "暴雨夜独自封住一段即将错位的高架匝道",
+        "lifeStain": "曾私自封桥，事后被处分但救下多人"
+      },
+      "hiddenInformation": {
+        "shameSecret": "不会在白天人多的会议上发言",
+        "hiddenHobby": "做极小的桥梁纸模型",
+        "weakness": "听到孩子在桥边哭会立刻分心",
+        "secretHabit": "给每段桥缝记录当天的性格",
+        "contrastSide": "外表粗硬，其实记得每个队员的生日",
+        "foodAllergy": "轻微坚果过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 45,
+        "morality": 82,
+        "sanity": 72,
+        "confidence": 70,
+        "stress": 61,
+        "danger": 64,
+        "desire": 38,
+        "loyalty": 86,
+        "stability": 80,
+        "social": 48,
+        "doom": 32,
+        "violence": 36,
+        "imagination": 58,
+        "worldBinding": 72,
+        "identityMix": 20,
+        "nameRealism": 62
+      },
+      "namingProfile": {
+        "primaryCulture": "现代中文",
+        "secondaryCulture": "",
+        "templateFamily": "职业世界绑定中文名",
+        "registeredName": "段朗",
+        "displayName": "桥温段朗",
+        "alias": "段师傅",
+        "codename": "折温牌"
+      },
+      "metaDesign": {
+        "characterHook": "一个能听懂高架桥热胀冷缩声的夜班巡检员，总在桥缝失控前把路人挡到安全线后。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body anime-style character illustration of a 36-year-old Chinese male urban bridge expansion-joint temperature inspector. Do not include any name text. Body: very bulky muscular adult male, extremely broad shoulders, heavy chest, thick arms, strong thighs, warm wheat skin, square-long face, short slicked-back black hair with a few warm brown tips, a short shallow scar above the right eyebrow, faint jaw stubble. Expression: protective low-command expression, mouth slightly open as if warning people to step back, brows gently lowered, deep brown eyes alert and facing forward. Outfit: clean white fitted long-sleeve performance top tucked into the waist, visibly stretched around chest, shoulders, and arms with clean cel-shaded folds; open sleeveless short bridge-service temperature-control vest in warm gray and graphite black, stiff silver-white reflective shoulder edging, no large back text; high-waist straight work trousers in dark red-brown with black-gray panels and folded knee guards; heavy graphite-black short anti-slip bridge boots; one black-gray half-palm temperature glove on the right hand, white wrist wrap on the left; narrow tool belt plus diagonal chest strap carrying a small thermometer case and numbered clasp. Props: a short-handled bridge-gap shield and a folding temperature marker board, readable as compact bridge maintenance equipment, graphite black and warm gray structure with only small amber-orange scale marks as restrained low glow. Style: clean anime game character concept art, crisp outline, simple cel shading, strong readable silhouette, attractive urban-fantasy workwear, clean color blocks, simplified metal accents. Composition: single standing character, centered, full body visible from head to boots, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no watermark, no photoreal fabric grain, no wet material, no glossy leather, no gritty dirt, no rust. Do not use #00ff00 or similar green anywhere on the character.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：36岁中国男性，城市桥梁伸缩缝温控巡检员。非常魁梧的成年男性，极宽肩、厚胸、粗壮手臂和强壮大腿，暖麦色皮肤，方长脸，黑色短寸后梳，发梢少量暖棕挑染，右眉上方短浅疤，淡短胡茬。表情是保护性低声指令：嘴微张像在提醒路人后退，眉峰轻压，深茶色眼睛警觉向前。服装：白色贴身长袖功能上衣扎进裤腰，胸肩和手臂被干净赛璐璐褶皱撑起；外穿无袖短款桥务温控马甲，前襟敞开，暖灰与石墨黑，肩部有硬挺银白反光边；高腰暗赤褐直筒桥务工装裤，膝侧折叠护片，重底石墨黑短筒防滑靴；右手黑灰半掌测温手套，左手白色腕带，窄工具腰带和斜跨胸带挂小温度计盒。道具：短柄桥缝护盾与折叠测温牌，石墨黑和暖灰结构，只有琥珀橙刻度低光作为幻想锚点。干净动画游戏立绘，清晰线条，简单赛璐璐上色，单人站姿，全身从头到靴完整可见，留出边距。背景必须是纯 #00ff00 平面绿幕。不要文字、标签、界面、图表、角色设定页、场景、阴影、地面或第二个人物。不要在角色身上使用 #00ff00 或近似绿色。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "拇指推开测温牌的一节铰链",
+        "irritatedAction": "用靴尖轻敲桥面接缝",
+        "nervousAction": "反复确认胸带上的编号扣",
+        "relaxedAction": "靠在护栏边喝温水",
+        "lyingAction": "把句尾说得过短",
+        "shyAction": "移开视线去看温度计",
+        "speechSpeed": "慢而清楚",
+        "speechTone": "低沉，像夜间广播",
+        "catchphrase": "别跨线，桥先喘完这口气。",
+        "battleLine": "站我后面，缝口归我。",
+        "walkStyle": "步幅大，落脚很稳",
+        "combatStance": "左臂护盾前顶，右手测温牌斜举",
+        "idleAction": "用指腹擦过琥珀刻度",
+        "attackRhythm": "先封住路线，再短距离反推"
+      }
+    },
+    {
+      "id": "e260ca4b-3313-40a4-a401-5ba081b2c2bd",
+      "createdAt": "2026-06-04T06:49:52.552Z",
+      "updatedAt": "2026-06-04T06:52:56.658Z",
+      "agentMarks": [
+        {
+          "id": "d13533c9-c309-4f4d-a7ae-713a4a6c27eb",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-04T06:49:52.552Z"
+        },
+        {
+          "id": "1b855d10-9941-4464-bc54-54f424bc07f1",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-04T06:49:52.552Z"
+        },
+        {
+          "id": "057a8499-58bc-46ad-96bd-8481050917ba",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-04T06:52:56.657Z"
+        }
+      ],
+      "activeMarks": {
+        "attributes": true,
+        "images": true
+      },
+      "generationProfile": {
+        "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 武器生成必须先决定战斗原型，再决定武器来源，最后才读取职业元素进行包装；禁止直接把职业常见工具当成最终武器。\n- 如果职业暗示了扳手、菜刀、书本、手术刀等直译工具，先写入禁用直译，再通过结构、尺度、功能、媒介或伪装至少变形一次。\n- 战斗字段填写顺序：战斗原型 -> 武器来源 -> 禁用直译 -> 变形逻辑 -> 最终武器。\n- 默认体型下限是非常壮、非常厚实、肌肉量很大的成年男性：极宽肩、厚胸、粗脖斜方肌、大上臂、粗前臂和强壮大腿，不是修长瘦男主，也不是普通运动型。\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭，不把它当成固定服装库。\n- 白色贴身上衣是核心偏好：紧身T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；要用干净赛璐璐阴影读出胸肩手臂体积，不要湿身或写实肌肉。\n- 如果用户说脱掉外套，最终提示词要明确禁止 jacket/coat/vest/open shirt/overshirt，让紧身白色上衣成为上身主视觉。\n- 材质用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 最终提示词不要写角色名字、代号、别名或罗马音；用年龄、血统、职业、体型、脸、服装、道具和奇幻标记描述可视内容。\n\n2. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n3. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": "",
+        "purpose": "5178 port pure Japanese character attribute-to-image test",
+        "createdBy": "Codex"
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-e260ca4b.png",
+        "thumbnail": "./assets/characters/generated-fullbody-e260ca4b.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "神楽坂宗司",
+        "codename": "灯切",
+        "alias": "",
+        "faction": "东京旧灯街保存会",
+        "birthday": "02/14",
+        "age": "38",
+        "height": "187",
+        "weight": "102 KG",
+        "occupation": "昭和招牌灯箱修复师",
+        "affiliation": "神乐坂旧商店街夜间维护班",
+        "species": "人类",
+        "heritage": "纯血日本人，关东东京下町家系"
+      },
+      "visualIdentity": {
+        "visualKeywords": "纯血日本男性、宽肩厚胸、白色贴身短袖、深墨蓝工装裤、昭和灯箱、朱红封签、夜街匠人感",
+        "colorLanguage": "干净白、墨蓝、炭黑、旧黄铜、朱红小标记、暖灯白",
+        "facialHair": "下巴与上唇有修整干净的短胡茬",
+        "faceShape": "偏长的方脸，下颌厚实但五官克制",
+        "expression": "沉着地露齿短笑，眉峰轻挑，眼神像在确认灯管亮度",
+        "eyes": "细长深双眼皮",
+        "eyeColor": "黑褐色",
+        "eyebrow": "浓黑直眉，眉峰清楚",
+        "lip": "嘴角上扬，露出一点犬齿的短笑",
+        "scar": "鼻梁右侧有一道很浅的修灯划痕",
+        "tattoo": "右肩内侧有极小的朱红商店街印纹",
+        "hairStyle": "黑色短发向后梳，鬓角整齐",
+        "hairLength": "短发",
+        "hairColor": "乌黑",
+        "highlight": "极少冷灰高光",
+        "bodyType": "高大结实的成年男性体型",
+        "muscleLevel": "高，胸肩厚实，手臂粗壮",
+        "bodyFat": "中低，腰腹结实",
+        "shoulderWidth": "很宽",
+        "skinTone": "偏暖的浅麦色日本肤色",
+        "muscleFocus": "肩膀、胸肌、前臂、手背"
+      },
+      "costumeSystem": {
+        "outerwear": "无外套，去掉夹克、和服外披、马甲、长外套和开衫，只保留贴身工作层与背带",
+        "outerwearColor": "无外套；背带为炭黑与墨蓝拼接，边缘有小块朱红封签",
+        "innerwear": "白色贴身短袖圆领上衣，扎进高腰工装裤，胸肩被干净撑开",
+        "innerwearColor": "干净白，阴影为浅暖灰",
+        "pants": "高腰墨蓝直筒工装裤，膝位有折线压褶，侧袋装细长灯管套",
+        "pantsColor": "深墨蓝接近黑，褶皱用冷灰概括",
+        "socks": "厚棉短袜，鞋口处只露一点",
+        "socksColor": "炭灰色",
+        "shoes": "低筒黑色防滑工作鞋，鞋头厚，鞋侧有旧黄铜小扣",
+        "shoesColor": "炭黑与少量旧黄铜",
+        "gloves": "一只半指电工手套，另一只手缠白色防割胶带",
+        "glovesColor": "黑灰手套与白色胶带",
+        "necklace": "短绳旧黄铜小灯座坠饰",
+        "necklaceColor": "旧黄铜与黑绳",
+        "belt": "窄工具腰带连接斜背灯箱固定带，挂有小螺丝盒和朱红封签",
+        "beltColor": "炭黑布带、墨蓝扣带、旧黄铜扣",
+        "signatureItem": "折叠式昭和灯箱框和细长白光灯管",
+        "signatureItemColor": "旧黄铜、乳白灯罩、朱红封签、暖白低光"
+      },
+      "personality": {
+        "corePersonality": "克制讲究",
+        "strengths": "手稳、审美准、能把旧物修得像新的一样可靠",
+        "weaknesses": "不轻易接受别人的快方案",
+        "hiddenPersonality": "对年轻店主很心软",
+        "emotionalStability": "高",
+        "confidenceLevel": "安静自信",
+        "outwardPersona": "像不多话但一定能修好的街区师傅",
+        "trueCore": "想让老街夜里的灯继续有人认得",
+        "surfaceFear": "灯箱被粗暴拆除",
+        "deepFear": "家族手艺在自己手里断掉",
+        "traumaTrigger": "霓虹灯管爆裂声",
+        "stressResponse": "先停下说话，检查电源和所有人的站位",
+        "trauma": "少年时父亲修灯受伤",
+        "traumaSource": "违规改装灯箱短路",
+        "recoveryStatus": "长期稳定工作但仍谨慎",
+        "traumaImpact": "极度重视断电顺序和安全距离"
+      },
+      "lifestyle": {
+        "favoriteFood": "酱油拉面加叉烧",
+        "hatedFood": "过甜奶油点心",
+        "hiddenFavorite": "热罐装咖啡",
+        "appetite": "中高",
+        "alcoholTolerance": "中",
+        "cookingSkill": "会做简单日式家常饭",
+        "roomStyle": "旧招牌草图、灯管盒、整齐工具墙",
+        "neatness": "工作区极整齐，榻榻米角落有旧杂志",
+        "collections": "昭和时期商店街火柴盒",
+        "pets": "无，常喂店街后巷的猫"
+      },
+      "socialSystem": {
+        "socialAbility": "稳重礼貌",
+        "lyingAbility": "一般偏弱",
+        "boundarySense": "强，礼貌但不暧昧",
+        "popularity": "老店主非常信任他",
+        "romanceExperience": "曾有一段认真但分开的关系",
+        "preferredType": "珍惜旧物、说话直接的人",
+        "expressionStyle": "少说承诺，多做实际修理",
+        "possessiveness": "低但保护欲明显"
+      },
+      "combatSystem": {
+        "battleArchetype": "近身护卫控场者",
+        "combatType": "光线压制与框架卡位型",
+        "coreStyle": "用灯箱框遮挡视线、卡住手臂，再用短距离力量控制",
+        "visualWeapon": "折叠式灯箱框",
+        "combatFunction": "展开后形成坚固矩形框，可格挡、套锁、折光干扰视线",
+        "fantasyExplanation": "保存会的朱红封签能让旧灯箱短暂记住街灯的亮灭节奏",
+        "weaponSource": "东京旧灯街保存会的封签仪式和老招牌残光",
+        "forbiddenDirectTool": "普通螺丝刀、钳子、裸灯管当棍子",
+        "weaponTransformation": "把招牌外框设计成可展开的防护框架，而不是直接拿维修工具当武器",
+        "weaponPreference": "折叠式灯箱框",
+        "specialAbility": "让小范围灯光按旧街节奏明灭，制造半秒视觉错拍",
+        "painTolerance": "中高",
+        "aggression": "低，先保护后制服",
+        "stamina": "高",
+        "burstPower": "高",
+        "pressure": "安静但很难绕开",
+        "reactionSpeed": "快"
+      },
+      "worldSetting": {
+        "origin": "东京神乐坂旧商店街",
+        "socialClass": "传统手艺人家庭",
+        "education": "东京工艺专门学校",
+        "criminalRecord": "无",
+        "organizationRank": "夜间维护班主修复师",
+        "enemyForces": "非法拆迁和黑市霓虹回收商",
+        "biggestRegret": "没能保住祖父亲手做的第一块灯牌",
+        "biggestGoal": "建立旧灯箱修复档案馆",
+        "hiddenDream": "让整条老街在祭典夜重新亮一次",
+        "mostImportantPerson": "经营老和果子铺的祖母",
+        "unforgettableExperience": "台风夜把整排招牌逐个断电保住街口",
+        "lifeStain": "曾私自藏起一块待拆灯牌"
+      },
+      "hiddenInformation": {
+        "shameSecret": "害怕在大舞台上讲话",
+        "hiddenHobby": "临摹旧商标字形",
+        "weakness": "对老店主的请求很难拒绝",
+        "secretHabit": "给每个修好的灯箱写小日期",
+        "contrastSide": "外表强硬沉默，其实审美很细腻",
+        "foodAllergy": "轻微荞麦过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 52,
+        "morality": 78,
+        "sanity": 74,
+        "confidence": 76,
+        "stress": 43,
+        "danger": 57,
+        "desire": 41,
+        "loyalty": 80,
+        "stability": 82,
+        "social": 58,
+        "doom": 22,
+        "violence": 31,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
+      },
+      "metaDesign": {
+        "characterHook": "一个守着东京旧商店街夜灯的纯血日本修复师，能让昭和灯箱按记忆里的街灯节奏重新亮起。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body anime-style character illustration of a 38-year-old pure Japanese male Showa-era sign lightbox restoration craftsman from an old Tokyo shopping street. He is tall and sturdy with very broad shoulders, thick chest, strong arms, warm light wheat Japanese skin tone, a long square face, narrow black-brown eyes, a calm short toothy smile, slightly raised brow peak as if checking the brightness of a light tube, slicked-back short jet-black hair with neat sideburns, a faint scratch on the right side of the nose bridge, and neatly trimmed short stubble on the chin and upper lip. Outfit: no outerwear, no jacket, no coat, no vest, no kimono robe, no cardigan, no overshirt. A clean white fitted short-sleeve crew-neck top tucked into high-waist deep ink-blue straight work trousers, charcoal-black and ink-blue suspenders connected to a narrow tool belt, small vermilion sealing tags along the suspender edges, one black-gray half-finger electrician glove, white cut-resistant tape wrapped around the other hand, low-cut black anti-slip work shoes with old brass buckles. A short cord old brass lamp-socket pendant sits close to the collar. Props: an unfolded folding Showa sign lightbox frame, clearly readable as a sturdy rectangular frame, with a slim milky-white light tube case fixed beside it. Colors: old brass, milky-white lampshade, small vermilion sealing tags, restrained warm-white low glow. Fantasy anchor: only tiny warm-white low-glow marks on the sealing tags and light tube edge; compact and tidy, no large aura. Material language: clean anime color blocks, simple cel-shaded folds, simplified metal accents; no photoreal fabric grain, no glossy leather, no wet material, no gritty grime. Style: clean anime game character concept art, crisp outline, simple cel shading, strong readable silhouette, cutout-ready asset, modern urban fantasy with realistic Japanese street craftsman identity first. Composition: single standing character, centered, full body visible from head to shoes, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no watermark. Do not use #00ff00 or any similar green anywhere on the character, props, glow, reflections, or shadows.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：38岁纯血日本男性，东京旧商店街昭和招牌灯箱修复师。高大结实，宽肩厚胸，偏暖浅麦色日本肤色，偏长方脸，黑褐细长眼，沉着露齿短笑，眉峰轻挑，像在确认灯管亮度；乌黑短发后梳，鬓角整齐，鼻梁右侧浅划痕，下巴与上唇有修整短胡茬。服装：无外套，无夹克、和服外披、马甲、长外套和开衫；白色贴身短袖圆领上衣扎进高腰墨蓝直筒工装裤，炭黑与墨蓝拼接背带连接窄工具腰带，背带边缘有小块朱红封签，半指黑灰电工手套，另一手缠白色防割胶带，低筒黑色防滑工作鞋带旧黄铜小扣。短绳旧黄铜小灯座坠饰贴近领口。手持展开的折叠式昭和灯箱框，像坚固矩形框架，旁边固定细长乳白灯管套；道具颜色为旧黄铜、乳白灯罩、朱红封签、暖白低光。幻想锚点克制：只在灯箱框封签和灯管边缘有少量暖白低光，不要大面积光效。干净动画游戏立绘，清晰线条，简单赛璐璐上色，现代都市奇幻但现实日本街区手艺人优先。单人全身，从头到鞋完整可见，居中，留出边距。背景必须是纯 #00ff00 平面绿幕，无阴影、无地面、无文字、无 UI、无角色表。不要在人物、道具或光效里使用 #00ff00 或相近绿色。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指擦过灯管套边缘",
+        "irritatedAction": "把螺丝盒轻轻合上",
+        "nervousAction": "检查手腕防割胶带",
+        "relaxedAction": "站在店门口看灯牌逐个亮起",
+        "lyingAction": "会把视线移到灯箱角落",
+        "shyAction": "摸一下下巴短胡茬",
+        "speechSpeed": "慢而准确",
+        "speechTone": "低沉干净",
+        "catchphrase": "灯不是亮就行，要亮得对。",
+        "battleLine": "退后，别碰那条线。",
+        "walkStyle": "步子稳，肩背很直",
+        "combatStance": "一手护住灯箱框，一手横持灯管套",
+        "idleAction": "轻拨旧黄铜灯座坠饰",
+        "attackRhythm": "先压暗视线，再用框架卡位"
+      }
+    },
+    {
+      "id": "0a3627e6-b049-4b64-b817-ec17cfbea054",
+      "createdAt": "2026-06-04T06:39:29.063Z",
+      "updatedAt": "2026-06-04T06:43:38.784Z",
+      "agentMarks": [
+        {
+          "id": "dfc45186-48d7-4b30-ac00-f3396e466c8e",
+          "mark": "[GENERATE_ATTRIBUTES]",
+          "createdAt": "2026-06-04T06:39:29.063Z"
+        },
+        {
+          "id": "259a225d-77aa-45b6-88c3-1dd54107458d",
+          "mark": "[GENERATE_PROMPT]",
+          "createdAt": "2026-06-04T06:39:29.063Z"
+        },
+        {
+          "id": "8835dbf5-728f-4a6f-bd40-5574be29e5cd",
+          "mark": "[GENERATE_IMAGES]",
+          "createdAt": "2026-06-04T06:43:38.784Z"
+        }
+      ],
+      "activeMarks": {
+        "attributes": false,
+        "images": false
+      },
+      "generationProfile": {
+        "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 武器生成必须先决定战斗原型，再决定武器来源，最后才读取职业元素进行包装；禁止直接把职业常见工具当成最终武器。\n- 如果职业暗示了扳手、菜刀、书本、手术刀等直译工具，先写入禁用直译，再通过结构、尺度、功能、媒介或伪装至少变形一次。\n- 战斗字段填写顺序：战斗原型 -> 武器来源 -> 禁用直译 -> 变形逻辑 -> 最终武器。\n- 默认体型下限是非常壮、非常厚实、肌肉量很大的成年男性：极宽肩、厚胸、粗脖斜方肌、大上臂、粗前臂和强壮大腿，不是修长瘦男主，也不是普通运动型。\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭，不把它当成固定服装库。\n- 白色贴身上衣是核心偏好：紧身T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；要用干净赛璐璐阴影读出胸肩手臂体积，不要湿身或写实肌肉。\n- 如果用户说脱掉外套，最终提示词要明确禁止 jacket/coat/vest/open shirt/overshirt，让紧身白色上衣成为上身主视觉。\n- 材质用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 最终提示词不要写角色名字、代号、别名或罗马音；用年龄、血统、职业、体型、脸、服装、道具和奇幻标记描述可视内容。\n\n2. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n3. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
+        "notesTemplateSeeded": true,
+        "selectedPresetId": "",
+        "purpose": "5178 port attribute-to-image test character",
+        "createdBy": "Codex"
+      },
+      "assets": {
+        "fullBody": "./assets/characters/generated-fullbody-0a3627e6.png",
+        "thumbnail": "./assets/characters/generated-fullbody-0a3627e6.png",
+        "referenceSheet": "",
+        "costume": "",
+        "props": "",
+        "expression": ""
+      },
+      "coreIdentity": {
+        "name": "轨钟韩砚",
+        "codename": "整点",
+        "alias": "",
+        "faction": "东环时刻局",
+        "birthday": "11/06",
+        "age": "36",
+        "height": "190",
+        "weight": "104 KG",
+        "occupation": "地铁夜班校钟员",
+        "affiliation": "东环地下时刻维护队",
+        "species": "人类",
+        "heritage": "华东沿海城市血统"
+      },
+      "visualIdentity": {
+        "visualKeywords": "宽肩厚胸、白色贴身长袖、深靛工装背带、黄铜怀表、轨道时刻标记、夜班地下感",
+        "colorLanguage": "干净白、深靛蓝、煤灰黑、黄铜小高光、少量红色校准线",
+        "facialHair": "干净刮净，仅有淡淡胡青",
+        "faceShape": "方长脸，下颌稳重",
+        "expression": "温和专注地半开口提醒，眉心轻压，眼神像在听远处钟声",
+        "eyes": "狭长内双眼",
+        "eyeColor": "深茶褐",
+        "eyebrow": "浓直眉，眉尾略低",
+        "lip": "薄唇微张，像刚说出一句短促提醒",
+        "scar": "右眉尾有一道浅淡旧疤",
+        "tattoo": "左腕内侧有极小的轨道刻度纹身",
+        "hairStyle": "偏分后梳短发，发根蓬松",
+        "hairLength": "短发",
+        "hairColor": "黑褐色",
+        "highlight": "暗金棕细挑染",
+        "bodyType": "高大厚实的成年男性体型",
+        "muscleLevel": "高，胸肩和前臂明显结实",
+        "bodyFat": "中低，线条干净",
+        "shoulderWidth": "很宽",
+        "skinTone": "暖米棕色",
+        "muscleFocus": "肩颈、胸背、前臂、手掌"
+      },
+      "costumeSystem": {
+        "outerwear": "无外套，只穿可行动的工装背带结构，避免夹克、风衣、马甲和披肩",
+        "outerwearColor": "无外套；背带为深靛蓝织带，边缘有细红校准线",
+        "innerwear": "白色贴身长袖针织上衣，扎进高腰工装裤，胸肩被干净撑开",
+        "innerwearColor": "干净白，阴影为浅冷灰",
+        "pants": "高腰直筒工装长裤，膝侧有窄工具袋和折线褶",
+        "pantsColor": "煤灰黑与深靛蓝拼接",
+        "socks": "厚实短袜，几乎藏在鞋口内",
+        "socksColor": "深灰",
+        "shoes": "低筒硬底巡检鞋，鞋头圆厚，适合轨道边行走",
+        "shoesColor": "黑色鞋面，黄铜色小扣",
+        "gloves": "半指校准手套，露出指尖便于拨动表冠",
+        "glovesColor": "深灰布面与白色指节补片",
+        "necklace": "短链黄铜怀表贴在胸口，表盖半开",
+        "necklaceColor": "旧黄铜色，内圈有细红刻度",
+        "belt": "窄工具腰带连接背带，挂有小校准钥匙和折叠秒针尺",
+        "beltColor": "深灰皮革感色块与旧铜扣",
+        "signatureItem": "放大的黄铜怀表和折叠秒针尺",
+        "signatureItemColor": "黄铜、象牙白表盘、极少红色校准线"
+      },
+      "personality": {
+        "corePersonality": "耐心守序",
+        "strengths": "记忆极准，能在混乱里抓住节奏",
+        "weaknesses": "过度依赖流程，临场变通偏慢",
+        "hiddenPersonality": "私下很爱讲冷笑话",
+        "emotionalStability": "高",
+        "confidenceLevel": "安静坚定",
+        "outwardPersona": "像永远准点出现的夜班师傅",
+        "trueCore": "相信被认真维护的小秩序能救人",
+        "surfaceFear": "列车时刻错乱",
+        "deepFear": "再次错过求救信号",
+        "traumaTrigger": "远处连续错拍的铃声",
+        "stressResponse": "先低声倒数，再迅速校对所有出口",
+        "trauma": "一次末班车调度事故",
+        "traumaSource": "旧系统漏报导致乘客被困",
+        "recoveryStatus": "已恢复工作但仍会提前巡查",
+        "traumaImpact": "对时间误差极敏感"
+      },
+      "lifestyle": {
+        "favoriteFood": "热豆浆配咸烧饼",
+        "hatedFood": "软烂冷面",
+        "hiddenFavorite": "桂花硬糖",
+        "appetite": "中高",
+        "alcoholTolerance": "低",
+        "cookingSkill": "会做夜班快手热食",
+        "roomStyle": "墙上挂满旧时刻表和小钟",
+        "neatness": "桌面极整齐，抽屉略乱",
+        "collections": "废弃站牌时刻卡",
+        "pets": "无，偶尔喂站口流浪猫"
+      },
+      "socialSystem": {
+        "socialAbility": "礼貌可靠",
+        "lyingAbility": "较弱",
+        "boundarySense": "明确但温和",
+        "popularity": "夜班同事很信任他",
+        "romanceExperience": "少但认真",
+        "preferredType": "守信、能听懂沉默的人",
+        "expressionStyle": "用准时出现和实际修好东西表达关心",
+        "possessiveness": "低"
+      },
+      "combatSystem": {
+        "battleArchetype": "守点控场者",
+        "combatType": "节奏控制型近身防卫",
+        "coreStyle": "用停顿、卡拍和短距离格挡打乱对手动作",
+        "visualWeapon": "折叠秒针尺",
+        "combatFunction": "展开后像短棍与量尺，可卡住关节并标记安全退线",
+        "fantasyExplanation": "黄铜怀表记录地下线路的整点回声，使秒针尺能短暂固定一个动作节拍",
+        "weaponSource": "东环地下时刻维护仪式和旧站钟残响",
+        "forbiddenDirectTool": "普通扳手、铁轨撬棍、巨大钟锤",
+        "weaponTransformation": "把校时工具转化成可展开的实体秒针尺，而不是直接拿维修工具作战",
+        "weaponPreference": "折叠秒针尺",
+        "specialAbility": "听见空间里的错拍并提前半秒移动",
+        "painTolerance": "中高",
+        "aggression": "低，优先护送和压制",
+        "stamina": "高",
+        "burstPower": "中高",
+        "pressure": "沉稳但让人无法抢拍",
+        "reactionSpeed": "快"
+      },
+      "worldSetting": {
+        "origin": "东环地下旧站群",
+        "socialClass": "技术工人家庭",
+        "education": "城市轨道技术学院",
+        "criminalRecord": "无",
+        "organizationRank": "夜班校钟组副组长",
+        "enemyForces": "篡改末班线路的黑票团伙",
+        "biggestRegret": "曾相信旧系统自动报警而没有亲自巡查",
+        "biggestGoal": "让东环每一班末班车都安全到站",
+        "hiddenDream": "修复废弃中央站的大钟",
+        "mostImportantPerson": "当年带他入行的站务阿姨",
+        "unforgettableExperience": "暴雨夜靠听钟声找回被困乘客",
+        "lifeStain": "曾私自封停一条线路避免事故"
+      },
+      "hiddenInformation": {
+        "shameSecret": "不擅长用智能日程软件",
+        "hiddenHobby": "手写站台播报稿",
+        "weakness": "对守时承诺过分执着",
+        "secretHabit": "给每块怀表记录误差",
+        "contrastSide": "外表严谨，其实很会照顾后辈情绪",
+        "foodAllergy": "轻微花生过敏"
+      },
+      "numericalAttributes": {
+        "wealth": 48,
+        "morality": 81,
+        "sanity": 72,
+        "confidence": 70,
+        "stress": 49,
+        "danger": 55,
+        "desire": 38,
+        "loyalty": 84,
+        "stability": 79,
+        "social": 61,
+        "doom": 24,
+        "violence": 29,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
+      },
+      "metaDesign": {
+        "characterHook": "一个能听见地下线路错拍的夜班校钟员，总在事故发生前三秒把人带离危险位置。",
+        "characterConsistencyPrompt": "",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body anime-style character illustration of a 36-year-old male subway night-shift clock calibrator. He is tall and heavily built with very broad shoulders, thick chest, strong forearms, warm beige-brown skin, a long square face, narrow dark tea-brown eyes, a focused gentle expression with lips slightly open as if giving a short warning, lightly pressed brows as if listening for a distant bell, side-parted slicked-back short black-brown hair with subtle dark golden-brown highlights, a faint scar at the right eyebrow tail, and clean faint stubble. Outfit: no outerwear, no jacket, no coat, no vest, no cape, no overshirt. A clean white fitted long-sleeve knit top tucked into high-waist coal-black work trousers, deep indigo work suspenders connected to a narrow tool belt, fine red calibration lines along the suspender edges, half-finger calibration gloves, low-cut black hard-sole patrol shoes with small brass buckles. A short-chain old brass pocket watch sits half-open on the chest. Props: an unfolded folding second-hand ruler, clearly readable as a physical short baton-measuring ruler hybrid, plus the brass pocket watch with an ivory dial. Fantasy anchor: only tiny warm-white low-glow marks along the watch scale and ruler edge; restrained, compact, tidy, no large aura. Material language: clean anime color blocks, simple cel-shaded folds, simplified small metal accents; no photoreal fabric grain, no glossy leather, no wet material, no gritty grime. Style: clean anime game character concept art, crisp outline, simple cel shading, strong readable silhouette, cutout-ready asset, modern urban fantasy with the real-world transit maintenance role first. Composition: single standing character, centered, full body visible from head to shoes, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no watermark. Do not use #00ff00 or any similar green anywhere on the character, props, glow, reflections, or shadows.",
+        "referenceSheetPrompt": "",
+        "propsPrompt": "",
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：36岁男性，地铁夜班校钟员。高大厚实，宽肩厚胸，暖米棕皮肤，方长脸，狭长深茶褐眼，温和专注地半开口提醒，眉心轻压，像在听远处钟声；偏分后梳黑褐短发带暗金棕细挑染，右眉尾浅疤，干净胡青。服装：无外套，无夹克、风衣、马甲、披肩；白色贴身长袖针织上衣扎进高腰煤灰黑工装长裤，深靛蓝工装背带连接窄工具腰带，背带边缘有细红校准线，半指校准手套，低筒黑色硬底巡检鞋，黄铜色小扣。胸口短链黄铜怀表半开，手持展开的折叠秒针尺，像短棍与量尺结合，表盘象牙白，只有极少红色校准线和旧铜高光。幻想锚点克制：怀表刻度与秒针尺边缘有细小暖白低光，不要大面积光效。干净动画游戏立绘，清晰线条，简单赛璐璐上色，强可读轮廓，现代都市奇幻但现实职业优先。单人全身，从头到鞋完整可见，居中，留出边距。背景必须是纯 #00ff00 平面绿幕，无阴影、无地面、无文字、无 UI、无角色表。不要在人物、道具或光效里使用 #00ff00 或相近绿色。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指拨怀表表冠",
+        "irritatedAction": "轻敲秒针尺边缘",
+        "nervousAction": "反复确认背带扣",
+        "relaxedAction": "靠在站台柱边喝温茶",
+        "lyingAction": "会把句尾说得过分准点",
+        "shyAction": "低头整理袖口",
+        "speechSpeed": "平稳偏慢",
+        "speechTone": "低沉清晰",
+        "catchphrase": "差三秒，也算迟到。",
+        "battleLine": "听我的拍子，退到黄线后。",
+        "walkStyle": "步幅大但落脚很准",
+        "combatStance": "侧身护住怀表，另一手展开秒针尺",
+        "idleAction": "让怀表链在指间绕一圈",
+        "attackRhythm": "按三拍一停的节奏压制"
+      }
+    },
+    {
       "id": "23d008b2-80f9-4d3f-b945-61f440308e08",
       "createdAt": "2026-06-04T00:18:50.975Z",
-      "updatedAt": "2026-06-04T00:24:53.151Z",
+      "updatedAt": "2026-06-04T06:00:59.563Z",
       "agentMarks": [
         {
           "id": "31380133-4bd7-458e-a58b-a1f7c14d2bd3",
@@ -93,8 +1007,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -126,6 +1040,7 @@
       "visualIdentity": {
         "visualKeywords": "巨厚肩背、白色贴身短袖、深靛长马甲、折叠星盘灯伞、腰侧胶片匣、低亮星孔纹、干净天文馆制服感",
         "colorLanguage": "干净白、深靛、炭黑、暖银、少量星金低光",
+        "facialHair": "短胡茬",
         "faceShape": "宽长方脸，下颌厚实",
         "expression": "开朗讲解式微笑，嘴微张，眉眼明亮上扬",
         "eyes": "深邃圆狭眼，眼尾平稳",
@@ -138,7 +1053,6 @@
         "hairLength": "短发",
         "hairColor": "深栗黑",
         "highlight": "发尾少量星金挑染",
-        "facialHair": "短胡茬",
         "bodyType": "非常厚实的巨型力量体格",
         "muscleLevel": "极高，胸肩臂围夸张但干净",
         "bodyFat": "中低，厚实圆润",
@@ -183,22 +1097,6 @@
         "traumaSource": "一次旧天文馆夜场事故",
         "recoveryStatus": "已能正常工作，但总提前检查备用灯",
         "traumaImpact": "对黑暗空间里的沉默格外敏感"
-      },
-      "behaviorSystem": {
-        "thinkingAction": "拇指摩挲穹幕钥片",
-        "irritatedAction": "快速合上星盘灯伞的伞骨",
-        "nervousAction": "反复确认腰侧胶片匣锁扣",
-        "relaxedAction": "仰头看天花板寻找投影中心",
-        "lyingAction": "讲解语气突然变得过分流畅",
-        "shyAction": "用手套背蹭鼻梁",
-        "speechSpeed": "清楚偏快",
-        "speechTone": "明亮、有舞台感",
-        "catchphrase": "抬头，星位已经亮了。",
-        "battleLine": "穹顶归位，别越过这条星轨。",
-        "walkStyle": "步幅稳，长马甲随步摆开",
-        "combatStance": "一手撑开折叠星盘灯伞，一手按住腰侧胶片匣",
-        "idleAction": "把灯伞转半圈对准地面",
-        "attackRhythm": "先照明定位，再折射封路，最后近身反推"
       },
       "lifestyle": {
         "favoriteFood": "热可可和厚吐司",
@@ -275,16 +1173,45 @@
         "stability": 79,
         "social": 82,
         "doom": 31,
-        "violence": 35
+        "violence": 35,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "天文馆穹幕放映员，能用折叠星盘灯伞把星轨投影折成短暂护幕，在黑暗场馆里定位、护送和封路。",
         "characterConsistencyPrompt": "梁星澈，29岁东亚男性，北城星象馆穹幕放映员；巨厚力量体格，深栗黑短发、短胡茬；白色贴身短袖、深靛长马甲、高腰炭黑宽腿裤；核心道具是折叠星盘灯伞与腰侧胶片匣，低亮星轨和暖银星孔是幻想标记。",
-        "characterImagePromptCn": "只画一个人物：梁星澈，29岁东亚男性，北城星象馆的天文馆穹幕放映员。非常厚实的巨型力量体格，极宽肩、厚胸、粗脖子和斜方肌、巨大上臂与粗前臂、强壮大腿，暖麦色皮肤，宽长方脸，下颌厚实，左颧一颗小浅痣，深邃圆狭的深琥珀棕眼，浓平眉略抬；蓬松深栗黑短发，发尾少量星金挑染，短胡茬。表情是开朗讲解式微笑：厚唇微张像正在讲解星座位置，眉眼明亮上扬。服装：白色贴身短袖上衣扎进高腰裤，胸肩和手臂被明显撑紧；外层是深靛长马甲式穹幕制服，前襟敞开到腰侧，长度过膝但两侧高开衩，不遮住白色上衣主体；高腰炭黑宽腿讲解制服裤，裤线利落，厚底黑色静音馆内鞋。配件：半掌白色调焦手套，窄腰封连接腰侧胶片匣和星盘挂扣，细链小型穹幕钥片。手持折叠星盘灯伞，伞面像星盘与投影镜片组合，能展开成可见的护幕实体道具；腰侧胶片匣与灯伞之间有少量低亮星金星轨线。幻想锚点：只有少量低亮星金星孔、短星轨和暖银镜片边，不要强烈大面积发光。材质是干净动画色块、简化褶皱、少量图形化金属扣和镜片边，不要写实布料纹理、油亮皮革、湿身材质或脏污工业质感。干净京都动画式 TV 动画游戏立绘，清晰线条，简洁赛璐璐上色，单人全身，从头到鞋完整可见，居中，留出边距。背景必须是纯 #00ff00 平面绿幕，完全均匀，无渐变、无阴影、无地面、无反射、无场景。绝对禁止 UI、信息图、图表、设定表、文字、标签、页面截图、多人、无关物件、水印。不要在角色身上使用 #00ff00 或接近绿幕的颜色。",
-        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body anime-style character illustration of Liang Xingche, a 29-year-old East Asian male planetarium dome projection operator for the North City Planetarium. He has a very bulky muscular adult male power build: extremely broad shoulders, heavy chest, thick neck and traps, huge upper arms, thick forearms, strong thighs, substantial rounded mass. Warm wheat skin, wide rectangular face with a strong jaw, one tiny beauty mark on the left cheekbone, deep amber-brown rounded narrow eyes, thick straight brows slightly raised; fluffy short dark chestnut-black hair with a few star-gold highlights at the tips, short stubble. Bright docent expression: thick lips slightly open as if explaining constellation positions, brows and eyes lifted with clear friendly energy. Outfit: a clean white fitted short-sleeve shirt tucked into high-waist trousers, visibly stretched across chest, shoulders, and arms; a long deep-indigo planetarium uniform vest worn open at the front down to the waist, knee-length with high side slits, not covering the white shirt; high-waist charcoal wide-leg docent uniform trousers with crisp trouser lines; thick-soled black quiet indoor shoes. Accessories: white half-palm focusing gloves, narrow waist cinch connected to a side film canister and astrolabe hook, small silver dome-key pendant necklace. Visible weapon object: a folding astrolabe lantern umbrella held in one hand, the canopy readable as a physical star-map disk and projection-lens mechanism that can unfold into a protective screen; a side film canister links to the umbrella with a few restrained low-glow star-gold orbital lines. Fantasy anchor: only a few subtle low-glow star-gold pinholes, short orbital tracks, and warm-silver lens edges, no strong diffuse glow. Material language: clean anime color blocks, simple cel-shaded folds, simplified small metal buckles and lens rims; no photoreal fabric grain, no glossy leather, no wet material, no grimy industrial texture. Style: clean Kyoto Animation-like TV anime game character concept art, crisp readable outline, tidy cel shading, fresh colors, strong readable silhouette, cutout-ready asset. Composition: single standing character, centered, full body visible from head to shoes, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no unrelated objects as the main subject, no watermark. Do not use #00ff00 or any similar green on the character.",
+        "characterImagePrompt": "Use case: stylized-concept. Asset type: full-body character sprite / cutout source. Create exactly ONE full-body anime-style character illustration of a 29-year-old East Asian male planetarium dome projection operator for the North City Planetarium. He has a very bulky muscular adult male power build: extremely broad shoulders, heavy chest, thick neck and traps, huge upper arms, thick forearms, strong thighs, substantial rounded mass. Warm wheat skin, wide rectangular face with a strong jaw, one tiny beauty mark on the left cheekbone, deep amber-brown rounded narrow eyes, thick straight brows slightly raised; fluffy short dark chestnut-black hair with a few star-gold highlights at the tips, short stubble. Bright docent expression: thick lips slightly open as if explaining constellation positions, brows and eyes lifted with clear friendly energy. Outfit: a clean white fitted short-sleeve shirt tucked into high-waist trousers, visibly stretched across chest, shoulders, and arms; a long deep-indigo planetarium uniform vest worn open at the front down to the waist, knee-length with high side slits, not covering the white shirt; high-waist charcoal wide-leg docent uniform trousers with crisp trouser lines; thick-soled black quiet indoor shoes. Accessories: white half-palm focusing gloves, narrow waist cinch connected to a side film canister and astrolabe hook, small silver dome-key pendant necklace. Visible weapon object: a folding astrolabe lantern umbrella held in one hand, the canopy readable as a physical star-map disk and projection-lens mechanism that can unfold into a protective screen; a side film canister links to the umbrella with a few restrained low-glow star-gold orbital lines. Fantasy anchor: only a few subtle low-glow star-gold pinholes, short orbital tracks, and warm-silver lens edges, no strong diffuse glow. Material language: clean anime color blocks, simple cel-shaded folds, simplified small metal buckles and lens rims; no photoreal fabric grain, no glossy leather, no wet material, no grimy industrial texture. Style: clean Kyoto Animation-like TV anime game character concept art, crisp readable outline, tidy cel shading, fresh colors, strong readable silhouette, cutout-ready asset. Composition: single standing character, centered, full body visible from head to shoes, generous padding, no cropping. Background: perfectly flat solid #00ff00 chroma-key background only, one uniform green color, no gradients, no texture, no floor, no shadow, no reflection, no scenery. Absolute bans: no UI, no infographic, no chart, no diagram, no character sheet, no text, no letters, no labels, no icons, no panels, no app screen, no multiple characters, no unrelated objects as the main subject, no watermark. Do not use #00ff00 or any similar green on the character.",
         "referenceSheetPrompt": "",
         "propsPrompt": "",
-        "costumePrompt": ""
+        "costumePrompt": "",
+        "characterImagePromptCn": "只画一个人物：29岁东亚男性，北城星象馆的天文馆穹幕放映员。非常厚实的巨型力量体格，极宽肩、厚胸、粗脖子和斜方肌、巨大上臂与粗前臂、强壮大腿，暖麦色皮肤，宽长方脸，下颌厚实，左颧一颗小浅痣，深邃圆狭的深琥珀棕眼，浓平眉略抬；蓬松深栗黑短发，发尾少量星金挑染，短胡茬。表情是开朗讲解式微笑：厚唇微张像正在讲解星座位置，眉眼明亮上扬。服装：白色贴身短袖上衣扎进高腰裤，胸肩和手臂被明显撑紧；外层是深靛长马甲式穹幕制服，前襟敞开到腰侧，长度过膝但两侧高开衩，不遮住白色上衣主体；高腰炭黑宽腿讲解制服裤，裤线利落，厚底黑色静音馆内鞋。配件：半掌白色调焦手套，窄腰封连接腰侧胶片匣和星盘挂扣，细链小型穹幕钥片。手持折叠星盘灯伞，伞面像星盘与投影镜片组合，能展开成可见的护幕实体道具；腰侧胶片匣与灯伞之间有少量低亮星金星轨线。幻想锚点：只有少量低亮星金星孔、短星轨和暖银镜片边，不要强烈大面积发光。材质是干净动画色块、简化褶皱、少量图形化金属扣和镜片边，不要写实布料纹理、油亮皮革、湿身材质或脏污工业质感。干净京都动画式 TV 动画游戏立绘，清晰线条，简洁赛璐璐上色，单人全身，从头到鞋完整可见，居中，留出边距。背景必须是纯 #00ff00 平面绿幕，完全均匀，无渐变、无阴影、无地面、无反射、无场景。绝对禁止 UI、信息图、图表、设定表、文字、标签、页面截图、多人、无关物件、水印。不要在角色身上使用 #00ff00 或接近绿幕的颜色。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "拇指摩挲穹幕钥片",
+        "irritatedAction": "快速合上星盘灯伞的伞骨",
+        "nervousAction": "反复确认腰侧胶片匣锁扣",
+        "relaxedAction": "仰头看天花板寻找投影中心",
+        "lyingAction": "讲解语气突然变得过分流畅",
+        "shyAction": "用手套背蹭鼻梁",
+        "speechSpeed": "清楚偏快",
+        "speechTone": "明亮、有舞台感",
+        "catchphrase": "抬头，星位已经亮了。",
+        "battleLine": "穹顶归位，别越过这条星轨。",
+        "walkStyle": "步幅稳，长马甲随步摆开",
+        "combatStance": "一手撑开折叠星盘灯伞，一手按住腰侧胶片匣",
+        "idleAction": "把灯伞转半圈对准地面",
+        "attackRhythm": "先照明定位，再折射封路，最后近身反推"
       }
     },
     {
@@ -309,8 +1236,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -475,7 +1402,20 @@
         "stability": 80,
         "social": 70,
         "doom": 34,
-        "violence": 38
+        "violence": 38,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "地下商场防灾广播员，能把疏散白线短暂实体化成护栏和通道，用身体和声音把混乱人群带回安全方向。",
@@ -531,7 +1471,7 @@
       ],
       "activeMarks": {
         "attributes": false,
-        "images": true
+        "images": false
       },
       "generationProfile": {
         "notes": "新建角色：现代都市幻想，公共急救设施巡检身份。完整生成属性、最终提示词与全身立绘。",
@@ -644,9 +1584,9 @@
         "possessiveness": "中等，重视安全感"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "急救防护反冲型",
         "coreStyle": "截停、护场、回搏、推离",
-        "battleArchetype": "守护型响应者",
         "weaponSource": "城心急救网授予的脉站回搏权限",
         "forbiddenDirectTool": "普通AED盒、普通电极片、普通急救包、普通警示牌",
         "weaponTransformation": "不把AED盒、电极片或急救包直接当武器，而是把设备环扣、护臂板和脉冲指示灯结构合成可展开护臂，回搏权限只解释它为什么能截停与反冲。",
@@ -696,7 +1636,20 @@
         "stability": 78,
         "social": 58,
         "doom": 42,
-        "violence": 30
+        "violence": 30,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个公共AED巡检员，能用脉冲环扣护臂捕捉断开的行动节律，并把危险冲击推回安全距离。",
@@ -752,7 +1705,7 @@
       ],
       "activeMarks": {
         "attributes": false,
-        "images": true
+        "images": false
       },
       "generationProfile": {
         "notes": "新建角色：现代都市幻想，室内运动设施与路线设计身份。完整生成属性、最终提示词与全身立绘。",
@@ -865,9 +1818,9 @@
         "possessiveness": "中等偏低，喜欢一起进步"
       },
       "combatSystem": {
+        "battleArchetype": "守护型路线规划者",
         "combatType": "定点牵引突进型",
         "coreStyle": "标点、牵引、借力、截停",
-        "battleArchetype": "守护型路线规划者",
         "weaponSource": "穹顶攀馆旧赛道留下的定点契约",
         "forbiddenDirectTool": "普通攀岩绳、普通粉笔袋、普通扳手、普通岩点",
         "weaponTransformation": "不把攀岩绳、粉笔袋或扳手直接当武器，而是把锚点扣、粉笔环和路线尺合成可展开的锚杖，定点契约只解释它为什么能标记落点和牵引距离。",
@@ -917,7 +1870,20 @@
         "stability": 77,
         "social": 74,
         "doom": 33,
-        "violence": 42
+        "violence": 42,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个室内攀岩路线员，能用粉笔环扣锚杖标记短暂落点，并用银白路线线把失衡目标牵回安全距离。",
@@ -973,7 +1939,7 @@
       ],
       "activeMarks": {
         "attributes": false,
-        "images": true
+        "images": false
       },
       "generationProfile": {
         "notes": "新建角色：现代都市幻想，公共文化设施与书籍修复身份。完整生成属性、最终提示词与全身立绘。",
@@ -1086,9 +2052,9 @@
         "possessiveness": "中等，重视记忆归属"
       },
       "combatSystem": {
+        "battleArchetype": "守护型档案管理者",
         "combatType": "封页修复控场型",
         "coreStyle": "标记、缝合、截停、反封",
-        "battleArchetype": "守护型档案管理者",
         "weaponSource": "白塔借阅馆授予的归签修复契约",
         "forbiddenDirectTool": "普通书本、普通剪刀、普通胶水、普通书签",
         "weaponTransformation": "不把书本、剪刀或胶水直接当武器，而是把装订环、直尺和修复夹结构合成可展开的刃尺道具，修复契约只解释它为什么能标页与封线。",
@@ -1138,7 +2104,20 @@
         "stability": 82,
         "social": 55,
         "doom": 37,
-        "violence": 34
+        "violence": 34,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个古籍修复馆员，能用装订环刃尺把被破坏的行动标成错误页，并用银白页线缝回原位。",
@@ -1194,7 +2173,7 @@
       ],
       "activeMarks": {
         "attributes": false,
-        "images": true
+        "images": false
       },
       "generationProfile": {
         "notes": "新建角色：现代都市幻想，白天公共窗口与调解身份。完整生成属性、最终提示词与全身立绘。",
@@ -1307,9 +2286,9 @@
         "possessiveness": "中低，重视互相回应"
       },
       "combatSystem": {
+        "battleArchetype": "守护型城市调停者",
         "combatType": "秩序防护控场型",
         "coreStyle": "排队、截停、缓冲、反送",
-        "battleArchetype": "守护型城市调停者",
         "weaponSource": "东庭民约厅授予的调解号码权限",
         "forbiddenDirectTool": "普通印章、普通排队机、普通文件夹",
         "weaponTransformation": "不把普通印章或叫号机直接当武器，而是把窗口号码牌结构做成可展开轮盘盾，调解权限只解释盾面号码为什么能截停与重排。",
@@ -1359,7 +2338,20 @@
         "stability": 81,
         "social": 78,
         "doom": 30,
-        "violence": 32
+        "violence": 32,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个民政调解窗口员，能用号码牌轮盘盾把冲突动作排号，让危险回到队尾等待调解。",
@@ -1415,7 +2407,7 @@
       ],
       "activeMarks": {
         "attributes": false,
-        "images": true
+        "images": false
       },
       "generationProfile": {
         "notes": "新建角色：现代都市幻想，公共交通服务身份，雨夜候车亭管理员。完整生成属性、最终提示词与全身立绘。",
@@ -1528,9 +2520,9 @@
         "possessiveness": "中等，重视约定感"
       },
       "combatSystem": {
+        "battleArchetype": "守护型交通管制者",
         "combatType": "守站牵引控场型",
         "coreStyle": "喊停、牵引、挡线、反送",
-        "battleArchetype": "守护型交通管制者",
         "weaponSource": "南环候灯署授予的末班候灯权限",
         "forbiddenDirectTool": "普通雨伞、普通站牌、普通车票",
         "weaponTransformation": "不把雨伞、站牌或车票直接当武器，而是把候车亭站牌结构折成可展开的伞骨路标，候灯权限只解释它为什么能喊停与牵回。",
@@ -1580,7 +2572,20 @@
         "stability": 79,
         "social": 60,
         "doom": 39,
-        "violence": 36
+        "violence": 36,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个雨夜候车亭管理员，能用折叠站牌伞骨让错过的路线短暂停靠，并把越线的危险牵回原站。",
@@ -1749,9 +2754,9 @@
         "possessiveness": "中低，重视归属感"
       },
       "combatSystem": {
+        "battleArchetype": "守护型递送者",
         "combatType": "守路线控场型",
         "coreStyle": "封路、牵引、截停、反推",
-        "battleArchetype": "守护型递送者",
         "weaponSource": "失物回路局授权的返件铃与路签封蜡",
         "forbiddenDirectTool": "普通邮包、普通信件、普通邮戳",
         "weaponTransformation": "不把邮包或普通信件当武器，而是把邮差铃放大为可触发的实体铃器，折叠路签作为可画出的边界锚点。退件规则只解释能力，不充当最终武器。",
@@ -1801,7 +2806,20 @@
         "stability": 80,
         "social": 57,
         "doom": 35,
-        "violence": 38
+        "violence": 38,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个夜间退件邮路员，能听见失物真正归处的方向，并用返件铃把错误路线退回。",
@@ -1856,8 +2874,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "按当前生成配置新建：使用 settings.styleReference.image 作为画风、厚重成年男性比例、干净线条和赛璐璐上色参考；本角色核心是紧身白衣包裹下清楚可读的腹肌轮廓。",
@@ -1970,6 +2988,7 @@
         "possessiveness": "低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "守门封控型",
         "coreStyle": "卡位、锁路、近身压制、护档案",
         "weaponPreference": "封蜡印章、短钥匙串和档案架锁杆",
@@ -2015,7 +3034,20 @@
         "stability": 83,
         "social": 46,
         "doom": 41,
-        "violence": 45
+        "violence": 45,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个穿紧身白色封库工作衣的地下档案护库员，能从封蜡和纸页气味判断密档是否被替换。",
@@ -2070,8 +3102,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "按当前生成配置新建：使用 settings.styleReference.image 作为画风、厚重成年男性比例、线条和赛璐璐上色参考；不复制参考图角色身份、服装、姿势或颜色。",
@@ -2184,6 +3216,7 @@
         "possessiveness": "低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "护炉控场型",
         "coreStyle": "卡位、护人、压制、耐心消耗",
         "weaponPreference": "药材烘筛和短柄药夹",
@@ -2229,7 +3262,20 @@
         "stability": 84,
         "social": 57,
         "doom": 38,
-        "violence": 42
+        "violence": 42,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能从药香和炉声判断火候偏差的地下药炙看炉人，总用沉稳慢火和一只旧烘筛挡住催命的急货。",
@@ -2284,8 +3330,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "按当前生成配置新建：使用 settings.styleReference.image 作为画风、厚重成年男性比例、干净线条和赛璐璐上色参考；本角色服装核心必须是短裤和白袜。",
@@ -2398,6 +3444,7 @@
         "possessiveness": "中低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "短距冲撞型",
         "coreStyle": "快速护送、卡门、肩撞、近身压制",
         "weaponPreference": "短柄封条剪和冷库钥匙链",
@@ -2443,7 +3490,20 @@
         "stability": 76,
         "social": 72,
         "doom": 37,
-        "violence": 48
+        "violence": 48,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个穿短裤白袜的地下霜库巡检员，靠冷气流和霜纹判断仓门是否误锁，总把危险说成小事却多查一遍。",
@@ -2498,8 +3558,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "按当前生成配置新建：使用 settings.styleReference.image 作为画风、厚重成年男性比例、干净线条和赛璐璐上色参考；不复制参考图角色身份、服装、姿势或颜色。",
@@ -2612,6 +3672,7 @@
         "possessiveness": "低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "低频控场型",
         "coreStyle": "护人、扰节奏、卡位、近身压制",
         "weaponPreference": "旧铜共鸣叉和短调音槌",
@@ -2657,7 +3718,20 @@
         "stability": 80,
         "social": 50,
         "doom": 40,
-        "violence": 43
+        "violence": 43,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能从地下风道低鸣听出缺氧和逆流的风井校音员，总在噪声变调前把人群带离危险区。",
@@ -2712,8 +3786,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "按当前生成配置新建：使用 settings.styleReference.image 作为画风、厚重成年男性比例、线条和赛璐璐上色参考；不复制参考图角色身份、服装、姿势或颜色。",
@@ -2826,6 +3900,7 @@
         "possessiveness": "低，保护欲高"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "钩锁控距型",
         "coreStyle": "护人、断路、钩拉、短距离压制",
         "weaponPreference": "卷缆钩和绝缘夹",
@@ -2871,7 +3946,20 @@
         "stability": 82,
         "social": 48,
         "doom": 39,
-        "violence": 44
+        "violence": 44,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能听出高压主缆绝缘层异常嗡鸣的地下守线人，总用卷缆钩把别人挡在安全距离外。",
@@ -2926,8 +4014,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "按当前生成配置新建：使用 settings.styleReference.image 作为画风、体型比例、线条和赛璐璐上色参考；不复制参考图角色身份、服装、姿势或颜色。",
@@ -3040,6 +4128,7 @@
         "possessiveness": "低，更多是守护欲"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "重杆控场型",
         "coreStyle": "护人、卡位、顶住冲击、短距离反制",
         "weaponPreference": "闸门扳杆",
@@ -3085,7 +4174,20 @@
         "stability": 79,
         "social": 52,
         "doom": 42,
-        "violence": 46
+        "violence": 46,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能听出雨洪闸门压力异常的地下巡守员，总在暴雨夜用沉重闸杆把人群护在身后。",
@@ -3135,8 +4237,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "新建角色：参考生成配置中的当前参考图，仅借用体型比例、线条和上色方式，不复制参考图角色身份、服装或姿势。",
@@ -3249,6 +4351,7 @@
         "possessiveness": "中等"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "近身控制与封界",
         "coreStyle": "用雨线封印限制对手移动",
         "weaponPreference": "晴钟印和盖章手套",
@@ -3294,7 +4397,20 @@
         "stability": 80,
         "social": 48,
         "doom": 42,
-        "violence": 55
+        "violence": 55,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一名市政气象理赔公证员，用晴钟印给雨痕盖押，替普通人固定会被冲走的证据。",
@@ -3344,8 +4460,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "测试角色：按 CHARACTER_CREATION_WORKFLOW.md 与 IMAGE_GENERATION_WORKFLOW.md 完整创建，先补全属性，通过完整性与乱码检查后再生成透明全身图。",
@@ -3458,6 +4574,7 @@
         "possessiveness": "低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "近身控制与结界封锁",
         "coreStyle": "检票钳夹出票纹，短暂封住影门",
         "weaponPreference": "墨色检票钳、票夹盾",
@@ -3503,7 +4620,20 @@
         "stability": 78,
         "social": 45,
         "doom": 49,
-        "violence": 52
+        "violence": 52,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "夜间票据监察员，能用墨色检票钳夹出短暂票纹结界，保护误入影班的乘客。",
@@ -3553,8 +4683,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "端到端测试角色：两个生成标记均已打开。属性阶段先完成全部模块，通过完整性检查后再进入图像生成。",
@@ -3667,6 +4797,7 @@
         "possessiveness": "低到中，保护欲强但尊重边界"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "防护控制型",
         "coreStyle": "用硬币匣、扫描器和站务栏杆制造短距离阻挡",
         "weaponPreference": "加固硬币匣与短柄检修扳手",
@@ -3712,7 +4843,20 @@
         "stability": 76,
         "social": 72,
         "doom": 44,
-        "violence": 41
+        "violence": 41,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能从错币落下的节奏里听出危险出口的地铁售票机巡检员，总在乘客迷路前先一步站到岔口。",
@@ -3767,8 +4911,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "端到端测试角色：两个生成标记均已打开。属性阶段先完成全部模块，通过完整性检查后再进入图像生成。",
@@ -3881,6 +5025,7 @@
         "possessiveness": "低到中，保护欲强但尊重边界"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "防护控制型",
         "coreStyle": "用硬币匣、扫描器和站务栏杆制造短距离阻挡",
         "weaponPreference": "加固硬币匣与短柄检修扳手",
@@ -3926,7 +5071,20 @@
         "stability": 76,
         "social": 72,
         "doom": 44,
-        "violence": 41
+        "violence": 41,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能从错币落下的节奏里听出危险出口的地铁售票机巡检员，总在乘客迷路前先一步站到岔口。",
@@ -3976,8 +5134,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "End-to-end test created on port 5178. Attribute and image buttons are both ON; image phase must use only final prompt fields plus the decoded current style reference.",
@@ -4090,6 +5248,7 @@
         "possessiveness": "中低，更像守护边界"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "通道控制型近身防卫",
         "coreStyle": "用声纹闸机短暂定向压制，再以厚重身体封锁路线",
         "weaponPreference": "闸机钥匙、读数手套、肩撞和擒拿",
@@ -4135,7 +5294,20 @@
         "stability": "78",
         "social": "46",
         "doom": "42",
-        "violence": "58"
+        "violence": "58",
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "夜线地铁里像人形闸门一样可靠的声纹安检员，能把危险谎言压成可见短波，却始终害怕漏听真正的求救声。",
@@ -4185,8 +5357,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "End-to-end test: both attribute and image generation marks are ON. Attribute phase is completed first; image phase must use only the final prompt plus the uploaded style reference.",
@@ -4299,6 +5471,7 @@
         "possessiveness": "low"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "defensive grappler and tool controller",
         "coreStyle": "hold ground, absorb force, hook weapons away, pin threats against railings",
         "weaponPreference": "crescent counterweight hook and heavy forearm guard",
@@ -4344,7 +5517,20 @@
         "stability": 82,
         "social": 58,
         "doom": 36,
-        "violence": 35
+        "violence": 35,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "A massive bridge counterweight inspector who can hear structural danger through tiny vibrations and treats maintenance like a promise to the city.",
@@ -4394,8 +5580,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "Fresh end-to-end test character created after enabling both attribute and image marks. The final image prompt is self-contained and should be used as the sole image subject.",
@@ -4508,6 +5694,7 @@
         "possessiveness": "低，重视各自空间"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "工具压制型",
         "coreStyle": "卡位、卸力、近身压制、保护撤离路线",
         "weaponPreference": "红铜阀轮和短阀门扳手",
@@ -4553,7 +5740,20 @@
         "stability": 78,
         "social": 60,
         "doom": 34,
-        "violence": 38
+        "violence": 38,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能从旧城热管回声里听出事故前兆的温室巡检员，总在玻璃棚结霜前把危险压住。",
@@ -4613,8 +5813,8 @@
         }
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "Test character generated after opening both attribute and image marks. Keep the image prompt self-contained and do not append raw profile fields during image generation.",
@@ -4727,6 +5927,7 @@
         "possessiveness": "低，重视各自空间"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "缆绳控制型",
         "coreStyle": "卡位、卸力、近身压制、保护撤离路线",
         "weaponPreference": "粗缆绳和缆车夹钳",
@@ -4772,7 +5973,20 @@
         "stability": 79,
         "social": 58,
         "doom": 36,
-        "violence": 39
+        "violence": 39,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能听懂雾夜缆线震动的山坡夜市检修员，总在最后一班车前把危险拦下。",
@@ -4823,8 +6037,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "新角色：资料与最终提示词已补全；attributes/images 两个开关均为 true，可直接进入生图流程。",
@@ -4937,6 +6151,7 @@
         "possessiveness": "低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "场地控制型",
         "coreStyle": "用雨尺引导水线和地面压力，限制对手移动",
         "weaponPreference": "折叠雨尺、雨压表",
@@ -4982,7 +6197,20 @@
         "stability": 86,
         "social": 66,
         "doom": 39,
-        "violence": 43
+        "violence": 43,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一名能从雨声里听出城市结构异常的雨务调度员，用折叠雨尺在暴雨中改写水路。",
@@ -5028,8 +6256,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "【生图读取规则】\n全身图生成时，只读取【提示词】模块里的最终提示词和已上传的风格参考图。\n不直接读取身份、特征、服装、人格、数值等零散字段。\n这些字段只用于先生成最终提示词，不会再被追加到生图提示里。\n\n1. 最终提示词\n- 必须明确写成：单个人物、全身立绘、头到脚完整可见。\n- 要把角色的身份、身形、脸部、发型、服装、工具或武器转成可视化描述。\n- 默认写成现代都市角色，用一个招牌装备、异能、魔法道具或隐藏身份做核心设计钩子。\n- 默认体型下限是非常壮、非常厚实、肌肉量很大的成年男性：极宽肩、厚胸、粗脖斜方肌、大上臂、粗前臂和强壮大腿，不是修长瘦男主，也不是普通运动型。\n- 写服装字段前必须先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭，不把它当成固定服装库。\n- 白色贴身上衣是核心偏好：紧身T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣；要用干净赛璐璐阴影读出胸肩手臂体积，不要湿身或写实肌肉。\n- 如果用户说脱掉外套，最终提示词要明确禁止 jacket/coat/vest/open shirt/overshirt，让紧身白色上衣成为上身主视觉。\n- 材质用干净动画设计语言：平面色块、概括褶皱、简化金属小点缀；不要写实布料纹理、油亮反光或时装摄影语言。\n- 画风要明确写成京都动画式清爽 TV 动画赛璐璐：线条干净流畅，阴影块面概括，整体干净无灰尘。\n- 英文提示词作为生图主文本，中文作为理解备份。\n- 名字要像正式角色名，严禁避免默认使用「老X」「小X」「阿X」这类通用外号。\n\n2. 风格参考图\n- 只参考体型比例、线条、上色和画风。\n- 不复制参考图的角色身份、脸、衣服、道具、姿势和配色。\n\n3. 禁止内容\n- 不要 UI、信息图、图表、设定表、文字标签、页面截图、多人组图。\n- 不要把生成配置或属性列表做成画面内容。\n- 不要把工业感、脏污、灰尘、油污、铁锈或废土纹理当成主要设计主张。",
@@ -5142,6 +6370,7 @@
         "possessiveness": "低，重视彼此体面"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "重锤压制型",
         "coreStyle": "站桩、护人、破障、短距离爆发",
         "weaponPreference": "大铁锤",
@@ -5187,7 +6416,20 @@
         "stability": 80,
         "social": 55,
         "doom": 36,
-        "violence": 52
+        "violence": 52,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个穿短裤干重活的码头巨汉，能用大铁锤和货绳在混乱现场把危险压住。",
@@ -5238,8 +6480,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "重点方向：都市为主，奇幻为辅\n体型下限：非常壮、非常厚实、肌肉量很大的成年男性，不要只是普通运动型\n极宽肩、厚胸、粗脖和斜方肌、大上臂、粗前臂、强壮大腿，圆润但有压重力量\n如果用户要更壮，要写成比参考图更大、更厚、更有力量的巨型力量感体格\n生成服装前先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭\n白色贴身上衣是核心偏好：紧身T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣，要读出胸肩和手臂体积\n如果用户说脱掉外套，就不要再补回夹克、外套、背心、开襟衬衫或其他上身外层\n现实职业或社会角色作为基底\n一个清晰的核心设计：招牌装备、异能、魔法道具或隐藏身份\n现代服装与轻量奇幻细节结合，服装必须好看而不只是实用\n用数值、世界阵营、战斗方式、身体轮廓和反重复交换来决定服装\n京都动画式清爽线条\n干净赛璐璐阴影，阴影概括明确\n整体干净、无灰尘、主动降噪\n颜色清透，角色轮廓易读\n\n默认禁止：少女\n萝莉\n萌系\n偶像风、女性化男性\n瘦弱体型\n普通运动型体格\n修长纤细男主\n写实肌肉渲染\n照片感\n湿身效果\n写实布料纹理、写实材质反光、时装摄影语言\n油亮皮革、湿身材质、拟真塑料或乳胶感\n工业风作为主设计\n大量灰尘、油污、铁锈、脏污质感\n废土、煤灰、混浊阴影",
@@ -5352,6 +6594,7 @@
         "possessiveness": "中低，重视承诺"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "静场控制型",
         "coreStyle": "压低环境声，近身封锁行动节奏",
         "weaponPreference": "封声铜印",
@@ -5397,7 +6640,20 @@
         "stability": 76,
         "social": 61,
         "doom": 34,
-        "violence": 38
+        "violence": 38,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一位能把城市噪声压成封条的公共记忆馆管理员，越混乱的现场越能安静地找到求救声。",
@@ -5443,8 +6699,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -5557,6 +6813,7 @@
         "possessiveness": "中低，但保护欲明显"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "高速节奏干扰型",
         "coreStyle": "假起跑、急停、短距冲撞",
         "weaponPreference": "计时护腕和哨声节拍",
@@ -5602,7 +6859,20 @@
         "stability": 70,
         "social": 82,
         "doom": 36,
-        "violence": 47
+        "violence": 47,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个社区夜场运动教练，能用计时护腕把一秒回放三次，让失败的动作多一次修正机会。",
@@ -5648,8 +6918,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -5762,6 +7032,7 @@
         "possessiveness": "低，重视安全感"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "声纹截断与近身护送型",
         "coreStyle": "听位、剪断、护送撤离",
         "weaponPreference": "声纹票剪",
@@ -5807,7 +7078,20 @@
         "stability": 72,
         "social": 67,
         "doom": 46,
-        "violence": 31
+        "violence": 31,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个夜间地铁广播与寻人调度员，能用声纹票剪剪开回音残留，找回被隧道吞掉方向的失联乘客。",
@@ -5853,8 +7137,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -5967,6 +7251,7 @@
         "possessiveness": "中低，但保护欲强"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "惯性封锁型近身防护",
         "coreStyle": "急停、扛压、短距擒拿",
         "weaponPreference": "急停票夹与制动背带",
@@ -6012,7 +7297,20 @@
         "stability": 76,
         "social": 64,
         "doom": 41,
-        "violence": 45
+        "violence": 45,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个高层电梯救援协调员，能用急停票夹短暂停住坠落惯性，让轿厢、物件或人从失控中缓下来。",
@@ -6058,8 +7356,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -6172,6 +7470,7 @@
         "possessiveness": "低，尊重对方行程"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "路线封锁与控场型",
         "coreStyle": "量距、划界、重步压制",
         "weaponPreference": "折叠测雨尺",
@@ -6217,7 +7516,20 @@
         "stability": 79,
         "social": 61,
         "doom": 39,
-        "violence": 42
+        "violence": 42,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个城市避雨路线调度员，能用折叠测雨尺量出雨幕阶差，把暴雨中的安全通路短暂划出来。",
@@ -6263,8 +7575,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -6377,6 +7689,7 @@
         "possessiveness": "中低，重视承诺边界"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "封印控制型近身支援",
         "coreStyle": "盖印定格、短距擒拿、路线封锁",
         "weaponPreference": "回执印章和钥匙链",
@@ -6422,7 +7735,20 @@
         "stability": 81,
         "social": 70,
         "doom": 34,
-        "violence": 38
+        "violence": 38,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个夜间失物归还公证员，能用回执印章让物件显出最后主人的影子，并把错误的归属短暂锁死。",
@@ -6468,8 +7794,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -6582,6 +7908,7 @@
         "possessiveness": "中低，偏保护而非控制"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "重心压制与防线守护",
         "coreStyle": "扎地、截停、推回、保护撤离线",
         "weaponPreference": "短柄测压锤与封桩刻度尺",
@@ -6627,7 +7954,20 @@
         "stability": 84,
         "social": 50,
         "doom": 29,
-        "violence": 39
+        "violence": 39,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能用封桩牌短暂加固脚下地面的地基监察员，像活着的承重柱一样守住城市裂缝前线。",
@@ -6673,8 +8013,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -6787,6 +8127,7 @@
         "possessiveness": "低，重视安稳陪伴"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "照明控场与近距防守",
         "coreStyle": "点亮安全线、逼退、卡位、保护撤离",
         "weaponPreference": "折叠灯杆钩与黄铜检修灯",
@@ -6832,7 +8173,20 @@
         "stability": 79,
         "social": 55,
         "doom": 34,
-        "violence": 33
+        "violence": 33,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能用黄铜检修灯点亮安全灯线的夜巡灯务官，在旧城雾夜里替迷路的人守住回家的路。",
@@ -6878,8 +8232,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "",
@@ -6992,6 +8346,7 @@
         "possessiveness": "低，重视互相信任"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "边界封锁与短距压制",
         "coreStyle": "定界、卡位、卸力、保护撤离路线",
         "weaponPreference": "短柄测量杖与潮尺罗盘",
@@ -7037,7 +8392,20 @@
         "stability": 76,
         "social": 58,
         "doom": 31,
-        "violence": 37
+        "violence": 37,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能用潮尺罗盘短暂钉住潮汐封印边界的测量员，总在灾害真正越线前赶到。",
@@ -7088,8 +8456,8 @@
         "[GENERATE_IMAGES]"
       ],
       "activeMarks": {
-        "attributes": true,
-        "images": true
+        "attributes": false,
+        "images": false
       },
       "generationProfile": {
         "notes": "新建角色。属性生成与图像生成均已开启；资料完整后继续生成全身图。",
@@ -7202,6 +8570,7 @@
         "possessiveness": "中低，重视承诺"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "工具防卫型",
         "coreStyle": "格挡、压腕、短距控制",
         "weaponPreference": "潮位尺和印章柄",
@@ -7247,7 +8616,20 @@
         "stability": 78,
         "social": 74,
         "doom": 24,
-        "violence": 30
+        "violence": 30,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一名能用旧铜潮汐印章确认水痕真伪的城市署员，把每一次盖章都当作守住岸线的誓言。",
@@ -7402,6 +8784,7 @@
         "possessiveness": "低，但会记住对方所有过敏源"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "支援限制型",
         "coreStyle": "用叶脉听诊环听取根系震动，标记危险路径并让藤影短暂缠住目标脚步",
         "weaponPreference": "采样剪、封样管、叶脉听诊环、检疫手套",
@@ -7447,7 +8830,20 @@
         "stability": 76,
         "social": 63,
         "doom": 42,
-        "violence": 24
+        "violence": 24,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "社区植物检疫师，能用腕部叶脉听诊环听见病株和根系的低语，把异常声纹压成短暂叶脉标记。",
@@ -7607,6 +9003,7 @@
         "possessiveness": "低，更像稳定陪伴"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "支援控制型",
         "coreStyle": "用白弧光短暂标记路径、干扰视线并保护撤离路线",
         "weaponPreference": "折叠桥灯钥匙、巡检灯、绝缘手套",
@@ -7652,7 +9049,20 @@
         "stability": 79,
         "social": 58,
         "doom": 31,
-        "violence": 29
+        "violence": 29,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "夜间桥灯巡检员，能用桥灯钥匙投出短暂白弧，照出城市里本不该存在的断路和隐藏通道。",
@@ -7812,6 +9222,7 @@
         "possessiveness": "中低，重视约定"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "声纹压制型",
         "coreStyle": "用回声砝码标记谎言重量，限制对手动作",
         "weaponPreference": "音叉印章",
@@ -7857,7 +9268,20 @@
         "stability": 81,
         "social": 75,
         "doom": 29,
-        "violence": 38
+        "violence": 38,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "能把承诺与谎言的声纹称出重量的声纹公证员，温和地让每一句话落到回声砝码上。",
@@ -8022,6 +9446,7 @@
         "possessiveness": "低，重视信任"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "测距控制型",
         "coreStyle": "用雨尺划定湿度边界，限制移动",
         "weaponPreference": "折叠雨尺",
@@ -8067,7 +9492,20 @@
         "stability": 76,
         "social": 62,
         "doom": 31,
-        "violence": 24
+        "violence": 24,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "能读取雨痕记忆的市立气象档案员，用透明雨量管和折叠雨尺把城市灾害记录重新排成真相。",
@@ -8234,6 +9672,7 @@
         "possessiveness": "中低，不控制人，但会记住对方所有容易冒雨出门的习惯"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "signatureAbility": "调频音叉麦克风能把雨声调成短暂保护频率，形成贴身的银蓝声波屏障",
         "combatType": "控制支援型远近结合",
         "coreStyle": "用声波线标出安全频段，配合厚实体格卡位、护人和打断目标节奏",
@@ -8280,7 +9719,20 @@
         "stability": 79,
         "social": 65,
         "doom": 31,
-        "violence": 25
+        "violence": 25,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个夜间电台气象播报员，能用调频音叉麦克风把雨声调成短暂保护频率。",
@@ -8447,6 +9899,7 @@
         "possessiveness": "中低，不控制人，但会记住对方所有容易遗失的小习惯"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "signatureAbility": "薄荷青档案票夹能夹住失物残留的一瞬记忆，短暂显出物主最后触碰的方向",
         "combatType": "支援控制型近身防护",
         "coreStyle": "用记忆线标出不可拿错的归还路径，配合厚实体格卡位、护物和截停目标",
@@ -8493,7 +9946,20 @@
         "stability": 81,
         "social": 61,
         "doom": 30,
-        "violence": 22
+        "violence": 22,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个夜间遗失物归还管理员，能用薄荷青档案票夹夹住失物残留的一瞬记忆。",
@@ -8660,6 +10126,7 @@
         "possessiveness": "中低，不控制人，但会记住对方所有容易忘记的禁忌"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "signatureAbility": "琥珀量药匙能量出疼痛和情绪波动的安全刻度，短暂稳定即将失控的身体反应",
         "combatType": "稳定支援型近战防护",
         "coreStyle": "用量药匙标出不可越过的安全距离，配合厚实体格卡位、护人和逼退目标",
@@ -8706,7 +10173,20 @@
         "stability": 83,
         "social": 63,
         "doom": 27,
-        "violence": 24
+        "violence": 24,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个夜间急药房值班药剂师，能用琥珀量药匙量出疼痛与情绪之间的安全刻度。",
@@ -8873,6 +10353,7 @@
         "possessiveness": "中低，不控制人，但会记住对方容易迷路的楼层"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "signatureAbility": "黄铜楼层牌能校准错位电梯门缝，把不存在的楼层短暂固定成可通行出口",
         "combatType": "空间校准型近战支援",
         "coreStyle": "用楼层牌标出可通行门线，配合厚实体格卡位、护人和逼退目标",
@@ -8919,7 +10400,20 @@
         "stability": 80,
         "social": 61,
         "doom": 34,
-        "violence": 31
+        "violence": 31,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个夜间高层电梯调度员，能用黄铜楼层牌把错位电梯校准回现实楼层。",
@@ -9086,6 +10580,7 @@
         "possessiveness": "中低，不控制人，但会默默准备备用钥匙和便签"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "signatureAbility": "黄铜书签钥匙能翻开遗失物的最后记忆页，短暂标出物品与主人之间的路径",
         "combatType": "标记追踪型近战支援",
         "coreStyle": "用书签钥匙标记路径，配合厚实体格卡位、护人和短距离压制",
@@ -9132,7 +10627,20 @@
         "stability": 81,
         "social": 64,
         "doom": 31,
-        "violence": 29
+        "violence": 29,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个夜间遗失物档案员，能用黄铜书签钥匙翻开物品最后一次被主人触碰时留下的记忆页。",
@@ -9294,6 +10802,7 @@
         "possessiveness": "中低，不控制人，但会记住对方所有容易涉险的捷径习惯"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "signatureAbility": "黄铜雨尺能量出异常暴雨的边界，把安全线压成短暂发亮的雨量刻线",
         "combatType": "地形封锁型近战支援",
         "coreStyle": "用雨尺标出不可越线区域，配合厚实体格卡位、护人和逼退目标",
@@ -9340,7 +10849,20 @@
         "stability": 79,
         "social": 63,
         "doom": 35,
-        "violence": 31
+        "violence": 31,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能看见暴雨边界的城市巡查员，总在道路被雨吞掉前，用黄铜雨尺给人留下一条还能走的线。",
@@ -9493,6 +11015,7 @@
         "possessiveness": "中低，不控制人，但会记住对方所有容易弄丢的小习惯"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "signatureAbility": "琥珀归还章能把目标和原本归属短暂连线，形成暖金票根印记并拉回偏离的位置",
         "combatType": "定位控制型近战支援",
         "coreStyle": "用归还章标记目标归属，配合厚实体格卡位、护人和截断路线",
@@ -9539,7 +11062,20 @@
         "stability": 80,
         "social": 56,
         "doom": 28,
-        "violence": 26
+        "violence": 26,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个夜间失物招领登记员，用琥珀归还章读取失物记忆，把偏离归属的人与物温柔拉回原位。",
@@ -9696,6 +11232,7 @@
         "possessiveness": "中低，不控制对方，但会本能地替重要的人规划安全路线"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "signatureAbility": "温压符灯释放暖金色压力环，短时间封住泄漏、弹开碎片，并给附近队友提供稳定站位",
         "combatType": "防护控制型近战支援",
         "coreStyle": "用温压符灯封住异常压力，配合厚实体格卡位、护人和逼停敌人",
@@ -9742,7 +11279,20 @@
         "stability": 82,
         "social": 58,
         "doom": 24,
-        "violence": 32
+        "violence": 32,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个负责夜间地下热水管网的厚实检修员，用黄铜温压符灯处理带有轻微魔法性质的压力异常。",
@@ -9897,6 +11447,7 @@
         "possessiveness": "中低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "封印与防护",
         "coreStyle": "用纸页护符固定空间边界",
         "weaponPreference": "黄铜书签锚、装订线、纸页护符",
@@ -9942,7 +11493,20 @@
         "stability": 80,
         "social": 55,
         "doom": 30,
-        "violence": 14
+        "violence": 14,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "壮壮肉肉的旧书修复师，白色紧身 T-shirt 下若隐若现有腹肌轮廓，用黄铜书签锚和纸页护符折成防护页墙。",
@@ -10092,6 +11656,7 @@
         "possessiveness": "低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "救援防护",
         "coreStyle": "用心跳光阵稳定伤者并阻隔危险",
         "weaponPreference": "急救包、脉搏贴片、护身光阵",
@@ -10137,7 +11702,20 @@
         "stability": 80,
         "social": 70,
         "doom": 35,
-        "violence": 16
+        "violence": 16,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "壮壮肉肉的社区夜巡急救员，白色紧身 T-shirt 下若隐若现有腹肌轮廓，急救包与心跳灯坠展开薄荷绿治疗光阵。",
@@ -10292,6 +11870,7 @@
         "possessiveness": "低到中"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "防护与控场",
         "coreStyle": "用伞面和露珠结界保护同伴",
         "weaponPreference": "透明折叠伞、剪枝剪",
@@ -10337,7 +11916,20 @@
         "stability": 77,
         "social": 58,
         "doom": 33,
-        "violence": 18
+        "violence": 18,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "肉肉厚实的夜间花店壮汉用透明折叠伞把植物露珠展开成保护结界，现实职业感清楚，奇幻元素克制而可记忆。",
@@ -10502,6 +12094,7 @@
         "possessiveness": "中低，重承诺"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "重工具压制型",
         "coreStyle": "格挡、卡位、近身破衡",
         "weaponPreference": "长柄铆钉锤",
@@ -10547,7 +12140,20 @@
         "stability": 75,
         "social": 49,
         "doom": 35,
-        "violence": 52
+        "violence": 52,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "一个能从废船铁皮回声里听出危险的铆接工头，总在事故发生前把人挡到自己身后。",
@@ -10711,6 +12317,7 @@
         "possessiveness": "克制但强"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "近身压制",
         "coreStyle": "盾墙式封锁",
         "weaponPreference": "闸锁扳柄",
@@ -10756,7 +12363,20 @@
         "stability": 79,
         "social": 46,
         "doom": 38,
-        "violence": 72
+        "violence": 72,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "封锁区里最可靠也最难说服的闸门守夜人，他把每一次放行都当成一次审判。",
@@ -10910,6 +12530,7 @@
         "possessiveness": "低，但保护欲强"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "防守控制型",
         "coreStyle": "封路、格挡、压制",
         "weaponPreference": "电控盾和短棍",
@@ -10955,7 +12576,20 @@
         "stability": 74,
         "social": 39,
         "doom": 41,
-        "violence": 45
+        "violence": 45,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "北环冷库的门禁巡守，沉默到近乎笨拙，却能在警报响起前先把所有人从危险门后拉回来。",
@@ -11171,7 +12805,9 @@
         "petStatus": "无"
       },
       "socialSystem": {},
-      "combatSystem": {},
+      "combatSystem": {
+        "battleArchetype": "守护型响应者"
+      },
       "worldSetting": {},
       "hiddenInformation": {},
       "numericalAttributes": {
@@ -11186,7 +12822,20 @@
         "stability": 30,
         "social": 30,
         "doom": 30,
-        "violence": 30
+        "violence": 30,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "",
@@ -11386,7 +13035,9 @@
         "petStatus": "喂港口流浪猫"
       },
       "socialSystem": {},
-      "combatSystem": {},
+      "combatSystem": {
+        "battleArchetype": "守护型响应者"
+      },
       "worldSetting": {},
       "hiddenInformation": {},
       "numericalAttributes": {
@@ -11401,7 +13052,20 @@
         "stability": 30,
         "social": 30,
         "doom": 30,
-        "violence": 30
+        "violence": 30,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "",
@@ -11611,6 +13275,7 @@
         "possessiveness": "低中"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "牵制拖拽",
         "coreStyle": "缆绳控场",
         "weaponPreference": "拖缆钩",
@@ -11656,7 +13321,20 @@
         "stability": 77,
         "social": 70,
         "doom": 39,
-        "violence": 58
+        "violence": 58,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "外港废料堆里的老把头，嘴上像骗子，手里的安全绳从没断过。",
@@ -11808,6 +13486,7 @@
         "possessiveness": "低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "近身压制",
         "coreStyle": "重力推进",
         "weaponPreference": "焊枪与撬棍",
@@ -11853,7 +13532,20 @@
         "stability": 74,
         "social": 42,
         "doom": 57,
-        "violence": 63
+        "violence": 63,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "夜班高架桥的老焊工，嘴上嫌麻烦，真正出事时永远站在最前面。",
@@ -12008,6 +13700,7 @@
         "possessiveness": "低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "防守救援",
         "coreStyle": "钩杆牵制",
         "weaponPreference": "井盖钩",
@@ -12053,7 +13746,20 @@
         "stability": 80,
         "social": 52,
         "doom": 32,
-        "violence": 28
+        "violence": 28,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "旧城地下管网的老巡检员，熟悉每一条暗渠和井盖编号，总在别人退后时第一个下去。",
@@ -12212,6 +13918,7 @@
         "possessiveness": "低"
       },
       "combatSystem": {
+        "battleArchetype": "守护型响应者",
         "combatType": "近身护卫",
         "coreStyle": "铁锅格挡反击",
         "weaponPreference": "黑铁锅、锅铲",
@@ -12257,7 +13964,20 @@
         "stability": 84,
         "social": 78,
         "doom": 22,
-        "violence": 45
+        "violence": 45,
+        "imagination": 30,
+        "worldBinding": 30,
+        "identityMix": 30,
+        "nameRealism": 70
+      },
+      "namingProfile": {
+        "primaryCulture": "",
+        "secondaryCulture": "",
+        "templateFamily": "",
+        "registeredName": "",
+        "displayName": "",
+        "alias": "",
+        "codename": ""
       },
       "metaDesign": {
         "characterHook": "荒路补给车队的护卫厨师，能用一口黑铁锅挡下子弹，也能用一锅热饭稳住人心。",

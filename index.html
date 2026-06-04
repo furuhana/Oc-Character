@@ -172,6 +172,38 @@
       </form>
     </dialog>
 
+    <dialog id="sampleLibraryDialog" class="sample-library-dialog">
+      <form method="dialog" class="sample-library-shell">
+        <header class="dialog-head">
+          <div>
+            <h2>&#26679;&#26412;&#24211;</h2>
+            <p>SAMPLE LIBRARY</p>
+          </div>
+          <button class="icon-button" value="close" aria-label="&#20851;&#38381;">&#215;</button>
+        </header>
+        <div class="sample-library-tabs" role="tablist">
+          <button type="button" class="active">&#21629;&#21517;&#26679;&#26412;</button>
+          <button type="button" disabled>&#32844;&#19994;&#35789;&#24211;</button>
+          <button type="button" disabled>&#19990;&#30028;&#27010;&#24565;</button>
+          <button type="button" disabled>&#26381;&#35013;&#35789;&#24211;</button>
+          <button type="button" disabled>&#33021;&#21147;&#36947;&#20855;</button>
+        </div>
+        <div id="sampleCultureTabs" class="sample-culture-tabs" role="tablist"></div>
+        <div id="sampleCategoryTabs" class="sample-category-tabs" role="tablist"></div>
+        <label class="sample-library-editor">
+          <span>&#36755;&#20837;&#26679;&#26412; / SPACE, NEWLINE, COMMA SEPARATED</span>
+          <textarea id="sampleLibraryTextarea" spellcheck="false"></textarea>
+        </label>
+        <footer class="sample-library-actions">
+          <span id="sampleLibraryStatus" class="sample-library-status"></span>
+          <div>
+            <button id="sampleLibraryDedupeBtn" type="button">&#21435;&#37325;&#25972;&#29702;</button>
+            <button id="sampleLibrarySaveBtn" type="button">&#20445;&#23384;&#26679;&#26412;</button>
+          </div>
+        </footer>
+      </form>
+    </dialog>
+
     <aside id="devPanel" class="dev-panel" aria-label="&#24320;&#21457;&#32773;&#27169;&#24335;">
       <header id="devDragHandle">
         <strong>&#24320;&#21457;&#32773;&#27169;&#24335;</strong>
