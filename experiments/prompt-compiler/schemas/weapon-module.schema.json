@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WeaponModule",
+  "type": "object",
+  "required": [
+    "archetype",
+    "roleInfluence",
+    "visualInfluences",
+    "composition",
+    "material",
+    "combatFunction",
+    "weaponName",
+    "imagePromptBreakdown"
+  ],
+  "properties": {
+    "archetype": { "type": "string" },
+    "roleInfluence": { "type": "string" },
+    "visualInfluences": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "composition": {
+      "type": "object",
+      "required": ["mainShape", "handle", "headOrCore", "secondaryParts", "silhouette"],
+      "properties": {
+        "mainShape": { "type": "string" },
+        "handle": { "type": "string" },
+        "headOrCore": { "type": "string" },
+        "secondaryParts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "silhouette": { "type": "string" }
+      }
+    },
+    "material": {
+      "type": "object",
+      "required": ["primary", "secondary", "finish", "wearState"],
+      "properties": {
+        "primary": { "type": "string" },
+        "secondary": { "type": "string" },
+        "finish": { "type": "string" },
+        "wearState": { "type": "string" }
+      }
+    },
+    "combatFunction": { "type": "string" },
+    "weaponName": { "type": "string" },
+    "imagePromptBreakdown": { "type": "string" },
+    "bans": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
+

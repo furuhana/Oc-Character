@@ -1,6 +1,6 @@
 {
   "app": "OC Character Bible Workbench",
-  "savedAt": "2026-06-04T15:45:42.730Z",
+  "savedAt": "2026-06-05T02:55:06.268Z",
   "settings": {
     "starterPrompt": "重点方向：都市为主，奇幻为辅\n体型下限：非常壮、非常厚实、肌肉量很大的成年男性，不要只是普通运动型\n极宽肩、厚胸、粗脖和斜方肌、大上臂、粗前臂、强壮大腿，圆润但有压重力量\n如果用户要更壮，要写成比参考图更大、更厚、更有力量的巨型力量感体格\n生成服装前先读 COSTUME_DESIGN_GUIDE.md，用服装设计门槛判断穿搭\n白色贴身上衣是核心偏好：紧身T-shirt、背心、长袖或其他可扎进腰部结构的紧身白色上衣，要读出胸肩和手臂体积\n如果用户说脱掉外套，就不要再补回夹克、外套、背心、开襟衬衫或其他上身外层\n现实职业或社会角色作为基底\n一个清晰的核心设计：招牌装备、异能、魔法道具或隐藏身份\n现代服装与轻量奇幻细节结合，服装必须好看而不只是实用\n用数值、世界阵营、战斗方式、身体轮廓和反重复交换来决定服装\n京都动画式清爽线条\n干净赛璐璐阴影，阴影概括明确\n整体干净、无灰尘、主动降噪\n颜色清透，角色轮廓易读\n\n默认禁止：少女\n萝莉\n萌系\n偶像风、女性化男性\n瘦弱体型\n普通运动型体格\n修长纤细男主\n写实肌肉渲染\n照片感\n湿身效果\n写实布料纹理、写实材质反光、时装摄影语言\n油亮皮革、湿身材质、拟真塑料或乳胶感\n工业风作为主设计\n大量灰尘、油污、铁锈、脏污质感\n废土、煤灰、混浊阴影",
     "styleReference": {
@@ -121,6 +121,7 @@
       "visualIdentity": {
         "visualKeywords": "厚重钟楼校准师，白色贴身短袖，膝下短工装裤，长袜厚靴，铜秒针扳轮，蓝黑腰封，琥珀秒格光",
         "colorLanguage": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "facialHair": "短胡茬与干净络腮线",
         "faceShape": "宽额方脸，下巴厚",
         "expression": "紧绷专注的开口提醒表情，嘴微张像在数最后三秒，眉头压紧，眼神锐利",
         "eyes": "深眼窝，目光笔直",
@@ -133,7 +134,6 @@
         "hairLength": "短发",
         "hairColor": "黑色",
         "highlight": "暖灰高光",
-        "facialHair": "短胡茬与干净络腮线",
         "bodyType": "非常厚实魁梧的成年男性",
         "muscleLevel": "极高，胸肩手臂和小腿都很厚",
         "bodyFat": "中等偏低，力量型厚度",
@@ -178,22 +178,6 @@
         "traumaSource": "旧城钟塔秒差灾害",
         "recoveryStatus": "恢复良好，但对报时误差极敏感",
         "traumaImpact": "形成强迫式校时习惯和对倒计时的过度责任感"
-      },
-      "behaviorSystem": {
-        "thinkingAction": "用拇指拨动腰侧秒差计",
-        "irritatedAction": "用靴跟敲出四拍节奏",
-        "nervousAction": "下意识数三、二、一",
-        "relaxedAction": "擦拭铜秒针扳轮",
-        "lyingAction": "报时会故意慢半拍",
-        "shyAction": "压低帽檐式地摸额发",
-        "speechSpeed": "短促偏快",
-        "speechTone": "低沉有节拍，像报时",
-        "catchphrase": "再给你三秒。",
-        "battleLine": "错拍了，重来。",
-        "walkStyle": "大步有节奏，靴跟落点很准",
-        "combatStance": "双脚错开，短裤下的小腿绷紧，扳轮横在身前",
-        "idleAction": "每隔十秒看一次秒差计",
-        "attackRhythm": "三拍压近，第四拍横扫，半拍后锁住"
       },
       "lifestyle": {
         "favoriteFood": "葱油饼夹卤牛肉",
@@ -288,11 +272,27 @@
       "metaDesign": {
         "characterHook": "一个穿膝下短工装裤的魁梧钟楼校准师，用铜秒针扳轮把错拍的动作重新压回节奏。",
         "characterConsistencyPrompt": "钟砚泊 always reads as a bulky muscular adult male clock-tower calibration worker with a fitted white short-sleeve top, very short knee-below utility shorts, visible long socks, broad boots, blue-black waist sash, and a copper second-hand ratchet wheel.",
-        "characterImagePromptCn": "单个角色，全身从头到靴子完整可见。现代都市奇幻男性，36岁，中国华北旧城血统，非常厚实魁梧成年男性，极宽肩、厚胸、宽背、粗壮上臂和前臂、强壮大腿、结实暴露小腿，力量型圆润体量，不要纤细或普通运动型。宽额方脸，暖铜小麦肤色，短黑发后梳，左下巴短浅擦伤，短胡茬与干净络腮线；紧绷专注开口提醒表情：嘴微张像在数最后三秒，眉头压紧，眼神锐利。穿贴身白色短袖上衣，塞入宽蓝黑腰封，胸肩手臂轮廓清楚；背后和肩侧有短款蓝黑钟塔肩带披片，不遮胸口。特别裁短的高腰工装短裤，长度到膝下小腿上段，雾灰蓝宽松直筒，裤脚铜色秒格压线，清楚露出白灰长筒工作袜和结实小腿；深蓝黑宽底维护靴。携带铜秒针扳轮，像大型钟表秒针与短柄棘轮结合，旧铜、象牙表盘片、琥珀秒格光，奇幻效果克制。生成当前视觉属性，不写或引用角色姓名。风格参考只用于体型比例和绘画风格，不复制参考角色。纯平面 #00ff00 色键背景，角色和道具不要出现绿色或接近色。干净京都动画感TV动画赛璐璐，上色清爽，线条清晰，阴影简洁，无灰尘油污，无写实布料纹理。不要UI、信息图、图表、角色设定表、文字、标签、图标、场景、多人。",
         "characterImagePrompt": "Single character only. Full body visible from head to boots. Modern urban fantasy adult male clock-tower second-difference calibration worker, age 36, northern Chinese old-city heritage, very bulky thick muscular adult male: extremely broad shoulders, heavy chest, wide back, thick upper arms and forearms, strong thighs, clearly visible muscular calves, substantial rounded power build, not slender and not merely athletic. Broad forehead square face, warm copper wheat skin, short black hair brushed back, short shallow scrape on the left lower chin, short stubble with clean beard line; tense focused open-mouth warning expression: mouth slightly open as if counting the final three seconds, brows pressed tight, sharp eyes. Outfit: tight fitted white short-sleeve top tucked into a wide blue-black waist sash, clean cel-shaded chest, shoulders, and arms readable; short blue-black clock-tower shoulder strap cape pieces only behind the shoulders and sides, not covering the chest. Special shorter pants: high-waist utility shorts cut unusually short for this design, ending just below the knees at the upper calves, loose straight silhouette, fog gray-blue fabric, copper second-mark trim at the hems, clearly exposing white-gray long work socks and strong calves; deep blue-black broad maintenance boots. Prop: copper second-hand ratchet wheel, a large clock second hand combined with a short-handled ratchet wheel, old copper metal, ivory clock-face plates, restrained amber second-mark glow. Urban first, fantasy second. Generate the character from the current visual attributes, without writing or referencing the character's name. The style reference is only for body proportion and drawing style; do not copy the reference character. Pure flat #00ff00 chroma-key background only; do not use green or near-green anywhere on the character, props, glow, reflections, or aura. Clean Kyoto Animation-like TV anime cel shading, crisp linework, fresh colors, tidy shadows, minimal dirt and grime, no realistic fabric texture. No UI, no infographic, no diagram, no chart, no character sheet, no text, no labels, no icons, no scenery, no extra characters.",
         "referenceSheetPrompt": "",
         "propsPrompt": "",
-        "costumePrompt": ""
+        "costumePrompt": "",
+        "characterImagePromptCn": "单个角色，全身从头到靴子完整可见。现代都市奇幻男性，36岁，中国华北旧城血统，非常厚实魁梧成年男性，极宽肩、厚胸、宽背、粗壮上臂和前臂、强壮大腿、结实暴露小腿，力量型圆润体量，不要纤细或普通运动型。宽额方脸，暖铜小麦肤色，短黑发后梳，左下巴短浅擦伤，短胡茬与干净络腮线；紧绷专注开口提醒表情：嘴微张像在数最后三秒，眉头压紧，眼神锐利。穿贴身白色短袖上衣，塞入宽蓝黑腰封，胸肩手臂轮廓清楚；背后和肩侧有短款蓝黑钟塔肩带披片，不遮胸口。特别裁短的高腰工装短裤，长度到膝下小腿上段，雾灰蓝宽松直筒，裤脚铜色秒格压线，清楚露出白灰长筒工作袜和结实小腿；深蓝黑宽底维护靴。携带铜秒针扳轮，像大型钟表秒针与短柄棘轮结合，旧铜、象牙表盘片、琥珀秒格光，奇幻效果克制。生成当前视觉属性，不写或引用角色姓名。风格参考只用于体型比例和绘画风格，不复制参考角色。纯平面 #00ff00 色键背景，角色和道具不要出现绿色或接近色。干净京都动画感TV动画赛璐璐，上色清爽，线条清晰，阴影简洁，无灰尘油污，无写实布料纹理。不要UI、信息图、图表、角色设定表、文字、标签、图标、场景、多人。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指拨动腰侧秒差计",
+        "irritatedAction": "用靴跟敲出四拍节奏",
+        "nervousAction": "下意识数三、二、一",
+        "relaxedAction": "擦拭铜秒针扳轮",
+        "lyingAction": "报时会故意慢半拍",
+        "shyAction": "压低帽檐式地摸额发",
+        "speechSpeed": "短促偏快",
+        "speechTone": "低沉有节拍，像报时",
+        "catchphrase": "再给你三秒。",
+        "battleLine": "错拍了，重来。",
+        "walkStyle": "大步有节奏，靴跟落点很准",
+        "combatStance": "双脚错开，短裤下的小腿绷紧，扳轮横在身前",
+        "idleAction": "每隔十秒看一次秒差计",
+        "attackRhythm": "三拍压近，第四拍横扫，半拍后锁住"
       }
     },
     {
@@ -345,6 +345,7 @@
       "visualIdentity": {
         "visualKeywords": "厚重魁梧馆员，白色贴身短袖，酒红高腰长裤，墨黑短披肩，重力书签锤，琥珀页边光，沉稳咬牙笑",
         "colorLanguage": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "facialHair": "短须和整齐络腮边",
         "faceShape": "宽下颌长方脸",
         "expression": "克制压力式咬牙短笑，嘴角抬起但牙齿轻咬，眉峰压低，眼神像在计算重量",
         "eyes": "深眼窝，眼神锐利",
@@ -357,7 +358,6 @@
         "hairLength": "短发",
         "hairColor": "黑色",
         "highlight": "暖棕高光",
-        "facialHair": "短须和整齐络腮边",
         "bodyType": "厚重魁梧的成年男性",
         "muscleLevel": "极高，像搬运书库也像护卫",
         "bodyFat": "中等偏低，厚实圆润",
@@ -402,22 +402,6 @@
         "traumaSource": "异常电梯贯穿书库楼层",
         "recoveryStatus": "恢复稳定，但仍主动值守封闭楼层",
         "traumaImpact": "对重量、楼层、页码和人数形成强迫式核对"
-      },
-      "behaviorSystem": {
-        "thinkingAction": "用拇指摩挲索引签边缘",
-        "irritatedAction": "把书签锤轻轻压在地面",
-        "nervousAction": "默数楼层和页码",
-        "relaxedAction": "给书脊重新排齐",
-        "lyingAction": "会把眼镜推得过高",
-        "shyAction": "低头整理手套扣",
-        "speechSpeed": "慢",
-        "speechTone": "低沉平稳，像图书馆广播",
-        "catchphrase": "重量会记得位置。",
-        "battleLine": "别动，我把这一页压住。",
-        "walkStyle": "脚步很轻但身体存在感很重",
-        "combatStance": "双脚宽站，书签锤低垂贴近地面",
-        "idleAction": "把金属索引签按顺序拨回腰侧",
-        "attackRhythm": "先压重定身，再短距离横扫，最后封页锁位"
       },
       "lifestyle": {
         "favoriteFood": "牛肉烧饼和热豆浆",
@@ -512,11 +496,27 @@
       "metaDesign": {
         "characterHook": "一个负责封闭高层书库的魁梧馆员，用重力书签锤把楼层像书页一样压住，保护读者撤离。",
         "characterConsistencyPrompt": "陆页钧 always reads as a bulky muscular adult male vertical-library archivist with a fitted white short-sleeve top, black short shoulder cape, deep burgundy high-waist trousers, dark gloves, and an old-gold gravity bookmark hammer.",
-        "characterImagePromptCn": "单个角色，全身从头到靴子完整可见。现代都市奇幻男性，36岁，中国北方城市血统，厚重魁梧成年男性，极宽肩、厚胸、宽背、粗壮上臂和前臂、强壮大腿、大手，力量型圆润体量，不要纤细或普通运动型。宽下颌长方脸，暖橄榄小麦肤色，短黑发侧分，右脸颊近耳处斜短旧伤，短须和整齐络腮边；克制压力式咬牙短笑：嘴角抬起但牙齿轻咬，眉峰压低，眼神像在计算重量。穿贴身白色短袖针织上衣，塞入高腰裤，胸肩手臂轮廓清楚；墨黑短披肩式馆员肩罩只到肩胛下方，正面不遮白色短袖。深酒红高腰直筒长裤，黑褐厚底静音馆员鞋，深褐半掌书库手套，宽黑皮质腰带和金属索引签。携带重力书签锤，像厚重金属书签与短柄锤结合，旧金、象牙白页片、琥珀页边光，奇幻效果克制。生成当前视觉属性，不写或引用角色姓名。风格参考只用于体型比例和绘画风格，不复制参考角色。纯平面 #00ff00 色键背景，角色和道具不要出现绿色或接近色。干净京都动画感TV动画赛璐璐，上色清爽，线条清晰，阴影简洁，无灰尘油污，无写实布料纹理。不要UI、信息图、图表、角色设定表、文字、标签、图标、场景、多人。",
         "characterImagePrompt": "Single character only. Full body visible from head to boots. Modern urban fantasy adult male vertical-library archivist, age 36, northern Chinese urban heritage, bulky thick muscular adult male: extremely broad shoulders, heavy chest, wide back, thick upper arms and forearms, strong thighs, large hands, substantial rounded power build, not slender and not merely athletic. Long rectangular face with broad jaw, warm olive wheat skin, short black side-parted hair, short diagonal old scar on the right cheek near the ear, short beard and neat side beard; controlled pressure expression with a restrained clenched-tooth short smile: mouth corner raised while teeth lightly clench, brows lowered, eyes calculating weight. Outfit: tight fitted white short-sleeve knit top tucked into high-waist trousers, clean cel-shaded chest, shoulders, and arms readable; black short librarian shoulder cape ending below the shoulder blades, not covering the front of the white top. Deep burgundy high-waist straight trousers, black-brown thick quiet librarian shoes, dark brown half-palm archive gloves, wide black leather belt with metal index tags. Prop: gravity bookmark hammer, a heavy metal bookmark combined with a short-handled hammer, old gold metal, ivory page plates, restrained amber page-edge glow. Urban first, fantasy second. Generate the character from the current visual attributes, without writing or referencing the character's name. The style reference is only for body proportion and drawing style; do not copy the reference character. Pure flat #00ff00 chroma-key background only; do not use green or near-green anywhere on the character, props, glow, reflections, or aura. Clean Kyoto Animation-like TV anime cel shading, crisp linework, fresh colors, tidy shadows, minimal dirt and grime, no realistic fabric texture. No UI, no infographic, no diagram, no chart, no character sheet, no text, no labels, no icons, no scenery, no extra characters.",
         "referenceSheetPrompt": "",
         "propsPrompt": "",
-        "costumePrompt": ""
+        "costumePrompt": "",
+        "characterImagePromptCn": "单个角色，全身从头到靴子完整可见。现代都市奇幻男性，36岁，中国北方城市血统，厚重魁梧成年男性，极宽肩、厚胸、宽背、粗壮上臂和前臂、强壮大腿、大手，力量型圆润体量，不要纤细或普通运动型。宽下颌长方脸，暖橄榄小麦肤色，短黑发侧分，右脸颊近耳处斜短旧伤，短须和整齐络腮边；克制压力式咬牙短笑：嘴角抬起但牙齿轻咬，眉峰压低，眼神像在计算重量。穿贴身白色短袖针织上衣，塞入高腰裤，胸肩手臂轮廓清楚；墨黑短披肩式馆员肩罩只到肩胛下方，正面不遮白色短袖。深酒红高腰直筒长裤，黑褐厚底静音馆员鞋，深褐半掌书库手套，宽黑皮质腰带和金属索引签。携带重力书签锤，像厚重金属书签与短柄锤结合，旧金、象牙白页片、琥珀页边光，奇幻效果克制。生成当前视觉属性，不写或引用角色姓名。风格参考只用于体型比例和绘画风格，不复制参考角色。纯平面 #00ff00 色键背景，角色和道具不要出现绿色或接近色。干净京都动画感TV动画赛璐璐，上色清爽，线条清晰，阴影简洁，无灰尘油污，无写实布料纹理。不要UI、信息图、图表、角色设定表、文字、标签、图标、场景、多人。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用拇指摩挲索引签边缘",
+        "irritatedAction": "把书签锤轻轻压在地面",
+        "nervousAction": "默数楼层和页码",
+        "relaxedAction": "给书脊重新排齐",
+        "lyingAction": "会把眼镜推得过高",
+        "shyAction": "低头整理手套扣",
+        "speechSpeed": "慢",
+        "speechTone": "低沉平稳，像图书馆广播",
+        "catchphrase": "重量会记得位置。",
+        "battleLine": "别动，我把这一页压住。",
+        "walkStyle": "脚步很轻但身体存在感很重",
+        "combatStance": "双脚宽站，书签锤低垂贴近地面",
+        "idleAction": "把金属索引签按顺序拨回腰侧",
+        "attackRhythm": "先压重定身，再短距离横扫，最后封页锁位"
       }
     },
     {
@@ -569,6 +569,7 @@
       "visualIdentity": {
         "visualKeywords": "巨型厚实体格，白色贴身背心，单肩背带高腰裤，透明雨尺伞骨，青蓝雨线刻度，稳健露齿笑，地下街防涝员",
         "colorLanguage": "白色上身锚点，石墨灰与雨蓝为主，青蓝透明刻度和少量银色金属作为奇幻点",
+        "facialHair": "整齐短络腮胡",
         "faceShape": "宽方脸，颧骨厚",
         "expression": "开朗防护式露齿短笑，嘴角打开露出牙齿，眉毛上扬但眼神警觉",
         "eyes": "圆而有神，眼尾微上挑",
@@ -581,7 +582,6 @@
         "hairLength": "短寸",
         "hairColor": "黑色",
         "highlight": "冷蓝灰轻微高光",
-        "facialHair": "整齐短络腮胡",
         "bodyType": "巨型厚实力量型成年男性",
         "muscleLevel": "极高，胸背肩臂都很厚",
         "bodyFat": "中等偏低，厚重圆润力量感",
@@ -626,22 +626,6 @@
         "traumaSource": "台风夜地下商街防涝失败",
         "recoveryStatus": "恢复良好，但仍坚持每场雨亲自巡线",
         "traumaImpact": "对水位声、回声和脚下坡度异常敏感"
-      },
-      "behaviorSystem": {
-        "thinkingAction": "用指尖弹腰侧透明刻度尺",
-        "irritatedAction": "把雨靴鞋尖轻敲地面听回声",
-        "nervousAction": "笑声会短促一拍",
-        "relaxedAction": "把水位哨当小口琴吹半个音",
-        "lyingAction": "会夸张地拍胸口",
-        "shyAction": "揉胡茬并转移话题",
-        "speechSpeed": "偏快但清楚",
-        "speechTone": "爽朗低音，带一点玩笑",
-        "catchphrase": "水还没到腰，心先别乱。",
-        "battleLine": "跟着刻度走，别跟着浪跑。",
-        "walkStyle": "大步踏地，脚步像在量坡度",
-        "combatStance": "一手前伸挡人，一手展开半伞雨尺",
-        "idleAction": "侧耳听地面排水声",
-        "attackRhythm": "先测距，侧身顶开，再用伞骨反推水线"
       },
       "lifestyle": {
         "favoriteFood": "热辣牛杂粉",
@@ -736,11 +720,27 @@
       "metaDesign": {
         "characterHook": "一个能听见雨线高度的地下街防涝组长，用透明雨尺伞骨把水位变成可见的安全刻度。",
         "characterConsistencyPrompt": "沈泷衡 always reads as a very bulky muscular adult male flood-line observer with a fitted white sleeveless undershirt, one-strap high-waist flood trousers, broad rain boots, transparent cyan rain-measure umbrella ribs, and a cheerful protective grin.",
-        "characterImagePromptCn": "单个角色，全身从头到靴子完整可见。现代都市奇幻男性，37岁，中国江南与沿海城市血统，巨型厚实力量型成年男性，极宽肩、厚胸、宽背、粗壮上臂和前臂、强壮大腿，体量圆润有压迫感，不要纤细或普通运动型。宽方脸，暖棕小麦肤色，短寸黑发，鼻梁右侧细小横伤，整齐短络腮胡；开朗防护式露齿短笑：嘴角打开露出牙齿，眉毛上扬但眼神警觉。穿贴身白色无袖背心，塞进高腰裤，胸肩手臂完全可读；透明浅雨蓝短斗篷雨片只盖肩后侧，不遮住正面白背心。单肩背带高腰防涝宽裤，石墨灰配雨蓝侧条，裤脚卷到深海蓝黑宽底雨靴上方，腕部防水护带和半指手套，透明刻度软尺腰带。携带雨尺伞骨，像透明量尺展开成半伞形防护架，透明青蓝、银色骨架、低亮水线刻度，奇幻效果克制。生成当前视觉属性，不写或引用角色姓名。风格参考只用于体型比例和绘画风格，不复制参考角色。纯平面 #ff00ff 洋红色键背景，角色和道具不要出现洋红、粉色、紫红或接近色。干净京都动画感TV动画赛璐璐，上色清爽，线条清晰，阴影简洁，无灰尘油污，无写实湿身效果，无写实布料纹理。不要UI、信息图、图表、角色设定表、文字、标签、图标、场景、多人。",
         "characterImagePrompt": "Single character only. Full body visible from head to boots. Modern urban fantasy adult male underground shopping-street flood-line observer, age 37, Jiangnan and coastal Chinese urban heritage, giant thick power build: extremely broad shoulders, heavy chest, wide back, thick upper arms and forearms, strong thighs, substantial rounded mass, not slender and not merely athletic. Wide square face, warm brown wheat skin, short black buzz-cut hair, tiny horizontal scar on the right side of the nose bridge, neat short full beard; cheerful protective short toothy grin: mouth open enough to show teeth, eyebrows raised, eyes still alert. Outfit: tight fitted white sleeveless undershirt tucked into high-waist trousers, chest, shoulders, and arms fully readable; a translucent pale rain-blue short shoulder rain cape only behind the shoulders, not covering the front of the white undershirt. One-strap high-waist flood-control wide trousers, graphite gray with rain-blue side stripe, rolled cuffs above deep sea-blue-black broad rain boots, waterproof wrist guards and half-finger gloves, transparent measuring-tape belt. Prop: rain-measure umbrella ribs, unfolding like a transparent measuring ruler into a half-umbrella protective frame, transparent cyan-blue surfaces, silver ribs, restrained low-glow waterline scale marks. Urban first, fantasy second. Generate the character from the current visual attributes, without writing or referencing the character's name. The style reference is only for body proportion and drawing style; do not copy the reference character. Pure flat #ff00ff magenta chroma-key background only; do not use magenta, pink, violet, fuchsia, or near-magenta anywhere on the character, props, glow, reflections, or aura. Clean Kyoto Animation-like TV anime cel shading, crisp linework, fresh colors, tidy shadows, minimal dirt and grime, no wet-body effect, no realistic fabric texture. No UI, no infographic, no diagram, no chart, no character sheet, no text, no labels, no icons, no scenery, no extra characters.",
         "referenceSheetPrompt": "",
         "propsPrompt": "",
-        "costumePrompt": ""
+        "costumePrompt": "",
+        "characterImagePromptCn": "单个角色，全身从头到靴子完整可见。现代都市奇幻男性，37岁，中国江南与沿海城市血统，巨型厚实力量型成年男性，极宽肩、厚胸、宽背、粗壮上臂和前臂、强壮大腿，体量圆润有压迫感，不要纤细或普通运动型。宽方脸，暖棕小麦肤色，短寸黑发，鼻梁右侧细小横伤，整齐短络腮胡；开朗防护式露齿短笑：嘴角打开露出牙齿，眉毛上扬但眼神警觉。穿贴身白色无袖背心，塞进高腰裤，胸肩手臂完全可读；透明浅雨蓝短斗篷雨片只盖肩后侧，不遮住正面白背心。单肩背带高腰防涝宽裤，石墨灰配雨蓝侧条，裤脚卷到深海蓝黑宽底雨靴上方，腕部防水护带和半指手套，透明刻度软尺腰带。携带雨尺伞骨，像透明量尺展开成半伞形防护架，透明青蓝、银色骨架、低亮水线刻度，奇幻效果克制。生成当前视觉属性，不写或引用角色姓名。风格参考只用于体型比例和绘画风格，不复制参考角色。纯平面 #ff00ff 洋红色键背景，角色和道具不要出现洋红、粉色、紫红或接近色。干净京都动画感TV动画赛璐璐，上色清爽，线条清晰，阴影简洁，无灰尘油污，无写实湿身效果，无写实布料纹理。不要UI、信息图、图表、角色设定表、文字、标签、图标、场景、多人。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "用指尖弹腰侧透明刻度尺",
+        "irritatedAction": "把雨靴鞋尖轻敲地面听回声",
+        "nervousAction": "笑声会短促一拍",
+        "relaxedAction": "把水位哨当小口琴吹半个音",
+        "lyingAction": "会夸张地拍胸口",
+        "shyAction": "揉胡茬并转移话题",
+        "speechSpeed": "偏快但清楚",
+        "speechTone": "爽朗低音，带一点玩笑",
+        "catchphrase": "水还没到腰，心先别乱。",
+        "battleLine": "跟着刻度走，别跟着浪跑。",
+        "walkStyle": "大步踏地，脚步像在量坡度",
+        "combatStance": "一手前伸挡人，一手展开半伞雨尺",
+        "idleAction": "侧耳听地面排水声",
+        "attackRhythm": "先测距，侧身顶开，再用伞骨反推水线"
       }
     },
     {
@@ -793,6 +793,7 @@
       "visualIdentity": {
         "visualKeywords": "极宽肩厚胸，白色贴身长袖，高腰暖灰阔腿裤，朱红门槛线，折叠门槛盾，低亮琥珀光印，温和但有压迫感的引导者",
         "colorLanguage": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "facialHair": "修短的下巴胡茬",
         "faceShape": "方圆脸，下颌厚实",
         "expression": "保护性低声指令表情，嘴微张像在让人排队通过，眉峰下压，眼神稳定警觉",
         "eyes": "狭长而清亮，眼尾微垂",
@@ -805,7 +806,6 @@
         "hairLength": "短发，颈后干净",
         "hairColor": "黑色",
         "highlight": "无挑染，仅有干净高光",
-        "facialHair": "修短的下巴胡茬",
         "bodyType": "非常魁梧厚实的成年男性",
         "muscleLevel": "极高，厚胸粗臂强腿",
         "bodyFat": "中低体脂，力量型圆润体量",
@@ -850,22 +850,6 @@
         "traumaSource": "异常空间灾害后的应急转移",
         "recoveryStatus": "仍在补偿式工作，但已能稳定训练新人",
         "traumaImpact": "形成强迫式点名习惯和对门、线、阈值的敏感"
-      },
-      "behaviorSystem": {
-        "thinkingAction": "拇指轻按腰封钥牌",
-        "irritatedAction": "把门槛盾向地面轻磕一下",
-        "nervousAction": "低声重复编号和人数",
-        "relaxedAction": "用保温杯杯盖量茶水",
-        "lyingAction": "视线会看向门框上缘",
-        "shyAction": "摸后颈并把声音压得更低",
-        "speechSpeed": "慢而清楚",
-        "speechTone": "低沉温和，带课堂式停顿",
-        "catchphrase": "先过线，再说话。",
-        "battleLine": "门在我这边，别回头。",
-        "walkStyle": "重心稳，步幅大，像在给队伍开路",
-        "combatStance": "半侧身护住身后，盾牌低位展开",
-        "idleAction": "用指节敲两下腰封确认门槛方向",
-        "attackRhythm": "先封路，再推离，最后短促反击"
       },
       "lifestyle": {
         "favoriteFood": "番茄牛腩面",
@@ -960,11 +944,27 @@
       "metaDesign": {
         "characterHook": "一个把避难所夜校秩序当作战斗规则的魁梧引导员，用折叠门槛盾确认谁能安全跨过异常通道。",
         "characterConsistencyPrompt": "司澄阙 always reads as a very bulky muscular adult male night-school shelter guide with a fitted white long-sleeve top, warm gray high-waist trousers, dark teal-black waist structure, amber threshold markings, and a folding threshold shield.",
-        "characterImagePromptCn": "单个角色，全身从头到靴子完整可见。现代都市奇幻男性，34岁，中国华东城市血统，非常魁梧厚实的成年男性，极宽肩、厚胸、粗颈和斜方肌、粗壮上臂与前臂、强壮大腿，力量型圆润体量，不要纤细或普通运动型。方圆脸，暖小麦肤色，短后梳黑发，左眉外侧短浅旧伤，修短下巴胡茬；保护性低声指令表情：嘴微张像在让人排队通过，眉峰下压，眼神稳定警觉。穿贴身白色长袖训练衫，干净塞入腰部结构，胸肩和手臂轮廓清楚；无外套，禁止夹克、马甲、开衫、长外套、开襟衬衫。高腰暖灰阔腿制服裤，深青黑宽腰封，深青黑宽底室内靴，半掌白灰引导手套。携带折叠门槛盾，盾展开像便携门框和低矮护栏，暖灰金属、朱红刻线、琥珀低光通行线，奇幻效果克制。生成当前视觉属性，不写或引用角色姓名。风格参考只用于体型比例和绘画风格，不复制参考角色。纯平面 #00ff00 色键背景，角色和道具不要出现绿色或接近色。干净京都动画感TV动画赛璐璐，上色清爽，线条清晰，阴影简洁，无灰尘油污，无写实布料纹理。不要UI、信息图、图表、角色设定表、文字、标签、图标、场景、多人。",
         "characterImagePrompt": "Single character only. Full body visible from head to boots. Modern urban fantasy adult male shelter night-school guide, age 34, East Chinese urban heritage, very bulky muscular power build: extremely broad shoulders, heavy chest, thick neck and traps, large upper arms and forearms, strong thighs, substantial rounded mass, not slender and not merely athletic. Square-round face, warm wheat skin, short black hair brushed back with one loose forelock, short shallow scar outside the left eyebrow, neat short chin stubble; protective low-command expression: mouth slightly open as if telling people to pass in order, brows lowered, steady alert eyes. Outfit: tight fitted white long-sleeve training shirt tucked into the waist structure, clean cel-shaded torso contours visible across chest, shoulders, and arms; no outerwear, ban jacket, vest, cardigan, long coat, open shirt, or overshirt. High-waist warm gray wide-leg uniform trousers, dark teal-black wide waist sash, dark teal-black broad indoor boots, white-gray half-palm guide gloves. Prop: folding threshold shield unfolded like a portable doorframe and low guardrail, warm gray metal, vermilion etched threshold lines, restrained amber low-glow passage line. Urban first, fantasy second. Generate the character from the current visual attributes, without writing or referencing the character's name. The style reference is only for body proportion and drawing style; do not copy the reference character. Pure flat #00ff00 chroma-key background only; do not use green or near-green anywhere on the character, props, glow, reflections, or aura. Clean Kyoto Animation-like TV anime cel shading, crisp linework, fresh colors, tidy shadows, minimal dirt and grime, no realistic fabric texture. No UI, no infographic, no diagram, no chart, no character sheet, no text, no labels, no icons, no scenery, no extra characters.",
         "referenceSheetPrompt": "",
         "propsPrompt": "",
-        "costumePrompt": ""
+        "costumePrompt": "",
+        "characterImagePromptCn": "单个角色，全身从头到靴子完整可见。现代都市奇幻男性，34岁，中国华东城市血统，非常魁梧厚实的成年男性，极宽肩、厚胸、粗颈和斜方肌、粗壮上臂与前臂、强壮大腿，力量型圆润体量，不要纤细或普通运动型。方圆脸，暖小麦肤色，短后梳黑发，左眉外侧短浅旧伤，修短下巴胡茬；保护性低声指令表情：嘴微张像在让人排队通过，眉峰下压，眼神稳定警觉。穿贴身白色长袖训练衫，干净塞入腰部结构，胸肩和手臂轮廓清楚；无外套，禁止夹克、马甲、开衫、长外套、开襟衬衫。高腰暖灰阔腿制服裤，深青黑宽腰封，深青黑宽底室内靴，半掌白灰引导手套。携带折叠门槛盾，盾展开像便携门框和低矮护栏，暖灰金属、朱红刻线、琥珀低光通行线，奇幻效果克制。生成当前视觉属性，不写或引用角色姓名。风格参考只用于体型比例和绘画风格，不复制参考角色。纯平面 #00ff00 色键背景，角色和道具不要出现绿色或接近色。干净京都动画感TV动画赛璐璐，上色清爽，线条清晰，阴影简洁，无灰尘油污，无写实布料纹理。不要UI、信息图、图表、角色设定表、文字、标签、图标、场景、多人。"
+      },
+      "behaviorSystem": {
+        "thinkingAction": "拇指轻按腰封钥牌",
+        "irritatedAction": "把门槛盾向地面轻磕一下",
+        "nervousAction": "低声重复编号和人数",
+        "relaxedAction": "用保温杯杯盖量茶水",
+        "lyingAction": "视线会看向门框上缘",
+        "shyAction": "摸后颈并把声音压得更低",
+        "speechSpeed": "慢而清楚",
+        "speechTone": "低沉温和，带课堂式停顿",
+        "catchphrase": "先过线，再说话。",
+        "battleLine": "门在我这边，别回头。",
+        "walkStyle": "重心稳，步幅大，像在给队伍开路",
+        "combatStance": "半侧身护住身后，盾牌低位展开",
+        "idleAction": "用指节敲两下腰封确认门槛方向",
+        "attackRhythm": "先封路，再推离，最后短促反击"
       }
     },
     {
