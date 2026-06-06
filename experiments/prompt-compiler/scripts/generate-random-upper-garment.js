@@ -1,5 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const {
+  defaultDesignLanguagePath,
+  formatDesignLanguageChecks,
+  formatDesignLanguageSummary,
+  getUpperGarmentLimits,
+  loadDesignLanguage,
+} = require("./design-language");
 
 const defaultLibraryPath = path.resolve(__dirname, "../libraries/fashion-upper-samples.json");
 const defaultOutputPath = path.resolve(__dirname, "../output/latest-upper-garment-ai-brief.md");
@@ -89,17 +96,21 @@ function traditionalPickCount(culturalLevel) {
 }
 
 function buildUpperGarmentModule(library, rng, options = {}) {
+  const designLanguage = options.designLanguage || loadDesignLanguage();
+  const designLimits = getUpperGarmentLimits(designLanguage);
   const influence = findByName(library.influenceSources, options.influence) || pick(library.influenceSources, rng);
   const culturalLevel = pickCulturalLevel(library, rng, options.cultureLevel);
   const traditionalInfluences = pickMany(library.traditionalInfluenceLibrary, traditionalPickCount(culturalLevel), rng);
-  const designFocus = pickMany(library.designFocus, 2, rng);
-  const structuralFeatures = pickMany(library.structuralFeatures, 2, rng);
-  const detailComponents = pickMany(library.detailComponents, 3, rng);
+  const designFocus = pickMany(library.designFocus, designLimits.focusLimit, rng);
+  const structuralFeatures = pickMany(library.structuralFeatures, designLimits.structureLimit, rng);
+  const detailComponents = pickMany(library.detailComponents, designLimits.detailLimit, rng);
   const constructionVerbs = pickMany(library.constructionVerbs, 5, rng);
   const visualMaterials = pickMany(influence.visualMaterials, Math.min(3, influence.visualMaterials.length), rng);
   const influenceDetails = pickMany(influence.details, Math.min(3, influence.details.length), rng);
 
   return {
+    designLanguage,
+    designLimits,
     baseArchetype: pickBaseTop(library, rng, culturalLevel, options.base),
     baseCategory: culturalLevel.level <= 1 ? "modern" : "traditional",
     culturalAdaptationLevel: culturalLevel,
@@ -130,30 +141,38 @@ function buildUpperGarmentModule(library, rng, options = {}) {
 }
 
 function formatAiBrief(module, seed) {
+  const designLanguageChecks = formatDesignLanguageChecks(module.designLanguage);
   return [
     "# 上衣模块 AI 发挥测试 Brief",
     "",
-    "请你根据下面的结构化上衣模块进行创作。这个测试的目标是观察 AI 遇到服装基础款、轮廓、裁剪、细节和影响源时，会如何做设计取舍，并把结果编译成短的生图提示词。",
+    "请根据下面的结构化上衣模块进行创作。这个测试用于观察 AI 如何在服装基础款、轮廓、裁剪、细节、影响源与全局设计语言之间做取舍，并把结果压缩成短的生图提示词。",
     "",
     "重要要求：",
     "- 不要照抄字段，不要把所有素材都塞进最终提示词。",
     "- 先写可追踪的设计思考日志，再抽取视觉要点，最后压缩成最终提示词。",
     "- 服装最终提示词只写上衣/外套本体，不写人物身体、脸、动作、背景、画风或世界观。",
-    "- 基础上衣方向默认兼容：干净白色贴身内搭可从外套下露出，但不要让外套完全遮住胸口结构。",
+    "- 基础上衣方向默认兼容干净白色贴身内搭可从外套下露出，但不要让外套完全遮住胸口结构。",
     "- 目标是现代都市服装 + 传统结构语言 + 轻度奇幻设计的混合，不要默认做成 cosplay 或历史复原服。",
-    "- 文化改造程度决定传统元素比例；如果等级低，只保留少量传统细节；如果等级高，也要保持角色可穿的现代设计感。",
-    "- 视觉重点最多保留 1-2 个，结构特征最多保留 2 个，细节组件最多保留 2-3 个。",
-    "- 材质语言和闭合系统用于让衣服更像真实衣物；不要把闭合系统当成额外装饰乱堆。",
-    "- 如果视觉噪音高，请主动舍弃次要细节；如果行动便利高，请避免过长、过硬、过复杂的结构。",
-    "- 最终提示词不要出现解释、规则、括号说明、UI、文字标签或抽象概念。",
+    "- 文化改造程度决定传统元素比例；等级低时只保留少量传统细节，等级高时也要保持角色可穿的现代设计感。",
+    "- 材质语言和闭合系统用于让衣服更像真实衣物，不要把闭合系统当成额外装饰乱堆。",
+    "- 最终提示词不要出现解释、规则、括号说明、AI、文字标签或抽象概念。",
+    "",
+    "Design Language Layer / 全局设计语言：",
+    formatDesignLanguageSummary(module.designLanguage),
+    "",
+    "上衣模块接入要求：",
+    `- 版型优先级：${module.designLimits.shouldPreferLargeShapes ? "优先清晰大版型、大轮廓、大块面" : "保持版型与细节平衡"}`,
+    `- 视觉重点上限：${module.designLimits.focusLimit}`,
+    `- 结构特征上限：${module.designLimits.structureLimit}`,
+    `- 细节组件上限：${module.designLimits.detailLimit}`,
+    `- 表面噪音：${module.designLimits.shouldReduceNoise ? "主动动画化降噪，避免写实纹理和密集小符号" : "允许更多纹理，但仍需保持可读"}`,
     "",
     "动画化降噪规则：",
     "- 最终提示词必须适配干净 TV 动画赛璐璐风格。",
     "- 把复杂材质转写为动画可读的大色块和简单质感，不要写实材质堆叠。",
     "- 每件上衣最终最多保留 1 个结构重点 + 1 个细节重点 + 1 个材质方向。",
     "- 避免写实化词汇：高精度、复杂纹理、真实皮革纹、密集缝线、硬核工业结构、过多金属件。",
-    "- 优先使用：平整布料、简洁拼接、少量金属扣、浅色压线、清晰轮廓、干净大块面。",
-    "- 如果抽到很复杂的材质或结构，请在最终提示词里主动降级为更简单的动画表达。",
+    "- 如果抽到复杂材质或结构，请在最终提示词里主动降级为更简单的动画表达。",
     "",
     "最终提示词压缩规则：",
     "- 最终提示词最多 1 句话，中文建议 70-130 字，绝对不要超过 150 个中文字。",
@@ -225,12 +244,13 @@ function formatAiBrief(module, seed) {
     "最终提示词：",
     "",
     "检查提醒：",
+    ...designLanguageChecks.map((item) => `- ${item}`),
   ].join("\n");
 }
 
 function printUsage() {
   console.log("Usage:");
-  console.log("node experiments/prompt-compiler/scripts/generate-random-upper-garment.js [--seed test-1] [--base 飞行员夹克] [--influence 天文馆穹幕放映员] [--culture-level 1]");
+  console.log("node experiments/prompt-compiler/scripts/generate-random-upper-garment.js [--seed test-1] [--base Hoodie] [--influence 花匠] [--culture-level 1] [--design-language experiments/prompt-compiler/config/design-language.json]");
 }
 
 function main() {
@@ -242,11 +262,14 @@ function main() {
 
   const seed = optionValue(args, "seed") || `${Date.now()}`;
   const libraryPath = path.resolve(process.cwd(), optionValue(args, "library") || defaultLibraryPath);
+  const designLanguagePath = path.resolve(process.cwd(), optionValue(args, "design-language") || defaultDesignLanguagePath);
   const library = readJson(libraryPath);
+  const designLanguage = loadDesignLanguage(designLanguagePath);
   const module = buildUpperGarmentModule(library, createRng(seed), {
     base: optionValue(args, "base"),
     influence: optionValue(args, "influence"),
     cultureLevel: numberOption(args, "culture-level"),
+    designLanguage,
   });
 
   const outputPath = path.resolve(process.cwd(), optionValue(args, "output") || defaultOutputPath);
