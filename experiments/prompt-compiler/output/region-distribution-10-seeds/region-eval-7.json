@@ -1,6 +1,6 @@
 {
   "version": "2.0-skeleton-mvp",
-  "seed": "bottom-image-test-1",
+  "seed": "region-eval-7",
   "designLanguage": {
     "shapeHierarchy": "large_shape_dominant",
     "silhouettePriority": "high",
@@ -18,27 +18,67 @@
     "moduleName": "themeDirectionLayer",
     "status": "active",
     "themeCategory": "festival_security",
-    "environmentFlavor": "京都老街",
-    "visualMotifs": [
-      "护符",
-      "纸片",
-      "地方徽章"
+    "themeLabel": "节庆安保",
+    "regionContext": "mountain_town",
+    "regionLabel": "山城",
+    "environmentFlavor": "石阶",
+    "environmentKeywords": [
+      "山城坡道",
+      "石阶",
+      "雾气街口",
+      "旅舍门前"
     ],
-    "materialMood": "厚针织与布带",
+    "visualMotifs": [
+      "地方徽章",
+      "木牌",
+      "旧钥匙"
+    ],
+    "materialMood": "皮革边与羊毛",
+    "materialHints": [
+      "棉布",
+      "皮革边",
+      "帆布",
+      "羊毛"
+    ],
+    "colorHints": [
+      "深绿",
+      "雾灰",
+      "旧白",
+      "棕色"
+    ],
+    "structuralHints": [
+      "厚外套",
+      "宽松裤",
+      "卷袖",
+      "腰带"
+    ],
+    "motifHints": [
+      "木牌",
+      "旧钥匙",
+      "旅舍牌",
+      "街灯"
+    ],
     "fantasyFlavor": "仪式感奇幻",
-    "culturalInfluenceLevel": 2,
+    "culturalInfluenceLevel": 1,
     "modernityLevel": "traditional_modern",
-    "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "styleHint": "modern_workwear",
+    "avoidIfNotSelected": [
+      "神社",
+      "京都",
+      "鸟居"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有山城节庆安保的气质，环境指向石阶，以皮革边与羊毛和深绿、雾灰配色作为主题基础，以地方徽章、木牌、旧钥匙作为少量集中视觉母题。"
   },
   "outfitCoherenceCheck": {
     "moduleName": "outfitCoherenceCheck",
     "status": "active",
     "scope": "topModule + outerwearModule + themeDirectionLayer only",
-    "primaryStyleSource": "traditional_modern",
-    "secondaryStyleSource": "fantasy_worker",
+    "primaryStyleSource": "modern_workwear",
+    "secondaryStyleSource": "traditional_modern",
     "dominantModule": "outerwearModule",
     "supportingModule": "topModule",
-    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 2: one upper-body module may carry visible traditional structure; the other should stay modern and simple.",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
     "motifMainPlacement": "外套肩部或领口区域",
     "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
     "reducedModules": [
@@ -55,7 +95,7 @@
       "outerwear is medium/heavy, so topModule should support instead of competing",
       "motifs should be limited to one main placement and one echo placement"
     ],
-    "styleSummary": "整体以传统现代混合为主，辅以都市奇幻劳动者，外套负责主视觉，内搭降低复杂度，只做结构衬托，护符和纸片元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+    "styleSummary": "整体以现代工装为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，地方徽章和木牌元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
   },
   "characterLayer": {
     "moduleName": "characterLayer",
@@ -159,83 +199,122 @@
       "shouldPreferLargeShapes": true,
       "shouldReduceNoise": true
     },
-    "baseArchetype": "交领短衫",
-    "baseCategory": "traditional",
+    "baseArchetype": "西装外套",
+    "baseCategory": "modern",
     "culturalAdaptationLevel": {
-      "level": 2,
-      "label": "传统基础款现代化",
-      "description": "传统基础款用现代材质、短句式和都市比例改写。"
+      "level": 1,
+      "label": "现代基础款 + 少量传统细节",
+      "description": "现代基础款为主，只加入 1 个传统细节。"
     },
     "traditionalInfluences": [
-      "斜襟",
-      "宽袖"
+      "腰间束带"
     ],
-    "silhouette": "宽肩窄摆",
+    "silhouette": "高腰短摆",
     "cutLanguage": "包裹式",
-    "materialLanguage": "防撕裂布",
+    "materialLanguage": "棉布",
     "closureSystem": "偏置拉链",
     "designFocus": [
-      "口袋",
+      "领子",
       "袖子"
     ],
     "structuralFeatures": [
-      "延长下摆",
-      "假两件"
+      "背部开片",
+      "双层领"
     ],
     "detailComponents": [
       "袖标",
-      "拉链"
+      "明线"
     ],
-    "wearState": "卷袖",
-    "personalHabit": "习惯让衣摆不完全对齐",
-    "influenceSource": "旧街修表师",
+    "wearState": "领口打开",
+    "personalHabit": "喜欢把外套绑腰上",
+    "influenceSource": "港口灯塔检修员",
     "influenceMaterials": [
-      "蓝钢色扣件",
-      "黑胡桃木色皮革",
-      "透明玻璃感饰片"
+      "海风磨损金属",
+      "旧铜色扣件",
+      "厚玻璃感透明片"
     ],
     "influenceDetails": [
-      "小齿轮袖扣",
-      "蓝钢螺丝状铆钉",
-      "发条形刺绣"
+      "灯塔镜片形胸袋",
+      "盐雾白边",
+      "信号旗色小布片"
     ],
     "constructionVerbs": [
-      "折叠",
-      "拼接",
-      "收束腰线",
-      "扣合",
-      "隐藏"
+      "形成护片",
+      "延伸下摆",
+      "外露",
+      "压线",
+      "形成假两件层次"
     ],
     "judgement": {
       "visualNoiseLevel": "高",
-      "formality": "半正式",
+      "formality": "休闲",
       "layeringDepth": "双层",
-      "mobility": "中",
-      "fantasyIntensity": "高",
+      "mobility": "高",
+      "fantasyIntensity": "中",
       "cleanliness": "做旧"
     },
     "avoid": [
-      "不要出现可读数字",
-      "不要只画钟表图案",
-      "不要机械件过密"
+      "不要文字标识",
+      "不要画成航海制服",
+      "不要大面积灯塔图案"
     ],
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
       "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+      "themeLabel": "节庆安保",
+      "regionContext": "mountain_town",
+      "regionLabel": "山城",
+      "environmentFlavor": "石阶",
+      "environmentKeywords": [
+        "山城坡道",
+        "石阶",
+        "雾气街口",
+        "旅舍门前"
       ],
-      "materialMood": "厚针织与布带",
+      "visualMotifs": [
+        "地方徽章",
+        "木牌",
+        "旧钥匙"
+      ],
+      "materialMood": "皮革边与羊毛",
+      "materialHints": [
+        "棉布",
+        "皮革边",
+        "帆布",
+        "羊毛"
+      ],
+      "colorHints": [
+        "深绿",
+        "雾灰",
+        "旧白",
+        "棕色"
+      ],
+      "structuralHints": [
+        "厚外套",
+        "宽松裤",
+        "卷袖",
+        "腰带"
+      ],
+      "motifHints": [
+        "木牌",
+        "旧钥匙",
+        "旅舍牌",
+        "街灯"
+      ],
       "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
+      "culturalInfluenceLevel": 1,
       "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有山城节庆安保的气质，环境指向石阶，以皮革边与羊毛和深绿、雾灰配色作为主题基础，以地方徽章、木牌、旧钥匙作为少量集中视觉母题。"
     },
-    "themePromptHint": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "themePromptHint": "整体带有山城节庆安保的气质，环境指向石阶，以皮革边与羊毛和深绿、雾灰配色作为主题基础，以地方徽章、木牌、旧钥匙作为少量集中视觉母题。"
   },
   "outerwearModule": {
     "moduleName": "outerwearModule",
@@ -254,20 +333,20 @@
       "complexityBudget": "moderate"
     },
     "presence": "medium",
-    "baseType": "work jacket",
-    "silhouette": "wide shoulder",
-    "length": "cropped",
-    "cutLanguage": "wrap style",
+    "baseType": "cropped jacket",
+    "silhouette": "A-line",
+    "length": "waist length",
+    "cutLanguage": "modular",
     "designFocus": {
-      "primary": "shoulder",
-      "secondary": "collar"
+      "primary": "pocket",
+      "secondary": "hem"
     },
     "structuralFeature": [
-      "fake two-piece"
+      "detachable panel"
     ],
-    "material": "leather trim",
+    "material": "utility fabric",
     "finish": "clean matte",
-    "wearState": "draped over shoulders",
+    "wearState": "sleeves rolled",
     "detailScale": "medium_large",
     "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
     "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
@@ -275,24 +354,64 @@
       "moduleName": "themeDirectionLayer",
       "status": "active",
       "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+      "themeLabel": "节庆安保",
+      "regionContext": "mountain_town",
+      "regionLabel": "山城",
+      "environmentFlavor": "石阶",
+      "environmentKeywords": [
+        "山城坡道",
+        "石阶",
+        "雾气街口",
+        "旅舍门前"
       ],
-      "materialMood": "厚针织与布带",
+      "visualMotifs": [
+        "地方徽章",
+        "木牌",
+        "旧钥匙"
+      ],
+      "materialMood": "皮革边与羊毛",
+      "materialHints": [
+        "棉布",
+        "皮革边",
+        "帆布",
+        "羊毛"
+      ],
+      "colorHints": [
+        "深绿",
+        "雾灰",
+        "旧白",
+        "棕色"
+      ],
+      "structuralHints": [
+        "厚外套",
+        "宽松裤",
+        "卷袖",
+        "腰带"
+      ],
+      "motifHints": [
+        "木牌",
+        "旧钥匙",
+        "旅舍牌",
+        "街灯"
+      ],
       "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
+      "culturalInfluenceLevel": 1,
       "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有山城节庆安保的气质，环境指向石阶，以皮革边与羊毛和深绿、雾灰配色作为主题基础，以地方徽章、木牌、旧钥匙作为少量集中视觉母题。"
     },
     "themeMotifs": [
-      "护符",
-      "纸片"
+      "地方徽章",
+      "木牌"
     ],
-    "materialMood": "厚针织与布带",
-    "promptFragment": "medium work jacket, wide shoulder silhouette, cropped, wrap style cut, leather trim with clean matte, main focus shoulder, secondary focus collar, large structure: fake two-piece, theme motifs: 护符 / 纸片, material mood: 厚针织与布带, draped over shoulders, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+    "materialMood": "皮革边与羊毛",
+    "promptFragment": "medium cropped jacket, A-line silhouette, waist length, modular cut, utility fabric with clean matte, main focus pocket, secondary focus hem, large structure: detachable panel, theme motifs: 地方徽章 / 木牌, material mood: 皮革边与羊毛, sleeves rolled, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
   },
   "bottomModule": {
     "moduleName": "bottomModule",
@@ -314,40 +433,80 @@
       "moduleName": "themeDirectionLayer",
       "status": "active",
       "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+      "themeLabel": "节庆安保",
+      "regionContext": "mountain_town",
+      "regionLabel": "山城",
+      "environmentFlavor": "石阶",
+      "environmentKeywords": [
+        "山城坡道",
+        "石阶",
+        "雾气街口",
+        "旅舍门前"
       ],
-      "materialMood": "厚针织与布带",
+      "visualMotifs": [
+        "地方徽章",
+        "木牌",
+        "旧钥匙"
+      ],
+      "materialMood": "皮革边与羊毛",
+      "materialHints": [
+        "棉布",
+        "皮革边",
+        "帆布",
+        "羊毛"
+      ],
+      "colorHints": [
+        "深绿",
+        "雾灰",
+        "旧白",
+        "棕色"
+      ],
+      "structuralHints": [
+        "厚外套",
+        "宽松裤",
+        "卷袖",
+        "腰带"
+      ],
+      "motifHints": [
+        "木牌",
+        "旧钥匙",
+        "旅舍牌",
+        "街灯"
+      ],
       "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
+      "culturalInfluenceLevel": 1,
       "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有山城节庆安保的气质，环境指向石阶，以皮革边与羊毛和深绿、雾灰配色作为主题基础，以地方徽章、木牌、旧钥匙作为少量集中视觉母题。"
     },
     "outfitCoherenceCheck": {
-      "primaryStyleSource": "traditional_modern",
+      "primaryStyleSource": "modern_workwear",
       "dominantModule": "outerwearModule",
       "supportingModule": "topModule"
     },
     "presence": "developed",
-    "baseType": "wrap-panel trousers",
-    "silhouette": "soft daily",
+    "baseType": "relaxed utility pants",
+    "silhouette": "relaxed",
     "length": "full length",
-    "waistStructure": "tied waist",
-    "legStructure": "panel division",
-    "hemTreatment": "open hem",
+    "waistStructure": "practical belt loops",
+    "legStructure": "utility pocket panel",
+    "hemTreatment": "clean hem",
     "material": "cotton twill",
-    "wearState": "relaxed daily",
+    "wearState": "lightly worn",
     "designFocus": [
-      "knee area"
+      "hem / ankle"
     ],
     "motifUsage": "single echo placement",
-    "motifEcho": "护符 at hem edge",
+    "motifEcho": "地方徽章 at waist edge",
     "complexityLevel": "simple",
     "role": "support full-body silhouette without competing with upper body",
-    "promptFragment": "wrap-panel trousers, soft daily silhouette, full length, tied waist, panel division, open hem, cotton twill, relaxed daily, focus knee area, single echo placement: 护符 at hem edge, simple complexity"
+    "promptFragment": "relaxed utility pants, relaxed silhouette, full length, practical belt loops, utility pocket panel, clean hem, cotton twill, lightly worn, focus hem / ankle, single echo placement: 地方徽章 at waist edge, simple complexity"
   },
   "footwearModule": {
     "moduleName": "footwearModule",
@@ -427,6 +586,7 @@
     },
     "intensity": "仪式感奇幻",
     "source": "festival_security",
+    "regionContext": "mountain_town",
     "rule": "support the outfit and prop design without overwhelming the character"
   },
   "styleLayer": {

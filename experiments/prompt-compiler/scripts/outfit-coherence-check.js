@@ -50,19 +50,43 @@ function isStrongOuterwear(outerwearModule) {
 
 function styleFromTheme(themeDirectionLayer) {
   if (!themeDirectionLayer) return "urban_casual";
-  if (["harbor_worker", "old_city_worker", "postal_courier"].includes(themeDirectionLayer.themeCategory)) return "modern_workwear";
+  if (themeDirectionLayer.styleHint) return themeDirectionLayer.styleHint;
+  if (["night_patrol", "market_guard", "warehouse_logistics_guard", "postal_courier"].includes(themeDirectionLayer.themeCategory)) return "modern_workwear";
   if (["underground_fitness_trainer"].includes(themeDirectionLayer.themeCategory)) return "sports_utility";
-  if (["bathhouse_keeper", "festival_security", "mountain_lodge_keeper"].includes(themeDirectionLayer.themeCategory)) return "traditional_modern";
+  if (["bathhouse_keeper", "festival_security", "dawn_gatekeeper"].includes(themeDirectionLayer.themeCategory)) return "soft_daily";
   if (["greenhouse_gardener", "clock_tower_maintainer"].includes(themeDirectionLayer.themeCategory)) return "fantasy_worker";
-  if (["night_market_vendor", "neighborhood_guardian", "book_repair_binder"].includes(themeDirectionLayer.themeCategory)) return "soft_daily";
+  if (["book_repair_binder"].includes(themeDirectionLayer.themeCategory)) return "soft_daily";
   return "urban_casual";
 }
 
 function chooseSecondaryStyle(primaryStyleSource, themeDirectionLayer, topModule) {
   const topTraditional = isTraditionalTop(topModule);
+  const culturalLevel = themeDirectionLayer ? themeDirectionLayer.culturalInfluenceLevel : 0;
+  const traditionalRegions = [
+    "japanese_small_town",
+    "kyoto_old_street",
+    "central_asian_market",
+    "north_african_medina",
+    "middle_eastern_bazaar",
+    "indian_old_market",
+  ];
   if (topTraditional && primaryStyleSource !== "traditional_modern") return "traditional_modern";
+  if (
+    culturalLevel >= 2
+    && themeDirectionLayer
+    && traditionalRegions.includes(themeDirectionLayer.regionContext)
+    && primaryStyleSource !== "traditional_modern"
+  ) return "traditional_modern";
   if (themeDirectionLayer && themeDirectionLayer.fantasyFlavor !== "现实主义" && primaryStyleSource !== "fantasy_worker") return "fantasy_worker";
   return "";
+}
+
+function culturalRuleText(level) {
+  if (level === 0) return "culturalInfluenceLevel 0: keep upper-body styling modern; traditional structure should not drive top or outerwear.";
+  if (level === 1) return "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.";
+  if (level === 2) return "culturalInfluenceLevel 2: one upper-body module may carry visible traditional structure; the other should stay modern and simple.";
+  if (level === 3) return "culturalInfluenceLevel 3: broader traditional silhouette is allowed, but visual hierarchy must still stay readable.";
+  return "culturalInfluenceLevel fallback: keep traditional influence controlled and avoid stacking it across modules.";
 }
 
 function styleLabel(style) {
@@ -89,27 +113,43 @@ function buildOutfitCoherenceCheck({ themeDirectionLayer, topModule, outerwearMo
   const motifEchoPlacement = motifs.length > 1 ? "腰带或下摆边缘的一处小呼应" : "";
   const reducedModules = [];
   const warningMessages = [];
+  const promptCoherenceNotes = [];
 
   if (outerwearDominant) {
     reducedModules.push("topModule");
     warningMessages.push("outerwear is medium/heavy, so topModule should support instead of competing");
+    promptCoherenceNotes.push("Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.");
+    promptCoherenceNotes.push("Top module should keep only one main structural idea and avoid competing details.");
   }
 
   const culturalLevel = themeDirectionLayer ? themeDirectionLayer.culturalInfluenceLevel : 1;
+  const culturalInfluenceRuleApplied = culturalRuleText(culturalLevel);
   if (culturalLevel === 1 && topTraditional && outerwearStrong) {
     reducedModules.push("outerwearModule");
     warningMessages.push("culturalInfluenceLevel 1 allows traditional detail in only one major upper-body module");
+    promptCoherenceNotes.push("Because cultural level is 1, traditional influence is restricted to one upper-body module.");
   }
   if (culturalLevel === 2 && topTraditional && outerwearStrong) {
     reducedModules.push(dominantModule === "outerwearModule" ? "topModule" : "outerwearModule");
     warningMessages.push("culturalInfluenceLevel 2 should not make both top and outerwear strongly traditional/complex");
+    promptCoherenceNotes.push("Because cultural level is 2, only one upper-body module should carry visible traditional structure.");
   }
   if (culturalLevel < 3 && topTraditional && outerwearStrong) {
     warningMessages.push("avoid stacking traditional top structure with strong outerwear cape/hood/layer language");
+    promptCoherenceNotes.push("Avoid stacking traditional top structure with strong outerwear silhouette language.");
   }
   if (motifs.length > 2) {
     warningMessages.push("motifs should be limited to one main placement and one echo placement");
+    promptCoherenceNotes.push("Theme motifs are limited to one main placement and one echo placement.");
   }
+
+  if (!promptCoherenceNotes.length) {
+    promptCoherenceNotes.push("Upper-body modules are within the current light coherence constraints.");
+  }
+
+  const uniqueReducedModules = Array.from(new Set(reducedModules));
+  const topComplexityAdjusted = uniqueReducedModules.includes("topModule");
+  const outerwearComplexityAdjusted = uniqueReducedModules.includes("outerwearModule");
 
   return {
     moduleName: "outfitCoherenceCheck",
@@ -119,9 +159,13 @@ function buildOutfitCoherenceCheck({ themeDirectionLayer, topModule, outerwearMo
     secondaryStyleSource,
     dominantModule,
     supportingModule,
+    culturalInfluenceRuleApplied,
     motifMainPlacement,
     motifEchoPlacement,
-    reducedModules: Array.from(new Set(reducedModules)),
+    reducedModules: uniqueReducedModules,
+    topComplexityAdjusted,
+    outerwearComplexityAdjusted,
+    promptCoherenceNotes: Array.from(new Set(promptCoherenceNotes)),
     warningMessages: Array.from(new Set(warningMessages)),
     styleSummary: buildCoherenceSummary({
       primaryStyleSource,

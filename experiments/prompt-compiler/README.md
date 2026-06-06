@@ -6,14 +6,15 @@ The 2.0 experiment has completed these MVP pieces:
 
 - `Design Language Layer`
 - `Theme Direction Layer`
+- `Global Region Context Layer`
 - `Full Module Skeleton`
 - `Natural Final Prompt Compiler`
 - `Top Module MVP`
 - `Outerwear Module MVP`
+- `Bottom Module MVP`
 
 These modules are not deepened yet:
 
-- `bottomModule`
 - `footwearModule`
 - `accessoryModule`
 - `weaponModule`
@@ -129,19 +130,39 @@ Final prompt mode hides internal field names and enum values:
 node experiments/prompt-compiler/scripts/compile-character-skeleton.js --seed skeleton-test-1 --culture-level 2 --mode final
 ```
 
-## Theme Direction Layer
+## Theme Direction Layer + Global Region Context
 
 `themeDirectionLayer` gives the character a theme direction and life context.
 It is not an Outfit Coordination Layer and does not decide whether every item
 matches. It provides visual flavor for `topModule`, `outerwearModule`,
 `fantasyLayer`, and the Prompt Compiler.
 
+The layer now separates role theme from regional context:
+
+- `themeCategory` = what the character does.
+- `regionContext` = where the character belongs visually.
+- `environmentFlavor` = a more specific street, shop, gate, warehouse, or
+  neighborhood feeling.
+- `culturalInfluenceLevel` = how strongly regional structure may affect
+  clothing.
+
+`regionContext` is not a costume generator. It should guide color, material,
+street flavor, small structural hints, and a few concentrated motifs without
+turning every region into ethnic costume cosplay.
+
 Fields:
 
 - `themeCategory`
+- `themeLabel`
+- `regionContext`
+- `regionLabel`
 - `environmentFlavor`
+- `environmentKeywords`
 - `visualMotifs`
 - `materialMood`
+- `materialHints`
+- `colorHints`
+- `structuralHints`
 - `fantasyFlavor`
 - `culturalInfluenceLevel`
 - `modernityLevel`
@@ -151,21 +172,36 @@ Example:
 
 ```json
 {
-  "themeCategory": "clock_tower_maintainer",
-  "environmentFlavor": "老钟楼",
-  "visualMotifs": ["钟表刻度", "旧铜", "旧钥匙"],
-  "materialMood": "羊毛与皮革边",
-  "fantasyFlavor": "都市奇幻",
-  "culturalInfluenceLevel": 2,
-  "modernityLevel": "retro_modern",
-  "themeSummary": "整体带有老钟楼维护员的气质，以钟表刻度、旧铜、旧钥匙和皮革边作为集中视觉母题。"
+  "themeCategory": "night_patrol",
+  "themeLabel": "夜巡",
+  "regionContext": "north_china_old_city",
+  "regionLabel": "华北旧城",
+  "environmentFlavor": "老城墙",
+  "visualMotifs": ["暖气阀", "旧钟", "路灯"],
+  "materialMood": "旧铜与磨砂金属",
+  "fantasyFlavor": "轻都市奇幻",
+  "culturalInfluenceLevel": 1,
+  "modernityLevel": "old_city_modern",
+  "themeSummary": "整体带有华北旧城夜巡的气质，环境指向老城墙，以旧铜与磨砂金属和灰蓝、煤黑配色作为主题基础，以暖气阀、旧钟、路灯作为少量集中视觉母题。"
 }
 ```
 
-Force a theme category:
+Force a theme category and region context:
 
 ```bash
-node experiments/prompt-compiler/scripts/compile-character-skeleton.js --seed theme-test-1 --culture-level 2 --outerwear-presence medium --theme-category clock_tower_maintainer --mode final
+node experiments/prompt-compiler/scripts/compile-character-skeleton.js --seed region-test-1 --culture-level 1 --cultural-influence-level 1 --outerwear-presence medium --theme-category night_patrol --region-context north_china_old_city --mode final
+```
+
+Generate a non-Japanese night-patrol test:
+
+```bash
+node experiments/prompt-compiler/scripts/compile-character-skeleton.js --seed rain-night-test --culture-level 1 --outerwear-presence medium --theme-category night_patrol --region-context southeast_asian_rain_street --mode final
+```
+
+Generate 10 seeds and inspect regional distribution:
+
+```powershell
+$outDir = 'experiments\prompt-compiler\output\region-distribution-10-seeds'; New-Item -ItemType Directory -Force -Path $outDir | Out-Null; 1..10 | ForEach-Object { $seed = "region-eval-$_"; $json = Join-Path $outDir "$seed.json"; $md = Join-Path $outDir "$seed.md"; node experiments\prompt-compiler\scripts\compile-character-skeleton.js --seed $seed --culture-level 1 --outerwear-presence medium --design-language experiments\prompt-compiler\config\design-language.json --mode final --module-output $json --prompt-output $md | Out-Null; $s = Get-Content $json -Encoding UTF8 | ConvertFrom-Json; [PSCustomObject]@{ Seed=$seed; Theme=$s.themeDirectionLayer.themeCategory; Region=$s.themeDirectionLayer.regionContext; Env=$s.themeDirectionLayer.environmentFlavor; Level=$s.themeDirectionLayer.culturalInfluenceLevel; Summary=$s.themeDirectionLayer.themeSummary } } | Format-Table -AutoSize
 ```
 
 ## Image Test Log
@@ -176,9 +212,9 @@ logic until enough prompt/image results show a repeated pattern.
 
 Current recommendation: run image tests against the 10 natural prompts in
 `experiments/prompt-compiler/output/test-runs-after-theme` before deepening
-`bottomModule`. Use the results to decide whether the next step should be
+`footwearModule`. Use the results to decide whether the next step should be
 strengthening `themeDirectionLayer`, continuing Prompt Compiler cleanup,
-starting `bottomModule`, or adding a `designLanguage` checker.
+starting `footwearModule`, or adding a `designLanguage` checker.
 
 Recommended flow:
 
@@ -197,8 +233,8 @@ direction without drifting back into a default modern urban template.
 
 Deepen modules later in this order:
 
-1. `outerwearModule`
-2. `bottomModule`
+1. `outerwearModule` - MVP complete
+2. `bottomModule` - MVP complete
 3. `footwearModule`
 4. `accessoryModule`
 5. `weaponModule`

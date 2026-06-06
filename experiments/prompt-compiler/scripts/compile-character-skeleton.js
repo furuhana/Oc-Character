@@ -5,6 +5,7 @@ const { buildUpperGarmentModule, createRng } = require("./generate-random-upper-
 const { buildOuterwearModule } = require("./outerwear-module");
 const { buildThemeDirectionLayer } = require("./theme-direction-layer");
 const { buildOutfitCoherenceCheck } = require("./outfit-coherence-check");
+const { buildBottomModule } = require("./bottom-module");
 
 const defaultUpperLibraryPath = path.resolve(__dirname, "../libraries/fashion-upper-samples.json");
 const defaultModuleOutputPath = path.resolve(__dirname, "../output/latest-character-skeleton.json");
@@ -140,6 +141,66 @@ const cnMap = {
   "thick jersey": "厚针织",
   "soft knit": "柔软针织",
   "utility fabric": "功能布料",
+  "straight work trousers": "直筒工装裤",
+  "tapered trousers": "微锥形长裤",
+  "relaxed utility pants": "宽松功能裤",
+  "cropped utility pants": "裁短功能裤",
+  "work shorts": "工装短裤",
+  "long shorts": "及膝长短裤",
+  "drawstring trousers": "系带长裤",
+  "wrap-panel trousers": "带前片结构的裤装",
+  "uniform trousers": "制服感长裤",
+  "simple fitted pants": "简洁修身裤",
+  "wide casual trousers": "宽松日常长裤",
+  straight: "直筒",
+  relaxed: "宽松",
+  tapered: "微锥形",
+  wide: "宽版",
+  "cropped-straight": "裁短直筒",
+  "sturdy workwear": "稳重工装",
+  "soft daily": "柔和日常",
+  "heavy lower body": "下半身厚重",
+  "full length": "全长",
+  "ankle length": "及踝",
+  "cropped ankle": "裁短及踝",
+  "calf length": "小腿长度",
+  "knee length": "及膝",
+  "clean waistband": "干净裤腰",
+  "work belt compatible": "可搭配工装皮带",
+  "tied waist": "系带腰",
+  "layered waistband": "分层腰头",
+  "broad waistband": "宽腰头",
+  "practical belt loops": "实用皮带袢",
+  "clean leg line": "干净腿线",
+  "side seam emphasis": "侧缝强调",
+  "knee panel": "膝部护片",
+  "utility pocket panel": "功能口袋片",
+  "wide thigh volume": "宽大大腿量感",
+  "simple reinforced knee": "简化加固膝部",
+  "panel division": "大块面分割",
+  "wrapped front panel": "前片包裹结构",
+  "clean hem": "干净裤脚",
+  "cuffed hem": "翻边裤脚",
+  "rolled hem": "卷边裤脚",
+  "narrowed hem": "收窄裤脚",
+  "tucked into footwear": "预留塞进鞋靴",
+  "open hem": "开放裤脚",
+  "cotton twill": "棉斜纹布",
+  "work canvas": "工装帆布",
+  "matte utility fabric": "哑光功能布",
+  "soft blended fabric": "柔软混纺布",
+  "denim-like sturdy fabric": "牛仔感硬挺布",
+  "dry woven fabric": "干爽梭织布",
+  "lightly worn": "轻微使用感",
+  "practical daily wear": "日常实用穿着",
+  "tidy workwear": "整洁工装状态",
+  "relaxed daily": "放松日常状态",
+  waist: "腰部",
+  "side pocket area": "侧袋区域",
+  "thigh panel": "大腿片区",
+  "knee area": "膝部",
+  "hem / ankle": "裤脚和脚踝",
+  "side motif strip": "侧边母题条",
   "clean matte": "干净哑光",
   "flat color blocks": "平整大色块",
   "low texture": "低纹理",
@@ -154,16 +215,51 @@ const cnMap = {
   "sleeves rolled": "卷袖",
   Tunic: "束腰长上衣",
   Angarkha: "斜襟长上衣",
+  Kurta: "库尔塔式长上衣",
   Doublet: "短身紧外衣",
   Dashiki: "宽松套头上衣",
+  clean: "干净整洁",
+};
+
+const japaneseRegionContexts = new Set(["japanese_small_town", "kyoto_old_street"]);
+const nonJapaneseTermMap = {
+  "羽织式外搭": "短外搭",
+  "haori-inspired jacket": "short utility outer layer",
+  "羽织": "短外搭",
+  "作务衣": "工装感上衣",
+  "和风": "地域感",
+  "京都": "旧城",
+  "神社": "街区小祠堂",
+  "鸟居": "街口门架",
+  "祭典": "节庆街区",
 };
 
 function cn(value) {
   return cnMap[value] || value;
 }
 
+function isJapaneseRegion(themeDirectionLayer) {
+  return themeDirectionLayer && japaneseRegionContexts.has(themeDirectionLayer.regionContext);
+}
+
+function sanitizeRegionalTerms(text, themeDirectionLayer) {
+  if (!text || isJapaneseRegion(themeDirectionLayer)) return text;
+  return Object.entries(nonJapaneseTermMap).reduce(
+    (result, [from, to]) => result.split(from).join(to),
+    text,
+  );
+}
+
+function regionalCn(value, themeDirectionLayer) {
+  return sanitizeRegionalTerms(cn(value), themeDirectionLayer);
+}
+
 function cnList(items, fallback = "") {
   return joinCn((items || []).map(cn), fallback);
+}
+
+function regionalCnList(items, themeDirectionLayer, fallback = "") {
+  return joinCn((items || []).map((item) => regionalCn(item, themeDirectionLayer)), fallback);
 }
 
 function designLanguageSentence(designLanguage) {
@@ -174,11 +270,11 @@ function designLanguageSentence(designLanguage) {
 }
 
 function topModuleSentence(topModule, themeDirectionLayer) {
-  const focus = cnList(topModule.designFocus, "领口和肩部");
-  const structures = cnList(topModule.structuralFeatures, "清楚的大结构");
-  const details = cnList(topModule.detailComponents, "少量中型细节");
+  const focus = regionalCnList(topModule.designFocus, themeDirectionLayer, "领口和肩部");
+  const structures = regionalCnList(topModule.structuralFeatures, themeDirectionLayer, "清楚的大结构");
+  const details = regionalCnList(topModule.detailComponents, themeDirectionLayer, "少量中型细节");
   const motifs = themeDirectionLayer ? joinCn(themeDirectionLayer.visualMotifs.slice(0, 2)) : "";
-  return `基础上衣为${cn(topModule.baseArchetype)}，${cn(topModule.silhouette)}轮廓，采用${cn(topModule.cutLanguage)}和${cn(topModule.materialLanguage)}，以${cn(topModule.closureSystem)}处理闭合；视觉重点集中在${focus}，用${structures}支撑大形，${details}只作为局部点缀${motifs ? `，并轻微呼应${motifs}` : ""}。`;
+  return `基础上衣为${regionalCn(topModule.baseArchetype, themeDirectionLayer)}，${regionalCn(topModule.silhouette, themeDirectionLayer)}轮廓，采用${regionalCn(topModule.cutLanguage, themeDirectionLayer)}和${regionalCn(topModule.materialLanguage, themeDirectionLayer)}，以${regionalCn(topModule.closureSystem, themeDirectionLayer)}处理闭合；视觉重点集中在${focus}，用${structures}支撑大形，${details}只作为局部点缀${motifs ? `，并轻微呼应${motifs}` : ""}。`;
 }
 
 function topModuleCoherentSentence(topModule, themeDirectionLayer, coherenceCheck) {
@@ -186,12 +282,12 @@ function topModuleCoherentSentence(topModule, themeDirectionLayer, coherenceChec
   const focusItems = supporting ? (topModule.designFocus || []).slice(0, 1) : topModule.designFocus;
   const structureItems = supporting ? (topModule.structuralFeatures || []).slice(0, 1) : topModule.structuralFeatures;
   const detailItems = supporting ? [] : topModule.detailComponents;
-  const focus = cnList(focusItems, "领口");
-  const structures = cnList(structureItems, "清楚的大结构");
+  const focus = regionalCnList(focusItems, themeDirectionLayer, "领口");
+  const structures = regionalCnList(structureItems, themeDirectionLayer, "清楚的大结构");
   const motifs = themeDirectionLayer ? joinCn(themeDirectionLayer.visualMotifs.slice(0, 1)) : "";
   const supportText = supporting ? "作为衬托层降低复杂度，" : "";
-  const detailText = detailItems && detailItems.length ? `，${cnList(detailItems)}只作为局部点缀` : "";
-  return `基础上衣为${cn(topModule.baseArchetype)}，${cn(topModule.silhouette)}轮廓，${supportText}重点集中在${focus}，用${structures}支撑大形${detailText}${motifs ? `，只轻微呼应${motifs}` : ""}。`;
+  const detailText = detailItems && detailItems.length ? `，${regionalCnList(detailItems, themeDirectionLayer)}只作为局部点缀` : "";
+  return `基础上衣为${regionalCn(topModule.baseArchetype, themeDirectionLayer)}，${regionalCn(topModule.silhouette, themeDirectionLayer)}轮廓，${supportText}重点集中在${focus}，用${structures}支撑大形${detailText}${motifs ? `，只轻微呼应${motifs}` : ""}。`;
 }
 
 function outerwearSentence(outerwearModule) {
@@ -216,16 +312,31 @@ function outerwearCoherentSentence(outerwearModule, coherenceCheck) {
     ? [outerwearModule.designFocus.primary].filter(Boolean)
     : [outerwearModule.designFocus.primary, outerwearModule.designFocus.secondary].filter(Boolean);
   const structureItems = supporting ? [] : outerwearModule.structuralFeature;
-  const focus = cnList(focusItems, "肩部");
-  const structures = structureItems && structureItems.length ? `，用${cnList(structureItems)}形成外套识别点` : "";
+  const themeDirectionLayer = outerwearModule.themeDirectionLayer;
+  const focus = regionalCnList(focusItems, themeDirectionLayer, "肩部");
+  const structures = structureItems && structureItems.length ? `，用${regionalCnList(structureItems, themeDirectionLayer)}形成外套识别点` : "";
   const visibility = outerwearModule.wearState === "closed" ? "闭合穿着时可以覆盖大部分内搭" : "不要完全遮住白色贴身上衣";
   const supportText = supporting ? "保持简洁，作为轮廓衬托，" : "";
-  return `外套是${cn(outerwearModule.presence)}的${cn(outerwearModule.baseType)}，${cn(outerwearModule.silhouette)}轮廓，${supportText}${cn(outerwearModule.material)}配合${cn(outerwearModule.finish)}表面；重点集中在${focus}${structures}，${cn(outerwearModule.wearState)}穿着，${visibility}。`;
+  return `外套是${regionalCn(outerwearModule.presence, themeDirectionLayer)}的${regionalCn(outerwearModule.baseType, themeDirectionLayer)}，${regionalCn(outerwearModule.silhouette, themeDirectionLayer)}轮廓，${supportText}${regionalCn(outerwearModule.material, themeDirectionLayer)}配合${regionalCn(outerwearModule.finish, themeDirectionLayer)}表面；重点集中在${focus}${structures}，${regionalCn(outerwearModule.wearState, themeDirectionLayer)}穿着，${visibility}。`;
+}
+
+function bottomModuleSentence(bottomModule) {
+  if (!bottomModule || bottomModule.status !== "active") {
+    return "裤装保持简洁清楚的长裤轮廓，暂不展开复杂细节。";
+  }
+
+  const focus = cnList(bottomModule.designFocus, "腰部");
+  const motifText = bottomModule.motifUsage === "none"
+    ? "不额外展开主题图案"
+    : `只在${focus}或裤侧做一处低调主题呼应`;
+  const complexityText = bottomModule.complexityLevel === "simple"
+    ? "复杂度低于上半身，不抢外套主视觉"
+    : "保持中等复杂度，但仍低于上半身主视觉";
+  return `下装使用${cn(bottomModule.baseType)}，${cn(bottomModule.silhouette)}轮廓，${cn(bottomModule.length)}长度，${cn(bottomModule.waistStructure)}连接上半身，腿部以${cn(bottomModule.legStructure)}和${cn(bottomModule.hemTreatment)}收束；材质为${cn(bottomModule.material)}，${cn(bottomModule.wearState)}，视觉重点只放在${focus}，${motifText}，${complexityText}。`;
 }
 
 function placeholderClothingSentence(skeleton) {
   const parts = [];
-  if (skeleton.bottomModule) parts.push("裤装保持简洁清楚的长裤轮廓");
   if (skeleton.footwearModule) parts.push("鞋履为稳定实用的低噪音造型");
   return parts.length ? `${parts.join("，")}，暂不展开复杂细节。` : "";
 }
@@ -238,9 +349,12 @@ function compileDebugPrompt(skeleton) {
     skeleton.faceLayer.faceType,
     skeleton.expressionLayer.expression,
     skeleton.themeDirectionLayer ? skeleton.themeDirectionLayer.themeSummary : "",
+    skeleton.themeDirectionLayer ? `regionContext: ${skeleton.themeDirectionLayer.regionContext}` : "",
+    skeleton.outfitCoherenceCheck ? `coherence: ${skeleton.outfitCoherenceCheck.styleSummary}` : "",
+    skeleton.outfitCoherenceCheck && skeleton.outfitCoherenceCheck.warningMessages.length ? `coherence warnings: ${skeleton.outfitCoherenceCheck.warningMessages.join(" / ")}` : "",
     summarizeTopModule(skeleton.topModule),
     summarizeOuterwearModule(skeleton.outerwearModule),
-    skeleton.bottomModule.silhouette,
+    skeleton.bottomModule.promptFragment || skeleton.bottomModule.silhouette,
     skeleton.footwearModule.silhouette,
     skeleton.accessoryModule.visualFocus,
     skeleton.weaponModule.silhouette,
@@ -263,7 +377,8 @@ function compileDebugPrompt(skeleton) {
     "- All modules carry the shared designLanguage config.",
     "- topModule uses the existing upper-garment module.",
     "- outerwearModule is the first deepened single-item module.",
-    "- bottomModule, footwearModule, accessoryModule, and weaponModule remain placeholders for later deep passes.",
+    "- bottomModule is an MVP single-item module.",
+    "- footwearModule, accessoryModule, and weaponModule remain placeholders for later deep passes.",
   ].join("\n");
 }
 
@@ -272,12 +387,13 @@ function compileNaturalFinalPrompt(skeleton) {
   const coherenceCheck = skeleton.outfitCoherenceCheck;
   const sentences = [
     "单人全身角色设定图，从头到脚完整可见，白底或浅色背景，正面或轻微三分之二站姿。",
-    `${cn(skeleton.bodyLayer.bodyType)}，气质${cn(skeleton.characterLayer.presence)}；${theme ? theme.themeSummary : "整体带有轻都市奇幻的生活语境。"}奇幻感克制，不要大范围发光。`,
+    `${cn(skeleton.bodyLayer.bodyType)}，气质${cn(skeleton.characterLayer.presence)}；${theme ? sanitizeRegionalTerms(theme.themeSummary, theme) : "整体带有轻都市奇幻的生活语境。"}奇幻感克制，不要大范围发光。`,
     "体型壮硕厚实，宽肩厚胸，手臂和腿部有力量，成熟有重量感，边缘略带柔和厚度。",
     `${cn(skeleton.faceLayer.faceType)}，发型简洁可读，${cn(skeleton.expressionLayer.expression)}。`,
     coherenceCheck ? coherenceCheck.styleSummary : "",
     topModuleCoherentSentence(skeleton.topModule, theme, coherenceCheck),
     outerwearCoherentSentence(skeleton.outerwearModule, coherenceCheck),
+    bottomModuleSentence(skeleton.bottomModule),
     placeholderClothingSentence(skeleton),
     "配饰、武器和奇幻元素只轻量出现，不抢服装主体。",
     designLanguageSentence(skeleton.designLanguage),
@@ -305,6 +421,8 @@ function buildCharacterSkeleton(options = {}) {
   const designLanguage = options.designLanguage || loadDesignLanguage(options.designLanguagePath || defaultDesignLanguagePath);
   const themeDirectionLayer = buildThemeDirectionLayer(rng, {
     themeCategory: options.themeCategory,
+    regionContext: options.regionContext,
+    culturalInfluenceLevel: options.culturalInfluenceLevel,
   });
   const upperLibrary = readJson(options.upperLibraryPath || defaultUpperLibraryPath);
   const topModule = {
@@ -336,6 +454,11 @@ function buildCharacterSkeleton(options = {}) {
     topModule,
     outerwearModule,
   });
+  const bottomModule = buildBottomModule(rng, {
+    designLanguage,
+    themeDirectionLayer,
+    outfitCoherenceCheck,
+  });
 
   return {
     version: "2.0-skeleton-mvp",
@@ -364,11 +487,7 @@ function buildCharacterSkeleton(options = {}) {
     }),
     topModule,
     outerwearModule,
-    bottomModule: makeLayer("bottomModule", designLanguage, {
-      itemType: "pants placeholder",
-      silhouette: "simple readable trouser shape",
-      detailLevel: "minimal until deep module pass",
-    }),
+    bottomModule,
     footwearModule: makeLayer("footwearModule", designLanguage, {
       itemType: "footwear placeholder",
       silhouette: "stable practical shoes",
@@ -387,6 +506,7 @@ function buildCharacterSkeleton(options = {}) {
     fantasyLayer: makeLayer("fantasyLayer", designLanguage, {
       intensity: themeDirectionLayer.fantasyFlavor,
       source: themeDirectionLayer.themeCategory,
+      regionContext: themeDirectionLayer.regionContext,
       rule: "support the outfit and prop design without overwhelming the character",
     }),
     styleLayer: makeLayer("styleLayer", designLanguage, {
@@ -407,7 +527,9 @@ function printUsage() {
   console.log("");
   console.log("Optional:");
   console.log("--mode final|debug");
-  console.log("--theme-category old_city_worker|clock_tower_maintainer|greenhouse_gardener|...");
+  console.log("--theme-category night_patrol|market_guard|clock_tower_maintainer|greenhouse_gardener|...");
+  console.log("--region-context neutral_urban|north_china_old_city|southeast_asian_rain_street|...");
+  console.log("--cultural-influence-level 0|1|2|3|4");
   console.log("--design-language experiments/prompt-compiler/config/design-language.json");
   console.log("--outerwear-presence none|light|medium|heavy");
   console.log("--module-output experiments/prompt-compiler/output/latest-character-skeleton.json");
@@ -436,6 +558,8 @@ function main() {
         influence: optionValue(args, "influence"),
         cultureLevel: numberOption(args, "culture-level"),
         themeCategory: optionValue(args, "theme-category"),
+        regionContext: optionValue(args, "region-context"),
+        culturalInfluenceLevel: numberOption(args, "cultural-influence-level"),
         outerwearPresence: optionValue(args, "outerwear-presence"),
         outerwearBaseType: optionValue(args, "outerwear-base-type"),
         outerwearSilhouette: optionValue(args, "outerwear-silhouette"),

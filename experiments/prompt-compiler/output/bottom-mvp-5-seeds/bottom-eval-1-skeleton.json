@@ -1,6 +1,6 @@
 {
   "version": "2.0-skeleton-mvp",
-  "seed": "bottom-image-test-1",
+  "seed": "bottom-eval-1",
   "designLanguage": {
     "shapeHierarchy": "large_shape_dominant",
     "silhouettePriority": "high",
@@ -17,45 +17,50 @@
   "themeDirectionLayer": {
     "moduleName": "themeDirectionLayer",
     "status": "active",
-    "themeCategory": "festival_security",
-    "environmentFlavor": "京都老街",
+    "themeCategory": "greenhouse_gardener",
+    "environmentFlavor": "废弃温室",
     "visualMotifs": [
-      "护符",
-      "纸片",
-      "地方徽章"
+      "蔷薇",
+      "荆棘",
+      "温室玻璃"
     ],
-    "materialMood": "厚针织与布带",
-    "fantasyFlavor": "仪式感奇幻",
-    "culturalInfluenceLevel": 2,
-    "modernityLevel": "traditional_modern",
-    "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "materialMood": "玻璃与藤蔓",
+    "fantasyFlavor": "民俗感奇幻",
+    "culturalInfluenceLevel": 1,
+    "modernityLevel": "fantasy_urban",
+    "themeSummary": "整体带有废弃温室花匠的气味，以蔷薇、荆棘和温室玻璃作为少量中大型视觉母题。"
   },
   "outfitCoherenceCheck": {
     "moduleName": "outfitCoherenceCheck",
     "status": "active",
     "scope": "topModule + outerwearModule + themeDirectionLayer only",
-    "primaryStyleSource": "traditional_modern",
-    "secondaryStyleSource": "fantasy_worker",
+    "primaryStyleSource": "fantasy_worker",
+    "secondaryStyleSource": "traditional_modern",
     "dominantModule": "outerwearModule",
     "supportingModule": "topModule",
-    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 2: one upper-body module may carry visible traditional structure; the other should stay modern and simple.",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
     "motifMainPlacement": "外套肩部或领口区域",
     "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
     "reducedModules": [
-      "topModule"
+      "topModule",
+      "outerwearModule"
     ],
     "topComplexityAdjusted": true,
-    "outerwearComplexityAdjusted": false,
+    "outerwearComplexityAdjusted": true,
     "promptCoherenceNotes": [
       "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
       "Top module should keep only one main structural idea and avoid competing details.",
+      "Because cultural level is 1, traditional influence is restricted to one upper-body module.",
+      "Avoid stacking traditional top structure with strong outerwear silhouette language.",
       "Theme motifs are limited to one main placement and one echo placement."
     ],
     "warningMessages": [
       "outerwear is medium/heavy, so topModule should support instead of competing",
+      "culturalInfluenceLevel 1 allows traditional detail in only one major upper-body module",
+      "avoid stacking traditional top structure with strong outerwear cape/hood/layer language",
       "motifs should be limited to one main placement and one echo placement"
     ],
-    "styleSummary": "整体以传统现代混合为主，辅以都市奇幻劳动者，外套负责主视觉，内搭降低复杂度，只做结构衬托，护符和纸片元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+    "styleSummary": "整体以都市奇幻劳动者为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，蔷薇和荆棘元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
   },
   "characterLayer": {
     "moduleName": "characterLayer",
@@ -159,7 +164,7 @@
       "shouldPreferLargeShapes": true,
       "shouldReduceNoise": true
     },
-    "baseArchetype": "交领短衫",
+    "baseArchetype": "Angarkha",
     "baseCategory": "traditional",
     "culturalAdaptationLevel": {
       "level": 2,
@@ -167,27 +172,27 @@
       "description": "传统基础款用现代材质、短句式和都市比例改写。"
     },
     "traditionalInfluences": [
-      "斜襟",
-      "宽袖"
+      "包裹式结构",
+      "斜襟"
     ],
-    "silhouette": "宽肩窄摆",
-    "cutLanguage": "包裹式",
-    "materialLanguage": "防撕裂布",
+    "silhouette": "超宽松",
+    "cutLanguage": "拼色分区",
+    "materialLanguage": "轻薄风衣布",
     "closureSystem": "偏置拉链",
     "designFocus": [
-      "口袋",
-      "袖子"
+      "腰部",
+      "前襟"
     ],
     "structuralFeatures": [
-      "延长下摆",
-      "假两件"
+      "束带结构",
+      "隐藏口袋结构"
     ],
     "detailComponents": [
-      "袖标",
-      "拉链"
+      "拉链",
+      "织带"
     ],
-    "wearState": "卷袖",
-    "personalHabit": "习惯让衣摆不完全对齐",
+    "wearState": "下摆塞进裤腰",
+    "personalHabit": "总喜欢立领",
     "influenceSource": "旧街修表师",
     "influenceMaterials": [
       "蓝钢色扣件",
@@ -197,22 +202,22 @@
     "influenceDetails": [
       "小齿轮袖扣",
       "蓝钢螺丝状铆钉",
-      "发条形刺绣"
+      "圆形表盖口袋盖"
     ],
     "constructionVerbs": [
       "折叠",
+      "形成护片",
       "拼接",
-      "收束腰线",
-      "扣合",
-      "隐藏"
+      "作为口袋盖",
+      "延伸下摆"
     ],
     "judgement": {
-      "visualNoiseLevel": "高",
-      "formality": "半正式",
-      "layeringDepth": "双层",
-      "mobility": "中",
-      "fantasyIntensity": "高",
-      "cleanliness": "做旧"
+      "visualNoiseLevel": "中",
+      "formality": "正式",
+      "layeringDepth": "单层",
+      "mobility": "低",
+      "fantasyIntensity": "中",
+      "cleanliness": "轻微使用痕迹"
     },
     "avoid": [
       "不要出现可读数字",
@@ -222,20 +227,20 @@
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
+      "themeCategory": "greenhouse_gardener",
+      "environmentFlavor": "废弃温室",
       "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+        "蔷薇",
+        "荆棘",
+        "温室玻璃"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
-      "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "materialMood": "玻璃与藤蔓",
+      "fantasyFlavor": "民俗感奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "fantasy_urban",
+      "themeSummary": "整体带有废弃温室花匠的气味，以蔷薇、荆棘和温室玻璃作为少量中大型视觉母题。"
     },
-    "themePromptHint": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "themePromptHint": "整体带有废弃温室花匠的气味，以蔷薇、荆棘和温室玻璃作为少量中大型视觉母题。"
   },
   "outerwearModule": {
     "moduleName": "outerwearModule",
@@ -254,45 +259,45 @@
       "complexityBudget": "moderate"
     },
     "presence": "medium",
-    "baseType": "work jacket",
-    "silhouette": "wide shoulder",
+    "baseType": "cardigan",
+    "silhouette": "A-line",
     "length": "cropped",
-    "cutLanguage": "wrap style",
+    "cutLanguage": "symmetrical",
     "designFocus": {
-      "primary": "shoulder",
-      "secondary": "collar"
+      "primary": "back panel",
+      "secondary": "pocket"
     },
     "structuralFeature": [
-      "fake two-piece"
+      "cape layer"
     ],
     "material": "leather trim",
-    "finish": "clean matte",
-    "wearState": "draped over shoulders",
+    "finish": "low texture",
+    "wearState": "closed",
     "detailScale": "medium_large",
     "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
     "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
+      "themeCategory": "greenhouse_gardener",
+      "environmentFlavor": "废弃温室",
       "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+        "蔷薇",
+        "荆棘",
+        "温室玻璃"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
-      "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "materialMood": "玻璃与藤蔓",
+      "fantasyFlavor": "民俗感奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "fantasy_urban",
+      "themeSummary": "整体带有废弃温室花匠的气味，以蔷薇、荆棘和温室玻璃作为少量中大型视觉母题。"
     },
     "themeMotifs": [
-      "护符",
-      "纸片"
+      "蔷薇",
+      "荆棘"
     ],
-    "materialMood": "厚针织与布带",
-    "promptFragment": "medium work jacket, wide shoulder silhouette, cropped, wrap style cut, leather trim with clean matte, main focus shoulder, secondary focus collar, large structure: fake two-piece, theme motifs: 护符 / 纸片, material mood: 厚针织与布带, draped over shoulders, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+    "materialMood": "玻璃与藤蔓",
+    "promptFragment": "medium cardigan, A-line silhouette, cropped, symmetrical cut, leather trim with low texture, main focus back panel, secondary focus pocket, large structure: cape layer, theme motifs: 蔷薇 / 荆棘, material mood: 玻璃与藤蔓, closed, closed outerwear may cover most of the top, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
   },
   "bottomModule": {
     "moduleName": "bottomModule",
@@ -313,41 +318,41 @@
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
+      "themeCategory": "greenhouse_gardener",
+      "environmentFlavor": "废弃温室",
       "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+        "蔷薇",
+        "荆棘",
+        "温室玻璃"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
-      "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "materialMood": "玻璃与藤蔓",
+      "fantasyFlavor": "民俗感奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "fantasy_urban",
+      "themeSummary": "整体带有废弃温室花匠的气味，以蔷薇、荆棘和温室玻璃作为少量中大型视觉母题。"
     },
     "outfitCoherenceCheck": {
-      "primaryStyleSource": "traditional_modern",
+      "primaryStyleSource": "fantasy_worker",
       "dominantModule": "outerwearModule",
       "supportingModule": "topModule"
     },
     "presence": "developed",
     "baseType": "wrap-panel trousers",
-    "silhouette": "soft daily",
-    "length": "full length",
-    "waistStructure": "tied waist",
-    "legStructure": "panel division",
-    "hemTreatment": "open hem",
-    "material": "cotton twill",
-    "wearState": "relaxed daily",
+    "silhouette": "heavy lower body",
+    "length": "cropped ankle",
+    "waistStructure": "work belt compatible",
+    "legStructure": "utility pocket panel",
+    "hemTreatment": "narrowed hem",
+    "material": "work canvas",
+    "wearState": "lightly worn",
     "designFocus": [
-      "knee area"
+      "hem / ankle"
     ],
     "motifUsage": "single echo placement",
-    "motifEcho": "护符 at hem edge",
+    "motifEcho": "蔷薇 at waist edge",
     "complexityLevel": "simple",
     "role": "support full-body silhouette without competing with upper body",
-    "promptFragment": "wrap-panel trousers, soft daily silhouette, full length, tied waist, panel division, open hem, cotton twill, relaxed daily, focus knee area, single echo placement: 护符 at hem edge, simple complexity"
+    "promptFragment": "wrap-panel trousers, heavy lower body silhouette, cropped ankle, work belt compatible, utility pocket panel, narrowed hem, work canvas, lightly worn, focus hem / ankle, single echo placement: 蔷薇 at waist edge, simple complexity"
   },
   "footwearModule": {
     "moduleName": "footwearModule",
@@ -425,8 +430,8 @@
       "graphicClarity": "high",
       "complexityBudget": "moderate"
     },
-    "intensity": "仪式感奇幻",
-    "source": "festival_security",
+    "intensity": "民俗感奇幻",
+    "source": "greenhouse_gardener",
     "rule": "support the outfit and prop design without overwhelming the character"
   },
   "styleLayer": {

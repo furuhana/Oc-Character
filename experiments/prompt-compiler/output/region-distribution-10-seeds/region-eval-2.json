@@ -1,6 +1,6 @@
 {
   "version": "2.0-skeleton-mvp",
-  "seed": "bottom-image-test-1",
+  "seed": "region-eval-2",
   "designLanguage": {
     "shapeHierarchy": "large_shape_dominant",
     "silhouettePriority": "high",
@@ -17,28 +17,68 @@
   "themeDirectionLayer": {
     "moduleName": "themeDirectionLayer",
     "status": "active",
-    "themeCategory": "festival_security",
-    "environmentFlavor": "京都老街",
-    "visualMotifs": [
-      "护符",
-      "纸片",
-      "地方徽章"
+    "themeCategory": "book_repair_binder",
+    "themeLabel": "旧书修复师",
+    "regionContext": "western_europe_old_town",
+    "regionLabel": "西欧旧城",
+    "environmentFlavor": "小广场",
+    "environmentKeywords": [
+      "石板路",
+      "旧书店",
+      "钟楼街",
+      "小广场"
     ],
-    "materialMood": "厚针织与布带",
-    "fantasyFlavor": "仪式感奇幻",
-    "culturalInfluenceLevel": 2,
-    "modernityLevel": "traditional_modern",
-    "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "visualMotifs": [
+      "装订线",
+      "纸片",
+      "票据"
+    ],
+    "materialMood": "黄铜与皮革",
+    "materialHints": [
+      "皮革",
+      "棉布",
+      "亚麻",
+      "纸页"
+    ],
+    "colorHints": [
+      "海军蓝",
+      "旧白",
+      "棕色",
+      "暗绿"
+    ],
+    "structuralHints": [
+      "短夹克",
+      "西装外套",
+      "开领",
+      "整洁长裤"
+    ],
+    "motifHints": [
+      "钟表刻度",
+      "门牌",
+      "票据",
+      "旧钥匙"
+    ],
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 0,
+    "modernityLevel": "retro_modern",
+    "styleHint": "soft_daily",
+    "avoidIfNotSelected": [
+      "神社",
+      "鸟居",
+      "京都"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有西欧旧城旧书修复师的气质，环境指向小广场，以黄铜与皮革和海军蓝、旧白配色作为主题基础，以装订线、纸片、票据作为少量集中视觉母题。"
   },
   "outfitCoherenceCheck": {
     "moduleName": "outfitCoherenceCheck",
     "status": "active",
     "scope": "topModule + outerwearModule + themeDirectionLayer only",
-    "primaryStyleSource": "traditional_modern",
-    "secondaryStyleSource": "fantasy_worker",
+    "primaryStyleSource": "soft_daily",
+    "secondaryStyleSource": "traditional_modern",
     "dominantModule": "outerwearModule",
     "supportingModule": "topModule",
-    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 2: one upper-body module may carry visible traditional structure; the other should stay modern and simple.",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 0: keep upper-body styling modern; traditional structure should not drive top or outerwear.",
     "motifMainPlacement": "外套肩部或领口区域",
     "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
     "reducedModules": [
@@ -49,13 +89,15 @@
     "promptCoherenceNotes": [
       "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
       "Top module should keep only one main structural idea and avoid competing details.",
+      "Avoid stacking traditional top structure with strong outerwear silhouette language.",
       "Theme motifs are limited to one main placement and one echo placement."
     ],
     "warningMessages": [
       "outerwear is medium/heavy, so topModule should support instead of competing",
+      "avoid stacking traditional top structure with strong outerwear cape/hood/layer language",
       "motifs should be limited to one main placement and one echo placement"
     ],
-    "styleSummary": "整体以传统现代混合为主，辅以都市奇幻劳动者，外套负责主视觉，内搭降低复杂度，只做结构衬托，护符和纸片元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+    "styleSummary": "整体以日常生活感为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，装订线和纸片元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
   },
   "characterLayer": {
     "moduleName": "characterLayer",
@@ -159,83 +201,122 @@
       "shouldPreferLargeShapes": true,
       "shouldReduceNoise": true
     },
-    "baseArchetype": "交领短衫",
-    "baseCategory": "traditional",
+    "baseArchetype": "Hoodie",
+    "baseCategory": "modern",
     "culturalAdaptationLevel": {
-      "level": 2,
-      "label": "传统基础款现代化",
-      "description": "传统基础款用现代材质、短句式和都市比例改写。"
+      "level": 1,
+      "label": "现代基础款 + 少量传统细节",
+      "description": "现代基础款为主，只加入 1 个传统细节。"
     },
     "traditionalInfluences": [
-      "斜襟",
-      "宽袖"
+      "分层前襟"
     ],
-    "silhouette": "宽肩窄摆",
-    "cutLanguage": "包裹式",
-    "materialLanguage": "防撕裂布",
-    "closureSystem": "偏置拉链",
+    "silhouette": "超宽松",
+    "cutLanguage": "对称",
+    "materialLanguage": "防水布",
+    "closureSystem": "腰封",
     "designFocus": [
-      "口袋",
-      "袖子"
+      "背部",
+      "帽子"
     ],
     "structuralFeatures": [
-      "延长下摆",
-      "假两件"
+      "短披风式后片",
+      "半披风结构"
     ],
     "detailComponents": [
-      "袖标",
-      "拉链"
+      "透明片",
+      "D 形环"
     ],
-    "wearState": "卷袖",
-    "personalHabit": "习惯让衣摆不完全对齐",
-    "influenceSource": "旧街修表师",
+    "wearState": "下摆塞进裤腰",
+    "personalHabit": "习惯把口袋塞满小工具",
+    "influenceSource": "雨夜候车亭管理员",
     "influenceMaterials": [
-      "蓝钢色扣件",
-      "黑胡桃木色皮革",
-      "透明玻璃感饰片"
+      "湿亮防水布",
+      "深灰橡胶边",
+      "冷白反光条"
     ],
     "influenceDetails": [
-      "小齿轮袖扣",
-      "蓝钢螺丝状铆钉",
-      "发条形刺绣"
+      "无字反光牌",
+      "票夹形口袋",
+      "雨水导槽压线"
     ],
     "constructionVerbs": [
-      "折叠",
       "拼接",
-      "收束腰线",
-      "扣合",
-      "隐藏"
+      "外露",
+      "作为口袋盖",
+      "作为肩线",
+      "收束腰线"
     ],
     "judgement": {
       "visualNoiseLevel": "高",
       "formality": "半正式",
-      "layeringDepth": "双层",
-      "mobility": "中",
-      "fantasyIntensity": "高",
+      "layeringDepth": "多层",
+      "mobility": "低",
+      "fantasyIntensity": "低",
       "cleanliness": "做旧"
     },
     "avoid": [
-      "不要出现可读数字",
-      "不要只画钟表图案",
-      "不要机械件过密"
+      "不要公交站文字",
+      "不要大面积霓虹灯牌",
+      "不要画成雨衣制服"
     ],
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+      "themeCategory": "book_repair_binder",
+      "themeLabel": "旧书修复师",
+      "regionContext": "western_europe_old_town",
+      "regionLabel": "西欧旧城",
+      "environmentFlavor": "小广场",
+      "environmentKeywords": [
+        "石板路",
+        "旧书店",
+        "钟楼街",
+        "小广场"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
-      "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "visualMotifs": [
+        "装订线",
+        "纸片",
+        "票据"
+      ],
+      "materialMood": "黄铜与皮革",
+      "materialHints": [
+        "皮革",
+        "棉布",
+        "亚麻",
+        "纸页"
+      ],
+      "colorHints": [
+        "海军蓝",
+        "旧白",
+        "棕色",
+        "暗绿"
+      ],
+      "structuralHints": [
+        "短夹克",
+        "西装外套",
+        "开领",
+        "整洁长裤"
+      ],
+      "motifHints": [
+        "钟表刻度",
+        "门牌",
+        "票据",
+        "旧钥匙"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 0,
+      "modernityLevel": "retro_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有西欧旧城旧书修复师的气质，环境指向小广场，以黄铜与皮革和海军蓝、旧白配色作为主题基础，以装订线、纸片、票据作为少量集中视觉母题。"
     },
-    "themePromptHint": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "themePromptHint": "整体带有西欧旧城旧书修复师的气质，环境指向小广场，以黄铜与皮革和海军蓝、旧白配色作为主题基础，以装订线、纸片、票据作为少量集中视觉母题。"
   },
   "outerwearModule": {
     "moduleName": "outerwearModule",
@@ -254,45 +335,85 @@
       "complexityBudget": "moderate"
     },
     "presence": "medium",
-    "baseType": "work jacket",
-    "silhouette": "wide shoulder",
+    "baseType": "hoodie jacket",
+    "silhouette": "draped",
     "length": "cropped",
-    "cutLanguage": "wrap style",
+    "cutLanguage": "panel cut",
     "designFocus": {
-      "primary": "shoulder",
-      "secondary": "collar"
+      "primary": "sleeve",
+      "secondary": "hood"
     },
     "structuralFeature": [
-      "fake two-piece"
+      "detachable panel"
     ],
-    "material": "leather trim",
+    "material": "thick jersey",
     "finish": "clean matte",
-    "wearState": "draped over shoulders",
+    "wearState": "tied around waist",
     "detailScale": "medium_large",
     "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
     "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+      "themeCategory": "book_repair_binder",
+      "themeLabel": "旧书修复师",
+      "regionContext": "western_europe_old_town",
+      "regionLabel": "西欧旧城",
+      "environmentFlavor": "小广场",
+      "environmentKeywords": [
+        "石板路",
+        "旧书店",
+        "钟楼街",
+        "小广场"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
-      "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "visualMotifs": [
+        "装订线",
+        "纸片",
+        "票据"
+      ],
+      "materialMood": "黄铜与皮革",
+      "materialHints": [
+        "皮革",
+        "棉布",
+        "亚麻",
+        "纸页"
+      ],
+      "colorHints": [
+        "海军蓝",
+        "旧白",
+        "棕色",
+        "暗绿"
+      ],
+      "structuralHints": [
+        "短夹克",
+        "西装外套",
+        "开领",
+        "整洁长裤"
+      ],
+      "motifHints": [
+        "钟表刻度",
+        "门牌",
+        "票据",
+        "旧钥匙"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 0,
+      "modernityLevel": "retro_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有西欧旧城旧书修复师的气质，环境指向小广场，以黄铜与皮革和海军蓝、旧白配色作为主题基础，以装订线、纸片、票据作为少量集中视觉母题。"
     },
     "themeMotifs": [
-      "护符",
+      "装订线",
       "纸片"
     ],
-    "materialMood": "厚针织与布带",
-    "promptFragment": "medium work jacket, wide shoulder silhouette, cropped, wrap style cut, leather trim with clean matte, main focus shoulder, secondary focus collar, large structure: fake two-piece, theme motifs: 护符 / 纸片, material mood: 厚针织与布带, draped over shoulders, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+    "materialMood": "黄铜与皮革",
+    "promptFragment": "medium hoodie jacket, draped silhouette, cropped, panel cut cut, thick jersey with clean matte, main focus sleeve, secondary focus hood, large structure: detachable panel, theme motifs: 装订线 / 纸片, material mood: 黄铜与皮革, tied around waist, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
   },
   "bottomModule": {
     "moduleName": "bottomModule",
@@ -313,41 +434,81 @@
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+      "themeCategory": "book_repair_binder",
+      "themeLabel": "旧书修复师",
+      "regionContext": "western_europe_old_town",
+      "regionLabel": "西欧旧城",
+      "environmentFlavor": "小广场",
+      "environmentKeywords": [
+        "石板路",
+        "旧书店",
+        "钟楼街",
+        "小广场"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
-      "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "visualMotifs": [
+        "装订线",
+        "纸片",
+        "票据"
+      ],
+      "materialMood": "黄铜与皮革",
+      "materialHints": [
+        "皮革",
+        "棉布",
+        "亚麻",
+        "纸页"
+      ],
+      "colorHints": [
+        "海军蓝",
+        "旧白",
+        "棕色",
+        "暗绿"
+      ],
+      "structuralHints": [
+        "短夹克",
+        "西装外套",
+        "开领",
+        "整洁长裤"
+      ],
+      "motifHints": [
+        "钟表刻度",
+        "门牌",
+        "票据",
+        "旧钥匙"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 0,
+      "modernityLevel": "retro_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有西欧旧城旧书修复师的气质，环境指向小广场，以黄铜与皮革和海军蓝、旧白配色作为主题基础，以装订线、纸片、票据作为少量集中视觉母题。"
     },
     "outfitCoherenceCheck": {
-      "primaryStyleSource": "traditional_modern",
+      "primaryStyleSource": "soft_daily",
       "dominantModule": "outerwearModule",
       "supportingModule": "topModule"
     },
     "presence": "developed",
-    "baseType": "wrap-panel trousers",
-    "silhouette": "soft daily",
-    "length": "full length",
-    "waistStructure": "tied waist",
+    "baseType": "wide casual trousers",
+    "silhouette": "relaxed",
+    "length": "cropped ankle",
+    "waistStructure": "broad waistband",
     "legStructure": "panel division",
-    "hemTreatment": "open hem",
+    "hemTreatment": "clean hem",
     "material": "cotton twill",
     "wearState": "relaxed daily",
     "designFocus": [
-      "knee area"
+      "waist"
     ],
     "motifUsage": "single echo placement",
-    "motifEcho": "护符 at hem edge",
+    "motifEcho": "装订线 at side seam",
     "complexityLevel": "simple",
     "role": "support full-body silhouette without competing with upper body",
-    "promptFragment": "wrap-panel trousers, soft daily silhouette, full length, tied waist, panel division, open hem, cotton twill, relaxed daily, focus knee area, single echo placement: 护符 at hem edge, simple complexity"
+    "promptFragment": "wide casual trousers, relaxed silhouette, cropped ankle, broad waistband, panel division, clean hem, cotton twill, relaxed daily, focus waist, single echo placement: 装订线 at side seam, simple complexity"
   },
   "footwearModule": {
     "moduleName": "footwearModule",
@@ -425,8 +586,9 @@
       "graphicClarity": "high",
       "complexityBudget": "moderate"
     },
-    "intensity": "仪式感奇幻",
-    "source": "festival_security",
+    "intensity": "轻都市奇幻",
+    "source": "book_repair_binder",
+    "regionContext": "western_europe_old_town",
     "rule": "support the outfit and prop design without overwhelming the character"
   },
   "styleLayer": {

@@ -1,6 +1,6 @@
 {
   "version": "2.0-skeleton-mvp",
-  "seed": "bottom-image-test-1",
+  "seed": "coherence-eval-1",
   "designLanguage": {
     "shapeHierarchy": "large_shape_dominant",
     "silhouettePriority": "high",
@@ -17,28 +17,28 @@
   "themeDirectionLayer": {
     "moduleName": "themeDirectionLayer",
     "status": "active",
-    "themeCategory": "festival_security",
-    "environmentFlavor": "京都老街",
+    "themeCategory": "book_repair_binder",
+    "environmentFlavor": "旧书街",
     "visualMotifs": [
-      "护符",
-      "纸片",
-      "地方徽章"
+      "书页",
+      "装订线",
+      "纸片"
     ],
-    "materialMood": "厚针织与布带",
-    "fantasyFlavor": "仪式感奇幻",
-    "culturalInfluenceLevel": 2,
-    "modernityLevel": "traditional_modern",
-    "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "materialMood": "纸页与黄铜",
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 1,
+    "modernityLevel": "retro_modern",
+    "themeSummary": "整体像旧书街的修复装订师，以纸页、黄铜、装订线和少量纸片形成安静的书卷气。"
   },
   "outfitCoherenceCheck": {
     "moduleName": "outfitCoherenceCheck",
     "status": "active",
     "scope": "topModule + outerwearModule + themeDirectionLayer only",
-    "primaryStyleSource": "traditional_modern",
-    "secondaryStyleSource": "fantasy_worker",
+    "primaryStyleSource": "soft_daily",
+    "secondaryStyleSource": "traditional_modern",
     "dominantModule": "outerwearModule",
     "supportingModule": "topModule",
-    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 2: one upper-body module may carry visible traditional structure; the other should stay modern and simple.",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
     "motifMainPlacement": "外套肩部或领口区域",
     "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
     "reducedModules": [
@@ -55,7 +55,7 @@
       "outerwear is medium/heavy, so topModule should support instead of competing",
       "motifs should be limited to one main placement and one echo placement"
     ],
-    "styleSummary": "整体以传统现代混合为主，辅以都市奇幻劳动者，外套负责主视觉，内搭降低复杂度，只做结构衬托，护符和纸片元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+    "styleSummary": "整体以日常生活感为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，书页和装订线元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
   },
   "characterLayer": {
     "moduleName": "characterLayer",
@@ -159,7 +159,7 @@
       "shouldPreferLargeShapes": true,
       "shouldReduceNoise": true
     },
-    "baseArchetype": "交领短衫",
+    "baseArchetype": "Tunic",
     "baseCategory": "traditional",
     "culturalAdaptationLevel": {
       "level": 2,
@@ -167,52 +167,52 @@
       "description": "传统基础款用现代材质、短句式和都市比例改写。"
     },
     "traditionalInfluences": [
-      "斜襟",
-      "宽袖"
+      "系带",
+      "立领"
     ],
-    "silhouette": "宽肩窄摆",
-    "cutLanguage": "包裹式",
-    "materialLanguage": "防撕裂布",
-    "closureSystem": "偏置拉链",
+    "silhouette": "上宽下收",
+    "cutLanguage": "可调节裁片",
+    "materialLanguage": "牛仔",
+    "closureSystem": "束带",
     "designFocus": [
-      "口袋",
-      "袖子"
+      "袖子",
+      "口袋"
     ],
     "structuralFeatures": [
-      "延长下摆",
-      "假两件"
+      "双层领",
+      "束带结构"
     ],
     "detailComponents": [
-      "袖标",
-      "拉链"
+      "铆钉",
+      "无字铭牌"
     ],
-    "wearState": "卷袖",
-    "personalHabit": "习惯让衣摆不完全对齐",
+    "wearState": "完全敞开",
+    "personalHabit": "喜欢露出内搭",
     "influenceSource": "旧街修表师",
     "influenceMaterials": [
-      "蓝钢色扣件",
+      "黄铜细件",
       "黑胡桃木色皮革",
-      "透明玻璃感饰片"
+      "蓝钢色扣件"
     ],
     "influenceDetails": [
-      "小齿轮袖扣",
-      "蓝钢螺丝状铆钉",
-      "发条形刺绣"
+      "圆形表盖口袋盖",
+      "发条形刺绣",
+      "小齿轮袖扣"
     ],
     "constructionVerbs": [
+      "扣合",
+      "镶边",
       "折叠",
       "拼接",
-      "收束腰线",
-      "扣合",
-      "隐藏"
+      "形成假两件层次"
     ],
     "judgement": {
       "visualNoiseLevel": "高",
       "formality": "半正式",
-      "layeringDepth": "双层",
+      "layeringDepth": "多层",
       "mobility": "中",
       "fantasyIntensity": "高",
-      "cleanliness": "做旧"
+      "cleanliness": "轻微使用痕迹"
     },
     "avoid": [
       "不要出现可读数字",
@@ -222,20 +222,20 @@
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
+      "themeCategory": "book_repair_binder",
+      "environmentFlavor": "旧书街",
       "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+        "书页",
+        "装订线",
+        "纸片"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
-      "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "materialMood": "纸页与黄铜",
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "retro_modern",
+      "themeSummary": "整体像旧书街的修复装订师，以纸页、黄铜、装订线和少量纸片形成安静的书卷气。"
     },
-    "themePromptHint": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "themePromptHint": "整体像旧书街的修复装订师，以纸页、黄铜、装订线和少量纸片形成安静的书卷气。"
   },
   "outerwearModule": {
     "moduleName": "outerwearModule",
@@ -254,49 +254,49 @@
       "complexityBudget": "moderate"
     },
     "presence": "medium",
-    "baseType": "work jacket",
-    "silhouette": "wide shoulder",
+    "baseType": "cropped jacket",
+    "silhouette": "A-line",
     "length": "cropped",
-    "cutLanguage": "wrap style",
+    "cutLanguage": "split hem",
     "designFocus": {
-      "primary": "shoulder",
-      "secondary": "collar"
+      "primary": "waist",
+      "secondary": "sleeve"
     },
     "structuralFeature": [
-      "fake two-piece"
+      "large pocket"
     ],
-    "material": "leather trim",
-    "finish": "clean matte",
-    "wearState": "draped over shoulders",
+    "material": "denim",
+    "finish": "low texture",
+    "wearState": "one shoulder slipped",
     "detailScale": "medium_large",
     "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
     "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
+      "themeCategory": "book_repair_binder",
+      "environmentFlavor": "旧书街",
       "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+        "书页",
+        "装订线",
+        "纸片"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
-      "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "materialMood": "纸页与黄铜",
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "retro_modern",
+      "themeSummary": "整体像旧书街的修复装订师，以纸页、黄铜、装订线和少量纸片形成安静的书卷气。"
     },
     "themeMotifs": [
-      "护符",
-      "纸片"
+      "书页",
+      "装订线"
     ],
-    "materialMood": "厚针织与布带",
-    "promptFragment": "medium work jacket, wide shoulder silhouette, cropped, wrap style cut, leather trim with clean matte, main focus shoulder, secondary focus collar, large structure: fake two-piece, theme motifs: 护符 / 纸片, material mood: 厚针织与布带, draped over shoulders, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+    "materialMood": "纸页与黄铜",
+    "promptFragment": "medium cropped jacket, A-line silhouette, cropped, split hem cut, denim with low texture, main focus waist, secondary focus sleeve, large structure: large pocket, theme motifs: 书页 / 装订线, material mood: 纸页与黄铜, one shoulder slipped, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
   },
   "bottomModule": {
     "moduleName": "bottomModule",
-    "status": "active",
+    "status": "skeleton",
     "designLanguage": {
       "shapeHierarchy": "large_shape_dominant",
       "silhouettePriority": "high",
@@ -310,44 +310,9 @@
       "graphicClarity": "high",
       "complexityBudget": "moderate"
     },
-    "themeDirectionLayer": {
-      "moduleName": "themeDirectionLayer",
-      "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
-      ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
-      "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
-    },
-    "outfitCoherenceCheck": {
-      "primaryStyleSource": "traditional_modern",
-      "dominantModule": "outerwearModule",
-      "supportingModule": "topModule"
-    },
-    "presence": "developed",
-    "baseType": "wrap-panel trousers",
-    "silhouette": "soft daily",
-    "length": "full length",
-    "waistStructure": "tied waist",
-    "legStructure": "panel division",
-    "hemTreatment": "open hem",
-    "material": "cotton twill",
-    "wearState": "relaxed daily",
-    "designFocus": [
-      "knee area"
-    ],
-    "motifUsage": "single echo placement",
-    "motifEcho": "护符 at hem edge",
-    "complexityLevel": "simple",
-    "role": "support full-body silhouette without competing with upper body",
-    "promptFragment": "wrap-panel trousers, soft daily silhouette, full length, tied waist, panel division, open hem, cotton twill, relaxed daily, focus knee area, single echo placement: 护符 at hem edge, simple complexity"
+    "itemType": "pants placeholder",
+    "silhouette": "simple readable trouser shape",
+    "detailLevel": "minimal until deep module pass"
   },
   "footwearModule": {
     "moduleName": "footwearModule",
@@ -425,8 +390,8 @@
       "graphicClarity": "high",
       "complexityBudget": "moderate"
     },
-    "intensity": "仪式感奇幻",
-    "source": "festival_security",
+    "intensity": "轻都市奇幻",
+    "source": "book_repair_binder",
     "rule": "support the outfit and prop design without overwhelming the character"
   },
   "styleLayer": {
