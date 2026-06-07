@@ -6,6 +6,10 @@ const { buildOuterwearModule } = require("./outerwear-module");
 const { buildThemeDirectionLayer } = require("./theme-direction-layer");
 const { buildOutfitCoherenceCheck } = require("./outfit-coherence-check");
 const { buildBottomModule } = require("./bottom-module");
+const { buildInfluenceGenerationLayer } = require("./influence-generation-layer");
+const { applyReasonabilityFilter } = require("./reasonability-filter");
+const { buildCompositionLayer } = require("./composition-layer");
+const { buildFieldInfluenceExpansionLayer } = require("./field-influence-expansion-layer");
 
 const defaultUpperLibraryPath = path.resolve(__dirname, "../libraries/fashion-upper-samples.json");
 const defaultModuleOutputPath = path.resolve(__dirname, "../output/latest-character-skeleton.json");
@@ -77,6 +81,14 @@ function joinCn(items, fallback = "") {
   return `${values.slice(0, -1).join("、")}和${values[values.length - 1]}`;
 }
 
+function unique(items) {
+  return Array.from(new Set((items || []).filter(Boolean)));
+}
+
+function pick(items, rng) {
+  return items[Math.floor(rng() * items.length)];
+}
+
 const cnMap = {
   "sturdy, grounded, broad-shouldered": "沉稳厚实、宽肩可靠",
   "normal adult male proportion": "正常成年男性比例",
@@ -145,8 +157,12 @@ const cnMap = {
   "tapered trousers": "微锥形长裤",
   "relaxed utility pants": "宽松功能裤",
   "cropped utility pants": "裁短功能裤",
+  "calf-length utility pants": "七分功能裤",
   "work shorts": "工装短裤",
   "long shorts": "及膝长短裤",
+  "knee-length shorts": "及膝短裤",
+  "relaxed shorts": "宽松短裤",
+  "wide cropped trousers": "宽版裁短裤",
   "drawstring trousers": "系带长裤",
   "wrap-panel trousers": "带前片结构的裤装",
   "uniform trousers": "制服感长裤",
@@ -165,6 +181,7 @@ const cnMap = {
   "cropped ankle": "裁短及踝",
   "calf length": "小腿长度",
   "knee length": "及膝",
+  "above knee": "膝上",
   "clean waistband": "干净裤腰",
   "work belt compatible": "可搭配工装皮带",
   "tied waist": "系带腰",
@@ -185,6 +202,14 @@ const cnMap = {
   "narrowed hem": "收窄裤脚",
   "tucked into footwear": "预留塞进鞋靴",
   "open hem": "开放裤脚",
+  hidden: "隐藏",
+  "slightly_visible": "略微可见",
+  "clearly_visible": "清楚可见",
+  "dominant_visible": "明显可见",
+  "ankle_socks": "短袜",
+  "crew_socks": "白色中筒袜",
+  "mid_calf_socks": "白色小腿袜",
+  "knee_high_socks": "白色长袜",
   "cotton twill": "棉斜纹布",
   "work canvas": "工装帆布",
   "matte utility fabric": "哑光功能布",
@@ -266,7 +291,314 @@ function designLanguageSentence(designLanguage) {
   const shape = designLanguage.shapeHierarchy === "large_shape_dominant" ? "大形主导" : "形体与细节平衡";
   const detail = designLanguage.detailDensity === "medium_low" ? "中低细节密度" : "克制细节密度";
   const focus = designLanguage.visualFocusCount === "one_main_one_secondary" ? "1 个主视觉重点和 1 个次视觉重点" : "少量明确视觉重点";
-  return `整体保持${shape}、高可读性和${detail}，每个单品只保留${focus}，用少量中大型特征建立识别度，避免小扣件、小带子、小挂件、密集切线和高频碎纹样。`;
+  const palette = designLanguage.migratedPalette && designLanguage.migratedPalette.summary
+    ? `色彩遵守${designLanguage.migratedPalette.summary}，`
+    : "";
+  return `${palette}整体保持${shape}、高可读性和${detail}，每个单品只保留${focus}，用少量中大型特征建立识别度，避免小扣件、小带子、小挂件、密集切线和高频碎纹样。`;
+}
+
+function normalizeBodyPhrase(text) {
+  return String(text || "")
+    .replace(/KG/g, "kg")
+    .replace(/(\d+)\s*kg/gi, "体重约 $1 kg")
+    .replace(/极高/g, "体格高大")
+    .replace(/中高/g, "中高身材")
+    .replace(/线条紧/g, "肌肉线条紧实")
+    .replace(/(^|，)宽($|，)/g, "$1肩背较宽$2")
+    .replace(/，，+/g, "，")
+    .replace(/^，|，$/g, "");
+}
+
+function characterFoundationSentence(foundation) {
+  if (!foundation) return "";
+  const body = [
+    normalizeBodyPhrase(foundation.bodyType),
+    normalizeBodyPhrase(foundation.muscleLevel),
+    normalizeBodyPhrase(foundation.shoulderWidth),
+    foundation.height ? `身高${foundation.height}` : "",
+    foundation.weight ? normalizeBodyPhrase(foundation.weight) : "",
+  ].filter(Boolean).join("，");
+  const face = [
+    foundation.skinTone,
+    foundation.faceShape,
+    foundation.hairStyle,
+    foundation.hairColor,
+    foundation.expression,
+  ].filter(Boolean).join("，");
+  const identity = [
+    foundation.age ? `${foundation.age}岁左右` : "",
+    foundation.heritageBase ? `${foundation.heritageBase}出身` : "",
+    foundation.personalityCore ? `性格${foundation.personalityCore}` : "",
+  ].filter(Boolean).join("，");
+  return `${identity ? `${identity}。` : ""}${body ? `体型${body}。` : ""}${face ? `${face}。` : ""}`;
+}
+
+function shortBodyPhrase(foundation, skeleton) {
+  if (!foundation) return "壮硕厚实，宽肩厚胸，手臂和腿部有力量";
+  return unique([
+    normalizeBodyPhrase(foundation.bodyType),
+    normalizeBodyPhrase(foundation.muscleLevel),
+    normalizeBodyPhrase(foundation.shoulderWidth),
+  ]).slice(0, 3).join("，") || cn(skeleton.bodyLayer.bodyType);
+}
+
+function shortFacePhrase(foundation, skeleton) {
+  if (!foundation) return `${cn(skeleton.faceLayer.faceType)}，发型简洁可读，${cn(skeleton.expressionLayer.expression)}`;
+  return unique([
+    foundation.skinTone,
+    foundation.faceShape,
+    foundation.hairStyle,
+    foundation.hairColor,
+    foundation.expression,
+  ]).slice(0, 5).join("，");
+}
+
+function compressThemeSummary(theme) {
+  if (!theme) return "轻都市奇幻角色，以少量清楚母题建立识别度。";
+  const motifs = unique(theme.visualMotifs || []).slice(0, 2);
+  const region = theme.regionLabel || "";
+  const label = theme.themeLabel || theme.themeCategory || "角色";
+  const motifText = motifs.length ? `，以${motifs.join("、")}为母题` : "";
+  return `整体带有${region}${label}气质${motifText}。`;
+}
+
+function primaryProp(skeleton) {
+  const theme = skeleton.themeDirectionLayer || {};
+  const influence = skeleton.influenceSourceLayer || {};
+  return unique([
+    theme.specialVisualProp,
+    influence.visualWeapon,
+    influence.weaponPreference,
+    ...((theme.visualKeywordExtraction && theme.visualKeywordExtraction.propWords) || []),
+    ...(theme.propWords || []),
+  ])[0] || "";
+}
+
+function fieldMotifLabelMap(skeleton) {
+  const concrete = skeleton.fieldInfluenceExpansionLayer && skeleton.fieldInfluenceExpansionLayer.concreteTheme
+    ? skeleton.fieldInfluenceExpansionLayer.concreteTheme
+    : skeleton.influenceGenerationLayer &&
+      skeleton.influenceGenerationLayer.fieldInfluenceExpansionLayer &&
+      skeleton.influenceGenerationLayer.fieldInfluenceExpansionLayer.concreteTheme
+      ? skeleton.influenceGenerationLayer.fieldInfluenceExpansionLayer.concreteTheme
+      : null;
+  if (!concrete || !concrete.sourceMotifs || !concrete.sourceMotifLabels) return {};
+  return Object.fromEntries(concrete.sourceMotifs.map((item, index) => [item, concrete.sourceMotifLabels[index] || item]));
+}
+
+function dedupePromptConcepts(skeleton) {
+  const theme = skeleton.themeDirectionLayer || {};
+  const extraction = theme.visualKeywordExtraction || {};
+  const composition = skeleton.compositionLayer || {};
+  const labelMap = fieldMotifLabelMap(skeleton);
+  const prop = primaryProp(skeleton);
+  const rawMotifs = unique([...(composition.sourceMotifs || []), ...(extraction.motifWords || []), ...(theme.visualMotifs || [])])
+    .filter((item) => item !== prop && !String(prop).includes(item))
+    .slice(0, 2);
+  const motifs = rawMotifs.map((item) => labelMap[item] || item);
+  return {
+    visualWeapon: prop,
+    motifs,
+    themeSummary: compressThemeSummary({ ...theme, visualMotifs: motifs.length ? motifs : theme.visualMotifs }),
+    selectedMotifs: motifs,
+  };
+}
+
+function innerwearAnchor(theme) {
+  const clothing = theme && theme.visualKeywordExtraction ? theme.visualKeywordExtraction.clothingWords || [] : [];
+  const explicit = clothing.find((item) => /白色|贴身|短袖|背心|上衣/.test(item));
+  if (explicit) return explicit.replace(/^白色贴身短袖$/, "白色贴身短袖上衣");
+  return "白色贴身内搭";
+}
+
+function innerwearBodyAnchorPhrase(theme) {
+  return `${innerwearAnchor(theme)}紧贴厚实躯干，布料下能轻微读出胸肌与腹肌的大块轮廓，强调被包裹住的力量感，腹部结构清楚但概括，不做细碎肌肉刻画`;
+}
+
+function outerwearShape(skeleton) {
+  const outer = skeleton.outerwearModule || {};
+  if (!outer || outer.presence === "none") return "简洁外层";
+  return `${regionalCn(outer.baseType, outer.themeDirectionLayer)}，${regionalCn(outer.silhouette, outer.themeDirectionLayer)}轮廓`;
+}
+
+function bottomShape(skeleton) {
+  const bottom = skeleton.bottomModule || {};
+  if (!bottom || bottom.status !== "active") return "利落长裤";
+  const socks = bottomSockPhrase(bottom, { compact: true });
+  return `${cn(bottom.baseType)}，${cn(bottom.silhouette)}轮廓${socks ? `，${socks}` : ""}`;
+}
+
+function compositionSentence(skeleton) {
+  const layer = skeleton.compositionLayer;
+  if (!layer || layer.status !== "mvp" || !layer.promptFragment) return "";
+  return `${layer.promptFragment}。`;
+}
+
+function bottomSockPhrase(bottomModule, options = {}) {
+  const profile = bottomModule && bottomModule.sockVisibilityProfile;
+  if (!profile || profile.sockVisibility === "hidden") return "";
+  const sock = cn(profile.sockLength || "crew_socks");
+  if (profile.sockVisibility === "slightly_visible") return options.compact
+    ? `裤脚与鞋履之间露出一截${sock}`
+    : `裤脚与鞋履之间略微露出一截${sock}`;
+  if (profile.sockVisibility === "dominant_visible") return options.compact
+    ? `搭配清楚的${sock}`
+    : `搭配清楚可见的${sock}，作为下半身稳定视觉组成`;
+  return options.compact
+    ? `${sock}清楚可见`
+    : `${sock}在裤脚与鞋履之间清楚可见`;
+}
+
+function paletteSentence(designLanguage) {
+  if (designLanguage && designLanguage.migratedPalette && designLanguage.migratedPalette.summary) {
+    return `配色以${designLanguage.migratedPalette.summary}。`;
+  }
+  return "配色干净，主色和点缀色分明。";
+}
+
+function stylePreferencePhrase(skeleton) {
+  const stylePreference = skeleton.stylePreferenceLayer || {};
+  const parts = unique([stylePreference.lineQuality, stylePreference.shadowStyle]);
+  if (parts.length) return parts.join("、");
+  return "干净 TV 动画赛璐璐";
+}
+
+function ageRangeCn(value) {
+  return {
+    early_30s: "三十出头",
+    mid_30s: "三十五岁左右",
+    late_30s: "三十七八岁",
+    early_40s: "四十出头",
+  }[value] || "成熟成年";
+}
+
+function bodyArchetypeCn(value) {
+  return {
+    very_broad_frame: "极宽肩厚实体格",
+    thick_chubby_muscular: "厚实微胖但有肌肉的体型",
+    bulky_soft_strong: "壮硕柔厚的力量型体格",
+    heavy_power_build: "沉重有力的强壮体格",
+  }[value] || "壮硕厚实体型";
+}
+
+function personalityCn(value) {
+  return {
+    calm_reliable: "平静可靠",
+    warm_protective: "温和保护欲",
+    serious_focused: "严肃专注",
+    blunt_honest: "直率诚实",
+    quiet_observant: "安静观察型",
+    cheerful_loud: "爽朗外向",
+    patient_caretaker: "耐心照看者",
+  }[value] || value;
+}
+
+function cleanupPromptPunctuation(text) {
+  return String(text || "")
+    .replace(/。{2,}/g, "。")
+    .replace(/，。/g, "。")
+    .replace(/；。/g, "。")
+    .replace(/。\s*。/g, "。")
+    .replace(/\n{3,}/g, "\n\n");
+}
+
+function compileImageFinalPrompt(skeleton) {
+  const theme = skeleton.themeDirectionLayer;
+  const foundation = skeleton.characterFoundationLayer;
+  const concepts = dedupePromptConcepts(skeleton);
+  const occupation = skeleton.influenceSourceLayer && skeleton.influenceSourceLayer.occupationInfluence
+    ? skeleton.influenceSourceLayer.occupationInfluence
+    : "原创成年男性角色";
+  const region = skeleton.regionContextLayer && skeleton.regionContextLayer.heritageBase
+    ? skeleton.regionContextLayer.heritageBase
+    : theme && theme.regionLabel ? theme.regionLabel : "";
+  const prop = concepts.visualWeapon;
+  const propSentence = prop
+    ? `核心道具只保留${prop}，符号化处理，少量轻都市奇幻感，不要散成全身小图案。`
+    : "奇幻元素轻量集中，不抢服装主体。";
+  const guardrail = skeleton.guardrails && skeleton.guardrails.noDirectTool && skeleton.guardrails.noDirectTool.length
+    ? `不要画成${joinCn(skeleton.guardrails.noDirectTool.slice(0, 3))}。`
+    : "";
+
+  const paragraphs = [
+    `单人全身角色设定图，从头到脚完整可见，白底或浅色背景；${region ? `${region}出身，` : ""}${occupation}，整体成熟厚实、稳定可靠。`,
+    `${shortBodyPhrase(foundation, skeleton)}；${shortFacePhrase(foundation, skeleton)}。`,
+    concepts.themeSummary,
+    `服装以${innerwearBodyAnchorPhrase(theme)}；外层是${outerwearShape(skeleton)}，下装为${bottomShape(skeleton)}，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。${compositionSentence(skeleton)}`,
+    `${propSentence}${guardrail}`,
+    `${paletteSentence(skeleton.designLanguage)}${stylePreferencePhrase(skeleton)}，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。`,
+  ].filter(Boolean);
+
+  return cleanupPromptPunctuation([
+    "# Character Skeleton Prompt Compiler Output",
+    "",
+    "## Image Final Prompt",
+    "",
+    paragraphs.join("\n"),
+    "",
+    "## promptCompressionGate.debug",
+    "",
+    JSON.stringify({
+      mode: "imageFinal",
+      targetLength: "250-450 Chinese characters",
+      paragraphCount: paragraphs.length,
+      dedupedConcepts: concepts,
+      moduleSanityWarnings: skeleton.promptCompressionGate && skeleton.promptCompressionGate.debug
+        ? skeleton.promptCompressionGate.debug.moduleSanityWarnings || []
+        : [],
+      influenceOnly: skeleton.promptCompressionGate && skeleton.promptCompressionGate.influenceOnly
+        ? skeleton.promptCompressionGate.influenceOnly
+        : [],
+      debugOnly: skeleton.promptCompressionGate && skeleton.promptCompressionGate.debugOnly
+        ? skeleton.promptCompressionGate.debugOnly
+        : [],
+      reasonabilityFilter: skeleton.reasonabilityFilter || null,
+      influenceReasoningLog: skeleton.influenceGenerationLayer
+        ? skeleton.influenceGenerationLayer.influenceReasoningLog
+        : [],
+    }, null, 2),
+  ].join("\n"));
+}
+
+function influenceSourceSentence(influenceSourceLayer) {
+  if (!influenceSourceLayer) return "";
+  const parts = [];
+  if (influenceSourceLayer.occupationInfluence) {
+    parts.push(`身份气质来自${influenceSourceLayer.occupationInfluence}`);
+  }
+  if (influenceSourceLayer.combatArchetype || influenceSourceLayer.combatFunction) {
+    parts.push(`战斗气质偏${[influenceSourceLayer.combatArchetype, influenceSourceLayer.combatFunction].filter(Boolean).join("，")}`);
+  }
+  const weapon = influenceSourceLayer.weaponPreference || influenceSourceLayer.visualWeapon;
+  if (weapon) {
+    parts.push(`可见道具以${weapon}为核心，轮廓单一清楚`);
+  }
+  return parts.length ? `${parts.join("；")}。` : "";
+}
+
+function convertedVisualHintSentence(themeDirectionLayer) {
+  const extraction = themeDirectionLayer && themeDirectionLayer.visualKeywordExtraction;
+  if (!extraction) return "";
+  const clothing = extraction.clothingWords || [];
+  const props = extraction.propWords || [];
+  const hints = [];
+  const whiteInner = clothing.find((item) => /白色|贴身|短袖|背心|上衣/.test(item));
+  if (whiteInner) {
+    hints.push(`内搭锚点保持${whiteInner.replace(/^白色贴身短袖$/, "白色贴身短袖上衣")}，用于轻微读出胸腹大块结构和被包裹住的力量感`);
+  }
+  const lowerHint = clothing.find((item) => /裤|袜|靴|腰封|腰带/.test(item));
+  if (lowerHint) {
+    hints.push(`下半身参考${lowerHint}的轮廓方向，保持简洁`);
+  }
+  if (props.length) {
+    hints.push(`道具母题集中在${props.slice(0, 2).join("和")}，不要散成全身小图案`);
+  }
+  return hints.length ? `${hints.join("；")}。` : "";
+}
+
+function guardrailSentence(guardrails) {
+  if (!guardrails || !guardrails.noDirectTool || !guardrails.noDirectTool.length) return "";
+  return `道具不要画成${joinCn(guardrails.noDirectTool)}，保持符号化和动画化。`;
 }
 
 function topModuleSentence(topModule, themeDirectionLayer) {
@@ -332,7 +664,15 @@ function bottomModuleSentence(bottomModule) {
   const complexityText = bottomModule.complexityLevel === "simple"
     ? "复杂度低于上半身，不抢外套主视觉"
     : "保持中等复杂度，但仍低于上半身主视觉";
-  return `下装使用${cn(bottomModule.baseType)}，${cn(bottomModule.silhouette)}轮廓，${cn(bottomModule.length)}长度，${cn(bottomModule.waistStructure)}连接上半身，腿部以${cn(bottomModule.legStructure)}和${cn(bottomModule.hemTreatment)}收束；材质为${cn(bottomModule.material)}，${cn(bottomModule.wearState)}，视觉重点只放在${focus}，${motifText}，${complexityText}。`;
+  const exposure = bottomModule.bottomLengthPreference && bottomModule.bottomLengthPreference.legExposureLevel;
+  const exposureText = {
+    covered: "腿部覆盖完整",
+    ankle_visible: "脚踝处保持清楚层次",
+    calf_visible: "露出结实小腿",
+    knee_visible: "露出膝部和结实小腿",
+  }[exposure] || "下半身轮廓清楚";
+  const sockText = bottomSockPhrase(bottomModule);
+  return `下装使用${cn(bottomModule.baseType)}，${cn(bottomModule.silhouette)}轮廓，${cn(bottomModule.length)}长度，${exposureText}，${cn(bottomModule.waistStructure)}连接上半身，腿部以${cn(bottomModule.legStructure)}和${cn(bottomModule.hemTreatment)}收束${sockText ? `；${sockText}` : ""}；材质为${cn(bottomModule.material)}，${cn(bottomModule.wearState)}，视觉重点只放在${focus}，${motifText}，${complexityText}。`;
 }
 
 function placeholderClothingSentence(skeleton) {
@@ -343,6 +683,10 @@ function placeholderClothingSentence(skeleton) {
 
 function compileDebugPrompt(skeleton) {
   const parts = [
+    skeleton.influenceGenerationLayer ? `influenceGenerationLayer: ${JSON.stringify(skeleton.influenceGenerationLayer)}` : "",
+    skeleton.reasonabilityFilter ? `reasonabilityFilter: ${JSON.stringify(skeleton.reasonabilityFilter)}` : "",
+    skeleton.characterFoundationLayer ? `foundation: ${JSON.stringify(skeleton.characterFoundationLayer)}` : "",
+    skeleton.influenceSourceLayer ? `influenceSource: ${JSON.stringify(skeleton.influenceSourceLayer)}` : "",
     skeleton.characterLayer.presence,
     skeleton.bodyLayer.bodyType,
     skeleton.bodyLayer.build,
@@ -363,7 +707,7 @@ function compileDebugPrompt(skeleton) {
     skeleton.styleLayer.promptDiscipline,
   ].filter(Boolean);
 
-  return [
+  return cleanupPromptPunctuation([
     "# Character Skeleton Prompt Compiler Output",
     "",
     "## Debug Prompt",
@@ -379,31 +723,36 @@ function compileDebugPrompt(skeleton) {
     "- outerwearModule is the first deepened single-item module.",
     "- bottomModule is an MVP single-item module.",
     "- footwearModule, accessoryModule, and weaponModule remain placeholders for later deep passes.",
-  ].join("\n");
+  ].join("\n"));
 }
 
 function compileNaturalFinalPrompt(skeleton) {
   const theme = skeleton.themeDirectionLayer;
   const coherenceCheck = skeleton.outfitCoherenceCheck;
+  const foundationText = characterFoundationSentence(skeleton.characterFoundationLayer);
+  const influenceText = influenceSourceSentence(skeleton.influenceSourceLayer);
   const sentences = [
     "单人全身角色设定图，从头到脚完整可见，白底或浅色背景，正面或轻微三分之二站姿。",
     `${cn(skeleton.bodyLayer.bodyType)}，气质${cn(skeleton.characterLayer.presence)}；${theme ? sanitizeRegionalTerms(theme.themeSummary, theme) : "整体带有轻都市奇幻的生活语境。"}奇幻感克制，不要大范围发光。`,
-    "体型壮硕厚实，宽肩厚胸，手臂和腿部有力量，成熟有重量感，边缘略带柔和厚度。",
-    `${cn(skeleton.faceLayer.faceType)}，发型简洁可读，${cn(skeleton.expressionLayer.expression)}。`,
+    foundationText || "体型壮硕厚实，宽肩厚胸，手臂和腿部有力量，成熟有重量感，边缘略带柔和厚度。",
+    foundationText ? "" : `${cn(skeleton.faceLayer.faceType)}，发型简洁可读，${cn(skeleton.expressionLayer.expression)}。`,
+    influenceText,
+    convertedVisualHintSentence(theme),
     coherenceCheck ? coherenceCheck.styleSummary : "",
     topModuleCoherentSentence(skeleton.topModule, theme, coherenceCheck),
     outerwearCoherentSentence(skeleton.outerwearModule, coherenceCheck),
     bottomModuleSentence(skeleton.bottomModule),
     placeholderClothingSentence(skeleton),
     "配饰、武器和奇幻元素只轻量出现，不抢服装主体。",
+    guardrailSentence(skeleton.guardrails),
     designLanguageSentence(skeleton.designLanguage),
-    "干净 TV 动画赛璐璐和游戏角色设定图，块面明确、轮廓清楚、材质动画化；不要厚涂、写实摄影、复杂纹理噪音、文字、UI、多人或身体裁切。",
+    `${stylePreferencePhrase(skeleton)}和游戏角色设定图，块面明确、轮廓清楚、材质动画化；不要厚涂、写实摄影、复杂纹理噪音、文字、UI、多人或身体裁切。`,
   ].filter(Boolean);
 
   return [
     "# Character Skeleton Prompt Compiler Output",
     "",
-    "## Final Prompt",
+    "## Full Final Prompt",
     "",
     sentences.join("\n"),
     "",
@@ -419,10 +768,59 @@ function buildCharacterSkeleton(options = {}) {
   const seed = options.seed || `${Date.now()}`;
   const rng = createRng(seed);
   const designLanguage = options.designLanguage || loadDesignLanguage(options.designLanguagePath || defaultDesignLanguagePath);
-  const themeDirectionLayer = buildThemeDirectionLayer(rng, {
+  const fieldInfluenceExpansionLayer = options.fieldInfluenceExpansionLayer || (options.useFieldInfluenceExpansion
+    ? buildFieldInfluenceExpansionLayer(rng, { themeCategory: options.themeCategory })
+    : null);
+  const concreteTheme = fieldInfluenceExpansionLayer && fieldInfluenceExpansionLayer.concreteTheme
+    ? fieldInfluenceExpansionLayer.concreteTheme
+    : null;
+  const fieldRegion = fieldInfluenceExpansionLayer && fieldInfluenceExpansionLayer.originInfluence
+    ? fieldInfluenceExpansionLayer.originInfluence.regionContext || fieldInfluenceExpansionLayer.originInfluence.region
+    : "";
+  const influenceGenerationLayer = buildInfluenceGenerationLayer(rng, {
     themeCategory: options.themeCategory,
-    regionContext: options.regionContext,
+    regionContext: options.regionContext || fieldRegion,
+    occupationSeed: options.influence || (concreteTheme ? concreteTheme.occupationSeed || concreteTheme.themeLabel : ""),
+    presentationMode: options.presentationMode,
+  });
+  const resolvedInfluences = influenceGenerationLayer.resolvedInfluences;
+  if (fieldInfluenceExpansionLayer) {
+    influenceGenerationLayer.fieldInfluenceExpansionLayer = fieldInfluenceExpansionLayer;
+    influenceGenerationLayer.fieldBundle = fieldInfluenceExpansionLayer.fieldBundle;
+    influenceGenerationLayer.fieldBoundaryCheck = fieldInfluenceExpansionLayer.fieldBoundaryCheck;
+    influenceGenerationLayer.primaryInfluences.occupationSeed = concreteTheme.occupationSeed || concreteTheme.themeLabel;
+    influenceGenerationLayer.primaryInfluences.fieldBundleDriven = true;
+    influenceGenerationLayer.primaryInfluences.fieldBundle = fieldInfluenceExpansionLayer.fieldBundle;
+    resolvedInfluences.fieldInfluenceExpansionLayer = fieldInfluenceExpansionLayer;
+    resolvedInfluences.occupationInfluence = concreteTheme.occupationSeed || concreteTheme.themeLabel;
+    resolvedInfluences.environmentInfluence = [
+      ...(resolvedInfluences.environmentInfluence || []),
+      ...(concreteTheme.environmentMotifs || []),
+      ...(fieldInfluenceExpansionLayer.derivedVisualContext || []).slice(0, 2),
+    ];
+    resolvedInfluences.materialInfluence = [
+      ...(resolvedInfluences.materialInfluence || []),
+      ...(concreteTheme.materialMotifs || []),
+    ];
+  }
+  const themeDirectionLayer = buildThemeDirectionLayer(rng, {
+    themeCategory: influenceGenerationLayer.primaryInfluences.themeCategory,
+    regionContext: influenceGenerationLayer.primaryInfluences.regionContext,
     culturalInfluenceLevel: options.culturalInfluenceLevel,
+  });
+  themeDirectionLayer.resolvedInfluences = resolvedInfluences;
+  if (fieldInfluenceExpansionLayer && concreteTheme) {
+    const motifLabels = concreteTheme.sourceMotifLabels || concreteTheme.sourceMotifs;
+    themeDirectionLayer.fieldInfluenceExpansionLayer = fieldInfluenceExpansionLayer;
+    themeDirectionLayer.themeCategory = concreteTheme.themeCategory;
+    themeDirectionLayer.themeLabel = concreteTheme.themeLabel;
+    themeDirectionLayer.visualMotifs = motifLabels.slice(0, 3);
+    themeDirectionLayer.environmentFlavor = concreteTheme.workplace;
+    themeDirectionLayer.themeSummary = `整体指向${concreteTheme.themeLabel}，生活场景来自${concreteTheme.workplace}，以${motifLabels.slice(0, 3).join("、")}作为可转化为服装结构的具体母题。`;
+  }
+  const compositionLayer = buildCompositionLayer(rng, {
+    themeDirectionLayer,
+    resolvedInfluences,
   });
   const upperLibrary = readJson(options.upperLibraryPath || defaultUpperLibraryPath);
   const topModule = {
@@ -431,24 +829,38 @@ function buildCharacterSkeleton(options = {}) {
     ...buildUpperGarmentModule(upperLibrary, rng, {
       designLanguage,
       base: options.base,
-      influence: options.influence,
+      influence: resolvedInfluences.occupationInfluence || options.influence,
       cultureLevel: options.cultureLevel,
     }),
     themeDirectionLayer,
+    compositionInfluence: {
+      sourceMotifs: compositionLayer.sourceMotifs.slice(0, 2),
+      garmentMapping: compositionLayer.garmentMapping,
+      promptFragment: compositionLayer.promptFragment,
+    },
+    resolvedInfluences,
     themePromptHint: themeDirectionLayer.themeSummary,
   };
+  const outerwearBias = resolvedInfluences.outerwearBias || {};
   const outerwearModule = buildOuterwearModule(rng, {
     designLanguage,
     themeDirectionLayer,
     presence: options.outerwearPresence,
-    baseType: options.outerwearBaseType,
+    baseType: options.outerwearBaseType || (outerwearBias.baseTypes && outerwearBias.baseTypes.length ? pick(outerwearBias.baseTypes, rng) : ""),
     silhouette: options.outerwearSilhouette,
     length: options.outerwearLength,
     cutLanguage: options.outerwearCutLanguage,
-    material: options.outerwearMaterial,
+    material: options.outerwearMaterial || (outerwearBias.materials && outerwearBias.materials.length ? pick(outerwearBias.materials, rng) : ""),
     finish: options.outerwearFinish,
     wearState: options.outerwearWearState,
+    resolvedInfluences,
   });
+  outerwearModule.resolvedInfluences = resolvedInfluences;
+  outerwearModule.compositionInfluence = {
+    sourceMotifs: compositionLayer.sourceMotifs.slice(0, 2),
+    garmentMapping: compositionLayer.garmentMapping,
+    promptFragment: compositionLayer.promptFragment,
+  };
   const outfitCoherenceCheck = buildOutfitCoherenceCheck({
     themeDirectionLayer,
     topModule,
@@ -458,22 +870,33 @@ function buildCharacterSkeleton(options = {}) {
     designLanguage,
     themeDirectionLayer,
     outfitCoherenceCheck,
+    resolvedInfluences,
+    compositionLayer,
   });
 
-  return {
+  const skeleton = {
     version: "2.0-skeleton-mvp",
     seed,
     designLanguage,
+    fieldInfluenceExpansionLayer,
+    influenceGenerationLayer,
+    stylePreferenceLayer: {
+      moduleName: "stylePreferenceLayer",
+      status: "minimal-global-style-preference",
+      lineQuality: "京都动画式清爽线条",
+      shadowStyle: "干净赛璐璐阴影",
+    },
     themeDirectionLayer,
+    compositionLayer,
     outfitCoherenceCheck,
     characterLayer: makeLayer("characterLayer", designLanguage, {
       role: "adult male original character",
-      ageRead: "mature adult",
-      presence: "sturdy, grounded, broad-shouldered",
+      ageRead: ageRangeCn(resolvedInfluences.ageRange),
+      presence: personalityCn(resolvedInfluences.personalityCore),
     }),
     bodyLayer: makeLayer("bodyLayer", designLanguage, {
       bodyType: "normal adult male proportion",
-      build: "strong, thick, mature physique",
+      build: bodyArchetypeCn(resolvedInfluences.bodyArchetype),
       posture: "stable standing pose",
     }),
     faceLayer: makeLayer("faceLayer", designLanguage, {
@@ -514,10 +937,13 @@ function buildCharacterSkeleton(options = {}) {
       promptDiscipline: "large shapes, clear blocks, controlled detail density",
     }),
   };
+  return applyReasonabilityFilter(skeleton);
 }
 
 function compileFinalPrompt(skeleton, options = {}) {
-  return options.mode === "debug" ? compileDebugPrompt(skeleton) : compileNaturalFinalPrompt(skeleton);
+  if (options.mode === "debug") return compileDebugPrompt(skeleton);
+  if (options.mode === "imageFinal") return compileImageFinalPrompt(skeleton);
+  return compileNaturalFinalPrompt(skeleton);
 }
 
 function printUsage() {
@@ -526,7 +952,7 @@ function printUsage() {
   console.log("node experiments/prompt-compiler/scripts/compile-character-skeleton.js --input experiments/prompt-compiler/output/latest-character-skeleton.json");
   console.log("");
   console.log("Optional:");
-  console.log("--mode final|debug");
+  console.log("--mode fullFinal|imageFinal|debug");
   console.log("--theme-category night_patrol|market_guard|clock_tower_maintainer|greenhouse_gardener|...");
   console.log("--region-context neutral_urban|north_china_old_city|southeast_asian_rain_street|...");
   console.log("--cultural-influence-level 0|1|2|3|4");
@@ -547,7 +973,7 @@ function main() {
   const moduleOutputPath = path.resolve(process.cwd(), optionValue(args, "module-output") || defaultModuleOutputPath);
   const promptOutputPath = path.resolve(process.cwd(), optionValue(args, "prompt-output") || defaultPromptOutputPath);
   const inputPath = optionValue(args, "input");
-  const mode = optionValue(args, "mode") || "final";
+  const mode = optionValue(args, "mode") || "fullFinal";
   const skeleton = inputPath
     ? readJson(path.resolve(process.cwd(), inputPath))
     : buildCharacterSkeleton({

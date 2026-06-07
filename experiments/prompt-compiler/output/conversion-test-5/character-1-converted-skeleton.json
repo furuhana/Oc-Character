@@ -1,0 +1,1006 @@
+{
+  "version": "2.0-skeleton-mvp-converted-from-1.0-a-fields",
+  "seed": "conversion-test-1",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate",
+    "migratedPalette": {
+      "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+      "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+      "extractedColors": [
+        "白色上衣为身体锚点",
+        "墨黑和酒红作为衣装主色",
+        "琥珀和旧金只用于书页边",
+        "书签锤和小型印记",
+        "白色",
+        "琥珀"
+      ],
+      "rule": "Use as palette guidance only; do not create dense color markings."
+    }
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active-with-1.0-a-field-influence",
+    "themeCategory": "library_stack_keeper",
+    "themeLabel": "书库看护",
+    "regionContext": "north_china_old_city",
+    "regionLabel": "华北旧城",
+    "environmentFlavor": "老城墙",
+    "environmentKeywords": [
+      "胡同",
+      "老城墙",
+      "灰砖",
+      "旧门牌",
+      "路灯",
+      "供热管线"
+    ],
+    "visualMotifs": [
+      "图书馆",
+      "书库",
+      "书签"
+    ],
+    "materialMood": "棉布与黄铜",
+    "materialHints": [
+      "纸页",
+      "帆布",
+      "厚织物",
+      "旧铜"
+    ],
+    "colorHints": [
+      "灰蓝",
+      "煤黑",
+      "旧白",
+      "暗红",
+      "旧铜"
+    ],
+    "structuralHints": [
+      "实用工装",
+      "宽门襟",
+      "厚外套",
+      "棉服感"
+    ],
+    "motifHints": [
+      "门牌",
+      "路灯",
+      "旧钥匙",
+      "暖气阀",
+      "旧钟"
+    ],
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 1,
+    "modernityLevel": "retro_modern",
+    "styleHint": "soft_daily",
+    "avoidIfNotSelected": [
+      "神社",
+      "鸟居",
+      "和风祭典",
+      "京都"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有华北旧城书库看护的气质，环境指向老城墙，以图书馆、书库、书签作为少量集中视觉母题，核心可见道具是重力书签锤，一个负责封闭高层书库的魁梧馆员，用重力书签锤把楼层像书页一样压住，保护读者撤离。",
+    "characterHook": "一个负责封闭高层书库的魁梧馆员，用重力书签锤把楼层像书页一样压住，保护读者撤离。",
+    "themeInference": {
+      "selectedTheme": "library_stack_keeper",
+      "confidence": 1,
+      "matchedKeywords": [
+        "图书馆",
+        "书库",
+        "垂直书库",
+        "书签",
+        "馆员"
+      ],
+      "fallbackUsed": false
+    },
+    "visualKeywordExtraction": {
+      "roleWords": [
+        "魁梧馆员",
+        "图书馆垂直书库管理员"
+      ],
+      "bodyWords": [
+        "厚重",
+        "魁梧"
+      ],
+      "clothingWords": [
+        "白色贴身短袖"
+      ],
+      "materialWords": [],
+      "colorWords": [
+        "白色",
+        "琥珀"
+      ],
+      "motifWords": [
+        "图书馆",
+        "书库",
+        "书签",
+        "馆员"
+      ],
+      "propWords": [
+        "书签",
+        "重力书签锤"
+      ],
+      "promptHints": [
+        "厚重魁梧馆员",
+        "白色贴身短袖",
+        "琥珀页边光"
+      ]
+    },
+    "specialVisualProp": "重力书签锤",
+    "propWords": [
+      "重力书签锤",
+      "书签"
+    ]
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "soft_daily",
+    "secondaryStyleSource": "traditional_modern",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": false,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以日常生活感为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，旧钥匙和书签元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "role": "adult male original character converted from 1.0 profile",
+    "ageRead": "36 years old",
+    "presence": "沉稳、严谨、护短、慢热"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "bodyType": "厚重魁梧的成年男性",
+    "build": "极高，像搬运书库也像护卫，极宽肩，胸背很厚",
+    "posture": "stable standing pose",
+    "height": "190 cm",
+    "weight": "121 kg"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "faceType": "宽下颌长方脸",
+    "hair": "短黑发侧分，发际干净，黑色",
+    "keyFeature": "clear facial silhouette",
+    "skinTone": "暖橄榄小麦色"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "expression": "克制压力式咬牙短笑，嘴角抬起但牙齿轻咬，眉峰压低，眼神像在计算重量",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "白色贴身短袖上衣",
+    "baseCategory": "modern",
+    "culturalAdaptationLevel": {
+      "level": 1,
+      "label": "现代基础款 + 少量传统细节",
+      "description": "现代基础款为主，只加入 1 个传统细节。"
+    },
+    "traditionalInfluences": [
+      "侧开衩"
+    ],
+    "silhouette": "贴身短袖轮廓",
+    "cutLanguage": "clean",
+    "materialLanguage": "clean",
+    "closureSystem": "pullover",
+    "designFocus": [
+      "chest fit"
+    ],
+    "structuralFeatures": [],
+    "detailComponents": [],
+    "wearState": "系在腰间",
+    "personalHabit": "习惯让衣摆不完全对齐",
+    "influenceSource": "旧街修表师",
+    "influenceMaterials": [
+      "黄铜细件",
+      "蓝钢色扣件",
+      "透明玻璃感饰片"
+    ],
+    "influenceDetails": [
+      "圆形表盖口袋盖",
+      "发条形刺绣",
+      "小齿轮袖扣"
+    ],
+    "constructionVerbs": [
+      "分段固定",
+      "作为肩线",
+      "折叠",
+      "扣合",
+      "铆接"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "低",
+      "formality": "半正式",
+      "layeringDepth": "单层",
+      "mobility": "低",
+      "fantasyIntensity": "中",
+      "cleanliness": "干净"
+    },
+    "avoid": [
+      "不要出现可读数字",
+      "不要只画钟表图案",
+      "不要机械件过密"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "library_stack_keeper",
+      "themeLabel": "书库看护",
+      "regionContext": "north_china_old_city",
+      "regionLabel": "华北旧城",
+      "environmentFlavor": "老城墙",
+      "environmentKeywords": [
+        "胡同",
+        "老城墙",
+        "灰砖",
+        "旧门牌",
+        "路灯",
+        "供热管线"
+      ],
+      "visualMotifs": [
+        "旧钥匙",
+        "书签",
+        "路灯"
+      ],
+      "materialMood": "棉布与黄铜",
+      "materialHints": [
+        "纸页",
+        "帆布",
+        "厚织物",
+        "旧铜"
+      ],
+      "colorHints": [
+        "灰蓝",
+        "煤黑",
+        "旧白",
+        "暗红",
+        "旧铜"
+      ],
+      "structuralHints": [
+        "实用工装",
+        "宽门襟",
+        "厚外套",
+        "棉服感"
+      ],
+      "motifHints": [
+        "门牌",
+        "路灯",
+        "旧钥匙",
+        "暖气阀",
+        "旧钟"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "retro_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "和风祭典",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有华北旧城书库看护的气质，环境指向老城墙，以棉布与黄铜和灰蓝、煤黑配色作为主题基础，以旧钥匙、书签、路灯作为少量集中视觉母题。"
+    },
+    "themePromptHint": "整体带有华北旧城书库看护的气质，环境指向老城墙，以棉布与黄铜和灰蓝、煤黑配色作为主题基础，以旧钥匙、书签、路灯作为少量集中视觉母题。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "presence": "medium",
+    "baseType": "long coat",
+    "silhouette": "heavy upper body",
+    "length": "waist length",
+    "cutLanguage": "wrap style",
+    "designFocus": {
+      "primary": "back panel",
+      "secondary": "waist"
+    },
+    "structuralFeature": [
+      "heavy hem"
+    ],
+    "material": "matte nylon",
+    "finish": "flat color blocks",
+    "wearState": "draped over shoulders",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "library_stack_keeper",
+      "themeLabel": "书库看护",
+      "regionContext": "north_china_old_city",
+      "regionLabel": "华北旧城",
+      "environmentFlavor": "老城墙",
+      "environmentKeywords": [
+        "胡同",
+        "老城墙",
+        "灰砖",
+        "旧门牌",
+        "路灯",
+        "供热管线"
+      ],
+      "visualMotifs": [
+        "旧钥匙",
+        "书签",
+        "路灯"
+      ],
+      "materialMood": "棉布与黄铜",
+      "materialHints": [
+        "纸页",
+        "帆布",
+        "厚织物",
+        "旧铜"
+      ],
+      "colorHints": [
+        "灰蓝",
+        "煤黑",
+        "旧白",
+        "暗红",
+        "旧铜"
+      ],
+      "structuralHints": [
+        "实用工装",
+        "宽门襟",
+        "厚外套",
+        "棉服感"
+      ],
+      "motifHints": [
+        "门牌",
+        "路灯",
+        "旧钥匙",
+        "暖气阀",
+        "旧钟"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "retro_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "和风祭典",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有华北旧城书库看护的气质，环境指向老城墙，以棉布与黄铜和灰蓝、煤黑配色作为主题基础，以旧钥匙、书签、路灯作为少量集中视觉母题。"
+    },
+    "themeMotifs": [
+      "旧钥匙",
+      "书签"
+    ],
+    "materialMood": "棉布与黄铜",
+    "promptFragment": "medium long coat, heavy upper body silhouette, waist length, wrap style cut, matte nylon with flat color blocks, main focus back panel, secondary focus waist, large structure: heavy hem, theme motifs: 旧钥匙 / 书签, material mood: 棉布与黄铜, draped over shoulders, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "library_stack_keeper",
+      "themeLabel": "书库看护",
+      "regionContext": "north_china_old_city",
+      "regionLabel": "华北旧城",
+      "environmentFlavor": "老城墙",
+      "environmentKeywords": [
+        "胡同",
+        "老城墙",
+        "灰砖",
+        "旧门牌",
+        "路灯",
+        "供热管线"
+      ],
+      "visualMotifs": [
+        "旧钥匙",
+        "书签",
+        "路灯"
+      ],
+      "materialMood": "棉布与黄铜",
+      "materialHints": [
+        "纸页",
+        "帆布",
+        "厚织物",
+        "旧铜"
+      ],
+      "colorHints": [
+        "灰蓝",
+        "煤黑",
+        "旧白",
+        "暗红",
+        "旧铜"
+      ],
+      "structuralHints": [
+        "实用工装",
+        "宽门襟",
+        "厚外套",
+        "棉服感"
+      ],
+      "motifHints": [
+        "门牌",
+        "路灯",
+        "旧钥匙",
+        "暖气阀",
+        "旧钟"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "retro_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "和风祭典",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有华北旧城书库看护的气质，环境指向老城墙，以棉布与黄铜和灰蓝、煤黑配色作为主题基础，以旧钥匙、书签、路灯作为少量集中视觉母题。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "soft_daily",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "presence": "developed",
+    "baseType": "tapered trousers",
+    "silhouette": "relaxed",
+    "length": "full length",
+    "waistStructure": "broad waistband",
+    "legStructure": "panel division",
+    "hemTreatment": "clean hem",
+    "material": "soft blended fabric",
+    "wearState": "relaxed daily",
+    "designFocus": [
+      "side pocket area"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "旧钥匙 at side seam",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "tapered trousers, relaxed silhouette, full length, broad waistband, panel division, clean hem, soft blended fabric, relaxed daily, focus side pocket area, single echo placement: 旧钥匙 at side seam, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "intensity": "轻都市奇幻",
+    "source": "library_stack_keeper",
+    "regionContext": "north_china_old_city",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上衣为身体锚点，墨黑和酒红作为衣装主色，琥珀和旧金只用于书页边、书签锤和小型印记",
+        "extractedColors": [
+          "白色上衣为身体锚点",
+          "墨黑和酒红作为衣装主色",
+          "琥珀和旧金只用于书页边",
+          "书签锤和小型印记",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  },
+  "sourceVersion": "1.0",
+  "sourceCharacterName": "陆页钧",
+  "characterFoundationLayer": {
+    "moduleName": "characterFoundationLayer",
+    "status": "converted-from-1.0-a-fields",
+    "age": "36",
+    "height": "190 cm",
+    "weight": "121 kg",
+    "heritageBase": "中国北方",
+    "personalityCore": "沉稳、严谨、护短、慢热",
+    "bodyType": "厚重魁梧的成年男性",
+    "muscleLevel": "极高，像搬运书库也像护卫",
+    "shoulderWidth": "极宽肩，胸背很厚",
+    "skinTone": "暖橄榄小麦色",
+    "faceShape": "宽下颌长方脸",
+    "expression": "克制压力式咬牙短笑，嘴角抬起但牙齿轻咬，眉峰压低，眼神像在计算重量",
+    "hairStyle": "短黑发侧分，发际干净",
+    "hairColor": "黑色"
+  },
+  "influenceSourceLayer": {
+    "moduleName": "influenceSourceLayer",
+    "status": "converted-from-1.0-a-fields",
+    "occupationInfluence": "图书馆垂直书库管理员",
+    "combatArchetype": "守护型重压控制者",
+    "combatFunction": "定身、压制、护栏式拦截、封锁楼层缝隙",
+    "visualWeapon": "重力书签锤",
+    "weaponPreference": "重力书签锤与金属索引签",
+    "forbiddenDirectTool": "普通书本、普通书签、普通书车、馆员印章",
+    "influenceRule": "Occupation and combat fields are influence sources only; they must not directly decide clothing or become ordinary job tools."
+  },
+  "regionContextLayer": {
+    "moduleName": "regionContext",
+    "status": "inferred-from-1.0-heritage",
+    "heritageRaw": "中国北方城市家庭",
+    "heritageBase": "中国北方",
+    "country": "中国",
+    "regionHint": "北方",
+    "localityFlavor": "",
+    "inferredRegionContext": "north_china_old_city",
+    "rule": "Heritage informs regional context softly; avoid stereotype or direct national costume translation."
+  },
+  "guardrails": {
+    "moduleName": "promptGuardrails",
+    "status": "converted-from-1.0-a-fields",
+    "noDirectTool": [
+      "普通书本",
+      "普通书签",
+      "普通书车",
+      "馆员印章"
+    ],
+    "fallbackUsed": false,
+    "rule": "Avoid direct occupation-to-tool translation; use weaponPreference or visualWeapon as a stylized prop source."
+  },
+  "conversionReport": {
+    "migratedFieldPaths": [
+      "coreIdentity.occupation",
+      "coreIdentity.heritage",
+      "coreIdentity.age",
+      "coreIdentity.height",
+      "coreIdentity.weight",
+      "personality.corePersonality",
+      "visualIdentity.bodyType",
+      "visualIdentity.muscleLevel",
+      "visualIdentity.shoulderWidth",
+      "visualIdentity.skinTone",
+      "visualIdentity.faceShape",
+      "visualIdentity.expression",
+      "visualIdentity.hairStyle",
+      "visualIdentity.hairColor",
+      "combatSystem.battleArchetype",
+      "combatSystem.visualWeapon",
+      "combatSystem.combatFunction",
+      "combatSystem.weaponPreference",
+      "combatSystem.forbiddenDirectTool",
+      "metaDesign.characterHook",
+      "visualIdentity.visualKeywords",
+      "visualIdentity.colorLanguage"
+    ],
+    "intentionallyIgnoredAreas": [
+      "socialSystem",
+      "hiddenInformation",
+      "lifestyle.foodAllergy",
+      "lifestyle.pets",
+      "coreIdentity.birthday",
+      "assets",
+      "activeMarks",
+      "agentMarks",
+      "settings.developer",
+      "generationProfile",
+      "romance / preferredType / possessiveness"
+    ],
+    "visualKeywordsSource": "厚重魁梧馆员，白色贴身短袖，酒红高腰长裤，墨黑短披肩，重力书签锤，琥珀页边光，沉稳咬牙笑",
+    "visualKeywordExtraction": {
+      "roleWords": [
+        "魁梧馆员",
+        "图书馆垂直书库管理员"
+      ],
+      "bodyWords": [
+        "厚重",
+        "魁梧"
+      ],
+      "clothingWords": [
+        "白色贴身短袖"
+      ],
+      "materialWords": [],
+      "colorWords": [
+        "白色",
+        "琥珀"
+      ],
+      "motifWords": [
+        "图书馆",
+        "书库",
+        "书签",
+        "馆员"
+      ],
+      "propWords": [
+        "书签",
+        "重力书签锤"
+      ],
+      "promptHints": [
+        "厚重魁梧馆员",
+        "白色贴身短袖",
+        "琥珀页边光"
+      ]
+    },
+    "themeInference": {
+      "selectedTheme": "library_stack_keeper",
+      "confidence": 1,
+      "matchedKeywords": [
+        "图书馆",
+        "书库",
+        "垂直书库",
+        "书签",
+        "馆员"
+      ],
+      "fallbackUsed": false
+    },
+    "characterHookSource": "一个负责封闭高层书库的魁梧馆员，用重力书签锤把楼层像书页一样压住，保护读者撤离。",
+    "forbiddenDirectToolSource": "普通书本、普通书签、普通书车、馆员印章",
+    "fallbackGuardrails": []
+  },
+  "promptCompressionGate": {
+    "status": "active",
+    "version": "v2",
+    "imageFinalRules": {
+      "targetLength": "250-450 Chinese characters",
+      "maxParagraphs": 6,
+      "mustRenderLimit": "one identity, one region, one-two motifs, one core prop, one innerwear anchor, one outerwear shape, one bottom silhouette, one palette sentence"
+    },
+    "influenceOnly": [
+      "短款夹克"
+    ],
+    "debugOnly": [],
+    "debug": {
+      "moduleSanityWarnings": [
+        "topModule.baseArchetype '短款夹克' is outerwear-like; downgraded to fitted innerwear."
+      ]
+    }
+  }
+}

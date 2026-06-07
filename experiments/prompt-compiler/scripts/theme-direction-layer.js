@@ -90,6 +90,46 @@ const themePresets = [
     styleHint: "fantasy_worker",
   },
   {
+    themeCategory: "rain_infrastructure_observer",
+    label: "雨水设施观测",
+    environmentHints: ["地下街", "排水口", "雨棚街口", "防汛通道"],
+    motifHints: ["水尺", "雨线", "反光条"],
+    materialHints: ["防水布", "透明雨具", "橡胶"],
+    fantasyFlavor: "轻都市奇幻",
+    modernityLevel: "old_city_modern",
+    styleHint: "modern_workwear",
+  },
+  {
+    themeCategory: "shelter_night_school_guide",
+    label: "避难夜校引导",
+    environmentHints: ["避难所走廊", "夜校教室", "安全出口", "临时集合点"],
+    motifHints: ["安全出口", "点名册", "门槛线"],
+    materialHints: ["帆布", "反光条", "磨砂金属"],
+    fantasyFlavor: "轻都市奇幻",
+    modernityLevel: "old_city_modern",
+    styleHint: "modern_workwear",
+  },
+  {
+    themeCategory: "harbor_pressure_maintenance",
+    label: "港区压力维护",
+    environmentHints: ["港区管道", "码头阀门间", "湿冷维修站", "港口仓库"],
+    motifHints: ["压力表", "阀门", "铜管"],
+    materialHints: ["防水布", "橡胶", "磨砂金属"],
+    fantasyFlavor: "轻都市奇幻",
+    modernityLevel: "old_city_modern",
+    styleHint: "modern_workwear",
+  },
+  {
+    themeCategory: "library_stack_keeper",
+    label: "书库看护",
+    environmentHints: ["垂直书库", "旧书架", "归档通道", "图书馆后库"],
+    motifHints: ["书页", "书签", "索引牌"],
+    materialHints: ["纸页", "黄铜", "棉布"],
+    fantasyFlavor: "轻都市奇幻",
+    modernityLevel: "retro_modern",
+    styleHint: "soft_daily",
+  },
+  {
     themeCategory: "book_repair_binder",
     label: "旧书修复师",
     environmentHints: ["旧书街", "装订铺", "纸页仓库"],
@@ -108,6 +148,26 @@ const themePresets = [
     fantasyFlavor: "轻都市奇幻",
     modernityLevel: "fantasy_urban",
     styleHint: "sports_utility",
+  },
+  {
+    themeCategory: "generic_civic_worker",
+    label: "城市公共事务员",
+    environmentHints: ["社区街口", "公共设施旁", "地下通道", "临时服务点"],
+    motifHints: ["路线牌", "编号牌", "地方徽章"],
+    materialHints: ["帆布", "尼龙", "磨砂金属"],
+    fantasyFlavor: "轻都市奇幻",
+    modernityLevel: "contemporary_modern",
+    styleHint: "modern_workwear",
+  },
+  {
+    themeCategory: "urban_fantasy_worker",
+    label: "都市奇幻劳动者",
+    environmentHints: ["架空街区", "旧楼边街", "地下通道", "夜市后巷"],
+    motifHints: ["旧钥匙", "票据", "灯具"],
+    materialHints: ["帆布", "旧铜", "橡胶"],
+    fantasyFlavor: "轻都市奇幻",
+    modernityLevel: "fantasy_urban",
+    styleHint: "fantasy_worker",
   },
 ];
 
@@ -386,6 +446,35 @@ function materialMoodFor(theme, region, rng) {
   return materials.join("与") || "帆布与磨砂金属";
 }
 
+const themeMotifPriority = {
+  harbor_pressure_maintenance: ["压力阀", "管线", "潮湿金属", "码头标记", "压力刻度", "氧化铜绿", "压力表", "阀门", "铜管"],
+  rain_infrastructure_observer: ["雨线", "水位刻度", "排水路径", "反光条", "透明雨具", "湿地面", "水尺"],
+  library_stack_keeper: ["书签", "索引签", "书页", "书库层架", "归档标记", "旧书架"],
+  bathhouse_keeper: ["蒸汽", "热水管", "瓷砖", "温度刻度", "毛巾", "阀门", "热水阀"],
+  market_guard: ["摊位灯", "货牌", "夜市路标", "布棚", "市场边线", "摊牌", "市场牌"],
+};
+
+function motifPriorityFor(theme) {
+  return themeMotifPriority[theme.themeCategory] || [];
+}
+
+function buildVisualMotifs(theme, region, rng) {
+  const priority = motifPriorityFor(theme);
+  const themePool = [...priority, ...(theme.motifHints || [])];
+  const regionPool = region.motifHints || [];
+  const selected = [];
+
+  for (const item of themePool) {
+    if (!selected.includes(item)) selected.push(item);
+    if (selected.length >= 2) break;
+  }
+
+  const echoPool = regionPool.filter((item) => !selected.includes(item));
+  if (echoPool.length && selected.length < 3) selected.push(pick(echoPool, rng));
+
+  return selected.slice(0, 3);
+}
+
 function buildThemeSummary(theme, region, environmentFlavor, motifs, materialMood, level) {
   const motifText = motifs.length ? `，以${motifs.join("、")}作为少量集中视觉母题` : "";
   const levelText = level >= 2 ? "，只让地域结构做现代化转译，不走传统服装套装" : "";
@@ -399,7 +488,7 @@ function buildThemeDirectionLayer(rng, options = {}) {
     ? options.culturalInfluenceLevel
     : defaultCulturalInfluenceLevel(region, rng);
   const environmentFlavor = options.environmentFlavor || pick([...region.environmentKeywords, ...theme.environmentHints], rng);
-  const visualMotifs = pickMany([...(theme.motifHints || []), ...(region.motifHints || [])], 3, rng);
+  const visualMotifs = buildVisualMotifs(theme, region, rng);
   const materialMood = materialMoodFor(theme, region, rng);
   const modernityLevel = modernityFor(theme, region, culturalInfluenceLevel);
 

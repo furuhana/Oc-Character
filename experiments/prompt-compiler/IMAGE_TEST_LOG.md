@@ -1,513 +1,366 @@
 # Image Test Log
 
-Use this file to record the 10-seed image test results from natural final
-prompts in:
+Generated: 2026-06-07
+
+Stage: first imageFinal visual test after Influence Generation Layer + Reasonability Filter regression.
+
+Scope: record image test results only. Do not modify generation logic from this log alone. Do not develop footwearModule / accessoryModule / weaponModule.
+
+## Selected Cases
+
+| Case | Seed | Prompt Path | Theme | Region | Bottom | Sock | Outerwear | Motifs |
+|---|---|---|---|---|---|---|---|---|
+| Harbor / humid / workwear direction | influence-mvp-2 | `experiments/prompt-compiler/output/image-test-influence-generation/case-01-harbor-workwear.md` | harbor_pressure_maintenance | latin_american_hill_town | knee_length / work shorts | dominant_visible / knee_high_socks | work jacket | 压力阀?管线 |
+| Rain infrastructure / waterproof hooded direction | influence-mvp-4 | `experiments/prompt-compiler/output/image-test-influence-generation/case-02-rain-waterproof.md` | rain_infrastructure_observer | kyoto_old_street | full_length / straight work trousers | hidden / crew_socks | hoodie jacket | 雨线?水位刻度 |
+| Library / indoor / full-length direction | influence-mvp-8 | `experiments/prompt-compiler/output/image-test-influence-generation/case-03-library-full-length.md` | library_stack_keeper | kyoto_old_street | full_length / wide casual trousers | hidden / crew_socks | cardigan | 书签?索引签 |
+| Market-region / summer / shorts and white socks direction | influence-mvp-11 | `experiments/prompt-compiler/output/image-test-influence-generation/case-04-market-summer-shorts-socks.md` | underground_fitness_trainer | central_asian_market | knee_length / knee-length shorts | dominant_visible / knee_high_socks | hoodie jacket | 压力表?地方徽章 |
+| Bathhouse / steam / full-length filter fix | influence-mvp-3 | `experiments/prompt-compiler/output/image-test-influence-generation/case-05-bathhouse-filtered-full.md` | bathhouse_keeper | eastern_europe_old_quarter | full_length / straight work trousers | hidden / crew_socks | utility vest | 蒸汽?热水管 |
+| Generic civic / urban control case | influence-mvp-1 | `experiments/prompt-compiler/output/image-test-influence-generation/case-06-generic-civic-control.md` | generic_civic_worker | japanese_small_town | full_length / straight work trousers | hidden / crew_socks | cropped jacket | 路线牌?编号牌 |
+
+## Harbor / humid / workwear direction
+
+- seed: influence-mvp-2
+- imageFinal prompt path: `experiments/prompt-compiler/output/image-test-influence-generation/case-01-harbor-workwear.md`
+- selection note: ???????????????????????????
+- primaryInfluences: harbor_pressure_maintenance; latin_american_hill_town; early_30s; bulky_soft_strong; quiet_observant; daily_portrait_mode; 港口仓库维修员; industrial_service
+- derivedInfluences summary: climate=coastal/humid/windy/street/seasonal_warm_possible; env=harbor_service_area/wet_metal; lifestyle=practical/tidy/workwear; bottom=short_or_cropped_allowed; sock=white_socks_likely_visible_when_exposed
+- reasonabilityFilter result: score 100; warnings=-; fixes=-; notes=Compressed normal motif list to 1-2 must-render motifs without warning.
+- bottom length: knee_length
+- sock visibility: dominant_visible
+- outerwear type: work jacket
+- selected motifs: 压力阀?管线
+
+### imageFinal text
 
 ```text
-experiments/prompt-compiler/output/test-runs-after-theme
+单人全身角色设定图，从头到脚完整可见，白底或浅色背景；拉美山城出身，原创成年男性角色，整体成熟厚实、稳定可靠。
+壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。
+整体带有拉美山城港区压力维护气质，以压力阀、管线为母题。
+服装以白色贴身内搭为身体锚点，外层是工装夹克，上半身厚重轮廓，下装为工装短裤，宽松轮廓，搭配清楚的白色长袜，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。
+奇幻元素轻量集中，不抢服装主体。
+配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。
 ```
 
-Current evaluation goal:
-
-1. Decide whether to strengthen `themeDirectionLayer`.
-2. Decide whether to continue optimizing Prompt Compiler.
-3. Decide whether to start `bottomModule`.
-4. Decide whether to add a `designLanguage` checker.
-
-Do not change generation logic during this image-test pass. Record repeated
-visual patterns first, then decide the next development step.
-
-## Rating Scale
-
-Use a short value for each rating:
-
-- `yes`
-- `partial`
-- `no`
-- optional score such as `4/5`
-
-## Entry Template
-
-### testId:
-
-#### Source
-
-- seed:
-- promptPath:
-- skeletonPath:
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-## 10 Seed Test Entries
-
-### testId: image-test-01
-
-#### Source
-
-- seed: `skeleton-eval-1`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-1-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-1-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-### testId: image-test-02
-
-#### Source
-
-- seed: `skeleton-eval-2`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-2-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-2-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-### testId: image-test-03
-
-#### Source
-
-- seed: `skeleton-eval-3`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-3-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-3-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-### testId: image-test-04
-
-#### Source
-
-- seed: `skeleton-eval-4`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-4-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-4-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-### testId: image-test-05
-
-#### Source
-
-- seed: `skeleton-eval-5`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-5-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-5-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-### testId: image-test-06
-
-#### Source
-
-- seed: `skeleton-eval-6`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-6-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-6-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-### testId: image-test-07
-
-#### Source
-
-- seed: `skeleton-eval-7`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-7-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-7-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-### testId: image-test-08
-
-#### Source
-
-- seed: `skeleton-eval-8`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-8-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-8-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-### testId: image-test-09
-
-#### Source
-
-- seed: `skeleton-eval-9`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-9-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-9-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
-
----
-
-### testId: image-test-10
-
-#### Source
-
-- seed: `skeleton-eval-10`
-- promptPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-10-character-prompt.md`
-- skeletonPath: `experiments/prompt-compiler/output/test-runs-after-theme/skeleton-eval-10-character-skeleton.json`
-
-#### Theme Snapshot
-
-- themeCategory:
-- environmentFlavor:
-- visualMotifs:
-- materialMood:
-- fantasyFlavor:
-
-#### Module Snapshot
-
-- topModule summary:
-- outerwearModule summary:
-- designLanguage summary:
-
-#### Ratings
-
-- prompt 是否自然:
-- 主题方向是否明确:
-- 上衣是否清楚:
-- 外套是否清楚:
-- 大形主导是否成立:
-- 细节密度是否过高:
-- 是否出现碎细节:
-- 是否仍然偏现代都市默认模板:
-- 是否符合正常成人比例壮硕男性:
-- 是否适合继续作为 2.0 方向:
-
-#### Problems
-
-- 图像主要失败点:
-- prompt 缺失信息:
-- 哪个模块需要加强:
-- 下一步建议:
+### Scores
+
+| Dimension | Score 1-5 | Notes |
+|---|---:|---|
+| ??????? |  | ??????????????????????? |
+| ????? |  | ??????????? |
+| ????? |  | ????????????????/??/??? |
+| ????? |  | ?????????????? |
+| ????? |  | ???????????? prompt? |
+| ???? |  | ???????????????? |
+| ???? |  | ???????????????????? |
+| prompt ???? |  | ????????????? |
+
+### Observed Issues
+
+- ?????
+- ???????
+- ???????????
+- ????????
+- ????????
+- ???????????
+- ????/????? prompt ???
+- ???????
+- ????????
+- ????????
+- ????????????
+- ?????? / logo / UI?
+
+### Next Correction Hint
+
+- Pending image result.
+
+## Rain infrastructure / waterproof hooded direction
+
+- seed: influence-mvp-4
+- imageFinal prompt path: `experiments/prompt-compiler/output/image-test-influence-generation/case-02-rain-waterproof.md`
+- selection note: ?????????????????
+- primaryInfluences: rain_infrastructure_observer; kyoto_old_street; early_40s; heavy_power_build; blunt_honest; off_duty_mode; 排水路径巡查员; rainy_infrastructure
+- derivedInfluences summary: climate=humid/rainy/warm; env=wet_street/drainage_path; lifestyle=casual/relaxed; bottom=short_or_cropped_allowed; sock=white_socks_likely_visible_when_exposed
+- reasonabilityFilter result: score 100; warnings=-; fixes=-; notes=Compressed normal motif list to 1-2 must-render motifs without warning.
+- bottom length: full_length
+- sock visibility: hidden
+- outerwear type: hoodie jacket
+- selected motifs: 雨线?水位刻度
+
+### imageFinal text
+
+```text
+单人全身角色设定图，从头到脚完整可见，白底或浅色背景；京都老街出身，原创成年男性角色，整体成熟厚实、稳定可靠。
+壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。
+整体带有京都老街雨水设施观测气质，以雨线、水位刻度为母题。
+服装以白色贴身内搭为身体锚点，外层是连帽外套，短版轮廓，下装为直筒工装裤，宽松轮廓，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。
+奇幻元素轻量集中，不抢服装主体。
+配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。
+```
+
+### Scores
+
+| Dimension | Score 1-5 | Notes |
+|---|---:|---|
+| ??????? |  | ??????????????????????? |
+| ????? |  | ??????????? |
+| ????? |  | ????????????????/??/??? |
+| ????? |  | ?????????????? |
+| ????? |  | ???????????? prompt? |
+| ???? |  | ???????????????? |
+| ???? |  | ???????????????????? |
+| prompt ???? |  | ????????????? |
+
+### Observed Issues
+
+- ?????
+- ???????
+- ???????????
+- ????????
+- ????????
+- ???????????
+- ????/????? prompt ???
+- ???????
+- ????????
+- ????????
+- ????????????
+- ?????? / logo / UI?
+
+### Next Correction Hint
+
+- Pending image result.
+
+## Library / indoor / full-length direction
+
+- seed: influence-mvp-8
+- imageFinal prompt path: `experiments/prompt-compiler/output/image-test-influence-generation/case-03-library-full-length.md`
+- selection note: ????????????????
+- primaryInfluences: library_stack_keeper; kyoto_old_street; late_30s; heavy_power_build; patient_caretaker; combat_ready_mode; 旧书库管理员; civic_urban_fantasy
+- derivedInfluences summary: climate=temperate; env=indoor_archive/vertical_storage; lifestyle=practical; bottom=full_length_preferred; sock=white_socks_hidden_or_slight
+- reasonabilityFilter result: score 100; warnings=-; fixes=-; notes=Compressed normal motif list to 1-2 must-render motifs without warning.
+- bottom length: full_length
+- sock visibility: hidden
+- outerwear type: cardigan
+- selected motifs: 书签?索引签
+
+### imageFinal text
+
+```text
+单人全身角色设定图，从头到脚完整可见，白底或浅色背景；京都老街出身，原创成年男性角色，整体成熟厚实、稳定可靠。
+壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。
+整体带有京都老街书库看护气质，以书签、索引签为母题。
+服装以白色贴身内搭为身体锚点，外层是开衫，A 字轮廓，下装为宽松日常长裤，宽松轮廓，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。
+奇幻元素轻量集中，不抢服装主体。
+配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。
+```
+
+### Scores
+
+| Dimension | Score 1-5 | Notes |
+|---|---:|---|
+| ??????? |  | ??????????????????????? |
+| ????? |  | ??????????? |
+| ????? |  | ????????????????/??/??? |
+| ????? |  | ?????????????? |
+| ????? |  | ???????????? prompt? |
+| ???? |  | ???????????????? |
+| ???? |  | ???????????????????? |
+| prompt ???? |  | ????????????? |
+
+### Observed Issues
+
+- ?????
+- ???????
+- ???????????
+- ????????
+- ????????
+- ???????????
+- ????/????? prompt ???
+- ???????
+- ????????
+- ????????
+- ????????????
+- ?????? / logo / UI?
+
+### Next Correction Hint
+
+- Pending image result.
+
+## Market-region / summer / shorts and white socks direction
+
+- seed: influence-mvp-11
+- imageFinal prompt path: `experiments/prompt-compiler/output/image-test-influence-generation/case-04-market-summer-shorts-socks.md`
+- selection note: ??20 seed??????/??/????????central_asian_market + summer + knee_length + dominant white socks?
+- primaryInfluences: underground_fitness_trainer; central_asian_market; early_30s; very_broad_frame; patient_caretaker; work_mode; 地下商场训练员; civic_urban_fantasy
+- derivedInfluences summary: climate=humid/rainy/warm/street/seasonal_warm_possible; env=crowded_market/stall_lights; lifestyle=athletic/practical/tidy/workwear; bottom=short_or_cropped_allowed; sock=white_socks_likely_visible_when_exposed
+- reasonabilityFilter result: score 100; warnings=-; fixes=-; notes=Compressed normal motif list to 1-2 must-render motifs without warning.
+- bottom length: knee_length
+- sock visibility: dominant_visible
+- outerwear type: hoodie jacket
+- selected motifs: 压力表?地方徽章
+
+### imageFinal text
+
+```text
+单人全身角色设定图，从头到脚完整可见，白底或浅色背景；中亚集市出身，原创成年男性角色，整体成熟厚实、稳定可靠。
+壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。
+整体带有中亚集市地下健身教练气质，以压力表、地方徽章为母题。
+服装以白色贴身内搭为身体锚点，外层是连帽外套，短版轮廓，下装为及膝短裤，稳重工装轮廓，搭配清楚的白色长袜，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。
+奇幻元素轻量集中，不抢服装主体。
+配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。
+```
+
+### Scores
+
+| Dimension | Score 1-5 | Notes |
+|---|---:|---|
+| ??????? |  | ??????????????????????? |
+| ????? |  | ??????????? |
+| ????? |  | ????????????????/??/??? |
+| ????? |  | ?????????????? |
+| ????? |  | ???????????? prompt? |
+| ???? |  | ???????????????? |
+| ???? |  | ???????????????????? |
+| prompt ???? |  | ????????????? |
+
+### Observed Issues
+
+- ?????
+- ???????
+- ???????????
+- ????????
+- ????????
+- ???????????
+- ????/????? prompt ???
+- ???????
+- ????????
+- ????????
+- ????????????
+- ?????? / logo / UI?
+
+### Next Correction Hint
+
+- Pending image result.
+
+## Bathhouse / steam / full-length filter fix
+
+- seed: influence-mvp-3
+- imageFinal prompt path: `experiments/prompt-compiler/output/image-test-influence-generation/case-05-bathhouse-filtered-full.md`
+- selection note: ??????full_length_preferred ??????????????????
+- primaryInfluences: bathhouse_keeper; eastern_europe_old_quarter; early_40s; bulky_soft_strong; quiet_observant; ceremonial_but_practical_mode; 蒸汽走廊维护员; folk_fantasy_light
+- derivedInfluences summary: climate=humid/warm/steam; env=旧电车街; lifestyle=practical/tidy/workwear; bottom=full_length_preferred; sock=white_socks_hidden_or_slight
+- reasonabilityFilter result: score 94; warnings=Full-length-preferred influence produced shorts.; fixes=Changed shorts to full-length trousers under full_length_preferred bias.; notes=Compressed normal motif list to 1-2 must-render motifs without warning.
+- bottom length: full_length
+- sock visibility: hidden
+- outerwear type: utility vest
+- selected motifs: 蒸汽?热水管
+
+### imageFinal text
+
+```text
+单人全身角色设定图，从头到脚完整可见，白底或浅色背景；东欧旧城区出身，原创成年男性角色，整体成熟厚实、稳定可靠。
+壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。
+整体带有东欧旧城区澡堂看护气质，以蒸汽、热水管为母题。
+服装以白色贴身内搭为身体锚点，外层是功能背心，箱型轮廓，下装为直筒工装裤，直筒轮廓，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。
+奇幻元素轻量集中，不抢服装主体。
+配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。
+```
+
+### Scores
+
+| Dimension | Score 1-5 | Notes |
+|---|---:|---|
+| ??????? |  | ??????????????????????? |
+| ????? |  | ??????????? |
+| ????? |  | ????????????????/??/??? |
+| ????? |  | ?????????????? |
+| ????? |  | ???????????? prompt? |
+| ???? |  | ???????????????? |
+| ???? |  | ???????????????????? |
+| prompt ???? |  | ????????????? |
+
+### Observed Issues
+
+- ?????
+- ???????
+- ???????????
+- ????????
+- ????????
+- ???????????
+- ????/????? prompt ???
+- ???????
+- ????????
+- ????????
+- ????????????
+- ?????? / logo / UI?
+
+### Next Correction Hint
+
+- Pending image result.
+
+## Generic civic / urban control case
+
+- seed: influence-mvp-1
+- imageFinal prompt path: `experiments/prompt-compiler/output/image-test-influence-generation/case-06-generic-civic-control.md`
+- selection note: ????????????????????
+- primaryInfluences: generic_civic_worker; japanese_small_town; mid_30s; bulky_soft_strong; cheerful_loud; work_mode; 城市公共事务员; contemporary_modern
+- derivedInfluences summary: climate=temperate; env=木牌; lifestyle=casual/relaxed/practical/tidy/workwear; bottom=ankle_or_full_balanced; sock=white_socks_visible_only_if_ankle_or_calf_exposed
+- reasonabilityFilter result: score 95; warnings=Balanced bottom-length influence produced shorts.; fixes=Changed shorts to full-length trousers under balanced bottom-length bias.; notes=Compressed normal motif list to 1-2 must-render motifs without warning.
+- bottom length: full_length
+- sock visibility: hidden
+- outerwear type: cropped jacket
+- selected motifs: 路线牌?编号牌
+
+### imageFinal text
+
+```text
+单人全身角色设定图，从头到脚完整可见，白底或浅色背景；日本小镇出身，原创成年男性角色，整体成熟厚实、稳定可靠。
+壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。
+整体带有日本小镇城市公共事务员气质，以路线牌、编号牌为母题。
+服装以白色贴身内搭为身体锚点，外层是短夹克，宽松轮廓，下装为直筒工装裤，宽松轮廓，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。
+奇幻元素轻量集中，不抢服装主体。
+配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。
+```
+
+### Scores
+
+| Dimension | Score 1-5 | Notes |
+|---|---:|---|
+| ??????? |  | ??????????????????????? |
+| ????? |  | ??????????? |
+| ????? |  | ????????????????/??/??? |
+| ????? |  | ?????????????? |
+| ????? |  | ???????????? prompt? |
+| ???? |  | ???????????????? |
+| ???? |  | ???????????????????? |
+| prompt ???? |  | ????????????? |
+
+### Observed Issues
+
+- ?????
+- ???????
+- ???????????
+- ????????
+- ????????
+- ???????????
+- ????/????? prompt ???
+- ???????
+- ????????
+- ????????
+- ????????????
+- ?????? / logo / UI?
+
+### Next Correction Hint
+
+- Pending image result.
+
+## Verdict
+
+Fill this after the six image outputs are reviewed.
+
+- If theme recognition is low: strengthen `themeDirectionLayer` / motif selection.
+- If clothing looks assembled from unrelated pieces: strengthen `outfitCoherenceCheck`, not a new module first.
+- If lower body is weak: tune `bottomModule` / `sockVisibility`.
+- If shoes are consistently vague: enter `footwearModule` MVP.
+- If the body becomes thin: strengthen `characterFoundationLayer` / body prompt anchor.
+- If details become noisy: add a `designLanguage` checker.
+- If all six are stable: next step can be `footwearModule` MVP.

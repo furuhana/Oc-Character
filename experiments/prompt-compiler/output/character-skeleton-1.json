@@ -1,0 +1,641 @@
+{
+  "version": "2.0-skeleton-mvp",
+  "seed": "full-integrated-test-915012441",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate"
+  },
+  "stylePreferenceLayer": {
+    "moduleName": "stylePreferenceLayer",
+    "status": "minimal-global-style-preference",
+    "lineQuality": "京都动画式清爽线条",
+    "shadowStyle": "干净赛璐璐阴影"
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active",
+    "themeCategory": "festival_security",
+    "themeLabel": "节庆安保",
+    "regionContext": "eastern_europe_old_quarter",
+    "regionLabel": "东欧旧城区",
+    "environmentFlavor": "雪后路面",
+    "environmentKeywords": [
+      "旧电车街",
+      "砖墙",
+      "雪后路面",
+      "老广场"
+    ],
+    "visualMotifs": [
+      "徽章",
+      "电车票",
+      "布带"
+    ],
+    "materialMood": "帆布与旧金属",
+    "materialHints": [
+      "旧金属",
+      "厚织物",
+      "旧铁",
+      "羊毛"
+    ],
+    "colorHints": [
+      "深灰",
+      "酒红",
+      "旧白",
+      "煤黑"
+    ],
+    "structuralHints": [
+      "厚外套",
+      "高领",
+      "宽肩",
+      "长裤"
+    ],
+    "motifHints": [
+      "电车票",
+      "旧钥匙",
+      "街灯",
+      "徽章"
+    ],
+    "fantasyFlavor": "仪式感奇幻",
+    "culturalInfluenceLevel": 0,
+    "modernityLevel": "traditional_modern",
+    "styleHint": "modern_workwear",
+    "avoidIfNotSelected": [
+      "神社",
+      "京都",
+      "和风"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有东欧旧城区节庆安保的气质，环境指向雪后路面，以帆布与旧金属和深灰、酒红配色作为主题基础，以徽章、电车票、布带作为少量集中视觉母题。"
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "modern_workwear",
+    "secondaryStyleSource": "traditional_modern",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 0: keep upper-body styling modern; traditional structure should not drive top or outerwear.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": false,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Avoid stacking traditional top structure with strong outerwear silhouette language.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "avoid stacking traditional top structure with strong outerwear cape/hood/layer language",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以现代工装为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，徽章和电车票元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "role": "adult male original character",
+    "ageRead": "mature adult",
+    "presence": "sturdy, grounded, broad-shouldered"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "bodyType": "normal adult male proportion",
+    "build": "strong, thick, mature physique",
+    "posture": "stable standing pose"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "faceType": "mature masculine face",
+    "hair": "simple readable hairstyle",
+    "keyFeature": "clear facial silhouette"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "expression": "calm focused expression",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "韩服短上衣",
+    "baseCategory": "traditional",
+    "culturalAdaptationLevel": {
+      "level": 2,
+      "label": "传统基础款现代化",
+      "description": "传统基础款用现代材质、短句式和都市比例改写。"
+    },
+    "traditionalInfluences": [
+      "宽门襟",
+      "披挂式肩部"
+    ],
+    "silhouette": "H 型",
+    "cutLanguage": "不对称",
+    "materialLanguage": "柔软运动布",
+    "closureSystem": "搭扣",
+    "designFocus": [
+      "领子",
+      "背部"
+    ],
+    "structuralFeatures": [
+      "背部开片",
+      "半披风结构"
+    ],
+    "detailComponents": [
+      "D 形环",
+      "刺绣"
+    ],
+    "wearState": "半敞开",
+    "personalHabit": "总喜欢立领",
+    "influenceSource": "雨夜候车亭管理员",
+    "influenceMaterials": [
+      "深灰橡胶边",
+      "冷白反光条",
+      "透明雨棚片"
+    ],
+    "influenceDetails": [
+      "票夹形口袋",
+      "折页式帽檐",
+      "雨水导槽压线"
+    ],
+    "constructionVerbs": [
+      "扣合",
+      "镶边",
+      "拼接",
+      "分段固定",
+      "铆接"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "中",
+      "formality": "半正式",
+      "layeringDepth": "双层",
+      "mobility": "高",
+      "fantasyIntensity": "低",
+      "cleanliness": "干净"
+    },
+    "avoid": [
+      "不要公交站文字",
+      "不要大面积霓虹灯牌",
+      "不要画成雨衣制服"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "festival_security",
+      "themeLabel": "节庆安保",
+      "regionContext": "eastern_europe_old_quarter",
+      "regionLabel": "东欧旧城区",
+      "environmentFlavor": "雪后路面",
+      "environmentKeywords": [
+        "旧电车街",
+        "砖墙",
+        "雪后路面",
+        "老广场"
+      ],
+      "visualMotifs": [
+        "徽章",
+        "电车票",
+        "布带"
+      ],
+      "materialMood": "帆布与旧金属",
+      "materialHints": [
+        "旧金属",
+        "厚织物",
+        "旧铁",
+        "羊毛"
+      ],
+      "colorHints": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "structuralHints": [
+        "厚外套",
+        "高领",
+        "宽肩",
+        "长裤"
+      ],
+      "motifHints": [
+        "电车票",
+        "旧钥匙",
+        "街灯",
+        "徽章"
+      ],
+      "fantasyFlavor": "仪式感奇幻",
+      "culturalInfluenceLevel": 0,
+      "modernityLevel": "traditional_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "和风"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有东欧旧城区节庆安保的气质，环境指向雪后路面，以帆布与旧金属和深灰、酒红配色作为主题基础，以徽章、电车票、布带作为少量集中视觉母题。"
+    },
+    "themePromptHint": "整体带有东欧旧城区节庆安保的气质，环境指向雪后路面，以帆布与旧金属和深灰、酒红配色作为主题基础，以徽章、电车票、布带作为少量集中视觉母题。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "presence": "medium",
+    "baseType": "long coat",
+    "silhouette": "wide shoulder",
+    "length": "hip length",
+    "cutLanguage": "wrap style",
+    "designFocus": {
+      "primary": "collar",
+      "secondary": "hem"
+    },
+    "structuralFeature": [
+      "oversized collar"
+    ],
+    "material": "leather trim",
+    "finish": "clean matte",
+    "wearState": "draped over shoulders",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "festival_security",
+      "themeLabel": "节庆安保",
+      "regionContext": "eastern_europe_old_quarter",
+      "regionLabel": "东欧旧城区",
+      "environmentFlavor": "雪后路面",
+      "environmentKeywords": [
+        "旧电车街",
+        "砖墙",
+        "雪后路面",
+        "老广场"
+      ],
+      "visualMotifs": [
+        "徽章",
+        "电车票",
+        "布带"
+      ],
+      "materialMood": "帆布与旧金属",
+      "materialHints": [
+        "旧金属",
+        "厚织物",
+        "旧铁",
+        "羊毛"
+      ],
+      "colorHints": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "structuralHints": [
+        "厚外套",
+        "高领",
+        "宽肩",
+        "长裤"
+      ],
+      "motifHints": [
+        "电车票",
+        "旧钥匙",
+        "街灯",
+        "徽章"
+      ],
+      "fantasyFlavor": "仪式感奇幻",
+      "culturalInfluenceLevel": 0,
+      "modernityLevel": "traditional_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "和风"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有东欧旧城区节庆安保的气质，环境指向雪后路面，以帆布与旧金属和深灰、酒红配色作为主题基础，以徽章、电车票、布带作为少量集中视觉母题。"
+    },
+    "themeMotifs": [
+      "徽章",
+      "电车票"
+    ],
+    "materialMood": "帆布与旧金属",
+    "promptFragment": "medium long coat, wide shoulder silhouette, hip length, wrap style cut, leather trim with clean matte, main focus collar, secondary focus hem, large structure: oversized collar, theme motifs: 徽章 / 电车票, material mood: 帆布与旧金属, draped over shoulders, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "festival_security",
+      "themeLabel": "节庆安保",
+      "regionContext": "eastern_europe_old_quarter",
+      "regionLabel": "东欧旧城区",
+      "environmentFlavor": "雪后路面",
+      "environmentKeywords": [
+        "旧电车街",
+        "砖墙",
+        "雪后路面",
+        "老广场"
+      ],
+      "visualMotifs": [
+        "徽章",
+        "电车票",
+        "布带"
+      ],
+      "materialMood": "帆布与旧金属",
+      "materialHints": [
+        "旧金属",
+        "厚织物",
+        "旧铁",
+        "羊毛"
+      ],
+      "colorHints": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "structuralHints": [
+        "厚外套",
+        "高领",
+        "宽肩",
+        "长裤"
+      ],
+      "motifHints": [
+        "电车票",
+        "旧钥匙",
+        "街灯",
+        "徽章"
+      ],
+      "fantasyFlavor": "仪式感奇幻",
+      "culturalInfluenceLevel": 0,
+      "modernityLevel": "traditional_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "和风"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有东欧旧城区节庆安保的气质，环境指向雪后路面，以帆布与旧金属和深灰、酒红配色作为主题基础，以徽章、电车票、布带作为少量集中视觉母题。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "modern_workwear",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "bottomContext": {
+      "climateInfluence": [
+        "summer"
+      ],
+      "presentationMode": "patrol_mode",
+      "lifestyleInfluence": [
+        "street",
+        "casual"
+      ]
+    },
+    "presence": "developed",
+    "baseType": "uniform trousers",
+    "silhouette": "straight",
+    "length": "full length",
+    "bottomLengthPreference": {
+      "legExposureLevel": "covered",
+      "preferredLength": "full_length",
+      "lengthReason": "full length selected for stable lower-body support; context: summer, patrol_mode, street, casual, festival_security"
+    },
+    "sockVisibilityProfile": {
+      "sockVisibility": "hidden",
+      "sockColor": "white",
+      "sockLength": "crew_socks",
+      "sockReason": "full-length trousers cover most of the sock, so white socks do not need emphasis"
+    },
+    "waistStructure": "work belt compatible",
+    "legStructure": "utility pocket panel",
+    "hemTreatment": "tucked into footwear",
+    "material": "work canvas",
+    "wearState": "relaxed daily",
+    "designFocus": [
+      "knee area"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "徽章 at hem edge",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "uniform trousers, straight silhouette, full length, leg exposure covered, white socks hidden crew_socks, work belt compatible, utility pocket panel, tucked into footwear, work canvas, relaxed daily, focus knee area, single echo placement: 徽章 at hem edge, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "intensity": "仪式感奇幻",
+    "source": "festival_security",
+    "regionContext": "eastern_europe_old_quarter",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  }
+}

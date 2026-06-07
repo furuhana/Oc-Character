@@ -1,22 +1,114 @@
 # Character Skeleton Prompt Compiler Output
 
-## Final Prompt
+## Image Final Prompt
 
-单人全身角色设定图，从头到脚完整可见，白底或浅色背景，正面或轻微三分之二站姿。
-正常成年男性比例，气质沉稳厚实、宽肩可靠；整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。奇幻感克制，不要大范围发光。
-体型壮硕厚实，宽肩厚胸，手臂和腿部有力量，成熟有重量感，边缘略带柔和厚度。
-成熟男性脸型，发型简洁可读，平静专注的表情。
-整体以传统现代混合为主，辅以都市奇幻劳动者，外套负责主视觉，内搭降低复杂度，只做结构衬托，护符和纸片元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。
-基础上衣为交领短衫，宽肩窄摆轮廓，作为衬托层降低复杂度，重点集中在口袋，用延长下摆支撑大形，只轻微呼应护符。
-外套是中等量感的工装夹克，宽肩轮廓，皮革滚边配合干净哑光表面；重点集中在肩部和领口，用假两件结构形成外套识别点，披在肩上穿着，不要完全遮住白色贴身上衣。
-下装使用带前片结构的裤装，柔和日常轮廓，全长长度，系带腰连接上半身，腿部以大块面分割和开放裤脚收束；材质为棉斜纹布，放松日常状态，视觉重点只放在膝部，只在膝部或裤侧做一处低调主题呼应，复杂度低于上半身，不抢外套主视觉。
-鞋履为稳定实用的低噪音造型，暂不展开复杂细节。
-配饰、武器和奇幻元素只轻量出现，不抢服装主体。
-整体保持大形主导、高可读性和中低细节密度，每个单品只保留1 个主视觉重点和 1 个次视觉重点，用少量中大型特征建立识别度，避免小扣件、小带子、小挂件、密集切线和高频碎纹样。
-干净 TV 动画赛璐璐和游戏角色设定图，块面明确、轮廓清楚、材质动画化；不要厚涂、写实摄影、复杂纹理噪音、文字、UI、多人或身体裁切。
+单人全身角色设定图，从头到脚完整可见，白底或浅色背景；东欧旧城区出身，原创成年男性角色，整体成熟厚实、稳定可靠。
+壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。
+整体带有东欧旧城区澡堂看护气质，以蒸汽、热水管为母题。
+服装以白色贴身内搭为身体锚点，外层是功能背心，箱型轮廓，下装为直筒工装裤，直筒轮廓，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。
+奇幻元素轻量集中，不抢服装主体。
+配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。
 
-## Compiler Notes
+## promptCompressionGate.debug
 
-- Final prompt mode hides internal field names and enum values.
-- No Outfit Coordination Layer is applied yet.
-- themeDirectionLayer provides visual flavor; designLanguage controls readability and detail density.
+{
+  "mode": "imageFinal",
+  "targetLength": "250-450 Chinese characters",
+  "paragraphCount": 6,
+  "dedupedConcepts": {
+    "visualWeapon": "",
+    "motifs": [
+      "蒸汽",
+      "热水管"
+    ],
+    "themeSummary": "整体带有东欧旧城区澡堂看护气质，以蒸汽、热水管为母题。"
+  },
+  "moduleSanityWarnings": [],
+  "influenceOnly": [],
+  "debugOnly": [],
+  "reasonabilityFilter": {
+    "moduleName": "reasonabilityFilter",
+    "status": "active-mvp",
+    "passed": true,
+    "score": 94,
+    "warnings": [
+      "Full-length-preferred influence produced shorts."
+    ],
+    "fixesApplied": [
+      "Changed shorts to full-length trousers under full_length_preferred bias."
+    ],
+    "compressionNotes": [
+      "Compressed normal motif list to 1-2 must-render motifs without warning."
+    ],
+    "rejectedCombinations": [],
+    "finalDecision": "passed with light checks"
+  },
+  "influenceReasoningLog": [
+    {
+      "source": "regionContext + themeCategory",
+      "input": [
+        "eastern_europe_old_quarter",
+        "bathhouse_keeper"
+      ],
+      "derived": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "reason": "Region and role seed climate, material, and comfort constraints."
+    },
+    {
+      "source": "themeCategory + regionContext",
+      "input": [
+        "bathhouse_keeper",
+        "eastern_europe_old_quarter"
+      ],
+      "derived": [
+        "旧电车街"
+      ],
+      "reason": "Theme and place combine into a drawable environment flavor."
+    },
+    {
+      "source": "presentationMode + occupationSeed + personalityCore",
+      "input": [
+        "ceremonial_but_practical_mode",
+        "蒸汽走廊维护员",
+        "quiet_observant"
+      ],
+      "derived": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "reason": "Mode and personality derive practical movement and daily-wear pressure."
+    },
+    {
+      "source": "climate + presentationMode + lifestyle",
+      "input": [
+        [
+          "humid",
+          "warm",
+          "steam"
+        ],
+        "ceremonial_but_practical_mode",
+        [
+          "practical",
+          "tidy",
+          "workwear"
+        ]
+      ],
+      "derived": [
+        "full_length_preferred"
+      ],
+      "reason": "Bottom length is derived from climate and use case, not independently random."
+    },
+    {
+      "source": "bottomLengthBias",
+      "input": "full_length_preferred",
+      "derived": [
+        "white_socks_hidden_or_slight"
+      ],
+      "reason": "Sock visibility follows leg exposure and should not randomize independently."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": "2.0-skeleton-mvp",
-  "seed": "bottom-image-test-1",
+  "seed": "influence-mvp-3",
   "designLanguage": {
     "shapeHierarchy": "large_shape_dominant",
     "silhouettePriority": "high",
@@ -14,31 +14,322 @@
     "graphicClarity": "high",
     "complexityBudget": "moderate"
   },
+  "influenceGenerationLayer": {
+    "moduleName": "influenceGenerationLayer",
+    "status": "active-mvp",
+    "primaryInfluences": {
+      "themeCategory": "bathhouse_keeper",
+      "regionContext": "eastern_europe_old_quarter",
+      "ageRange": "early_40s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "quiet_observant",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "occupationSeed": "蒸汽走廊维护员",
+      "worldFlavorSeed": "folk_fantasy_light"
+    },
+    "derivedInfluences": {
+      "climateInfluence": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "environmentInfluence": [
+        "旧电车街"
+      ],
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "single_symbolic_practical_prop",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    },
+    "resolvedInfluences": {
+      "occupationInfluence": "蒸汽走廊维护员",
+      "regionInfluence": "eastern_europe_old_quarter",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "early_40s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "quiet_observant",
+      "worldFlavorSeed": "folk_fantasy_light",
+      "climateInfluence": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "environmentInfluence": [
+        "旧电车街"
+      ],
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "single_symbolic_practical_prop",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    },
+    "influenceReasoningLog": [
+      {
+        "source": "regionContext + themeCategory",
+        "input": [
+          "eastern_europe_old_quarter",
+          "bathhouse_keeper"
+        ],
+        "derived": [
+          "humid",
+          "warm",
+          "steam"
+        ],
+        "reason": "Region and role seed climate, material, and comfort constraints."
+      },
+      {
+        "source": "themeCategory + regionContext",
+        "input": [
+          "bathhouse_keeper",
+          "eastern_europe_old_quarter"
+        ],
+        "derived": [
+          "旧电车街"
+        ],
+        "reason": "Theme and place combine into a drawable environment flavor."
+      },
+      {
+        "source": "presentationMode + occupationSeed + personalityCore",
+        "input": [
+          "ceremonial_but_practical_mode",
+          "蒸汽走廊维护员",
+          "quiet_observant"
+        ],
+        "derived": [
+          "practical",
+          "tidy",
+          "workwear"
+        ],
+        "reason": "Mode and personality derive practical movement and daily-wear pressure."
+      },
+      {
+        "source": "climate + presentationMode + lifestyle",
+        "input": [
+          [
+            "humid",
+            "warm",
+            "steam"
+          ],
+          "ceremonial_but_practical_mode",
+          [
+            "practical",
+            "tidy",
+            "workwear"
+          ]
+        ],
+        "derived": [
+          "full_length_preferred"
+        ],
+        "reason": "Bottom length is derived from climate and use case, not independently random."
+      },
+      {
+        "source": "bottomLengthBias",
+        "input": "full_length_preferred",
+        "derived": [
+          "white_socks_hidden_or_slight"
+        ],
+        "reason": "Sock visibility follows leg exposure and should not randomize independently."
+      }
+    ]
+  },
+  "stylePreferenceLayer": {
+    "moduleName": "stylePreferenceLayer",
+    "status": "minimal-global-style-preference",
+    "lineQuality": "京都动画式清爽线条",
+    "shadowStyle": "干净赛璐璐阴影"
+  },
   "themeDirectionLayer": {
     "moduleName": "themeDirectionLayer",
     "status": "active",
-    "themeCategory": "festival_security",
-    "environmentFlavor": "京都老街",
-    "visualMotifs": [
-      "护符",
-      "纸片",
-      "地方徽章"
+    "themeCategory": "bathhouse_keeper",
+    "themeLabel": "澡堂看护",
+    "regionContext": "eastern_europe_old_quarter",
+    "regionLabel": "东欧旧城区",
+    "environmentFlavor": "老广场",
+    "environmentKeywords": [
+      "旧电车街",
+      "砖墙",
+      "雪后路面",
+      "老广场"
     ],
-    "materialMood": "厚针织与布带",
-    "fantasyFlavor": "仪式感奇幻",
-    "culturalInfluenceLevel": 2,
+    "visualMotifs": [
+      "蒸汽",
+      "热水管"
+    ],
+    "materialMood": "磨砂金属与木材",
+    "materialHints": [
+      "木材",
+      "磨砂金属",
+      "羊毛",
+      "厚棉布"
+    ],
+    "colorHints": [
+      "深灰",
+      "酒红",
+      "旧白",
+      "煤黑"
+    ],
+    "structuralHints": [
+      "厚外套",
+      "高领",
+      "宽肩",
+      "长裤"
+    ],
+    "motifHints": [
+      "电车票",
+      "旧钥匙",
+      "街灯",
+      "徽章"
+    ],
+    "fantasyFlavor": "民俗感奇幻",
+    "culturalInfluenceLevel": 0,
     "modernityLevel": "traditional_modern",
-    "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "styleHint": "soft_daily",
+    "avoidIfNotSelected": [
+      "神社",
+      "京都",
+      "和风"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有东欧旧城区澡堂看护的气质，环境指向老广场，以磨砂金属与木材和深灰、酒红配色作为主题基础，以蒸汽、热水管、徽章作为少量集中视觉母题。",
+    "resolvedInfluences": {
+      "occupationInfluence": "蒸汽走廊维护员",
+      "regionInfluence": "eastern_europe_old_quarter",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "early_40s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "quiet_observant",
+      "worldFlavorSeed": "folk_fantasy_light",
+      "climateInfluence": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "environmentInfluence": [
+        "旧电车街"
+      ],
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "single_symbolic_practical_prop",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    }
   },
   "outfitCoherenceCheck": {
     "moduleName": "outfitCoherenceCheck",
     "status": "active",
     "scope": "topModule + outerwearModule + themeDirectionLayer only",
-    "primaryStyleSource": "traditional_modern",
-    "secondaryStyleSource": "fantasy_worker",
+    "primaryStyleSource": "soft_daily",
+    "secondaryStyleSource": "traditional_modern",
     "dominantModule": "outerwearModule",
     "supportingModule": "topModule",
-    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 2: one upper-body module may carry visible traditional structure; the other should stay modern and simple.",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 0: keep upper-body styling modern; traditional structure should not drive top or outerwear.",
     "motifMainPlacement": "外套肩部或领口区域",
     "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
     "reducedModules": [
@@ -49,13 +340,15 @@
     "promptCoherenceNotes": [
       "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
       "Top module should keep only one main structural idea and avoid competing details.",
+      "Avoid stacking traditional top structure with strong outerwear silhouette language.",
       "Theme motifs are limited to one main placement and one echo placement."
     ],
     "warningMessages": [
       "outerwear is medium/heavy, so topModule should support instead of competing",
+      "avoid stacking traditional top structure with strong outerwear cape/hood/layer language",
       "motifs should be limited to one main placement and one echo placement"
     ],
-    "styleSummary": "整体以传统现代混合为主，辅以都市奇幻劳动者，外套负责主视觉，内搭降低复杂度，只做结构衬托，护符和纸片元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+    "styleSummary": "整体以日常生活感为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，蒸汽和热水管元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
   },
   "characterLayer": {
     "moduleName": "characterLayer",
@@ -74,8 +367,8 @@
       "complexityBudget": "moderate"
     },
     "role": "adult male original character",
-    "ageRead": "mature adult",
-    "presence": "sturdy, grounded, broad-shouldered"
+    "ageRead": "四十出头",
+    "presence": "安静观察型"
   },
   "bodyLayer": {
     "moduleName": "bodyLayer",
@@ -94,7 +387,7 @@
       "complexityBudget": "moderate"
     },
     "bodyType": "normal adult male proportion",
-    "build": "strong, thick, mature physique",
+    "build": "壮硕柔厚的力量型体格",
     "posture": "stable standing pose"
   },
   "faceLayer": {
@@ -159,7 +452,7 @@
       "shouldPreferLargeShapes": true,
       "shouldReduceNoise": true
     },
-    "baseArchetype": "交领短衫",
+    "baseArchetype": "对襟短褂",
     "baseCategory": "traditional",
     "culturalAdaptationLevel": {
       "level": 2,
@@ -167,75 +460,229 @@
       "description": "传统基础款用现代材质、短句式和都市比例改写。"
     },
     "traditionalInfluences": [
-      "斜襟",
-      "宽袖"
+      "直线衣身",
+      "披挂式肩部"
     ],
-    "silhouette": "宽肩窄摆",
-    "cutLanguage": "包裹式",
-    "materialLanguage": "防撕裂布",
+    "silhouette": "落肩",
+    "cutLanguage": "弧形切线",
+    "materialLanguage": "防水布",
     "closureSystem": "偏置拉链",
     "designFocus": [
-      "口袋",
-      "袖子"
+      "背部",
+      "肩膀"
     ],
     "structuralFeatures": [
-      "延长下摆",
-      "假两件"
+      "假两件",
+      "肩章结构"
     ],
     "detailComponents": [
-      "袖标",
-      "拉链"
+      "金属扣",
+      "肩章"
     ],
-    "wearState": "卷袖",
-    "personalHabit": "习惯让衣摆不完全对齐",
-    "influenceSource": "旧街修表师",
+    "wearState": "完全闭合",
+    "personalHabit": "喜欢穿大一码",
+    "influenceSource": "花匠",
     "influenceMaterials": [
-      "蓝钢色扣件",
-      "黑胡桃木色皮革",
-      "透明玻璃感饰片"
+      "柔软水管感饰边",
+      "护理良好的银色金属",
+      "深色皮革"
     ],
     "influenceDetails": [
-      "小齿轮袖扣",
-      "蓝钢螺丝状铆钉",
-      "发条形刺绣"
+      "深红蔷薇小徽章",
+      "花枝形刺绣",
+      "叶脉状压线"
     ],
     "constructionVerbs": [
-      "折叠",
-      "拼接",
       "收束腰线",
-      "扣合",
-      "隐藏"
+      "拼接",
+      "隐藏",
+      "形成护片",
+      "扣合"
     ],
     "judgement": {
-      "visualNoiseLevel": "高",
-      "formality": "半正式",
-      "layeringDepth": "双层",
-      "mobility": "中",
+      "visualNoiseLevel": "低",
+      "formality": "正式",
+      "layeringDepth": "单层",
+      "mobility": "低",
       "fantasyIntensity": "高",
-      "cleanliness": "做旧"
+      "cleanliness": "轻微使用痕迹"
     },
     "avoid": [
-      "不要出现可读数字",
-      "不要只画钟表图案",
-      "不要机械件过密"
+      "不要大面积绿色",
+      "不要画成围裙",
+      "不要只堆花朵"
     ],
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+      "themeCategory": "bathhouse_keeper",
+      "themeLabel": "澡堂看护",
+      "regionContext": "eastern_europe_old_quarter",
+      "regionLabel": "东欧旧城区",
+      "environmentFlavor": "老广场",
+      "environmentKeywords": [
+        "旧电车街",
+        "砖墙",
+        "雪后路面",
+        "老广场"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
+      "visualMotifs": [
+        "蒸汽",
+        "热水管",
+        "徽章"
+      ],
+      "materialMood": "磨砂金属与木材",
+      "materialHints": [
+        "木材",
+        "磨砂金属",
+        "羊毛",
+        "厚棉布"
+      ],
+      "colorHints": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "structuralHints": [
+        "厚外套",
+        "高领",
+        "宽肩",
+        "长裤"
+      ],
+      "motifHints": [
+        "电车票",
+        "旧钥匙",
+        "街灯",
+        "徽章"
+      ],
+      "fantasyFlavor": "民俗感奇幻",
+      "culturalInfluenceLevel": 0,
       "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "和风"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有东欧旧城区澡堂看护的气质，环境指向老广场，以磨砂金属与木材和深灰、酒红配色作为主题基础，以蒸汽、热水管、徽章作为少量集中视觉母题。",
+      "resolvedInfluences": {
+        "occupationInfluence": "蒸汽走廊维护员",
+        "regionInfluence": "eastern_europe_old_quarter",
+        "presentationMode": "ceremonial_but_practical_mode",
+        "ageRange": "early_40s",
+        "bodyArchetype": "bulky_soft_strong",
+        "personalityCore": "quiet_observant",
+        "worldFlavorSeed": "folk_fantasy_light",
+        "climateInfluence": [
+          "humid",
+          "warm",
+          "steam"
+        ],
+        "environmentInfluence": [
+          "旧电车街"
+        ],
+        "lifestyleInfluence": [
+          "practical",
+          "tidy",
+          "workwear"
+        ],
+        "socialRoleInfluence": [
+          "local_worker",
+          "reliable_adult"
+        ],
+        "materialInfluence": [
+          "waterproof fabric",
+          "rubber",
+          "matte pvc",
+          "reflective tape"
+        ],
+        "colorInfluence": [
+          "深灰",
+          "酒红",
+          "旧白",
+          "煤黑"
+        ],
+        "culturalStructureInfluence": "modern structure with light regional edge",
+        "movementInfluence": "formal_stable_stance",
+        "bottomLengthBias": "full_length_preferred",
+        "sockBias": "white_socks_hidden_or_slight",
+        "outerwearBias": {
+          "baseTypes": [
+            "hoodie jacket",
+            "work jacket",
+            "utility vest"
+          ],
+          "materials": [
+            "matte nylon",
+            "utility fabric"
+          ]
+        },
+        "propBias": "single_symbolic_practical_prop",
+        "fantasyDensity": "restrained",
+        "formalityLevel": "medium_high",
+        "practicalityLevel": "high"
+      }
     },
-    "themePromptHint": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+    "resolvedInfluences": {
+      "occupationInfluence": "蒸汽走廊维护员",
+      "regionInfluence": "eastern_europe_old_quarter",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "early_40s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "quiet_observant",
+      "worldFlavorSeed": "folk_fantasy_light",
+      "climateInfluence": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "environmentInfluence": [
+        "旧电车街"
+      ],
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "single_symbolic_practical_prop",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    },
+    "themePromptHint": "整体带有东欧旧城区澡堂看护的气质，环境指向老广场，以磨砂金属与木材和深灰、酒红配色作为主题基础，以蒸汽、热水管、徽章作为少量集中视觉母题。"
   },
   "outerwearModule": {
     "moduleName": "outerwearModule",
@@ -254,45 +701,199 @@
       "complexityBudget": "moderate"
     },
     "presence": "medium",
-    "baseType": "work jacket",
-    "silhouette": "wide shoulder",
-    "length": "cropped",
+    "baseType": "utility vest",
+    "silhouette": "boxy",
+    "length": "long",
     "cutLanguage": "wrap style",
     "designFocus": {
-      "primary": "shoulder",
-      "secondary": "collar"
+      "primary": "back panel",
+      "secondary": "hem"
     },
     "structuralFeature": [
-      "fake two-piece"
+      "oversized collar"
     ],
-    "material": "leather trim",
-    "finish": "clean matte",
-    "wearState": "draped over shoulders",
+    "material": "matte nylon",
+    "finish": "simplified cel-shaded material",
+    "wearState": "sleeves rolled",
     "detailScale": "medium_large",
     "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
     "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+      "themeCategory": "bathhouse_keeper",
+      "themeLabel": "澡堂看护",
+      "regionContext": "eastern_europe_old_quarter",
+      "regionLabel": "东欧旧城区",
+      "environmentFlavor": "老广场",
+      "environmentKeywords": [
+        "旧电车街",
+        "砖墙",
+        "雪后路面",
+        "老广场"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
+      "visualMotifs": [
+        "蒸汽",
+        "热水管",
+        "徽章"
+      ],
+      "materialMood": "磨砂金属与木材",
+      "materialHints": [
+        "木材",
+        "磨砂金属",
+        "羊毛",
+        "厚棉布"
+      ],
+      "colorHints": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "structuralHints": [
+        "厚外套",
+        "高领",
+        "宽肩",
+        "长裤"
+      ],
+      "motifHints": [
+        "电车票",
+        "旧钥匙",
+        "街灯",
+        "徽章"
+      ],
+      "fantasyFlavor": "民俗感奇幻",
+      "culturalInfluenceLevel": 0,
       "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "和风"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有东欧旧城区澡堂看护的气质，环境指向老广场，以磨砂金属与木材和深灰、酒红配色作为主题基础，以蒸汽、热水管、徽章作为少量集中视觉母题。",
+      "resolvedInfluences": {
+        "occupationInfluence": "蒸汽走廊维护员",
+        "regionInfluence": "eastern_europe_old_quarter",
+        "presentationMode": "ceremonial_but_practical_mode",
+        "ageRange": "early_40s",
+        "bodyArchetype": "bulky_soft_strong",
+        "personalityCore": "quiet_observant",
+        "worldFlavorSeed": "folk_fantasy_light",
+        "climateInfluence": [
+          "humid",
+          "warm",
+          "steam"
+        ],
+        "environmentInfluence": [
+          "旧电车街"
+        ],
+        "lifestyleInfluence": [
+          "practical",
+          "tidy",
+          "workwear"
+        ],
+        "socialRoleInfluence": [
+          "local_worker",
+          "reliable_adult"
+        ],
+        "materialInfluence": [
+          "waterproof fabric",
+          "rubber",
+          "matte pvc",
+          "reflective tape"
+        ],
+        "colorInfluence": [
+          "深灰",
+          "酒红",
+          "旧白",
+          "煤黑"
+        ],
+        "culturalStructureInfluence": "modern structure with light regional edge",
+        "movementInfluence": "formal_stable_stance",
+        "bottomLengthBias": "full_length_preferred",
+        "sockBias": "white_socks_hidden_or_slight",
+        "outerwearBias": {
+          "baseTypes": [
+            "hoodie jacket",
+            "work jacket",
+            "utility vest"
+          ],
+          "materials": [
+            "matte nylon",
+            "utility fabric"
+          ]
+        },
+        "propBias": "single_symbolic_practical_prop",
+        "fantasyDensity": "restrained",
+        "formalityLevel": "medium_high",
+        "practicalityLevel": "high"
+      }
     },
     "themeMotifs": [
-      "护符",
-      "纸片"
+      "蒸汽",
+      "热水管"
     ],
-    "materialMood": "厚针织与布带",
-    "promptFragment": "medium work jacket, wide shoulder silhouette, cropped, wrap style cut, leather trim with clean matte, main focus shoulder, secondary focus collar, large structure: fake two-piece, theme motifs: 护符 / 纸片, material mood: 厚针织与布带, draped over shoulders, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+    "materialMood": "磨砂金属与木材",
+    "promptFragment": "medium utility vest, boxy silhouette, long, wrap style cut, matte nylon with simplified cel-shaded material, main focus back panel, secondary focus hem, large structure: oversized collar, theme motifs: 蒸汽 / 热水管, material mood: 磨砂金属与木材, sleeves rolled, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "resolvedInfluences": {
+      "occupationInfluence": "蒸汽走廊维护员",
+      "regionInfluence": "eastern_europe_old_quarter",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "early_40s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "quiet_observant",
+      "worldFlavorSeed": "folk_fantasy_light",
+      "climateInfluence": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "environmentInfluence": [
+        "旧电车街"
+      ],
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "single_symbolic_practical_prop",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    }
   },
   "bottomModule": {
     "moduleName": "bottomModule",
@@ -313,41 +914,221 @@
     "themeDirectionLayer": {
       "moduleName": "themeDirectionLayer",
       "status": "active",
-      "themeCategory": "festival_security",
-      "environmentFlavor": "京都老街",
-      "visualMotifs": [
-        "护符",
-        "纸片",
-        "地方徽章"
+      "themeCategory": "bathhouse_keeper",
+      "themeLabel": "澡堂看护",
+      "regionContext": "eastern_europe_old_quarter",
+      "regionLabel": "东欧旧城区",
+      "environmentFlavor": "老广场",
+      "environmentKeywords": [
+        "旧电车街",
+        "砖墙",
+        "雪后路面",
+        "老广场"
       ],
-      "materialMood": "厚针织与布带",
-      "fantasyFlavor": "仪式感奇幻",
-      "culturalInfluenceLevel": 2,
+      "visualMotifs": [
+        "蒸汽",
+        "热水管",
+        "徽章"
+      ],
+      "materialMood": "磨砂金属与木材",
+      "materialHints": [
+        "木材",
+        "磨砂金属",
+        "羊毛",
+        "厚棉布"
+      ],
+      "colorHints": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "structuralHints": [
+        "厚外套",
+        "高领",
+        "宽肩",
+        "长裤"
+      ],
+      "motifHints": [
+        "电车票",
+        "旧钥匙",
+        "街灯",
+        "徽章"
+      ],
+      "fantasyFlavor": "民俗感奇幻",
+      "culturalInfluenceLevel": 0,
       "modernityLevel": "traditional_modern",
-      "themeSummary": "整体带有京都老街节庆安保的气质，以护符、纸片、地方徽章和宽布带作为克制仪式感。"
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "和风"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有东欧旧城区澡堂看护的气质，环境指向老广场，以磨砂金属与木材和深灰、酒红配色作为主题基础，以蒸汽、热水管、徽章作为少量集中视觉母题。",
+      "resolvedInfluences": {
+        "occupationInfluence": "蒸汽走廊维护员",
+        "regionInfluence": "eastern_europe_old_quarter",
+        "presentationMode": "ceremonial_but_practical_mode",
+        "ageRange": "early_40s",
+        "bodyArchetype": "bulky_soft_strong",
+        "personalityCore": "quiet_observant",
+        "worldFlavorSeed": "folk_fantasy_light",
+        "climateInfluence": [
+          "humid",
+          "warm",
+          "steam"
+        ],
+        "environmentInfluence": [
+          "旧电车街"
+        ],
+        "lifestyleInfluence": [
+          "practical",
+          "tidy",
+          "workwear"
+        ],
+        "socialRoleInfluence": [
+          "local_worker",
+          "reliable_adult"
+        ],
+        "materialInfluence": [
+          "waterproof fabric",
+          "rubber",
+          "matte pvc",
+          "reflective tape"
+        ],
+        "colorInfluence": [
+          "深灰",
+          "酒红",
+          "旧白",
+          "煤黑"
+        ],
+        "culturalStructureInfluence": "modern structure with light regional edge",
+        "movementInfluence": "formal_stable_stance",
+        "bottomLengthBias": "full_length_preferred",
+        "sockBias": "white_socks_hidden_or_slight",
+        "outerwearBias": {
+          "baseTypes": [
+            "hoodie jacket",
+            "work jacket",
+            "utility vest"
+          ],
+          "materials": [
+            "matte nylon",
+            "utility fabric"
+          ]
+        },
+        "propBias": "single_symbolic_practical_prop",
+        "fantasyDensity": "restrained",
+        "formalityLevel": "medium_high",
+        "practicalityLevel": "high"
+      }
     },
     "outfitCoherenceCheck": {
-      "primaryStyleSource": "traditional_modern",
+      "primaryStyleSource": "soft_daily",
       "dominantModule": "outerwearModule",
       "supportingModule": "topModule"
     },
+    "bottomContext": {
+      "climateInfluence": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "presentationMode": "ceremonial_but_practical_mode",
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "source": "resolvedInfluences"
+    },
     "presence": "developed",
-    "baseType": "wrap-panel trousers",
-    "silhouette": "soft daily",
+    "baseType": "straight work trousers",
+    "silhouette": "straight",
     "length": "full length",
+    "bottomLengthPreference": {
+      "legExposureLevel": "covered",
+      "preferredLength": "full_length",
+      "initialPreferredLength": "knee_length",
+      "lengthReason": "reasonability filter honored full_length_preferred influence"
+    },
+    "sockVisibilityProfile": {
+      "sockVisibility": "hidden",
+      "sockColor": "white",
+      "sockLength": "crew_socks",
+      "sockReason": "full-length trousers cover most of the sock, so white socks do not need emphasis"
+    },
     "waistStructure": "tied waist",
     "legStructure": "panel division",
-    "hemTreatment": "open hem",
-    "material": "cotton twill",
-    "wearState": "relaxed daily",
+    "hemTreatment": "rolled hem",
+    "material": "dry woven fabric",
+    "wearState": "practical daily wear",
     "designFocus": [
-      "knee area"
+      "side motif strip"
     ],
     "motifUsage": "single echo placement",
-    "motifEcho": "护符 at hem edge",
+    "motifEcho": "蒸汽 at side seam",
     "complexityLevel": "simple",
     "role": "support full-body silhouette without competing with upper body",
-    "promptFragment": "wrap-panel trousers, soft daily silhouette, full length, tied waist, panel division, open hem, cotton twill, relaxed daily, focus knee area, single echo placement: 护符 at hem edge, simple complexity"
+    "promptFragment": "relaxed shorts, straight silhouette, knee length, leg exposure knee_visible, white socks dominant_visible knee_high_socks, tied waist, panel division, rolled hem, dry woven fabric, practical daily wear, focus side motif strip, single echo placement: 蒸汽 at side seam, simple complexity",
+    "resolvedInfluences": {
+      "occupationInfluence": "蒸汽走廊维护员",
+      "regionInfluence": "eastern_europe_old_quarter",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "early_40s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "quiet_observant",
+      "worldFlavorSeed": "folk_fantasy_light",
+      "climateInfluence": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "environmentInfluence": [
+        "旧电车街"
+      ],
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "single_symbolic_practical_prop",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    }
   },
   "footwearModule": {
     "moduleName": "footwearModule",
@@ -425,9 +1206,67 @@
       "graphicClarity": "high",
       "complexityBudget": "moderate"
     },
-    "intensity": "仪式感奇幻",
-    "source": "festival_security",
-    "rule": "support the outfit and prop design without overwhelming the character"
+    "intensity": "restrained",
+    "source": "bathhouse_keeper",
+    "regionContext": "eastern_europe_old_quarter",
+    "rule": "support the outfit and prop design without overwhelming the character",
+    "resolvedInfluences": {
+      "occupationInfluence": "蒸汽走廊维护员",
+      "regionInfluence": "eastern_europe_old_quarter",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "early_40s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "quiet_observant",
+      "worldFlavorSeed": "folk_fantasy_light",
+      "climateInfluence": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "environmentInfluence": [
+        "旧电车街"
+      ],
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "single_symbolic_practical_prop",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    }
   },
   "styleLayer": {
     "moduleName": "styleLayer",
@@ -447,5 +1286,22 @@
     },
     "renderStyle": "clean TV animation cel style",
     "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  },
+  "reasonabilityFilter": {
+    "moduleName": "reasonabilityFilter",
+    "status": "active-mvp",
+    "passed": true,
+    "score": 94,
+    "warnings": [
+      "Full-length-preferred influence produced shorts."
+    ],
+    "fixesApplied": [
+      "Changed shorts to full-length trousers under full_length_preferred bias."
+    ],
+    "compressionNotes": [
+      "Compressed normal motif list to 1-2 must-render motifs without warning."
+    ],
+    "rejectedCombinations": [],
+    "finalDecision": "passed with light checks"
   }
 }

@@ -1,0 +1,652 @@
+{
+  "version": "2.0-skeleton-mvp",
+  "seed": "full-integrated-test-1068119910",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate"
+  },
+  "stylePreferenceLayer": {
+    "moduleName": "stylePreferenceLayer",
+    "status": "minimal-global-style-preference",
+    "lineQuality": "京都动画式清爽线条",
+    "shadowStyle": "干净赛璐璐阴影"
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active",
+    "themeCategory": "urban_fantasy_worker",
+    "themeLabel": "都市奇幻劳动者",
+    "regionContext": "central_asian_market",
+    "regionLabel": "中亚集市",
+    "environmentFlavor": "拱门",
+    "environmentKeywords": [
+      "集市",
+      "织毯",
+      "拱门",
+      "干燥街道",
+      "香料摊"
+    ],
+    "visualMotifs": [
+      "铜扣",
+      "护符",
+      "市场牌"
+    ],
+    "materialMood": "皮革与帆布",
+    "materialHints": [
+      "橡胶",
+      "羊毛",
+      "黄铜",
+      "编织带"
+    ],
+    "colorHints": [
+      "沙色",
+      "深红",
+      "靛蓝",
+      "旧金",
+      "土黄"
+    ],
+    "structuralHints": [
+      "宽腰带",
+      "长外披",
+      "直线长身",
+      "边饰"
+    ],
+    "motifHints": [
+      "编织纹",
+      "护符",
+      "铜扣",
+      "市场牌"
+    ],
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 1,
+    "modernityLevel": "fantasy_urban",
+    "styleHint": "fantasy_worker",
+    "avoidIfNotSelected": [
+      "和风",
+      "神社",
+      "京都"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有中亚集市都市奇幻劳动者的气质，环境指向拱门，以皮革与帆布和沙色、深红配色作为主题基础，以铜扣、护符、市场牌作为少量集中视觉母题。"
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "fantasy_worker",
+    "secondaryStyleSource": "traditional_modern",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule",
+      "outerwearModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": true,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Because cultural level is 1, traditional influence is restricted to one upper-body module.",
+      "Avoid stacking traditional top structure with strong outerwear silhouette language.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "culturalInfluenceLevel 1 allows traditional detail in only one major upper-body module",
+      "avoid stacking traditional top structure with strong outerwear cape/hood/layer language",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以都市奇幻劳动者为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，铜扣和护符元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "role": "adult male original character",
+    "ageRead": "mature adult",
+    "presence": "sturdy, grounded, broad-shouldered"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "bodyType": "normal adult male proportion",
+    "build": "strong, thick, mature physique",
+    "posture": "stable standing pose"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "faceType": "mature masculine face",
+    "hair": "simple readable hairstyle",
+    "keyFeature": "clear facial silhouette"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "expression": "calm focused expression",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "Dashiki 风上衣",
+    "baseCategory": "traditional",
+    "culturalAdaptationLevel": {
+      "level": 2,
+      "label": "传统基础款现代化",
+      "description": "传统基础款用现代材质、短句式和都市比例改写。"
+    },
+    "traditionalInfluences": [
+      "宽门襟",
+      "侧开衩"
+    ],
+    "silhouette": "上宽下收",
+    "cutLanguage": "开衩",
+    "materialLanguage": "麂皮",
+    "closureSystem": "搭扣",
+    "designFocus": [
+      "背部",
+      "口袋"
+    ],
+    "structuralFeatures": [
+      "风挡片",
+      "束带结构"
+    ],
+    "detailComponents": [
+      "反光条",
+      "暗袋"
+    ],
+    "wearState": "完全敞开",
+    "personalHabit": "总喜欢立领",
+    "influenceSource": "天文馆穹幕放映员",
+    "influenceMaterials": [
+      "深靛布料",
+      "星盘压线",
+      "投影镜片感透明片"
+    ],
+    "influenceDetails": [
+      "小型胶片匣口袋",
+      "圆弧穹幕分割线",
+      "暖银星孔"
+    ],
+    "constructionVerbs": [
+      "折叠",
+      "形成护片",
+      "收束腰线",
+      "压线",
+      "拼接"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "高",
+      "formality": "半正式",
+      "layeringDepth": "单层",
+      "mobility": "中",
+      "fantasyIntensity": "高",
+      "cleanliness": "做旧"
+    },
+    "avoid": [
+      "不要大面积星空图案",
+      "不要文字或星座标签",
+      "不要强烈发光"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "urban_fantasy_worker",
+      "themeLabel": "都市奇幻劳动者",
+      "regionContext": "central_asian_market",
+      "regionLabel": "中亚集市",
+      "environmentFlavor": "拱门",
+      "environmentKeywords": [
+        "集市",
+        "织毯",
+        "拱门",
+        "干燥街道",
+        "香料摊"
+      ],
+      "visualMotifs": [
+        "铜扣",
+        "护符",
+        "市场牌"
+      ],
+      "materialMood": "皮革与帆布",
+      "materialHints": [
+        "橡胶",
+        "羊毛",
+        "黄铜",
+        "编织带"
+      ],
+      "colorHints": [
+        "沙色",
+        "深红",
+        "靛蓝",
+        "旧金",
+        "土黄"
+      ],
+      "structuralHints": [
+        "宽腰带",
+        "长外披",
+        "直线长身",
+        "边饰"
+      ],
+      "motifHints": [
+        "编织纹",
+        "护符",
+        "铜扣",
+        "市场牌"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "fantasy_urban",
+      "styleHint": "fantasy_worker",
+      "avoidIfNotSelected": [
+        "和风",
+        "神社",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有中亚集市都市奇幻劳动者的气质，环境指向拱门，以皮革与帆布和沙色、深红配色作为主题基础，以铜扣、护符、市场牌作为少量集中视觉母题。"
+    },
+    "themePromptHint": "整体带有中亚集市都市奇幻劳动者的气质，环境指向拱门，以皮革与帆布和沙色、深红配色作为主题基础，以铜扣、护符、市场牌作为少量集中视觉母题。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "presence": "medium",
+    "baseType": "bomber jacket",
+    "silhouette": "oversized",
+    "length": "hip length",
+    "cutLanguage": "modular",
+    "designFocus": {
+      "primary": "hood",
+      "secondary": "shoulder"
+    },
+    "structuralFeature": [
+      "oversized collar"
+    ],
+    "material": "wool blend",
+    "finish": "low texture",
+    "wearState": "tied around waist",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "urban_fantasy_worker",
+      "themeLabel": "都市奇幻劳动者",
+      "regionContext": "central_asian_market",
+      "regionLabel": "中亚集市",
+      "environmentFlavor": "拱门",
+      "environmentKeywords": [
+        "集市",
+        "织毯",
+        "拱门",
+        "干燥街道",
+        "香料摊"
+      ],
+      "visualMotifs": [
+        "铜扣",
+        "护符",
+        "市场牌"
+      ],
+      "materialMood": "皮革与帆布",
+      "materialHints": [
+        "橡胶",
+        "羊毛",
+        "黄铜",
+        "编织带"
+      ],
+      "colorHints": [
+        "沙色",
+        "深红",
+        "靛蓝",
+        "旧金",
+        "土黄"
+      ],
+      "structuralHints": [
+        "宽腰带",
+        "长外披",
+        "直线长身",
+        "边饰"
+      ],
+      "motifHints": [
+        "编织纹",
+        "护符",
+        "铜扣",
+        "市场牌"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "fantasy_urban",
+      "styleHint": "fantasy_worker",
+      "avoidIfNotSelected": [
+        "和风",
+        "神社",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有中亚集市都市奇幻劳动者的气质，环境指向拱门，以皮革与帆布和沙色、深红配色作为主题基础，以铜扣、护符、市场牌作为少量集中视觉母题。"
+    },
+    "themeMotifs": [
+      "铜扣",
+      "护符"
+    ],
+    "materialMood": "皮革与帆布",
+    "promptFragment": "medium bomber jacket, oversized silhouette, hip length, modular cut, wool blend with low texture, main focus hood, secondary focus shoulder, large structure: oversized collar, theme motifs: 铜扣 / 护符, material mood: 皮革与帆布, tied around waist, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "urban_fantasy_worker",
+      "themeLabel": "都市奇幻劳动者",
+      "regionContext": "central_asian_market",
+      "regionLabel": "中亚集市",
+      "environmentFlavor": "拱门",
+      "environmentKeywords": [
+        "集市",
+        "织毯",
+        "拱门",
+        "干燥街道",
+        "香料摊"
+      ],
+      "visualMotifs": [
+        "铜扣",
+        "护符",
+        "市场牌"
+      ],
+      "materialMood": "皮革与帆布",
+      "materialHints": [
+        "橡胶",
+        "羊毛",
+        "黄铜",
+        "编织带"
+      ],
+      "colorHints": [
+        "沙色",
+        "深红",
+        "靛蓝",
+        "旧金",
+        "土黄"
+      ],
+      "structuralHints": [
+        "宽腰带",
+        "长外披",
+        "直线长身",
+        "边饰"
+      ],
+      "motifHints": [
+        "编织纹",
+        "护符",
+        "铜扣",
+        "市场牌"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "fantasy_urban",
+      "styleHint": "fantasy_worker",
+      "avoidIfNotSelected": [
+        "和风",
+        "神社",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有中亚集市都市奇幻劳动者的气质，环境指向拱门，以皮革与帆布和沙色、深红配色作为主题基础，以铜扣、护符、市场牌作为少量集中视觉母题。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "fantasy_worker",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "bottomContext": {
+      "climateInfluence": [
+        "summer"
+      ],
+      "presentationMode": "work_mode",
+      "lifestyleInfluence": [
+        "street",
+        "casual"
+      ]
+    },
+    "presence": "developed",
+    "baseType": "straight work trousers",
+    "silhouette": "heavy lower body",
+    "length": "full length",
+    "bottomLengthPreference": {
+      "legExposureLevel": "covered",
+      "preferredLength": "full_length",
+      "lengthReason": "full length selected for stable lower-body support; context: summer, work_mode, street, casual, urban_fantasy_worker"
+    },
+    "sockVisibilityProfile": {
+      "sockVisibility": "hidden",
+      "sockColor": "white",
+      "sockLength": "crew_socks",
+      "sockReason": "full-length trousers cover most of the sock, so white socks do not need emphasis"
+    },
+    "waistStructure": "broad waistband",
+    "legStructure": "panel division",
+    "hemTreatment": "tucked into footwear",
+    "material": "dry woven fabric",
+    "wearState": "relaxed daily",
+    "designFocus": [
+      "waist"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "铜扣 at hem edge",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "straight work trousers, heavy lower body silhouette, full length, leg exposure covered, white socks hidden crew_socks, broad waistband, panel division, tucked into footwear, dry woven fabric, relaxed daily, focus waist, single echo placement: 铜扣 at hem edge, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "intensity": "轻都市奇幻",
+    "source": "urban_fantasy_worker",
+    "regionContext": "central_asian_market",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  }
+}

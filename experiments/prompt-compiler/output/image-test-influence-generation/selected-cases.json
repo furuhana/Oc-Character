@@ -1,0 +1,580 @@
+[
+  {
+    "id": "case-01-harbor-workwear",
+    "label": "Harbor / humid / workwear direction",
+    "seed": "influence-mvp-2",
+    "note": "???????????????????????????",
+    "promptPath": "experiments/prompt-compiler/output/image-test-influence-generation/case-01-harbor-workwear.md",
+    "primary": {
+      "themeCategory": "harbor_pressure_maintenance",
+      "regionContext": "latin_american_hill_town",
+      "ageRange": "early_30s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "quiet_observant",
+      "presentationMode": "daily_portrait_mode",
+      "occupationSeed": "港口仓库维修员",
+      "worldFlavorSeed": "industrial_service"
+    },
+    "derived": {
+      "climateInfluence": [
+        "coastal",
+        "humid",
+        "windy",
+        "street",
+        "seasonal_warm_possible"
+      ],
+      "environmentInfluence": [
+        "harbor_service_area",
+        "wet_metal",
+        "pipe_corridor"
+      ],
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "土红",
+        "暖黄",
+        "深绿",
+        "旧蓝"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "relaxed_standing",
+      "bottomLengthBias": "short_or_cropped_allowed",
+      "sockBias": "white_socks_likely_visible_when_exposed",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_pressure_gauge_or_valve_symbol",
+      "fantasyDensity": "low",
+      "formalityLevel": "low_medium",
+      "practicalityLevel": "high"
+    },
+    "filter": {
+      "moduleName": "reasonabilityFilter",
+      "status": "active-mvp",
+      "passed": true,
+      "score": 100,
+      "warnings": [],
+      "fixesApplied": [],
+      "compressionNotes": [
+        "Compressed normal motif list to 1-2 must-render motifs without warning."
+      ],
+      "rejectedCombinations": [],
+      "finalDecision": "passed with light checks"
+    },
+    "bottom": {
+      "length": "knee_length",
+      "exposure": "knee_visible",
+      "sockVisibility": "dominant_visible",
+      "sockLength": "knee_high_socks",
+      "baseType": "work shorts"
+    },
+    "outerwear": "work jacket",
+    "motifs": [
+      "压力阀",
+      "管线"
+    ],
+    "imageFinal": "单人全身角色设定图，从头到脚完整可见，白底或浅色背景；拉美山城出身，原创成年男性角色，整体成熟厚实、稳定可靠。\n壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。\n整体带有拉美山城港区压力维护气质，以压力阀、管线为母题。\n服装以白色贴身内搭为身体锚点，外层是工装夹克，上半身厚重轮廓，下装为工装短裤，宽松轮廓，搭配清楚的白色长袜，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。\n奇幻元素轻量集中，不抢服装主体。\n配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。"
+  },
+  {
+    "id": "case-02-rain-waterproof",
+    "label": "Rain infrastructure / waterproof hooded direction",
+    "seed": "influence-mvp-4",
+    "note": "?????????????????",
+    "promptPath": "experiments/prompt-compiler/output/image-test-influence-generation/case-02-rain-waterproof.md",
+    "primary": {
+      "themeCategory": "rain_infrastructure_observer",
+      "regionContext": "kyoto_old_street",
+      "ageRange": "early_40s",
+      "bodyArchetype": "heavy_power_build",
+      "personalityCore": "blunt_honest",
+      "presentationMode": "off_duty_mode",
+      "occupationSeed": "排水路径巡查员",
+      "worldFlavorSeed": "rainy_infrastructure"
+    },
+    "derived": {
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm"
+      ],
+      "environmentInfluence": [
+        "wet_street",
+        "drainage_path",
+        "reflective_surface"
+      ],
+      "lifestyleInfluence": [
+        "casual",
+        "relaxed"
+      ],
+      "socialRoleInfluence": [
+        "local_guardian",
+        "familiar_big_brother"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "墨蓝",
+        "旧白",
+        "木褐",
+        "朱红"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "relaxed_grounded_pose",
+      "bottomLengthBias": "short_or_cropped_allowed",
+      "sockBias": "white_socks_likely_visible_when_exposed",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+      "fantasyDensity": "low",
+      "formalityLevel": "low",
+      "practicalityLevel": "high"
+    },
+    "filter": {
+      "moduleName": "reasonabilityFilter",
+      "status": "active-mvp",
+      "passed": true,
+      "score": 100,
+      "warnings": [],
+      "fixesApplied": [],
+      "compressionNotes": [
+        "Compressed normal motif list to 1-2 must-render motifs without warning."
+      ],
+      "rejectedCombinations": [],
+      "finalDecision": "passed with light checks"
+    },
+    "bottom": {
+      "length": "full_length",
+      "exposure": "covered",
+      "sockVisibility": "hidden",
+      "sockLength": "crew_socks",
+      "baseType": "straight work trousers"
+    },
+    "outerwear": "hoodie jacket",
+    "motifs": [
+      "雨线",
+      "水位刻度"
+    ],
+    "imageFinal": "单人全身角色设定图，从头到脚完整可见，白底或浅色背景；京都老街出身，原创成年男性角色，整体成熟厚实、稳定可靠。\n壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。\n整体带有京都老街雨水设施观测气质，以雨线、水位刻度为母题。\n服装以白色贴身内搭为身体锚点，外层是连帽外套，短版轮廓，下装为直筒工装裤，宽松轮廓，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。\n奇幻元素轻量集中，不抢服装主体。\n配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。"
+  },
+  {
+    "id": "case-03-library-full-length",
+    "label": "Library / indoor / full-length direction",
+    "seed": "influence-mvp-8",
+    "note": "????????????????",
+    "promptPath": "experiments/prompt-compiler/output/image-test-influence-generation/case-03-library-full-length.md",
+    "primary": {
+      "themeCategory": "library_stack_keeper",
+      "regionContext": "kyoto_old_street",
+      "ageRange": "late_30s",
+      "bodyArchetype": "heavy_power_build",
+      "personalityCore": "patient_caretaker",
+      "presentationMode": "combat_ready_mode",
+      "occupationSeed": "旧书库管理员",
+      "worldFlavorSeed": "civic_urban_fantasy"
+    },
+    "derived": {
+      "climateInfluence": [
+        "temperate"
+      ],
+      "environmentInfluence": [
+        "indoor_archive",
+        "vertical_storage",
+        "quiet_heavy_space"
+      ],
+      "lifestyleInfluence": [
+        "practical"
+      ],
+      "socialRoleInfluence": [
+        "community_keeper",
+        "guide",
+        "protector"
+      ],
+      "materialInfluence": [
+        "wool blend",
+        "matte fabric",
+        "leather edge",
+        "paper motif"
+      ],
+      "colorInfluence": [
+        "墨蓝",
+        "旧白",
+        "木褐",
+        "朱红"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "guarded_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "long coat",
+          "cardigan",
+          "blazer"
+        ],
+        "materials": [
+          "wool blend",
+          "soft knit"
+        ]
+      },
+      "propBias": "transformed_bookmark_hammer_or_index_shield",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "medium"
+    },
+    "filter": {
+      "moduleName": "reasonabilityFilter",
+      "status": "active-mvp",
+      "passed": true,
+      "score": 100,
+      "warnings": [],
+      "fixesApplied": [],
+      "compressionNotes": [
+        "Compressed normal motif list to 1-2 must-render motifs without warning."
+      ],
+      "rejectedCombinations": [],
+      "finalDecision": "passed with light checks"
+    },
+    "bottom": {
+      "length": "full_length",
+      "exposure": "covered",
+      "sockVisibility": "hidden",
+      "sockLength": "crew_socks",
+      "baseType": "wide casual trousers"
+    },
+    "outerwear": "cardigan",
+    "motifs": [
+      "书签",
+      "索引签"
+    ],
+    "imageFinal": "单人全身角色设定图，从头到脚完整可见，白底或浅色背景；京都老街出身，原创成年男性角色，整体成熟厚实、稳定可靠。\n壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。\n整体带有京都老街书库看护气质，以书签、索引签为母题。\n服装以白色贴身内搭为身体锚点，外层是开衫，A 字轮廓，下装为宽松日常长裤，宽松轮廓，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。\n奇幻元素轻量集中，不抢服装主体。\n配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。"
+  },
+  {
+    "id": "case-04-market-summer-shorts-socks",
+    "label": "Market-region / summer / shorts and white socks direction",
+    "seed": "influence-mvp-11",
+    "note": "??20 seed??????/??/????????central_asian_market + summer + knee_length + dominant white socks?",
+    "promptPath": "experiments/prompt-compiler/output/image-test-influence-generation/case-04-market-summer-shorts-socks.md",
+    "primary": {
+      "themeCategory": "underground_fitness_trainer",
+      "regionContext": "central_asian_market",
+      "ageRange": "early_30s",
+      "bodyArchetype": "very_broad_frame",
+      "personalityCore": "patient_caretaker",
+      "presentationMode": "work_mode",
+      "occupationSeed": "地下商场训练员",
+      "worldFlavorSeed": "civic_urban_fantasy"
+    },
+    "derived": {
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm",
+        "street",
+        "seasonal_warm_possible"
+      ],
+      "environmentInfluence": [
+        "crowded_market",
+        "stall_lights",
+        "wet_street",
+        "drainage_path",
+        "reflective_surface"
+      ],
+      "lifestyleInfluence": [
+        "athletic",
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "community_keeper",
+        "guide",
+        "protector"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "沙色",
+        "深红",
+        "靛蓝",
+        "旧金"
+      ],
+      "culturalStructureInfluence": "small collar/placket/edge influence only",
+      "movementInfluence": "standing_ready",
+      "bottomLengthBias": "short_or_cropped_allowed",
+      "sockBias": "white_socks_likely_visible_when_exposed",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium",
+      "practicalityLevel": "high"
+    },
+    "filter": {
+      "moduleName": "reasonabilityFilter",
+      "status": "active-mvp",
+      "passed": true,
+      "score": 100,
+      "warnings": [],
+      "fixesApplied": [],
+      "compressionNotes": [
+        "Compressed normal motif list to 1-2 must-render motifs without warning."
+      ],
+      "rejectedCombinations": [],
+      "finalDecision": "passed with light checks"
+    },
+    "bottom": {
+      "length": "knee_length",
+      "exposure": "knee_visible",
+      "sockVisibility": "dominant_visible",
+      "sockLength": "knee_high_socks",
+      "baseType": "knee-length shorts"
+    },
+    "outerwear": "hoodie jacket",
+    "motifs": [
+      "压力表",
+      "地方徽章"
+    ],
+    "imageFinal": "单人全身角色设定图，从头到脚完整可见，白底或浅色背景；中亚集市出身，原创成年男性角色，整体成熟厚实、稳定可靠。\n壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。\n整体带有中亚集市地下健身教练气质，以压力表、地方徽章为母题。\n服装以白色贴身内搭为身体锚点，外层是连帽外套，短版轮廓，下装为及膝短裤，稳重工装轮廓，搭配清楚的白色长袜，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。\n奇幻元素轻量集中，不抢服装主体。\n配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。"
+  },
+  {
+    "id": "case-05-bathhouse-filtered-full",
+    "label": "Bathhouse / steam / full-length filter fix",
+    "seed": "influence-mvp-3",
+    "note": "??????full_length_preferred ??????????????????",
+    "promptPath": "experiments/prompt-compiler/output/image-test-influence-generation/case-05-bathhouse-filtered-full.md",
+    "primary": {
+      "themeCategory": "bathhouse_keeper",
+      "regionContext": "eastern_europe_old_quarter",
+      "ageRange": "early_40s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "quiet_observant",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "occupationSeed": "蒸汽走廊维护员",
+      "worldFlavorSeed": "folk_fantasy_light"
+    },
+    "derived": {
+      "climateInfluence": [
+        "humid",
+        "warm",
+        "steam"
+      ],
+      "environmentInfluence": [
+        "旧电车街"
+      ],
+      "lifestyleInfluence": [
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "深灰",
+        "酒红",
+        "旧白",
+        "煤黑"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "single_symbolic_practical_prop",
+      "fantasyDensity": "restrained",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    },
+    "filter": {
+      "moduleName": "reasonabilityFilter",
+      "status": "active-mvp",
+      "passed": true,
+      "score": 94,
+      "warnings": [
+        "Full-length-preferred influence produced shorts."
+      ],
+      "fixesApplied": [
+        "Changed shorts to full-length trousers under full_length_preferred bias."
+      ],
+      "compressionNotes": [
+        "Compressed normal motif list to 1-2 must-render motifs without warning."
+      ],
+      "rejectedCombinations": [],
+      "finalDecision": "passed with light checks"
+    },
+    "bottom": {
+      "length": "full_length",
+      "exposure": "covered",
+      "sockVisibility": "hidden",
+      "sockLength": "crew_socks",
+      "baseType": "straight work trousers"
+    },
+    "outerwear": "utility vest",
+    "motifs": [
+      "蒸汽",
+      "热水管"
+    ],
+    "imageFinal": "单人全身角色设定图，从头到脚完整可见，白底或浅色背景；东欧旧城区出身，原创成年男性角色，整体成熟厚实、稳定可靠。\n壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。\n整体带有东欧旧城区澡堂看护气质，以蒸汽、热水管为母题。\n服装以白色贴身内搭为身体锚点，外层是功能背心，箱型轮廓，下装为直筒工装裤，直筒轮廓，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。\n奇幻元素轻量集中，不抢服装主体。\n配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。"
+  },
+  {
+    "id": "case-06-generic-civic-control",
+    "label": "Generic civic / urban control case",
+    "seed": "influence-mvp-1",
+    "note": "????????????????????",
+    "promptPath": "experiments/prompt-compiler/output/image-test-influence-generation/case-06-generic-civic-control.md",
+    "primary": {
+      "themeCategory": "generic_civic_worker",
+      "regionContext": "japanese_small_town",
+      "ageRange": "mid_30s",
+      "bodyArchetype": "bulky_soft_strong",
+      "personalityCore": "cheerful_loud",
+      "presentationMode": "work_mode",
+      "occupationSeed": "城市公共事务员",
+      "worldFlavorSeed": "contemporary_modern"
+    },
+    "derived": {
+      "climateInfluence": [
+        "temperate"
+      ],
+      "environmentInfluence": [
+        "木牌"
+      ],
+      "lifestyleInfluence": [
+        "casual",
+        "relaxed",
+        "practical",
+        "tidy",
+        "workwear"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "cotton canvas",
+        "matte fabric",
+        "rubber",
+        "brushed metal"
+      ],
+      "colorInfluence": [
+        "深蓝",
+        "旧白",
+        "木色",
+        "炭黑"
+      ],
+      "culturalStructureInfluence": "small collar/placket/edge influence only",
+      "movementInfluence": "standing_ready",
+      "bottomLengthBias": "ankle_or_full_balanced",
+      "sockBias": "white_socks_visible_only_if_ankle_or_calf_exposed",
+      "outerwearBias": {
+        "baseTypes": [
+          "work jacket",
+          "cropped jacket",
+          "bomber jacket"
+        ],
+        "materials": [
+          "cotton canvas",
+          "utility fabric"
+        ]
+      },
+      "propBias": "single_symbolic_practical_prop",
+      "fantasyDensity": "low",
+      "formalityLevel": "medium",
+      "practicalityLevel": "medium"
+    },
+    "filter": {
+      "moduleName": "reasonabilityFilter",
+      "status": "active-mvp",
+      "passed": true,
+      "score": 95,
+      "warnings": [
+        "Balanced bottom-length influence produced shorts."
+      ],
+      "fixesApplied": [
+        "Changed shorts to full-length trousers under balanced bottom-length bias."
+      ],
+      "compressionNotes": [
+        "Compressed normal motif list to 1-2 must-render motifs without warning."
+      ],
+      "rejectedCombinations": [],
+      "finalDecision": "passed with light checks"
+    },
+    "bottom": {
+      "length": "full_length",
+      "exposure": "covered",
+      "sockVisibility": "hidden",
+      "sockLength": "crew_socks",
+      "baseType": "straight work trousers"
+    },
+    "outerwear": "cropped jacket",
+    "motifs": [
+      "路线牌",
+      "编号牌"
+    ],
+    "imageFinal": "单人全身角色设定图，从头到脚完整可见，白底或浅色背景；日本小镇出身，原创成年男性角色，整体成熟厚实、稳定可靠。\n壮硕厚实，宽肩厚胸，手臂和腿部有力量；成熟男性脸型，发型简洁可读，平静专注的表情。\n整体带有日本小镇城市公共事务员气质，以路线牌、编号牌为母题。\n服装以白色贴身内搭为身体锚点，外层是短夹克，宽松轮廓，下装为直筒工装裤，宽松轮廓，搭配简洁实用的深色鞋履，上半身主视觉清楚，下半身稳定支撑。\n奇幻元素轻量集中，不抢服装主体。\n配色干净，主色和点缀色分明。京都动画式清爽线条、干净赛璐璐阴影，游戏角色设定感，大形主导，中低细节密度，轮廓清楚；不要写实摄影、厚涂、复杂纹理、文字、UI、多人或身体裁切。"
+  }
+]

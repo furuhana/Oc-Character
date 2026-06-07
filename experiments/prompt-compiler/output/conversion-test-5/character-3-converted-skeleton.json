@@ -1,0 +1,963 @@
+{
+  "version": "2.0-skeleton-mvp-converted-from-1.0-a-fields",
+  "seed": "conversion-test-3",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate",
+    "migratedPalette": {
+      "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+      "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+      "extractedColors": [
+        "白色上身锚点",
+        "暖灰与深青黑为衣装主色",
+        "朱红和琥珀只用于门槛刻线与小型光印",
+        "白色",
+        "琥珀"
+      ],
+      "rule": "Use as palette guidance only; do not create dense color markings."
+    }
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active-with-1.0-a-field-influence",
+    "themeCategory": "shelter_night_school_guide",
+    "themeLabel": "避难夜校引导",
+    "regionContext": "fantasy_mixed_city",
+    "regionLabel": "架空混合都市",
+    "environmentFlavor": "夜市",
+    "environmentKeywords": [
+      "架空老城",
+      "混合街区",
+      "夜市",
+      "旧楼",
+      "地下通道"
+    ],
+    "visualMotifs": [
+      "避难所",
+      "夜校",
+      "引导"
+    ],
+    "materialMood": "尼龙与反光条",
+    "materialHints": [
+      "橡胶",
+      "反光条",
+      "磨砂金属",
+      "尼龙"
+    ],
+    "colorHints": [
+      "深蓝",
+      "灰黑",
+      "旧白",
+      "琥珀",
+      "暗红"
+    ],
+    "structuralHints": [
+      "现代工装为主",
+      "少量混合传统结构",
+      "短外层",
+      "宽腰带"
+    ],
+    "motifHints": [
+      "旧钥匙",
+      "路牌",
+      "票据",
+      "护符",
+      "灯具"
+    ],
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 1,
+    "modernityLevel": "fantasy_urban",
+    "styleHint": "modern_workwear",
+    "avoidIfNotSelected": [
+      "不要过度指向单一现实国家"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有架空混合都市避难夜校引导的气质，环境指向夜市，以避难所、夜校、引导作为少量集中视觉母题，核心可见道具是折叠门槛盾，一个把避难所夜校秩序当作战斗规则的魁梧引导员，用折叠门槛盾确认谁能安全跨过异常通道。",
+    "characterHook": "一个把避难所夜校秩序当作战斗规则的魁梧引导员，用折叠门槛盾确认谁能安全跨过异常通道。",
+    "themeInference": {
+      "selectedTheme": "shelter_night_school_guide",
+      "confidence": 1,
+      "matchedKeywords": [
+        "避难所",
+        "夜校",
+        "引导员"
+      ],
+      "fallbackUsed": false
+    },
+    "visualKeywordExtraction": {
+      "roleWords": [
+        "避难所夜校引导员"
+      ],
+      "bodyWords": [
+        "宽肩",
+        "厚胸"
+      ],
+      "clothingWords": [],
+      "materialWords": [],
+      "colorWords": [
+        "白色",
+        "琥珀"
+      ],
+      "motifWords": [
+        "避难所",
+        "夜校",
+        "引导"
+      ],
+      "propWords": [
+        "折叠门槛盾"
+      ],
+      "promptHints": [
+        "白色贴身长袖",
+        "低亮琥珀光印"
+      ]
+    },
+    "specialVisualProp": "折叠门槛盾",
+    "propWords": [
+      "折叠门槛盾"
+    ]
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "modern_workwear",
+    "secondaryStyleSource": "traditional_modern",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": false,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以现代工装为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，灯具和门槛线元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "role": "adult male original character converted from 1.0 profile",
+    "ageRead": "34 years old",
+    "presence": "稳重、耐心、护短、讲秩序"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "bodyType": "非常魁梧厚实的成年男性",
+    "build": "极高，厚胸粗臂强腿，极宽肩，斜方肌明显",
+    "posture": "stable standing pose",
+    "height": "191 cm",
+    "weight": "118 kg"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "faceType": "方圆脸，下颌厚实",
+    "hair": "短后梳黑发，前额留一撮自然下垂，黑色",
+    "keyFeature": "clear facial silhouette",
+    "skinTone": "健康暖小麦色"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "expression": "保护性低声指令表情，嘴微张像在让人排队通过，眉峰下压，眼神稳定警觉",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "T-shirt",
+    "baseCategory": "modern",
+    "culturalAdaptationLevel": {
+      "level": 1,
+      "label": "现代基础款 + 少量传统细节",
+      "description": "现代基础款为主，只加入 1 个传统细节。"
+    },
+    "traditionalInfluences": [
+      "包裹式结构"
+    ],
+    "silhouette": "箱型",
+    "cutLanguage": "开衩",
+    "materialLanguage": "防水布",
+    "closureSystem": "纽扣",
+    "designFocus": [
+      "背部",
+      "腰部"
+    ],
+    "structuralFeatures": [
+      "立体口袋",
+      "双排扣结构"
+    ],
+    "detailComponents": [
+      "绳结",
+      "环扣"
+    ],
+    "wearState": "完全闭合",
+    "personalHabit": "习惯把口袋塞满小工具",
+    "influenceSource": "天文馆穹幕放映员",
+    "influenceMaterials": [
+      "星盘压线",
+      "暗银滚边",
+      "投影镜片感透明片"
+    ],
+    "influenceDetails": [
+      "小型胶片匣口袋",
+      "暖银星孔",
+      "暗银支架形肩线"
+    ],
+    "constructionVerbs": [
+      "拼接",
+      "镶边",
+      "分段固定",
+      "延伸下摆",
+      "扣合"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "高",
+      "formality": "休闲",
+      "layeringDepth": "单层",
+      "mobility": "高",
+      "fantasyIntensity": "高",
+      "cleanliness": "做旧"
+    },
+    "avoid": [
+      "不要大面积星空图案",
+      "不要文字或星座标签",
+      "不要强烈发光"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "shelter_night_school_guide",
+      "themeLabel": "避难夜校引导",
+      "regionContext": "fantasy_mixed_city",
+      "regionLabel": "架空混合都市",
+      "environmentFlavor": "夜市",
+      "environmentKeywords": [
+        "架空老城",
+        "混合街区",
+        "夜市",
+        "旧楼",
+        "地下通道"
+      ],
+      "visualMotifs": [
+        "灯具",
+        "门槛线",
+        "点名册"
+      ],
+      "materialMood": "尼龙与反光条",
+      "materialHints": [
+        "橡胶",
+        "反光条",
+        "磨砂金属",
+        "尼龙"
+      ],
+      "colorHints": [
+        "深蓝",
+        "灰黑",
+        "旧白",
+        "琥珀",
+        "暗红"
+      ],
+      "structuralHints": [
+        "现代工装为主",
+        "少量混合传统结构",
+        "短外层",
+        "宽腰带"
+      ],
+      "motifHints": [
+        "旧钥匙",
+        "路牌",
+        "票据",
+        "护符",
+        "灯具"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "fantasy_urban",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "不要过度指向单一现实国家"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有架空混合都市避难夜校引导的气质，环境指向夜市，以尼龙与反光条和深蓝、灰黑配色作为主题基础，以灯具、门槛线、点名册作为少量集中视觉母题。"
+    },
+    "themePromptHint": "整体带有架空混合都市避难夜校引导的气质，环境指向夜市，以尼龙与反光条和深蓝、灰黑配色作为主题基础，以灯具、门槛线、点名册作为少量集中视觉母题。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "presence": "medium",
+    "baseType": "bomber jacket",
+    "silhouette": "wide shoulder",
+    "length": "thigh length",
+    "cutLanguage": "modular",
+    "designFocus": {
+      "primary": "shoulder",
+      "secondary": "back panel"
+    },
+    "structuralFeature": [
+      "large pocket"
+    ],
+    "material": "wool blend",
+    "finish": "clean matte",
+    "wearState": "closed",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "shelter_night_school_guide",
+      "themeLabel": "避难夜校引导",
+      "regionContext": "fantasy_mixed_city",
+      "regionLabel": "架空混合都市",
+      "environmentFlavor": "夜市",
+      "environmentKeywords": [
+        "架空老城",
+        "混合街区",
+        "夜市",
+        "旧楼",
+        "地下通道"
+      ],
+      "visualMotifs": [
+        "灯具",
+        "门槛线",
+        "点名册"
+      ],
+      "materialMood": "尼龙与反光条",
+      "materialHints": [
+        "橡胶",
+        "反光条",
+        "磨砂金属",
+        "尼龙"
+      ],
+      "colorHints": [
+        "深蓝",
+        "灰黑",
+        "旧白",
+        "琥珀",
+        "暗红"
+      ],
+      "structuralHints": [
+        "现代工装为主",
+        "少量混合传统结构",
+        "短外层",
+        "宽腰带"
+      ],
+      "motifHints": [
+        "旧钥匙",
+        "路牌",
+        "票据",
+        "护符",
+        "灯具"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "fantasy_urban",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "不要过度指向单一现实国家"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有架空混合都市避难夜校引导的气质，环境指向夜市，以尼龙与反光条和深蓝、灰黑配色作为主题基础，以灯具、门槛线、点名册作为少量集中视觉母题。"
+    },
+    "themeMotifs": [
+      "灯具",
+      "门槛线"
+    ],
+    "materialMood": "尼龙与反光条",
+    "promptFragment": "medium bomber jacket, wide shoulder silhouette, thigh length, modular cut, wool blend with clean matte, main focus shoulder, secondary focus back panel, large structure: large pocket, theme motifs: 灯具 / 门槛线, material mood: 尼龙与反光条, closed, closed outerwear may cover most of the top, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "shelter_night_school_guide",
+      "themeLabel": "避难夜校引导",
+      "regionContext": "fantasy_mixed_city",
+      "regionLabel": "架空混合都市",
+      "environmentFlavor": "夜市",
+      "environmentKeywords": [
+        "架空老城",
+        "混合街区",
+        "夜市",
+        "旧楼",
+        "地下通道"
+      ],
+      "visualMotifs": [
+        "灯具",
+        "门槛线",
+        "点名册"
+      ],
+      "materialMood": "尼龙与反光条",
+      "materialHints": [
+        "橡胶",
+        "反光条",
+        "磨砂金属",
+        "尼龙"
+      ],
+      "colorHints": [
+        "深蓝",
+        "灰黑",
+        "旧白",
+        "琥珀",
+        "暗红"
+      ],
+      "structuralHints": [
+        "现代工装为主",
+        "少量混合传统结构",
+        "短外层",
+        "宽腰带"
+      ],
+      "motifHints": [
+        "旧钥匙",
+        "路牌",
+        "票据",
+        "护符",
+        "灯具"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "fantasy_urban",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "不要过度指向单一现实国家"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有架空混合都市避难夜校引导的气质，环境指向夜市，以尼龙与反光条和深蓝、灰黑配色作为主题基础，以灯具、门槛线、点名册作为少量集中视觉母题。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "modern_workwear",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "presence": "developed",
+    "baseType": "uniform trousers",
+    "silhouette": "sturdy workwear",
+    "length": "ankle length",
+    "waistStructure": "clean waistband",
+    "legStructure": "simple reinforced knee",
+    "hemTreatment": "tucked into footwear",
+    "material": "work canvas",
+    "wearState": "practical daily wear",
+    "designFocus": [
+      "knee area"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "灯具 at waist edge",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "uniform trousers, sturdy workwear silhouette, ankle length, clean waistband, simple reinforced knee, tucked into footwear, work canvas, practical daily wear, focus knee area, single echo placement: 灯具 at waist edge, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "intensity": "轻都市奇幻",
+    "source": "shelter_night_school_guide",
+    "regionContext": "fantasy_mixed_city",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，暖灰与深青黑为衣装主色，朱红和琥珀只用于门槛刻线与小型光印",
+        "extractedColors": [
+          "白色上身锚点",
+          "暖灰与深青黑为衣装主色",
+          "朱红和琥珀只用于门槛刻线与小型光印",
+          "白色",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  },
+  "sourceVersion": "1.0",
+  "sourceCharacterName": "司澄阙",
+  "characterFoundationLayer": {
+    "moduleName": "characterFoundationLayer",
+    "status": "converted-from-1.0-a-fields",
+    "age": "34",
+    "height": "191 cm",
+    "weight": "118 kg",
+    "heritageBase": "中国华东",
+    "personalityCore": "稳重、耐心、护短、讲秩序",
+    "bodyType": "非常魁梧厚实的成年男性",
+    "muscleLevel": "极高，厚胸粗臂强腿",
+    "shoulderWidth": "极宽肩，斜方肌明显",
+    "skinTone": "健康暖小麦色",
+    "faceShape": "方圆脸，下颌厚实",
+    "expression": "保护性低声指令表情，嘴微张像在让人排队通过，眉峰下压，眼神稳定警觉",
+    "hairStyle": "短后梳黑发，前额留一撮自然下垂",
+    "hairColor": "黑色"
+  },
+  "influenceSourceLayer": {
+    "moduleName": "influenceSourceLayer",
+    "status": "converted-from-1.0-a-fields",
+    "occupationInfluence": "避难所夜校引导员",
+    "combatArchetype": "守护型响应者",
+    "combatFunction": "防御、封路、推离、标记可通行边界",
+    "visualWeapon": "折叠门槛盾",
+    "weaponPreference": "折叠门槛盾与琥珀通行线",
+    "forbiddenDirectTool": "教鞭、粉笔、点名册、普通扩音器",
+    "influenceRule": "Occupation and combat fields are influence sources only; they must not directly decide clothing or become ordinary job tools."
+  },
+  "regionContextLayer": {
+    "moduleName": "regionContext",
+    "status": "inferred-from-1.0-heritage",
+    "heritageRaw": "中国华东城市家庭",
+    "heritageBase": "中国华东",
+    "country": "中国",
+    "regionHint": "华东",
+    "localityFlavor": "",
+    "inferredRegionContext": "fantasy_mixed_city",
+    "rule": "Heritage informs regional context softly; avoid stereotype or direct national costume translation."
+  },
+  "guardrails": {
+    "moduleName": "promptGuardrails",
+    "status": "converted-from-1.0-a-fields",
+    "noDirectTool": [
+      "教鞭",
+      "粉笔",
+      "点名册",
+      "普通扩音器"
+    ],
+    "fallbackUsed": false,
+    "rule": "Avoid direct occupation-to-tool translation; use weaponPreference or visualWeapon as a stylized prop source."
+  },
+  "conversionReport": {
+    "migratedFieldPaths": [
+      "coreIdentity.occupation",
+      "coreIdentity.heritage",
+      "coreIdentity.age",
+      "coreIdentity.height",
+      "coreIdentity.weight",
+      "personality.corePersonality",
+      "visualIdentity.bodyType",
+      "visualIdentity.muscleLevel",
+      "visualIdentity.shoulderWidth",
+      "visualIdentity.skinTone",
+      "visualIdentity.faceShape",
+      "visualIdentity.expression",
+      "visualIdentity.hairStyle",
+      "visualIdentity.hairColor",
+      "combatSystem.battleArchetype",
+      "combatSystem.visualWeapon",
+      "combatSystem.combatFunction",
+      "combatSystem.weaponPreference",
+      "combatSystem.forbiddenDirectTool",
+      "metaDesign.characterHook",
+      "visualIdentity.visualKeywords",
+      "visualIdentity.colorLanguage"
+    ],
+    "intentionallyIgnoredAreas": [
+      "socialSystem",
+      "hiddenInformation",
+      "lifestyle.foodAllergy",
+      "lifestyle.pets",
+      "coreIdentity.birthday",
+      "assets",
+      "activeMarks",
+      "agentMarks",
+      "settings.developer",
+      "generationProfile",
+      "romance / preferredType / possessiveness"
+    ],
+    "visualKeywordsSource": "极宽肩厚胸，白色贴身长袖，高腰暖灰阔腿裤，朱红门槛线，折叠门槛盾，低亮琥珀光印，温和但有压迫感的引导者",
+    "visualKeywordExtraction": {
+      "roleWords": [
+        "避难所夜校引导员"
+      ],
+      "bodyWords": [
+        "宽肩",
+        "厚胸"
+      ],
+      "clothingWords": [],
+      "materialWords": [],
+      "colorWords": [
+        "白色",
+        "琥珀"
+      ],
+      "motifWords": [
+        "避难所",
+        "夜校",
+        "引导"
+      ],
+      "propWords": [
+        "折叠门槛盾"
+      ],
+      "promptHints": [
+        "白色贴身长袖",
+        "低亮琥珀光印"
+      ]
+    },
+    "themeInference": {
+      "selectedTheme": "shelter_night_school_guide",
+      "confidence": 1,
+      "matchedKeywords": [
+        "避难所",
+        "夜校",
+        "引导员"
+      ],
+      "fallbackUsed": false
+    },
+    "characterHookSource": "一个把避难所夜校秩序当作战斗规则的魁梧引导员，用折叠门槛盾确认谁能安全跨过异常通道。",
+    "forbiddenDirectToolSource": "教鞭、粉笔、点名册、普通扩音器",
+    "fallbackGuardrails": []
+  },
+  "promptCompressionGate": {
+    "status": "active",
+    "version": "v2",
+    "imageFinalRules": {
+      "targetLength": "250-450 Chinese characters",
+      "maxParagraphs": 6,
+      "mustRenderLimit": "one identity, one region, one-two motifs, one core prop, one innerwear anchor, one outerwear shape, one bottom silhouette, one palette sentence"
+    },
+    "influenceOnly": [],
+    "debugOnly": [],
+    "debug": {
+      "moduleSanityWarnings": []
+    }
+  }
+}

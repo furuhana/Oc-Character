@@ -1,0 +1,1012 @@
+{
+  "version": "2.0-skeleton-mvp-converted-from-1.0-a-fields",
+  "seed": "conversion-test-0",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate",
+    "migratedPalette": {
+      "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+      "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+      "extractedColors": [
+        "白色上身锚点",
+        "蓝黑与雾灰为衣装主色",
+        "铜金和琥珀只用于钟表金属与秒格光",
+        "白色",
+        "蓝黑",
+        "琥珀"
+      ],
+      "rule": "Use as palette guidance only; do not create dense color markings."
+    }
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active-with-1.0-a-field-influence",
+    "themeCategory": "clock_tower_maintainer",
+    "themeLabel": "钟塔维护",
+    "regionContext": "north_china_old_city",
+    "regionLabel": "华北旧城",
+    "environmentFlavor": "老钟楼",
+    "environmentKeywords": [
+      "胡同",
+      "老城墙",
+      "灰砖",
+      "旧门牌",
+      "路灯",
+      "供热管线"
+    ],
+    "visualMotifs": [
+      "钟楼",
+      "秒针",
+      "秒格"
+    ],
+    "materialMood": "羊毛与磨砂金属",
+    "materialHints": [
+      "铜",
+      "厚织物",
+      "皮革边",
+      "旧铜"
+    ],
+    "colorHints": [
+      "灰蓝",
+      "煤黑",
+      "旧白",
+      "暗红",
+      "旧铜"
+    ],
+    "structuralHints": [
+      "实用工装",
+      "宽门襟",
+      "厚外套",
+      "棉服感"
+    ],
+    "motifHints": [
+      "门牌",
+      "路灯",
+      "旧钥匙",
+      "暖气阀",
+      "旧钟"
+    ],
+    "fantasyFlavor": "都市奇幻",
+    "culturalInfluenceLevel": 1,
+    "modernityLevel": "retro_modern",
+    "styleHint": "fantasy_worker",
+    "avoidIfNotSelected": [
+      "神社",
+      "鸟居",
+      "和风祭典",
+      "京都"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有华北旧城钟塔维护的气质，环境指向老钟楼，以钟楼、秒针、秒格作为少量集中视觉母题，核心可见道具是铜秒针扳轮，魁梧钟楼校准师，用铜秒针扳轮把错拍的动作重新压回节奏。",
+    "characterHook": "一个穿膝下短工装裤的魁梧钟楼校准师，用铜秒针扳轮把错拍的动作重新压回节奏。",
+    "themeInference": {
+      "selectedTheme": "clock_tower_maintainer",
+      "confidence": 1,
+      "matchedKeywords": [
+        "钟楼",
+        "秒针"
+      ],
+      "fallbackUsed": false
+    },
+    "visualKeywordExtraction": {
+      "roleWords": [
+        "钟楼校准师",
+        "钟楼秒差校准师",
+        "城市钟楼秒差校准师"
+      ],
+      "bodyWords": [
+        "厚重"
+      ],
+      "clothingWords": [
+        "白色贴身短袖",
+        "膝下短工装裤",
+        "长袜厚靴",
+        "蓝黑腰封"
+      ],
+      "materialWords": [
+        "铜"
+      ],
+      "colorWords": [
+        "白色",
+        "蓝黑",
+        "琥珀"
+      ],
+      "motifWords": [
+        "钟楼",
+        "秒针",
+        "秒格",
+        "校准"
+      ],
+      "propWords": [
+        "扳轮",
+        "铜秒针扳轮"
+      ],
+      "promptHints": [
+        "厚重钟楼校准师",
+        "白色贴身短袖",
+        "琥珀秒格光"
+      ]
+    },
+    "specialVisualProp": "铜秒针扳轮",
+    "propWords": [
+      "铜秒针扳轮",
+      "扳轮"
+    ]
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "fantasy_worker",
+    "secondaryStyleSource": "",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": false,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以都市奇幻劳动者为主，外套负责主视觉，内搭降低复杂度，只做结构衬托，门牌和旧铜元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "role": "adult male original character converted from 1.0 profile",
+    "ageRead": "36 years old",
+    "presence": "准时、硬朗、护短、嘴碎"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "bodyType": "非常厚实魁梧的成年男性",
+    "build": "极高，胸肩手臂和小腿都很厚，极宽肩，胸背厚重",
+    "posture": "stable standing pose",
+    "height": "192 cm",
+    "weight": "123 kg"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "faceType": "宽额方脸，下巴厚",
+    "hair": "短黑发向后梳，鬓角整齐，黑色",
+    "keyFeature": "clear facial silhouette",
+    "skinTone": "暖铜小麦色"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "expression": "紧绷专注的开口提醒表情，嘴微张像在数最后三秒，眉头压紧，眼神锐利",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "白色贴身短袖上衣",
+    "baseCategory": "modern",
+    "culturalAdaptationLevel": {
+      "level": 1,
+      "label": "现代基础款 + 少量传统细节",
+      "description": "现代基础款为主，只加入 1 个传统细节。"
+    },
+    "traditionalInfluences": [
+      "弧形下摆"
+    ],
+    "silhouette": "贴身短袖轮廓",
+    "cutLanguage": "clean",
+    "materialLanguage": "clean",
+    "closureSystem": "pullover",
+    "designFocus": [
+      "chest fit"
+    ],
+    "structuralFeatures": [],
+    "detailComponents": [],
+    "wearState": "帽子垂在背后",
+    "personalHabit": "喜欢把外套绑腰上",
+    "influenceSource": "雨夜候车亭管理员",
+    "influenceMaterials": [
+      "透明雨棚片",
+      "深灰橡胶边",
+      "冷白反光条"
+    ],
+    "influenceDetails": [
+      "无字反光牌",
+      "票夹形口袋",
+      "折页式帽檐"
+    ],
+    "constructionVerbs": [
+      "镶边",
+      "收束腰线",
+      "形成护片",
+      "外露",
+      "隐藏"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "低",
+      "formality": "半正式",
+      "layeringDepth": "多层",
+      "mobility": "中",
+      "fantasyIntensity": "中",
+      "cleanliness": "干净"
+    },
+    "avoid": [
+      "不要公交站文字",
+      "不要大面积霓虹灯牌",
+      "不要画成雨衣制服"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "clock_tower_maintainer",
+      "themeLabel": "钟塔维护",
+      "regionContext": "north_china_old_city",
+      "regionLabel": "华北旧城",
+      "environmentFlavor": "老钟楼",
+      "environmentKeywords": [
+        "胡同",
+        "老城墙",
+        "灰砖",
+        "旧门牌",
+        "路灯",
+        "供热管线"
+      ],
+      "visualMotifs": [
+        "门牌",
+        "旧铜",
+        "暖气阀"
+      ],
+      "materialMood": "羊毛与磨砂金属",
+      "materialHints": [
+        "厚织物",
+        "皮革边",
+        "旧铜",
+        "帆布"
+      ],
+      "colorHints": [
+        "灰蓝",
+        "煤黑",
+        "旧白",
+        "暗红",
+        "旧铜"
+      ],
+      "structuralHints": [
+        "实用工装",
+        "宽门襟",
+        "厚外套",
+        "棉服感"
+      ],
+      "motifHints": [
+        "门牌",
+        "路灯",
+        "旧钥匙",
+        "暖气阀",
+        "旧钟"
+      ],
+      "fantasyFlavor": "都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "retro_modern",
+      "styleHint": "fantasy_worker",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "和风祭典",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有华北旧城钟塔维护的气质，环境指向老钟楼，以羊毛与磨砂金属和灰蓝、煤黑配色作为主题基础，以门牌、旧铜、暖气阀作为少量集中视觉母题。"
+    },
+    "themePromptHint": "整体带有华北旧城钟塔维护的气质，环境指向老钟楼，以羊毛与磨砂金属和灰蓝、煤黑配色作为主题基础，以门牌、旧铜、暖气阀作为少量集中视觉母题。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "presence": "medium",
+    "baseType": "hoodie jacket",
+    "silhouette": "draped",
+    "length": "long",
+    "cutLanguage": "layered",
+    "designFocus": {
+      "primary": "waist",
+      "secondary": "hood"
+    },
+    "structuralFeature": [
+      "wide placket"
+    ],
+    "material": "denim",
+    "finish": "flat color blocks",
+    "wearState": "open",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "clock_tower_maintainer",
+      "themeLabel": "钟塔维护",
+      "regionContext": "north_china_old_city",
+      "regionLabel": "华北旧城",
+      "environmentFlavor": "老钟楼",
+      "environmentKeywords": [
+        "胡同",
+        "老城墙",
+        "灰砖",
+        "旧门牌",
+        "路灯",
+        "供热管线"
+      ],
+      "visualMotifs": [
+        "门牌",
+        "旧铜",
+        "暖气阀"
+      ],
+      "materialMood": "羊毛与磨砂金属",
+      "materialHints": [
+        "厚织物",
+        "皮革边",
+        "旧铜",
+        "帆布"
+      ],
+      "colorHints": [
+        "灰蓝",
+        "煤黑",
+        "旧白",
+        "暗红",
+        "旧铜"
+      ],
+      "structuralHints": [
+        "实用工装",
+        "宽门襟",
+        "厚外套",
+        "棉服感"
+      ],
+      "motifHints": [
+        "门牌",
+        "路灯",
+        "旧钥匙",
+        "暖气阀",
+        "旧钟"
+      ],
+      "fantasyFlavor": "都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "retro_modern",
+      "styleHint": "fantasy_worker",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "和风祭典",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有华北旧城钟塔维护的气质，环境指向老钟楼，以羊毛与磨砂金属和灰蓝、煤黑配色作为主题基础，以门牌、旧铜、暖气阀作为少量集中视觉母题。"
+    },
+    "themeMotifs": [
+      "门牌",
+      "旧铜"
+    ],
+    "materialMood": "羊毛与磨砂金属",
+    "promptFragment": "medium hoodie jacket, draped silhouette, long, layered cut, denim with flat color blocks, main focus waist, secondary focus hood, large structure: wide placket, theme motifs: 门牌 / 旧铜, material mood: 羊毛与磨砂金属, open, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "clock_tower_maintainer",
+      "themeLabel": "钟塔维护",
+      "regionContext": "north_china_old_city",
+      "regionLabel": "华北旧城",
+      "environmentFlavor": "老钟楼",
+      "environmentKeywords": [
+        "胡同",
+        "老城墙",
+        "灰砖",
+        "旧门牌",
+        "路灯",
+        "供热管线"
+      ],
+      "visualMotifs": [
+        "门牌",
+        "旧铜",
+        "暖气阀"
+      ],
+      "materialMood": "羊毛与磨砂金属",
+      "materialHints": [
+        "厚织物",
+        "皮革边",
+        "旧铜",
+        "帆布"
+      ],
+      "colorHints": [
+        "灰蓝",
+        "煤黑",
+        "旧白",
+        "暗红",
+        "旧铜"
+      ],
+      "structuralHints": [
+        "实用工装",
+        "宽门襟",
+        "厚外套",
+        "棉服感"
+      ],
+      "motifHints": [
+        "门牌",
+        "路灯",
+        "旧钥匙",
+        "暖气阀",
+        "旧钟"
+      ],
+      "fantasyFlavor": "都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "retro_modern",
+      "styleHint": "fantasy_worker",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "和风祭典",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有华北旧城钟塔维护的气质，环境指向老钟楼，以羊毛与磨砂金属和灰蓝、煤黑配色作为主题基础，以门牌、旧铜、暖气阀作为少量集中视觉母题。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "fantasy_worker",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "presence": "developed",
+    "baseType": "relaxed utility pants",
+    "silhouette": "relaxed",
+    "length": "full length",
+    "waistStructure": "work belt compatible",
+    "legStructure": "utility pocket panel",
+    "hemTreatment": "clean hem",
+    "material": "matte utility fabric",
+    "wearState": "lightly worn",
+    "designFocus": [
+      "side pocket area"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "门牌 at waist edge",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "relaxed utility pants, relaxed silhouette, full length, work belt compatible, utility pocket panel, clean hem, matte utility fabric, lightly worn, focus side pocket area, single echo placement: 门牌 at waist edge, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "intensity": "都市奇幻",
+    "source": "clock_tower_maintainer",
+    "regionContext": "north_china_old_city",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "白色上身锚点，蓝黑与雾灰为衣装主色，铜金和琥珀只用于钟表金属与秒格光",
+        "extractedColors": [
+          "白色上身锚点",
+          "蓝黑与雾灰为衣装主色",
+          "铜金和琥珀只用于钟表金属与秒格光",
+          "白色",
+          "蓝黑",
+          "琥珀"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  },
+  "sourceVersion": "1.0",
+  "sourceCharacterName": "钟砚泊",
+  "characterFoundationLayer": {
+    "moduleName": "characterFoundationLayer",
+    "status": "converted-from-1.0-a-fields",
+    "age": "36",
+    "height": "192 cm",
+    "weight": "123 kg",
+    "heritageBase": "中国华北",
+    "personalityCore": "准时、硬朗、护短、嘴碎",
+    "bodyType": "非常厚实魁梧的成年男性",
+    "muscleLevel": "极高，胸肩手臂和小腿都很厚",
+    "shoulderWidth": "极宽肩，胸背厚重",
+    "skinTone": "暖铜小麦色",
+    "faceShape": "宽额方脸，下巴厚",
+    "expression": "紧绷专注的开口提醒表情，嘴微张像在数最后三秒，眉头压紧，眼神锐利",
+    "hairStyle": "短黑发向后梳，鬓角整齐",
+    "hairColor": "黑色"
+  },
+  "influenceSourceLayer": {
+    "moduleName": "influenceSourceLayer",
+    "status": "converted-from-1.0-a-fields",
+    "occupationInfluence": "城市钟楼秒差校准师",
+    "combatArchetype": "近战节拍控制者",
+    "combatFunction": "格挡、横扫、校准错拍、短暂锁住动作节奏",
+    "visualWeapon": "铜秒针扳轮",
+    "weaponPreference": "铜秒针扳轮与折叠秒差计",
+    "forbiddenDirectTool": "普通扳手、普通钟表、普通怀表、普通螺丝刀",
+    "influenceRule": "Occupation and combat fields are influence sources only; they must not directly decide clothing or become ordinary job tools."
+  },
+  "regionContextLayer": {
+    "moduleName": "regionContext",
+    "status": "inferred-from-1.0-heritage",
+    "heritageRaw": "中国华北旧城家庭",
+    "heritageBase": "中国华北",
+    "country": "中国",
+    "regionHint": "华北",
+    "localityFlavor": "旧城",
+    "inferredRegionContext": "north_china_old_city",
+    "rule": "Heritage informs regional context softly; avoid stereotype or direct national costume translation."
+  },
+  "guardrails": {
+    "moduleName": "promptGuardrails",
+    "status": "converted-from-1.0-a-fields",
+    "noDirectTool": [
+      "普通扳手",
+      "普通钟表",
+      "普通怀表",
+      "普通螺丝刀"
+    ],
+    "fallbackUsed": false,
+    "rule": "Avoid direct occupation-to-tool translation; use weaponPreference or visualWeapon as a stylized prop source."
+  },
+  "conversionReport": {
+    "migratedFieldPaths": [
+      "coreIdentity.occupation",
+      "coreIdentity.heritage",
+      "coreIdentity.age",
+      "coreIdentity.height",
+      "coreIdentity.weight",
+      "personality.corePersonality",
+      "visualIdentity.bodyType",
+      "visualIdentity.muscleLevel",
+      "visualIdentity.shoulderWidth",
+      "visualIdentity.skinTone",
+      "visualIdentity.faceShape",
+      "visualIdentity.expression",
+      "visualIdentity.hairStyle",
+      "visualIdentity.hairColor",
+      "combatSystem.battleArchetype",
+      "combatSystem.visualWeapon",
+      "combatSystem.combatFunction",
+      "combatSystem.weaponPreference",
+      "combatSystem.forbiddenDirectTool",
+      "metaDesign.characterHook",
+      "visualIdentity.visualKeywords",
+      "visualIdentity.colorLanguage"
+    ],
+    "intentionallyIgnoredAreas": [
+      "socialSystem",
+      "hiddenInformation",
+      "lifestyle.foodAllergy",
+      "lifestyle.pets",
+      "coreIdentity.birthday",
+      "assets",
+      "activeMarks",
+      "agentMarks",
+      "settings.developer",
+      "generationProfile",
+      "romance / preferredType / possessiveness"
+    ],
+    "visualKeywordsSource": "厚重钟楼校准师，白色贴身短袖，膝下短工装裤，长袜厚靴，铜秒针扳轮，蓝黑腰封，琥珀秒格光",
+    "visualKeywordExtraction": {
+      "roleWords": [
+        "钟楼校准师",
+        "钟楼秒差校准师",
+        "城市钟楼秒差校准师"
+      ],
+      "bodyWords": [
+        "厚重"
+      ],
+      "clothingWords": [
+        "白色贴身短袖",
+        "膝下短工装裤",
+        "长袜厚靴",
+        "蓝黑腰封"
+      ],
+      "materialWords": [
+        "铜"
+      ],
+      "colorWords": [
+        "白色",
+        "蓝黑",
+        "琥珀"
+      ],
+      "motifWords": [
+        "钟楼",
+        "秒针",
+        "秒格",
+        "校准"
+      ],
+      "propWords": [
+        "扳轮",
+        "铜秒针扳轮"
+      ],
+      "promptHints": [
+        "厚重钟楼校准师",
+        "白色贴身短袖",
+        "琥珀秒格光"
+      ]
+    },
+    "themeInference": {
+      "selectedTheme": "clock_tower_maintainer",
+      "confidence": 1,
+      "matchedKeywords": [
+        "钟楼",
+        "秒针"
+      ],
+      "fallbackUsed": false
+    },
+    "characterHookSource": "一个穿膝下短工装裤的魁梧钟楼校准师，用铜秒针扳轮把错拍的动作重新压回节奏。",
+    "forbiddenDirectToolSource": "普通扳手、普通钟表、普通怀表、普通螺丝刀",
+    "fallbackGuardrails": []
+  },
+  "promptCompressionGate": {
+    "status": "active",
+    "version": "v2",
+    "imageFinalRules": {
+      "targetLength": "250-450 Chinese characters",
+      "maxParagraphs": 6,
+      "mustRenderLimit": "one identity, one region, one-two motifs, one core prop, one innerwear anchor, one outerwear shape, one bottom silhouette, one palette sentence"
+    },
+    "influenceOnly": [
+      "运动夹克"
+    ],
+    "debugOnly": [],
+    "debug": {
+      "moduleSanityWarnings": [
+        "topModule.baseArchetype '运动夹克' is outerwear-like; downgraded to fitted innerwear."
+      ]
+    }
+  }
+}

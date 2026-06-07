@@ -51,11 +51,20 @@ function isStrongOuterwear(outerwearModule) {
 function styleFromTheme(themeDirectionLayer) {
   if (!themeDirectionLayer) return "urban_casual";
   if (themeDirectionLayer.styleHint) return themeDirectionLayer.styleHint;
-  if (["night_patrol", "market_guard", "warehouse_logistics_guard", "postal_courier"].includes(themeDirectionLayer.themeCategory)) return "modern_workwear";
+  if ([
+    "night_patrol",
+    "market_guard",
+    "warehouse_logistics_guard",
+    "postal_courier",
+    "rain_infrastructure_observer",
+    "shelter_night_school_guide",
+    "harbor_pressure_maintenance",
+    "generic_civic_worker",
+  ].includes(themeDirectionLayer.themeCategory)) return "modern_workwear";
   if (["underground_fitness_trainer"].includes(themeDirectionLayer.themeCategory)) return "sports_utility";
   if (["bathhouse_keeper", "festival_security", "dawn_gatekeeper"].includes(themeDirectionLayer.themeCategory)) return "soft_daily";
   if (["greenhouse_gardener", "clock_tower_maintainer"].includes(themeDirectionLayer.themeCategory)) return "fantasy_worker";
-  if (["book_repair_binder"].includes(themeDirectionLayer.themeCategory)) return "soft_daily";
+  if (["book_repair_binder", "library_stack_keeper"].includes(themeDirectionLayer.themeCategory)) return "soft_daily";
   return "urban_casual";
 }
 

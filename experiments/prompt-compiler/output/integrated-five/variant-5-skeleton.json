@@ -1,0 +1,643 @@
+{
+  "version": "2.0-skeleton-mvp",
+  "seed": "full-integrated-test-1455751947",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate"
+  },
+  "stylePreferenceLayer": {
+    "moduleName": "stylePreferenceLayer",
+    "status": "minimal-global-style-preference",
+    "lineQuality": "京都动画式清爽线条",
+    "shadowStyle": "干净赛璐璐阴影"
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active",
+    "themeCategory": "book_repair_binder",
+    "themeLabel": "旧书修复师",
+    "regionContext": "middle_eastern_bazaar",
+    "regionLabel": "中东巴扎",
+    "environmentFlavor": "香料街",
+    "environmentKeywords": [
+      "巴扎",
+      "拱廊",
+      "灯具摊",
+      "香料街",
+      "石墙"
+    ],
+    "visualMotifs": [
+      "灯具",
+      "装订线",
+      "书页"
+    ],
+    "materialMood": "纸页与黄铜",
+    "materialHints": [
+      "厚布",
+      "棉布",
+      "黄铜",
+      "皮革"
+    ],
+    "colorHints": [
+      "砂色",
+      "深绿",
+      "旧金",
+      "暗红"
+    ],
+    "structuralHints": [
+      "宽腰带",
+      "开襟外层",
+      "长身线条",
+      "边饰"
+    ],
+    "motifHints": [
+      "灯具",
+      "护符",
+      "铜扣",
+      "市场牌"
+    ],
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 2,
+    "modernityLevel": "traditional_modern",
+    "styleHint": "soft_daily",
+    "avoidIfNotSelected": [
+      "神社",
+      "京都",
+      "鸟居"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有中东巴扎旧书修复师的气质，环境指向香料街，以纸页与黄铜和砂色、深绿配色作为主题基础，以灯具、装订线、书页作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "soft_daily",
+    "secondaryStyleSource": "traditional_modern",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 2: one upper-body module may carry visible traditional structure; the other should stay modern and simple.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": false,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以日常生活感为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，灯具和装订线元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "role": "adult male original character",
+    "ageRead": "mature adult",
+    "presence": "sturdy, grounded, broad-shouldered"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "bodyType": "normal adult male proportion",
+    "build": "strong, thick, mature physique",
+    "posture": "stable standing pose"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "faceType": "mature masculine face",
+    "hair": "simple readable hairstyle",
+    "keyFeature": "clear facial silhouette"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "expression": "calm focused expression",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "半纏",
+    "baseCategory": "traditional",
+    "culturalAdaptationLevel": {
+      "level": 2,
+      "label": "传统基础款现代化",
+      "description": "传统基础款用现代材质、短句式和都市比例改写。"
+    },
+    "traditionalInfluences": [
+      "盘扣",
+      "包裹式结构"
+    ],
+    "silhouette": "茧型",
+    "cutLanguage": "拼接",
+    "materialLanguage": "帆布",
+    "closureSystem": "插扣",
+    "designFocus": [
+      "背部",
+      "袖子"
+    ],
+    "structuralFeatures": [
+      "内外双层门襟",
+      "束带结构"
+    ],
+    "detailComponents": [
+      "磁吸扣",
+      "皮带"
+    ],
+    "wearState": "披在肩上",
+    "personalHabit": "喜欢露出内搭",
+    "influenceSource": "地下档案封签护库员",
+    "influenceMaterials": [
+      "深红封蜡色皮革",
+      "黑色硬挺布",
+      "哑光银黑金属"
+    ],
+    "influenceDetails": [
+      "封蜡色扣带",
+      "钥匙牌挂件",
+      "无字编号牌"
+    ],
+    "constructionVerbs": [
+      "折叠",
+      "形成假两件层次",
+      "扣合",
+      "拼接",
+      "镶边"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "低",
+      "formality": "休闲",
+      "layeringDepth": "双层",
+      "mobility": "中",
+      "fantasyIntensity": "中",
+      "cleanliness": "做旧"
+    },
+    "avoid": [
+      "不要可读文字",
+      "不要画成书本",
+      "不要堆满标签"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "book_repair_binder",
+      "themeLabel": "旧书修复师",
+      "regionContext": "middle_eastern_bazaar",
+      "regionLabel": "中东巴扎",
+      "environmentFlavor": "香料街",
+      "environmentKeywords": [
+        "巴扎",
+        "拱廊",
+        "灯具摊",
+        "香料街",
+        "石墙"
+      ],
+      "visualMotifs": [
+        "灯具",
+        "装订线",
+        "书页"
+      ],
+      "materialMood": "纸页与黄铜",
+      "materialHints": [
+        "厚布",
+        "棉布",
+        "黄铜",
+        "皮革"
+      ],
+      "colorHints": [
+        "砂色",
+        "深绿",
+        "旧金",
+        "暗红"
+      ],
+      "structuralHints": [
+        "宽腰带",
+        "开襟外层",
+        "长身线条",
+        "边饰"
+      ],
+      "motifHints": [
+        "灯具",
+        "护符",
+        "铜扣",
+        "市场牌"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 2,
+      "modernityLevel": "traditional_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有中东巴扎旧书修复师的气质，环境指向香料街，以纸页与黄铜和砂色、深绿配色作为主题基础，以灯具、装订线、书页作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+    },
+    "themePromptHint": "整体带有中东巴扎旧书修复师的气质，环境指向香料街，以纸页与黄铜和砂色、深绿配色作为主题基础，以灯具、装订线、书页作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "presence": "medium",
+    "baseType": "bomber jacket",
+    "silhouette": "A-line",
+    "length": "long",
+    "cutLanguage": "asymmetrical",
+    "designFocus": {
+      "primary": "hem",
+      "secondary": "collar"
+    },
+    "structuralFeature": [
+      "large cuffs"
+    ],
+    "material": "leather trim",
+    "finish": "clean matte",
+    "wearState": "tied around waist",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "book_repair_binder",
+      "themeLabel": "旧书修复师",
+      "regionContext": "middle_eastern_bazaar",
+      "regionLabel": "中东巴扎",
+      "environmentFlavor": "香料街",
+      "environmentKeywords": [
+        "巴扎",
+        "拱廊",
+        "灯具摊",
+        "香料街",
+        "石墙"
+      ],
+      "visualMotifs": [
+        "灯具",
+        "装订线",
+        "书页"
+      ],
+      "materialMood": "纸页与黄铜",
+      "materialHints": [
+        "厚布",
+        "棉布",
+        "黄铜",
+        "皮革"
+      ],
+      "colorHints": [
+        "砂色",
+        "深绿",
+        "旧金",
+        "暗红"
+      ],
+      "structuralHints": [
+        "宽腰带",
+        "开襟外层",
+        "长身线条",
+        "边饰"
+      ],
+      "motifHints": [
+        "灯具",
+        "护符",
+        "铜扣",
+        "市场牌"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 2,
+      "modernityLevel": "traditional_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有中东巴扎旧书修复师的气质，环境指向香料街，以纸页与黄铜和砂色、深绿配色作为主题基础，以灯具、装订线、书页作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+    },
+    "themeMotifs": [
+      "灯具",
+      "装订线"
+    ],
+    "materialMood": "纸页与黄铜",
+    "promptFragment": "medium bomber jacket, A-line silhouette, long, asymmetrical cut, leather trim with clean matte, main focus hem, secondary focus collar, large structure: large cuffs, theme motifs: 灯具 / 装订线, material mood: 纸页与黄铜, tied around waist, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "book_repair_binder",
+      "themeLabel": "旧书修复师",
+      "regionContext": "middle_eastern_bazaar",
+      "regionLabel": "中东巴扎",
+      "environmentFlavor": "香料街",
+      "environmentKeywords": [
+        "巴扎",
+        "拱廊",
+        "灯具摊",
+        "香料街",
+        "石墙"
+      ],
+      "visualMotifs": [
+        "灯具",
+        "装订线",
+        "书页"
+      ],
+      "materialMood": "纸页与黄铜",
+      "materialHints": [
+        "厚布",
+        "棉布",
+        "黄铜",
+        "皮革"
+      ],
+      "colorHints": [
+        "砂色",
+        "深绿",
+        "旧金",
+        "暗红"
+      ],
+      "structuralHints": [
+        "宽腰带",
+        "开襟外层",
+        "长身线条",
+        "边饰"
+      ],
+      "motifHints": [
+        "灯具",
+        "护符",
+        "铜扣",
+        "市场牌"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 2,
+      "modernityLevel": "traditional_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有中东巴扎旧书修复师的气质，环境指向香料街，以纸页与黄铜和砂色、深绿配色作为主题基础，以灯具、装订线、书页作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "soft_daily",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "bottomContext": {
+      "climateInfluence": [
+        "temperate"
+      ],
+      "presentationMode": "work_mode",
+      "lifestyleInfluence": [
+        "street",
+        "casual"
+      ]
+    },
+    "presence": "developed",
+    "baseType": "simple fitted pants",
+    "silhouette": "soft daily",
+    "length": "full length",
+    "bottomLengthPreference": {
+      "legExposureLevel": "covered",
+      "preferredLength": "full_length",
+      "lengthReason": "full length selected for stable lower-body support; context: temperate, work_mode, street, casual, book_repair_binder"
+    },
+    "sockVisibilityProfile": {
+      "sockVisibility": "hidden",
+      "sockColor": "white",
+      "sockLength": "crew_socks",
+      "sockReason": "full-length trousers cover most of the sock, so white socks do not need emphasis"
+    },
+    "waistStructure": "broad waistband",
+    "legStructure": "panel division",
+    "hemTreatment": "cuffed hem",
+    "material": "cotton twill",
+    "wearState": "relaxed daily",
+    "designFocus": [
+      "thigh panel"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "灯具 at waist edge",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "simple fitted pants, soft daily silhouette, full length, leg exposure covered, white socks hidden crew_socks, broad waistband, panel division, cuffed hem, cotton twill, relaxed daily, focus thigh panel, single echo placement: 灯具 at waist edge, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "intensity": "轻都市奇幻",
+    "source": "book_repair_binder",
+    "regionContext": "middle_eastern_bazaar",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  }
+}

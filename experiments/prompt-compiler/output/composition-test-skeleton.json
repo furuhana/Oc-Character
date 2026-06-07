@@ -1,0 +1,1411 @@
+{
+  "version": "2.0-skeleton-mvp",
+  "seed": "composition-mvp-rain-2",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate"
+  },
+  "influenceGenerationLayer": {
+    "moduleName": "influenceGenerationLayer",
+    "status": "active-mvp",
+    "primaryInfluences": {
+      "themeCategory": "rain_infrastructure_observer",
+      "regionContext": "southeast_asian_rain_street",
+      "ageRange": "mid_30s",
+      "bodyArchetype": "thick_chubby_muscular",
+      "personalityCore": "calm_reliable",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "occupationSeed": "排水路径巡查员",
+      "worldFlavorSeed": "rainy_infrastructure"
+    },
+    "derivedInfluences": {
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm"
+      ],
+      "environmentInfluence": [
+        "wet_street",
+        "drainage_path",
+        "reflective_surface"
+      ],
+      "lifestyleInfluence": [
+        "practical"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "wet gray",
+        "deep blue",
+        "orange light",
+        "reflective silver"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+      "fantasyDensity": "low",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    },
+    "resolvedInfluences": {
+      "occupationInfluence": "排水路径巡查员",
+      "regionInfluence": "southeast_asian_rain_street",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "mid_30s",
+      "bodyArchetype": "thick_chubby_muscular",
+      "personalityCore": "calm_reliable",
+      "worldFlavorSeed": "rainy_infrastructure",
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm"
+      ],
+      "environmentInfluence": [
+        "wet_street",
+        "drainage_path",
+        "reflective_surface"
+      ],
+      "lifestyleInfluence": [
+        "practical"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "wet gray",
+        "deep blue",
+        "orange light",
+        "reflective silver"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+      "fantasyDensity": "low",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    },
+    "influenceReasoningLog": [
+      {
+        "source": "regionContext + themeCategory",
+        "input": [
+          "southeast_asian_rain_street",
+          "rain_infrastructure_observer"
+        ],
+        "derived": [
+          "humid",
+          "rainy",
+          "warm"
+        ],
+        "reason": "Region and role seed climate, material, and comfort constraints."
+      },
+      {
+        "source": "themeCategory + regionContext",
+        "input": [
+          "rain_infrastructure_observer",
+          "southeast_asian_rain_street"
+        ],
+        "derived": [
+          "wet_street",
+          "drainage_path",
+          "reflective_surface"
+        ],
+        "reason": "Theme and place combine into a drawable environment flavor."
+      },
+      {
+        "source": "presentationMode + occupationSeed + personalityCore",
+        "input": [
+          "ceremonial_but_practical_mode",
+          "排水路径巡查员",
+          "calm_reliable"
+        ],
+        "derived": [
+          "practical"
+        ],
+        "reason": "Mode and personality derive practical movement and daily-wear pressure."
+      },
+      {
+        "source": "climate + presentationMode + lifestyle",
+        "input": [
+          [
+            "humid",
+            "rainy",
+            "warm"
+          ],
+          "ceremonial_but_practical_mode",
+          [
+            "practical"
+          ]
+        ],
+        "derived": [
+          "full_length_preferred"
+        ],
+        "reason": "Bottom length is derived from climate and use case, not independently random."
+      },
+      {
+        "source": "bottomLengthBias",
+        "input": "full_length_preferred",
+        "derived": [
+          "white_socks_hidden_or_slight"
+        ],
+        "reason": "Sock visibility follows leg exposure and should not randomize independently."
+      }
+    ]
+  },
+  "stylePreferenceLayer": {
+    "moduleName": "stylePreferenceLayer",
+    "status": "minimal-global-style-preference",
+    "lineQuality": "京都动画式清爽线条",
+    "shadowStyle": "干净赛璐璐阴影"
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active",
+    "themeCategory": "rain_infrastructure_observer",
+    "themeLabel": "雨水设施观测",
+    "regionContext": "southeast_asian_rain_street",
+    "regionLabel": "东南亚雨街",
+    "environmentFlavor": "防汛通道",
+    "environmentKeywords": [
+      "雨棚",
+      "湿街",
+      "霓虹",
+      "小摊",
+      "摩托",
+      "塑料帘"
+    ],
+    "visualMotifs": [
+      "雨线",
+      "水位刻度"
+    ],
+    "materialMood": "尼龙与透明塑料",
+    "materialHints": [
+      "PVC",
+      "防水布",
+      "透明塑料",
+      "尼龙"
+    ],
+    "colorHints": [
+      "深蓝",
+      "湿灰",
+      "橙灯",
+      "雨夜黑",
+      "旧白"
+    ],
+    "structuralHints": [
+      "防雨外层",
+      "短外披",
+      "宽松裤",
+      "雨具结构"
+    ],
+    "motifHints": [
+      "雨滴",
+      "摊牌",
+      "塑料绳",
+      "反光条"
+    ],
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 1,
+    "modernityLevel": "old_city_modern",
+    "styleHint": "modern_workwear",
+    "avoidIfNotSelected": [
+      "神社",
+      "羽织",
+      "祭典"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有东南亚雨街雨水设施观测的气质，环境指向防汛通道，以尼龙与透明塑料和深蓝、湿灰配色作为主题基础，以雨线、水位刻度、反光条作为少量集中视觉母题。",
+    "resolvedInfluences": {
+      "occupationInfluence": "排水路径巡查员",
+      "regionInfluence": "southeast_asian_rain_street",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "mid_30s",
+      "bodyArchetype": "thick_chubby_muscular",
+      "personalityCore": "calm_reliable",
+      "worldFlavorSeed": "rainy_infrastructure",
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm"
+      ],
+      "environmentInfluence": [
+        "wet_street",
+        "drainage_path",
+        "reflective_surface"
+      ],
+      "lifestyleInfluence": [
+        "practical"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "wet gray",
+        "deep blue",
+        "orange light",
+        "reflective silver"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+      "fantasyDensity": "low",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    }
+  },
+  "compositionLayer": {
+    "moduleName": "compositionLayer",
+    "status": "mvp",
+    "sourceMotifs": [
+      "雨线",
+      "水位刻度",
+      "反光条"
+    ],
+    "extractedElements": {
+      "points": [
+        "小水痕点"
+      ],
+      "lines": [
+        "竖向雨线",
+        "水位竖线"
+      ],
+      "planes": [
+        "透明防雨片",
+        "防水挡片"
+      ]
+    },
+    "compositionGrammar": {
+      "arrangement": "linear",
+      "rhythm": "interrupted",
+      "transformation": "split",
+      "booleanOperation": "union"
+    },
+    "garmentMapping": {
+      "mainPanel": "front opening panel",
+      "secondaryPanel": "sleeve cuff",
+      "linePlacement": "vertical side seam",
+      "pointPlacement": "waist scale marks",
+      "colorPlacement": "small accent marks only"
+    },
+    "complexityControl": {
+      "maxMainPlanes": 2,
+      "maxSecondaryPlanes": 2,
+      "maxLineGroups": 2,
+      "maxPointClusters": 1,
+      "allowDensePattern": false,
+      "motifScale": "medium_to_large",
+      "detailDensity": "medium_low"
+    },
+    "compositionReasoningLog": [
+      "Selected 雨线 / 水位刻度 / 反光条 from theme motifs and resolved influences.",
+      "Converted motifs into limited points, lines, and planes for garment structure instead of surface stickers.",
+      "Mapped the main composition to front opening panel with one echo area at sleeve cuff."
+    ],
+    "promptFragment": "服装将雨线和水位刻度转成前襟透明防雨片，用竖向线条贯穿前身，线条在边缘克制中断，主块面分成两段，不遮白色内搭",
+    "reasonabilityNotes": [
+      "Composition must behave like garment structure, not abstract sticker graphics.",
+      "White fitted innerwear remains visible and readable."
+    ]
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "modern_workwear",
+    "secondaryStyleSource": "traditional_modern",
+    "dominantModule": "topModule",
+    "supportingModule": "outerwearModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
+    "motifMainPlacement": "上衣领口或前襟区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [],
+    "topComplexityAdjusted": false,
+    "outerwearComplexityAdjusted": false,
+    "promptCoherenceNotes": [
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以现代工装为主，辅以传统现代混合，上衣负责主视觉，外套保持简洁，只做轮廓衬托，雨线和水位刻度元素集中在上衣领口或前襟区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "role": "adult male original character",
+    "ageRead": "三十五岁左右",
+    "presence": "平静可靠"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "bodyType": "normal adult male proportion",
+    "build": "厚实微胖但有肌肉的体型",
+    "posture": "stable standing pose"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "faceType": "mature masculine face",
+    "hair": "simple readable hairstyle",
+    "keyFeature": "clear facial silhouette"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "expression": "calm focused expression",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "Angarkha",
+    "baseCategory": "traditional",
+    "culturalAdaptationLevel": {
+      "level": 2,
+      "label": "传统基础款现代化",
+      "description": "传统基础款用现代材质、短句式和都市比例改写。"
+    },
+    "traditionalInfluences": [
+      "宽袖",
+      "斜襟"
+    ],
+    "silhouette": "H 型",
+    "cutLanguage": "对称",
+    "materialLanguage": "缎面",
+    "closureSystem": "拉链",
+    "designFocus": [
+      "腰部",
+      "口袋"
+    ],
+    "structuralFeatures": [
+      "背带结构",
+      "隐藏口袋结构"
+    ],
+    "detailComponents": [
+      "补丁",
+      "袖标"
+    ],
+    "wearState": "内搭明显露出",
+    "personalHabit": "永远不拉拉链",
+    "influenceSource": "花匠",
+    "influenceMaterials": [
+      "深色皮革",
+      "柔软水管感饰边",
+      "干净棉布"
+    ],
+    "influenceDetails": [
+      "叶脉状压线",
+      "深红蔷薇小徽章",
+      "园艺工具形挂环"
+    ],
+    "constructionVerbs": [
+      "隐藏",
+      "镶边",
+      "压线",
+      "作为口袋盖",
+      "形成护片"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "高",
+      "formality": "半正式",
+      "layeringDepth": "单层",
+      "mobility": "低",
+      "fantasyIntensity": "中",
+      "cleanliness": "干净"
+    },
+    "avoid": [
+      "不要大面积绿色",
+      "不要画成围裙",
+      "不要只堆花朵"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "rain_infrastructure_observer",
+      "themeLabel": "雨水设施观测",
+      "regionContext": "southeast_asian_rain_street",
+      "regionLabel": "东南亚雨街",
+      "environmentFlavor": "防汛通道",
+      "environmentKeywords": [
+        "雨棚",
+        "湿街",
+        "霓虹",
+        "小摊",
+        "摩托",
+        "塑料帘"
+      ],
+      "visualMotifs": [
+        "雨线",
+        "水位刻度",
+        "反光条"
+      ],
+      "materialMood": "尼龙与透明塑料",
+      "materialHints": [
+        "PVC",
+        "防水布",
+        "透明塑料",
+        "尼龙"
+      ],
+      "colorHints": [
+        "深蓝",
+        "湿灰",
+        "橙灯",
+        "雨夜黑",
+        "旧白"
+      ],
+      "structuralHints": [
+        "防雨外层",
+        "短外披",
+        "宽松裤",
+        "雨具结构"
+      ],
+      "motifHints": [
+        "雨滴",
+        "摊牌",
+        "塑料绳",
+        "反光条"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "old_city_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "羽织",
+        "祭典"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有东南亚雨街雨水设施观测的气质，环境指向防汛通道，以尼龙与透明塑料和深蓝、湿灰配色作为主题基础，以雨线、水位刻度、反光条作为少量集中视觉母题。",
+      "resolvedInfluences": {
+        "occupationInfluence": "排水路径巡查员",
+        "regionInfluence": "southeast_asian_rain_street",
+        "presentationMode": "ceremonial_but_practical_mode",
+        "ageRange": "mid_30s",
+        "bodyArchetype": "thick_chubby_muscular",
+        "personalityCore": "calm_reliable",
+        "worldFlavorSeed": "rainy_infrastructure",
+        "climateInfluence": [
+          "humid",
+          "rainy",
+          "warm"
+        ],
+        "environmentInfluence": [
+          "wet_street",
+          "drainage_path",
+          "reflective_surface"
+        ],
+        "lifestyleInfluence": [
+          "practical"
+        ],
+        "socialRoleInfluence": [
+          "local_worker",
+          "reliable_adult"
+        ],
+        "materialInfluence": [
+          "waterproof fabric",
+          "rubber",
+          "matte pvc",
+          "reflective tape"
+        ],
+        "colorInfluence": [
+          "wet gray",
+          "deep blue",
+          "orange light",
+          "reflective silver"
+        ],
+        "culturalStructureInfluence": "modern structure with light regional edge",
+        "movementInfluence": "formal_stable_stance",
+        "bottomLengthBias": "full_length_preferred",
+        "sockBias": "white_socks_hidden_or_slight",
+        "outerwearBias": {
+          "baseTypes": [
+            "hoodie jacket",
+            "work jacket",
+            "utility vest"
+          ],
+          "materials": [
+            "matte nylon",
+            "utility fabric"
+          ]
+        },
+        "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+        "fantasyDensity": "low",
+        "formalityLevel": "medium_high",
+        "practicalityLevel": "high"
+      }
+    },
+    "compositionInfluence": {
+      "sourceMotifs": [
+        "雨线",
+        "水位刻度"
+      ],
+      "garmentMapping": {
+        "mainPanel": "front opening panel",
+        "secondaryPanel": "sleeve cuff",
+        "linePlacement": "vertical side seam",
+        "pointPlacement": "waist scale marks",
+        "colorPlacement": "small accent marks only"
+      },
+      "promptFragment": "服装将雨线和水位刻度转成前襟透明防雨片，用竖向线条贯穿前身，线条在边缘克制中断，主块面分成两段，不遮白色内搭"
+    },
+    "resolvedInfluences": {
+      "occupationInfluence": "排水路径巡查员",
+      "regionInfluence": "southeast_asian_rain_street",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "mid_30s",
+      "bodyArchetype": "thick_chubby_muscular",
+      "personalityCore": "calm_reliable",
+      "worldFlavorSeed": "rainy_infrastructure",
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm"
+      ],
+      "environmentInfluence": [
+        "wet_street",
+        "drainage_path",
+        "reflective_surface"
+      ],
+      "lifestyleInfluence": [
+        "practical"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "wet gray",
+        "deep blue",
+        "orange light",
+        "reflective silver"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+      "fantasyDensity": "low",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    },
+    "themePromptHint": "整体带有东南亚雨街雨水设施观测的气质，环境指向防汛通道，以尼龙与透明塑料和深蓝、湿灰配色作为主题基础，以雨线、水位刻度、反光条作为少量集中视觉母题。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "presence": "none",
+    "baseType": "none",
+    "silhouette": "none",
+    "length": "none",
+    "cutLanguage": "none",
+    "designFocus": {
+      "primary": "topModule",
+      "secondary": ""
+    },
+    "structuralFeature": [],
+    "material": "none",
+    "finish": "none",
+    "wearState": "none",
+    "detailScale": "medium_large",
+    "readabilityRule": "white fitted top remains the primary upper-body shape",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "rain_infrastructure_observer",
+      "themeLabel": "雨水设施观测",
+      "regionContext": "southeast_asian_rain_street",
+      "regionLabel": "东南亚雨街",
+      "environmentFlavor": "防汛通道",
+      "environmentKeywords": [
+        "雨棚",
+        "湿街",
+        "霓虹",
+        "小摊",
+        "摩托",
+        "塑料帘"
+      ],
+      "visualMotifs": [
+        "雨线",
+        "水位刻度",
+        "反光条"
+      ],
+      "materialMood": "尼龙与透明塑料",
+      "materialHints": [
+        "PVC",
+        "防水布",
+        "透明塑料",
+        "尼龙"
+      ],
+      "colorHints": [
+        "深蓝",
+        "湿灰",
+        "橙灯",
+        "雨夜黑",
+        "旧白"
+      ],
+      "structuralHints": [
+        "防雨外层",
+        "短外披",
+        "宽松裤",
+        "雨具结构"
+      ],
+      "motifHints": [
+        "雨滴",
+        "摊牌",
+        "塑料绳",
+        "反光条"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "old_city_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "羽织",
+        "祭典"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有东南亚雨街雨水设施观测的气质，环境指向防汛通道，以尼龙与透明塑料和深蓝、湿灰配色作为主题基础，以雨线、水位刻度、反光条作为少量集中视觉母题。",
+      "resolvedInfluences": {
+        "occupationInfluence": "排水路径巡查员",
+        "regionInfluence": "southeast_asian_rain_street",
+        "presentationMode": "ceremonial_but_practical_mode",
+        "ageRange": "mid_30s",
+        "bodyArchetype": "thick_chubby_muscular",
+        "personalityCore": "calm_reliable",
+        "worldFlavorSeed": "rainy_infrastructure",
+        "climateInfluence": [
+          "humid",
+          "rainy",
+          "warm"
+        ],
+        "environmentInfluence": [
+          "wet_street",
+          "drainage_path",
+          "reflective_surface"
+        ],
+        "lifestyleInfluence": [
+          "practical"
+        ],
+        "socialRoleInfluence": [
+          "local_worker",
+          "reliable_adult"
+        ],
+        "materialInfluence": [
+          "waterproof fabric",
+          "rubber",
+          "matte pvc",
+          "reflective tape"
+        ],
+        "colorInfluence": [
+          "wet gray",
+          "deep blue",
+          "orange light",
+          "reflective silver"
+        ],
+        "culturalStructureInfluence": "modern structure with light regional edge",
+        "movementInfluence": "formal_stable_stance",
+        "bottomLengthBias": "full_length_preferred",
+        "sockBias": "white_socks_hidden_or_slight",
+        "outerwearBias": {
+          "baseTypes": [
+            "hoodie jacket",
+            "work jacket",
+            "utility vest"
+          ],
+          "materials": [
+            "matte nylon",
+            "utility fabric"
+          ]
+        },
+        "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+        "fantasyDensity": "low",
+        "formalityLevel": "medium_high",
+        "practicalityLevel": "high"
+      }
+    },
+    "themeMotifs": [
+      "雨线",
+      "水位刻度"
+    ],
+    "materialMood": "尼龙与透明塑料",
+    "promptFragment": "no outerwear, keep the clean white fitted top as the main upper-body visual",
+    "resolvedInfluences": {
+      "occupationInfluence": "排水路径巡查员",
+      "regionInfluence": "southeast_asian_rain_street",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "mid_30s",
+      "bodyArchetype": "thick_chubby_muscular",
+      "personalityCore": "calm_reliable",
+      "worldFlavorSeed": "rainy_infrastructure",
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm"
+      ],
+      "environmentInfluence": [
+        "wet_street",
+        "drainage_path",
+        "reflective_surface"
+      ],
+      "lifestyleInfluence": [
+        "practical"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "wet gray",
+        "deep blue",
+        "orange light",
+        "reflective silver"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+      "fantasyDensity": "low",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    },
+    "compositionInfluence": {
+      "sourceMotifs": [
+        "雨线",
+        "水位刻度"
+      ],
+      "garmentMapping": {
+        "mainPanel": "front opening panel",
+        "secondaryPanel": "sleeve cuff",
+        "linePlacement": "vertical side seam",
+        "pointPlacement": "waist scale marks",
+        "colorPlacement": "small accent marks only"
+      },
+      "promptFragment": "服装将雨线和水位刻度转成前襟透明防雨片，用竖向线条贯穿前身，线条在边缘克制中断，主块面分成两段，不遮白色内搭"
+    }
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "rain_infrastructure_observer",
+      "themeLabel": "雨水设施观测",
+      "regionContext": "southeast_asian_rain_street",
+      "regionLabel": "东南亚雨街",
+      "environmentFlavor": "防汛通道",
+      "environmentKeywords": [
+        "雨棚",
+        "湿街",
+        "霓虹",
+        "小摊",
+        "摩托",
+        "塑料帘"
+      ],
+      "visualMotifs": [
+        "雨线",
+        "水位刻度",
+        "反光条"
+      ],
+      "materialMood": "尼龙与透明塑料",
+      "materialHints": [
+        "PVC",
+        "防水布",
+        "透明塑料",
+        "尼龙"
+      ],
+      "colorHints": [
+        "深蓝",
+        "湿灰",
+        "橙灯",
+        "雨夜黑",
+        "旧白"
+      ],
+      "structuralHints": [
+        "防雨外层",
+        "短外披",
+        "宽松裤",
+        "雨具结构"
+      ],
+      "motifHints": [
+        "雨滴",
+        "摊牌",
+        "塑料绳",
+        "反光条"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "old_city_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "羽织",
+        "祭典"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有东南亚雨街雨水设施观测的气质，环境指向防汛通道，以尼龙与透明塑料和深蓝、湿灰配色作为主题基础，以雨线、水位刻度、反光条作为少量集中视觉母题。",
+      "resolvedInfluences": {
+        "occupationInfluence": "排水路径巡查员",
+        "regionInfluence": "southeast_asian_rain_street",
+        "presentationMode": "ceremonial_but_practical_mode",
+        "ageRange": "mid_30s",
+        "bodyArchetype": "thick_chubby_muscular",
+        "personalityCore": "calm_reliable",
+        "worldFlavorSeed": "rainy_infrastructure",
+        "climateInfluence": [
+          "humid",
+          "rainy",
+          "warm"
+        ],
+        "environmentInfluence": [
+          "wet_street",
+          "drainage_path",
+          "reflective_surface"
+        ],
+        "lifestyleInfluence": [
+          "practical"
+        ],
+        "socialRoleInfluence": [
+          "local_worker",
+          "reliable_adult"
+        ],
+        "materialInfluence": [
+          "waterproof fabric",
+          "rubber",
+          "matte pvc",
+          "reflective tape"
+        ],
+        "colorInfluence": [
+          "wet gray",
+          "deep blue",
+          "orange light",
+          "reflective silver"
+        ],
+        "culturalStructureInfluence": "modern structure with light regional edge",
+        "movementInfluence": "formal_stable_stance",
+        "bottomLengthBias": "full_length_preferred",
+        "sockBias": "white_socks_hidden_or_slight",
+        "outerwearBias": {
+          "baseTypes": [
+            "hoodie jacket",
+            "work jacket",
+            "utility vest"
+          ],
+          "materials": [
+            "matte nylon",
+            "utility fabric"
+          ]
+        },
+        "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+        "fantasyDensity": "low",
+        "formalityLevel": "medium_high",
+        "practicalityLevel": "high"
+      }
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "modern_workwear",
+      "dominantModule": "topModule",
+      "supportingModule": "outerwearModule"
+    },
+    "bottomContext": {
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm"
+      ],
+      "presentationMode": "ceremonial_but_practical_mode",
+      "lifestyleInfluence": [
+        "practical"
+      ],
+      "source": "resolvedInfluences"
+    },
+    "presence": "developed",
+    "baseType": "straight work trousers",
+    "silhouette": "sturdy workwear",
+    "length": "full length",
+    "bottomLengthPreference": {
+      "legExposureLevel": "covered",
+      "preferredLength": "full_length",
+      "initialPreferredLength": "full_length",
+      "lengthReason": "full length selected for stable lower-body support; context: humid, rainy, warm, ceremonial_but_practical_mode, practical"
+    },
+    "sockVisibilityProfile": {
+      "sockVisibility": "hidden",
+      "sockColor": "white",
+      "sockLength": "crew_socks",
+      "sockReason": "full-length trousers cover most of the sock, so white socks do not need emphasis"
+    },
+    "waistStructure": "work belt compatible",
+    "legStructure": "simple reinforced knee",
+    "hemTreatment": "tucked into footwear",
+    "material": "work canvas",
+    "wearState": "lightly worn",
+    "designFocus": [
+      "thigh panel",
+      "side pocket area"
+    ],
+    "motifUsage": "restrained side accent",
+    "motifEcho": "雨线 at hem edge",
+    "compositionEcho": {
+      "sourceMotifs": [
+        "雨线",
+        "水位刻度"
+      ],
+      "edgeOrPocketEcho": "sleeve cuff",
+      "lineEcho": "vertical side seam",
+      "rule": "only a small edge, pocket, or side-seam echo; do not compete with upper body"
+    },
+    "complexityLevel": "moderate",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "straight work trousers, sturdy workwear silhouette, full length, leg exposure covered, white socks hidden crew_socks, work belt compatible, simple reinforced knee, tucked into footwear, work canvas, lightly worn, focus thigh panel / side pocket area, restrained side accent: 雨线 at hem edge, moderate complexity",
+    "resolvedInfluences": {
+      "occupationInfluence": "排水路径巡查员",
+      "regionInfluence": "southeast_asian_rain_street",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "mid_30s",
+      "bodyArchetype": "thick_chubby_muscular",
+      "personalityCore": "calm_reliable",
+      "worldFlavorSeed": "rainy_infrastructure",
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm"
+      ],
+      "environmentInfluence": [
+        "wet_street",
+        "drainage_path",
+        "reflective_surface"
+      ],
+      "lifestyleInfluence": [
+        "practical"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "wet gray",
+        "deep blue",
+        "orange light",
+        "reflective silver"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+      "fantasyDensity": "low",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    },
+    "compositionInfluence": {
+      "sourceMotifs": [
+        "雨线",
+        "水位刻度"
+      ],
+      "garmentMapping": {
+        "mainPanel": "front opening panel",
+        "secondaryPanel": "sleeve cuff",
+        "linePlacement": "vertical side seam",
+        "pointPlacement": "waist scale marks",
+        "colorPlacement": "small accent marks only"
+      },
+      "promptFragment": "服装将雨线和水位刻度转成前襟透明防雨片，用竖向线条贯穿前身，线条在边缘克制中断，主块面分成两段，不遮白色内搭"
+    }
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "intensity": "low",
+    "source": "rain_infrastructure_observer",
+    "regionContext": "southeast_asian_rain_street",
+    "rule": "support the outfit and prop design without overwhelming the character",
+    "resolvedInfluences": {
+      "occupationInfluence": "排水路径巡查员",
+      "regionInfluence": "southeast_asian_rain_street",
+      "presentationMode": "ceremonial_but_practical_mode",
+      "ageRange": "mid_30s",
+      "bodyArchetype": "thick_chubby_muscular",
+      "personalityCore": "calm_reliable",
+      "worldFlavorSeed": "rainy_infrastructure",
+      "climateInfluence": [
+        "humid",
+        "rainy",
+        "warm"
+      ],
+      "environmentInfluence": [
+        "wet_street",
+        "drainage_path",
+        "reflective_surface"
+      ],
+      "lifestyleInfluence": [
+        "practical"
+      ],
+      "socialRoleInfluence": [
+        "local_worker",
+        "reliable_adult"
+      ],
+      "materialInfluence": [
+        "waterproof fabric",
+        "rubber",
+        "matte pvc",
+        "reflective tape"
+      ],
+      "colorInfluence": [
+        "wet gray",
+        "deep blue",
+        "orange light",
+        "reflective silver"
+      ],
+      "culturalStructureInfluence": "modern structure with light regional edge",
+      "movementInfluence": "formal_stable_stance",
+      "bottomLengthBias": "full_length_preferred",
+      "sockBias": "white_socks_hidden_or_slight",
+      "outerwearBias": {
+        "baseTypes": [
+          "hoodie jacket",
+          "work jacket",
+          "utility vest"
+        ],
+        "materials": [
+          "matte nylon",
+          "utility fabric"
+        ]
+      },
+      "propBias": "transformed_rain_gauge_or_umbrella_rib_prop",
+      "fantasyDensity": "low",
+      "formalityLevel": "medium_high",
+      "practicalityLevel": "high"
+    }
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  },
+  "reasonabilityFilter": {
+    "moduleName": "reasonabilityFilter",
+    "status": "active-mvp",
+    "passed": true,
+    "score": 100,
+    "warnings": [],
+    "fixesApplied": [],
+    "compressionNotes": [
+      "Compressed normal motif list to 1-2 must-render motifs without warning.",
+      "Compressed composition planes to the MVP complexity budget.",
+      "Compressed composition line groups to avoid high-frequency seam noise.",
+      "Compressed composition point clusters to one small accent area."
+    ],
+    "rejectedCombinations": [],
+    "finalDecision": "passed with light checks"
+  }
+}

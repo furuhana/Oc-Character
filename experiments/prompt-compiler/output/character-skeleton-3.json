@@ -1,0 +1,663 @@
+{
+  "version": "2.0-skeleton-mvp",
+  "seed": "full-integrated-test-1581347927",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate"
+  },
+  "stylePreferenceLayer": {
+    "moduleName": "stylePreferenceLayer",
+    "status": "minimal-global-style-preference",
+    "lineQuality": "京都动画式清爽线条",
+    "shadowStyle": "干净赛璐璐阴影"
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active",
+    "themeCategory": "postal_courier",
+    "themeLabel": "邮差",
+    "regionContext": "north_china_old_city",
+    "regionLabel": "华北旧城",
+    "environmentFlavor": "老城墙",
+    "environmentKeywords": [
+      "胡同",
+      "老城墙",
+      "灰砖",
+      "旧门牌",
+      "路灯",
+      "供热管线"
+    ],
+    "visualMotifs": [
+      "旧钥匙",
+      "邮戳",
+      "旧钟"
+    ],
+    "materialMood": "旧铜与橡胶",
+    "materialHints": [
+      "棉布",
+      "磨砂金属",
+      "旧铜",
+      "帆布"
+    ],
+    "colorHints": [
+      "灰蓝",
+      "煤黑",
+      "旧白",
+      "暗红",
+      "旧铜"
+    ],
+    "structuralHints": [
+      "实用工装",
+      "宽门襟",
+      "厚外套",
+      "棉服感"
+    ],
+    "motifHints": [
+      "门牌",
+      "路灯",
+      "旧钥匙",
+      "暖气阀",
+      "旧钟"
+    ],
+    "fantasyFlavor": "现实主义",
+    "culturalInfluenceLevel": 1,
+    "modernityLevel": "old_city_modern",
+    "styleHint": "modern_workwear",
+    "avoidIfNotSelected": [
+      "神社",
+      "鸟居",
+      "和风祭典",
+      "京都"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有华北旧城邮差的气质，环境指向老城墙，以旧铜与橡胶和灰蓝、煤黑配色作为主题基础，以旧钥匙、邮戳、旧钟作为少量集中视觉母题。"
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "modern_workwear",
+    "secondaryStyleSource": "traditional_modern",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule",
+      "outerwearModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": true,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Because cultural level is 1, traditional influence is restricted to one upper-body module.",
+      "Avoid stacking traditional top structure with strong outerwear silhouette language.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "culturalInfluenceLevel 1 allows traditional detail in only one major upper-body module",
+      "avoid stacking traditional top structure with strong outerwear cape/hood/layer language",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以现代工装为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，旧钥匙和邮戳元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "role": "adult male original character",
+    "ageRead": "mature adult",
+    "presence": "sturdy, grounded, broad-shouldered"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "bodyType": "normal adult male proportion",
+    "build": "strong, thick, mature physique",
+    "posture": "stable standing pose"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "faceType": "mature masculine face",
+    "hair": "simple readable hairstyle",
+    "keyFeature": "clear facial silhouette"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "expression": "calm focused expression",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "立领短褂",
+    "baseCategory": "traditional",
+    "culturalAdaptationLevel": {
+      "level": 2,
+      "label": "传统基础款现代化",
+      "description": "传统基础款用现代材质、短句式和都市比例改写。"
+    },
+    "traditionalInfluences": [
+      "对襟",
+      "直线衣身"
+    ],
+    "silhouette": "落肩",
+    "cutLanguage": "不对称",
+    "materialLanguage": "棉布",
+    "closureSystem": "腰封",
+    "designFocus": [
+      "背部",
+      "前襟"
+    ],
+    "structuralFeatures": [
+      "可拆卸结构",
+      "斜向门襟"
+    ],
+    "detailComponents": [
+      "抽绳",
+      "反光条"
+    ],
+    "wearState": "外套只挂在手臂上",
+    "personalHabit": "喜欢把外套绑腰上",
+    "influenceSource": "港口灯塔检修员",
+    "influenceMaterials": [
+      "厚玻璃感透明片",
+      "深蓝帆布",
+      "旧铜色扣件"
+    ],
+    "influenceDetails": [
+      "铜线形压线",
+      "灯塔镜片形胸袋",
+      "信号旗色小布片"
+    ],
+    "constructionVerbs": [
+      "拼接",
+      "压线",
+      "扣合",
+      "折叠",
+      "分段固定"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "低",
+      "formality": "休闲",
+      "layeringDepth": "双层",
+      "mobility": "中",
+      "fantasyIntensity": "低",
+      "cleanliness": "轻微使用痕迹"
+    },
+    "avoid": [
+      "不要文字标识",
+      "不要画成航海制服",
+      "不要大面积灯塔图案"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "postal_courier",
+      "themeLabel": "邮差",
+      "regionContext": "north_china_old_city",
+      "regionLabel": "华北旧城",
+      "environmentFlavor": "老城墙",
+      "environmentKeywords": [
+        "胡同",
+        "老城墙",
+        "灰砖",
+        "旧门牌",
+        "路灯",
+        "供热管线"
+      ],
+      "visualMotifs": [
+        "旧钥匙",
+        "邮戳",
+        "旧钟"
+      ],
+      "materialMood": "旧铜与橡胶",
+      "materialHints": [
+        "棉布",
+        "磨砂金属",
+        "旧铜",
+        "帆布"
+      ],
+      "colorHints": [
+        "灰蓝",
+        "煤黑",
+        "旧白",
+        "暗红",
+        "旧铜"
+      ],
+      "structuralHints": [
+        "实用工装",
+        "宽门襟",
+        "厚外套",
+        "棉服感"
+      ],
+      "motifHints": [
+        "门牌",
+        "路灯",
+        "旧钥匙",
+        "暖气阀",
+        "旧钟"
+      ],
+      "fantasyFlavor": "现实主义",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "old_city_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "和风祭典",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有华北旧城邮差的气质，环境指向老城墙，以旧铜与橡胶和灰蓝、煤黑配色作为主题基础，以旧钥匙、邮戳、旧钟作为少量集中视觉母题。"
+    },
+    "themePromptHint": "整体带有华北旧城邮差的气质，环境指向老城墙，以旧铜与橡胶和灰蓝、煤黑配色作为主题基础，以旧钥匙、邮戳、旧钟作为少量集中视觉母题。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "presence": "medium",
+    "baseType": "track jacket",
+    "silhouette": "oversized",
+    "length": "hip length",
+    "cutLanguage": "layered",
+    "designFocus": {
+      "primary": "back panel",
+      "secondary": "collar"
+    },
+    "structuralFeature": [
+      "broad shoulder panel"
+    ],
+    "material": "cotton canvas",
+    "finish": "clean matte",
+    "wearState": "closed",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "postal_courier",
+      "themeLabel": "邮差",
+      "regionContext": "north_china_old_city",
+      "regionLabel": "华北旧城",
+      "environmentFlavor": "老城墙",
+      "environmentKeywords": [
+        "胡同",
+        "老城墙",
+        "灰砖",
+        "旧门牌",
+        "路灯",
+        "供热管线"
+      ],
+      "visualMotifs": [
+        "旧钥匙",
+        "邮戳",
+        "旧钟"
+      ],
+      "materialMood": "旧铜与橡胶",
+      "materialHints": [
+        "棉布",
+        "磨砂金属",
+        "旧铜",
+        "帆布"
+      ],
+      "colorHints": [
+        "灰蓝",
+        "煤黑",
+        "旧白",
+        "暗红",
+        "旧铜"
+      ],
+      "structuralHints": [
+        "实用工装",
+        "宽门襟",
+        "厚外套",
+        "棉服感"
+      ],
+      "motifHints": [
+        "门牌",
+        "路灯",
+        "旧钥匙",
+        "暖气阀",
+        "旧钟"
+      ],
+      "fantasyFlavor": "现实主义",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "old_city_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "和风祭典",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有华北旧城邮差的气质，环境指向老城墙，以旧铜与橡胶和灰蓝、煤黑配色作为主题基础，以旧钥匙、邮戳、旧钟作为少量集中视觉母题。"
+    },
+    "themeMotifs": [
+      "旧钥匙",
+      "邮戳"
+    ],
+    "materialMood": "旧铜与橡胶",
+    "promptFragment": "medium track jacket, oversized silhouette, hip length, layered cut, cotton canvas with clean matte, main focus back panel, secondary focus collar, large structure: broad shoulder panel, theme motifs: 旧钥匙 / 邮戳, material mood: 旧铜与橡胶, closed, closed outerwear may cover most of the top, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "postal_courier",
+      "themeLabel": "邮差",
+      "regionContext": "north_china_old_city",
+      "regionLabel": "华北旧城",
+      "environmentFlavor": "老城墙",
+      "environmentKeywords": [
+        "胡同",
+        "老城墙",
+        "灰砖",
+        "旧门牌",
+        "路灯",
+        "供热管线"
+      ],
+      "visualMotifs": [
+        "旧钥匙",
+        "邮戳",
+        "旧钟"
+      ],
+      "materialMood": "旧铜与橡胶",
+      "materialHints": [
+        "棉布",
+        "磨砂金属",
+        "旧铜",
+        "帆布"
+      ],
+      "colorHints": [
+        "灰蓝",
+        "煤黑",
+        "旧白",
+        "暗红",
+        "旧铜"
+      ],
+      "structuralHints": [
+        "实用工装",
+        "宽门襟",
+        "厚外套",
+        "棉服感"
+      ],
+      "motifHints": [
+        "门牌",
+        "路灯",
+        "旧钥匙",
+        "暖气阀",
+        "旧钟"
+      ],
+      "fantasyFlavor": "现实主义",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "old_city_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "和风祭典",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有华北旧城邮差的气质，环境指向老城墙，以旧铜与橡胶和灰蓝、煤黑配色作为主题基础，以旧钥匙、邮戳、旧钟作为少量集中视觉母题。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "modern_workwear",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "bottomContext": {
+      "climateInfluence": [
+        "temperate"
+      ],
+      "presentationMode": "work_mode",
+      "lifestyleInfluence": [
+        "practical"
+      ]
+    },
+    "presence": "developed",
+    "baseType": "relaxed utility pants",
+    "silhouette": "relaxed",
+    "length": "full length",
+    "bottomLengthPreference": {
+      "legExposureLevel": "covered",
+      "preferredLength": "full_length",
+      "lengthReason": "full length selected for stable lower-body support; context: temperate, work_mode, practical, postal_courier, north_china_old_city"
+    },
+    "sockVisibilityProfile": {
+      "sockVisibility": "hidden",
+      "sockColor": "white",
+      "sockLength": "crew_socks",
+      "sockReason": "full-length trousers cover most of the sock, so white socks do not need emphasis"
+    },
+    "waistStructure": "practical belt loops",
+    "legStructure": "simple reinforced knee",
+    "hemTreatment": "clean hem",
+    "material": "matte utility fabric",
+    "wearState": "relaxed daily",
+    "designFocus": [
+      "side pocket area"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "旧钥匙 at waist edge",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "relaxed utility pants, relaxed silhouette, full length, leg exposure covered, white socks hidden crew_socks, practical belt loops, simple reinforced knee, clean hem, matte utility fabric, relaxed daily, focus side pocket area, single echo placement: 旧钥匙 at waist edge, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "intensity": "现实主义",
+    "source": "postal_courier",
+    "regionContext": "north_china_old_city",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  }
+}

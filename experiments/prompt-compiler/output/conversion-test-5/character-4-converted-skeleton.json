@@ -1,0 +1,978 @@
+{
+  "version": "2.0-skeleton-mvp-converted-from-1.0-a-fields",
+  "seed": "conversion-test-4",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate",
+    "migratedPalette": {
+      "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+      "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+      "extractedColors": [
+        "干净白",
+        "深青灰",
+        "雾蓝",
+        "氧化铜绿小点缀",
+        "少量白色警示线",
+        "白色"
+      ],
+      "rule": "Use as palette guidance only; do not create dense color markings."
+    }
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active-with-1.0-a-field-influence",
+    "themeCategory": "harbor_pressure_maintenance",
+    "themeLabel": "港区压力维护",
+    "regionContext": "harbor_district",
+    "regionLabel": "港口社区",
+    "environmentFlavor": "湿冷码头",
+    "environmentKeywords": [
+      "港口仓库",
+      "湿冷码头",
+      "货柜边街",
+      "船灯"
+    ],
+    "visualMotifs": [
+      "港区",
+      "压力阀",
+      "检修"
+    ],
+    "materialMood": "旧铁与尼龙",
+    "materialHints": [
+      "尼龙",
+      "橡胶",
+      "旧铁",
+      "磨砂金属"
+    ],
+    "colorHints": [
+      "海军蓝",
+      "铁灰",
+      "旧白",
+      "安全橙"
+    ],
+    "structuralHints": [
+      "工装外套",
+      "实用口袋",
+      "短夹克",
+      "卷袖"
+    ],
+    "motifHints": [
+      "港牌",
+      "船灯",
+      "绳结",
+      "编号牌"
+    ],
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 1,
+    "modernityLevel": "old_city_modern",
+    "styleHint": "modern_workwear",
+    "avoidIfNotSelected": [
+      "神社",
+      "京都",
+      "鸟居"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有港口社区港区压力维护的气质，环境指向湿冷码头，以港区、压力阀、检修作为少量集中视觉母题，一个听得懂旧港管道声音的检修员，总能在事故发生前半拍出现在阀门旁。",
+    "characterHook": "一个听得懂旧港管道声音的检修员，总能在事故发生前半拍出现在阀门旁。",
+    "themeInference": {
+      "selectedTheme": "harbor_pressure_maintenance",
+      "confidence": 1,
+      "matchedKeywords": [
+        "港区",
+        "压力阀",
+        "检修"
+      ],
+      "fallbackUsed": false
+    },
+    "visualKeywordExtraction": {
+      "roleWords": [
+        "港区压力阀检修员"
+      ],
+      "bodyWords": [
+        "宽肩",
+        "厚胸"
+      ],
+      "clothingWords": [
+        "白色贴身背心",
+        "开襟短袖衬衫"
+      ],
+      "materialWords": [],
+      "colorWords": [
+        "白色"
+      ],
+      "motifWords": [
+        "港区",
+        "压力阀",
+        "检修"
+      ],
+      "propWords": [],
+      "promptHints": [
+        "白色贴身背心"
+      ]
+    },
+    "specialVisualProp": "",
+    "propWords": []
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "modern_workwear",
+    "secondaryStyleSource": "fantasy_worker",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 1: traditional influence may affect only one upper-body module as a light collar/placket/edge detail.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": false,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以现代工装为主，辅以都市奇幻劳动者，外套负责主视觉，内搭降低复杂度，只做结构衬托，阀门和压力表元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "role": "adult male original character converted from 1.0 profile",
+    "ageRead": "34 years old",
+    "presence": "松弛可靠"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "bodyType": "结实高挑",
+    "build": "中高，线条紧，宽",
+    "posture": "stable standing pose",
+    "height": "188",
+    "weight": "96 KG"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "faceType": "长方脸，颧骨硬",
+    "hair": "后梳短发，发尾微卷，深褐黑",
+    "keyFeature": "clear facial silhouette",
+    "skinTone": "被海风晒深的暖麦色"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "expression": "平静带笑",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "白色贴身背心",
+    "baseCategory": "modern",
+    "culturalAdaptationLevel": {
+      "level": 1,
+      "label": "现代基础款 + 少量传统细节",
+      "description": "现代基础款为主，只加入 1 个传统细节。"
+    },
+    "traditionalInfluences": [
+      "直线衣身"
+    ],
+    "silhouette": "贴身背心轮廓",
+    "cutLanguage": "clean",
+    "materialLanguage": "clean",
+    "closureSystem": "pullover",
+    "designFocus": [
+      "chest fit"
+    ],
+    "structuralFeatures": [],
+    "detailComponents": [],
+    "wearState": "腰带松开",
+    "personalHabit": "喜欢露出内搭",
+    "influenceSource": "天文馆穹幕放映员",
+    "influenceMaterials": [
+      "星盘压线",
+      "暗银滚边",
+      "深靛布料"
+    ],
+    "influenceDetails": [
+      "圆弧穹幕分割线",
+      "暗银支架形肩线",
+      "暖银星孔"
+    ],
+    "constructionVerbs": [
+      "作为口袋盖",
+      "压线",
+      "收束腰线",
+      "作为肩线",
+      "形成假两件层次"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "中",
+      "formality": "正式",
+      "layeringDepth": "单层",
+      "mobility": "中",
+      "fantasyIntensity": "低",
+      "cleanliness": "干净"
+    },
+    "avoid": [
+      "不要大面积星空图案",
+      "不要文字或星座标签",
+      "不要强烈发光"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "harbor_pressure_maintenance",
+      "themeLabel": "港区压力维护",
+      "regionContext": "harbor_district",
+      "regionLabel": "港口社区",
+      "environmentFlavor": "湿冷码头",
+      "environmentKeywords": [
+        "港口仓库",
+        "湿冷码头",
+        "货柜边街",
+        "船灯"
+      ],
+      "visualMotifs": [
+        "阀门",
+        "压力表",
+        "港牌"
+      ],
+      "materialMood": "旧铁与尼龙",
+      "materialHints": [
+        "尼龙",
+        "橡胶",
+        "旧铁",
+        "磨砂金属"
+      ],
+      "colorHints": [
+        "海军蓝",
+        "铁灰",
+        "旧白",
+        "安全橙"
+      ],
+      "structuralHints": [
+        "工装外套",
+        "实用口袋",
+        "短夹克",
+        "卷袖"
+      ],
+      "motifHints": [
+        "港牌",
+        "船灯",
+        "绳结",
+        "编号牌"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "old_city_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有港口社区港区压力维护的气质，环境指向湿冷码头，以旧铁与尼龙和海军蓝、铁灰配色作为主题基础，以阀门、压力表、港牌作为少量集中视觉母题。"
+    },
+    "themePromptHint": "整体带有港口社区港区压力维护的气质，环境指向湿冷码头，以旧铁与尼龙和海军蓝、铁灰配色作为主题基础，以阀门、压力表、港牌作为少量集中视觉母题。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "presence": "medium",
+    "baseType": "work jacket",
+    "silhouette": "draped",
+    "length": "waist length",
+    "cutLanguage": "modular",
+    "designFocus": {
+      "primary": "hem",
+      "secondary": "shoulder"
+    },
+    "structuralFeature": [
+      "large pocket"
+    ],
+    "material": "utility fabric",
+    "finish": "clean matte",
+    "wearState": "one shoulder slipped",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "harbor_pressure_maintenance",
+      "themeLabel": "港区压力维护",
+      "regionContext": "harbor_district",
+      "regionLabel": "港口社区",
+      "environmentFlavor": "湿冷码头",
+      "environmentKeywords": [
+        "港口仓库",
+        "湿冷码头",
+        "货柜边街",
+        "船灯"
+      ],
+      "visualMotifs": [
+        "阀门",
+        "压力表",
+        "港牌"
+      ],
+      "materialMood": "旧铁与尼龙",
+      "materialHints": [
+        "尼龙",
+        "橡胶",
+        "旧铁",
+        "磨砂金属"
+      ],
+      "colorHints": [
+        "海军蓝",
+        "铁灰",
+        "旧白",
+        "安全橙"
+      ],
+      "structuralHints": [
+        "工装外套",
+        "实用口袋",
+        "短夹克",
+        "卷袖"
+      ],
+      "motifHints": [
+        "港牌",
+        "船灯",
+        "绳结",
+        "编号牌"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "old_city_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有港口社区港区压力维护的气质，环境指向湿冷码头，以旧铁与尼龙和海军蓝、铁灰配色作为主题基础，以阀门、压力表、港牌作为少量集中视觉母题。"
+    },
+    "themeMotifs": [
+      "阀门",
+      "压力表"
+    ],
+    "materialMood": "旧铁与尼龙",
+    "promptFragment": "medium blazer, draped silhouette, waist length, modular cut, denim with low texture, main focus hem, secondary focus shoulder, large structure: oversized collar, theme motifs: 阀门 / 压力表, material mood: 旧铁与尼龙, one shoulder slipped, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "harbor_pressure_maintenance",
+      "themeLabel": "港区压力维护",
+      "regionContext": "harbor_district",
+      "regionLabel": "港口社区",
+      "environmentFlavor": "湿冷码头",
+      "environmentKeywords": [
+        "港口仓库",
+        "湿冷码头",
+        "货柜边街",
+        "船灯"
+      ],
+      "visualMotifs": [
+        "阀门",
+        "压力表",
+        "港牌"
+      ],
+      "materialMood": "旧铁与尼龙",
+      "materialHints": [
+        "尼龙",
+        "橡胶",
+        "旧铁",
+        "磨砂金属"
+      ],
+      "colorHints": [
+        "海军蓝",
+        "铁灰",
+        "旧白",
+        "安全橙"
+      ],
+      "structuralHints": [
+        "工装外套",
+        "实用口袋",
+        "短夹克",
+        "卷袖"
+      ],
+      "motifHints": [
+        "港牌",
+        "船灯",
+        "绳结",
+        "编号牌"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 1,
+      "modernityLevel": "old_city_modern",
+      "styleHint": "modern_workwear",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有港口社区港区压力维护的气质，环境指向湿冷码头，以旧铁与尼龙和海军蓝、铁灰配色作为主题基础，以阀门、压力表、港牌作为少量集中视觉母题。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "modern_workwear",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "presence": "developed",
+    "baseType": "uniform trousers",
+    "silhouette": "straight",
+    "length": "full length",
+    "waistStructure": "clean waistband",
+    "legStructure": "clean leg line",
+    "hemTreatment": "narrowed hem",
+    "material": "cotton twill",
+    "wearState": "clean",
+    "designFocus": [
+      "side pocket area"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "阀门 at hem edge",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "uniform trousers, straight silhouette, full length, clean waistband, clean leg line, narrowed hem, cotton twill, clean, focus side pocket area, single echo placement: 阀门 at hem edge, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "intensity": "轻都市奇幻",
+    "source": "harbor_pressure_maintenance",
+    "regionContext": "harbor_district",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate",
+      "migratedPalette": {
+        "source": "visualIdentity.colorLanguage + visualKeywordExtraction.colorWords",
+        "summary": "干净白、深青灰、雾蓝、氧化铜绿小点缀、少量白色警示线",
+        "extractedColors": [
+          "干净白",
+          "深青灰",
+          "雾蓝",
+          "氧化铜绿小点缀",
+          "少量白色警示线",
+          "白色"
+        ],
+        "rule": "Use as palette guidance only; do not create dense color markings."
+      }
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  },
+  "sourceVersion": "1.0",
+  "sourceCharacterName": "岚阀司昼",
+  "characterFoundationLayer": {
+    "moduleName": "characterFoundationLayer",
+    "status": "converted-from-1.0-a-fields",
+    "age": "34",
+    "height": "188",
+    "weight": "96 KG",
+    "heritageBase": "中国南港",
+    "personalityCore": "松弛可靠",
+    "bodyType": "结实高挑",
+    "muscleLevel": "中高，线条紧",
+    "shoulderWidth": "宽",
+    "skinTone": "被海风晒深的暖麦色",
+    "faceShape": "长方脸，颧骨硬",
+    "expression": "平静带笑",
+    "hairStyle": "后梳短发，发尾微卷",
+    "hairColor": "深褐黑"
+  },
+  "influenceSourceLayer": {
+    "moduleName": "influenceSourceLayer",
+    "status": "converted-from-1.0-a-fields",
+    "occupationInfluence": "港区压力阀检修员",
+    "combatArchetype": "守护型响应者",
+    "combatFunction": "",
+    "visualWeapon": "",
+    "weaponPreference": "阀门扳手",
+    "forbiddenDirectTool": "",
+    "influenceRule": "Occupation and combat fields are influence sources only; they must not directly decide clothing or become ordinary job tools."
+  },
+  "regionContextLayer": {
+    "moduleName": "regionContext",
+    "status": "inferred-from-1.0-heritage",
+    "heritageRaw": "中国南港工人家庭",
+    "heritageBase": "中国南港",
+    "country": "中国",
+    "regionHint": "南港",
+    "localityFlavor": "港口",
+    "inferredRegionContext": "harbor_district",
+    "rule": "Heritage informs regional context softly; avoid stereotype or direct national costume translation."
+  },
+  "guardrails": {
+    "moduleName": "promptGuardrails",
+    "status": "converted-from-1.0-a-fields",
+    "noDirectTool": [
+      "普通阀门",
+      "普通扳手",
+      "普通压力表",
+      "普通管钳",
+      "普通维修工具"
+    ],
+    "fallbackUsed": true,
+    "rule": "Avoid direct occupation-to-tool translation; use weaponPreference or visualWeapon as a stylized prop source."
+  },
+  "conversionReport": {
+    "migratedFieldPaths": [
+      "coreIdentity.occupation",
+      "coreIdentity.heritage",
+      "coreIdentity.age",
+      "coreIdentity.height",
+      "coreIdentity.weight",
+      "personality.corePersonality",
+      "visualIdentity.bodyType",
+      "visualIdentity.muscleLevel",
+      "visualIdentity.shoulderWidth",
+      "visualIdentity.skinTone",
+      "visualIdentity.faceShape",
+      "visualIdentity.expression",
+      "visualIdentity.hairStyle",
+      "visualIdentity.hairColor",
+      "combatSystem.battleArchetype",
+      "combatSystem.visualWeapon",
+      "combatSystem.combatFunction",
+      "combatSystem.weaponPreference",
+      "combatSystem.forbiddenDirectTool",
+      "metaDesign.characterHook",
+      "visualIdentity.visualKeywords",
+      "visualIdentity.colorLanguage"
+    ],
+    "intentionallyIgnoredAreas": [
+      "socialSystem",
+      "hiddenInformation",
+      "lifestyle.foodAllergy",
+      "lifestyle.pets",
+      "coreIdentity.birthday",
+      "assets",
+      "activeMarks",
+      "agentMarks",
+      "settings.developer",
+      "generationProfile",
+      "romance / preferredType / possessiveness"
+    ],
+    "visualKeywordsSource": "宽肩厚胸、白色贴身背心、开襟短袖衬衫、胸前仪表背带、管网工具、海风感",
+    "visualKeywordExtraction": {
+      "roleWords": [
+        "港区压力阀检修员"
+      ],
+      "bodyWords": [
+        "宽肩",
+        "厚胸"
+      ],
+      "clothingWords": [
+        "白色贴身背心",
+        "开襟短袖衬衫"
+      ],
+      "materialWords": [],
+      "colorWords": [
+        "白色"
+      ],
+      "motifWords": [
+        "港区",
+        "压力阀",
+        "检修"
+      ],
+      "propWords": [],
+      "promptHints": [
+        "白色贴身背心"
+      ]
+    },
+    "themeInference": {
+      "selectedTheme": "harbor_pressure_maintenance",
+      "confidence": 1,
+      "matchedKeywords": [
+        "港区",
+        "压力阀",
+        "检修"
+      ],
+      "fallbackUsed": false
+    },
+    "characterHookSource": "一个听得懂旧港管道声音的检修员，总能在事故发生前半拍出现在阀门旁。",
+    "forbiddenDirectToolSource": "",
+    "fallbackGuardrails": [
+      "普通阀门",
+      "普通扳手",
+      "普通压力表",
+      "普通管钳",
+      "普通维修工具"
+    ]
+  },
+  "promptCompressionGate": {
+    "status": "active",
+    "version": "v2",
+    "imageFinalRules": {
+      "targetLength": "250-450 Chinese characters",
+      "maxParagraphs": 6,
+      "mustRenderLimit": "one identity, one region, one-two motifs, one core prop, one innerwear anchor, one outerwear shape, one bottom silhouette, one palette sentence"
+    },
+    "influenceOnly": [
+      "风衣",
+      "blazer"
+    ],
+    "debugOnly": [
+      "body cleanup candidate: muscleLevel=中高，线条紧",
+      "body cleanup candidate: shoulderWidth=宽",
+      "body cleanup candidate: weight=96 KG"
+    ],
+    "debug": {
+      "moduleSanityWarnings": [
+        "topModule.baseArchetype '风衣' is outerwear-like; downgraded to fitted innerwear.",
+        "outerwearModule.baseType 'blazer' mismatches harbor_pressure_maintenance; replaced with utility outerwear."
+      ]
+    }
+  }
+}

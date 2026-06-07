@@ -1,0 +1,639 @@
+{
+  "version": "2.0-skeleton-mvp",
+  "seed": "full-integrated-test-1437966900",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate"
+  },
+  "stylePreferenceLayer": {
+    "moduleName": "stylePreferenceLayer",
+    "status": "minimal-global-style-preference",
+    "lineQuality": "京都动画式清爽线条",
+    "shadowStyle": "干净赛璐璐阴影"
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active",
+    "themeCategory": "underground_fitness_trainer",
+    "themeLabel": "地下健身教练",
+    "regionContext": "korean_old_district",
+    "regionLabel": "韩国旧城区",
+    "environmentFlavor": "旧健身房",
+    "environmentKeywords": [
+      "坡道旧街",
+      "小店门口",
+      "砖墙",
+      "社区巷口"
+    ],
+    "visualMotifs": [
+      "小店招牌",
+      "旧钥匙",
+      "门牌"
+    ],
+    "materialMood": "橡胶与旧金属",
+    "materialHints": [
+      "布带",
+      "帆布",
+      "厚针织",
+      "羊毛"
+    ],
+    "colorHints": [
+      "石灰",
+      "深蓝",
+      "旧白",
+      "棕灰"
+    ],
+    "structuralHints": [
+      "短外套",
+      "简洁开合",
+      "宽松裤",
+      "圆润领口"
+    ],
+    "motifHints": [
+      "门牌",
+      "小店招牌",
+      "旧钥匙"
+    ],
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 0,
+    "modernityLevel": "fantasy_urban",
+    "styleHint": "sports_utility",
+    "avoidIfNotSelected": [
+      "神社",
+      "鸟居",
+      "京都"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有韩国旧城区地下健身教练的气质，环境指向旧健身房，以橡胶与旧金属和石灰、深蓝配色作为主题基础，以小店招牌、旧钥匙、门牌作为少量集中视觉母题。"
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "sports_utility",
+    "secondaryStyleSource": "traditional_modern",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 0: keep upper-body styling modern; traditional structure should not drive top or outerwear.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": false,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Avoid stacking traditional top structure with strong outerwear silhouette language.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "avoid stacking traditional top structure with strong outerwear cape/hood/layer language",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以运动机能为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，小店招牌和旧钥匙元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "role": "adult male original character",
+    "ageRead": "mature adult",
+    "presence": "sturdy, grounded, broad-shouldered"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "bodyType": "normal adult male proportion",
+    "build": "strong, thick, mature physique",
+    "posture": "stable standing pose"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "faceType": "mature masculine face",
+    "hair": "simple readable hairstyle",
+    "keyFeature": "clear facial silhouette"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "expression": "calm focused expression",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "韩服短上衣",
+    "baseCategory": "traditional",
+    "culturalAdaptationLevel": {
+      "level": 2,
+      "label": "传统基础款现代化",
+      "description": "传统基础款用现代材质、短句式和都市比例改写。"
+    },
+    "traditionalInfluences": [
+      "对襟",
+      "直线衣身"
+    ],
+    "silhouette": "超宽松",
+    "cutLanguage": "重叠前片",
+    "materialLanguage": "硬挺制服布",
+    "closureSystem": "腰封",
+    "designFocus": [
+      "帽子",
+      "肩膀"
+    ],
+    "structuralFeatures": [
+      "半披风结构",
+      "侧边扣带"
+    ],
+    "detailComponents": [
+      "搭扣",
+      "磁吸扣"
+    ],
+    "wearState": "一侧袖子半脱",
+    "personalHabit": "总喜欢立领",
+    "influenceSource": "地下档案封签护库员",
+    "influenceMaterials": [
+      "黑色硬挺布",
+      "旧纸色内衬",
+      "深红封蜡色皮革"
+    ],
+    "influenceDetails": [
+      "无字编号牌",
+      "钥匙牌挂件",
+      "封蜡色扣带"
+    ],
+    "constructionVerbs": [
+      "拼接",
+      "作为口袋盖",
+      "折叠",
+      "延伸下摆",
+      "隐藏"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "中",
+      "formality": "正式",
+      "layeringDepth": "多层",
+      "mobility": "中",
+      "fantasyIntensity": "中",
+      "cleanliness": "干净"
+    },
+    "avoid": [
+      "不要可读文字",
+      "不要画成书本",
+      "不要堆满标签"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "underground_fitness_trainer",
+      "themeLabel": "地下健身教练",
+      "regionContext": "korean_old_district",
+      "regionLabel": "韩国旧城区",
+      "environmentFlavor": "旧健身房",
+      "environmentKeywords": [
+        "坡道旧街",
+        "小店门口",
+        "砖墙",
+        "社区巷口"
+      ],
+      "visualMotifs": [
+        "小店招牌",
+        "旧钥匙",
+        "门牌"
+      ],
+      "materialMood": "橡胶与旧金属",
+      "materialHints": [
+        "布带",
+        "帆布",
+        "厚针织",
+        "羊毛"
+      ],
+      "colorHints": [
+        "石灰",
+        "深蓝",
+        "旧白",
+        "棕灰"
+      ],
+      "structuralHints": [
+        "短外套",
+        "简洁开合",
+        "宽松裤",
+        "圆润领口"
+      ],
+      "motifHints": [
+        "门牌",
+        "小店招牌",
+        "旧钥匙"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 0,
+      "modernityLevel": "fantasy_urban",
+      "styleHint": "sports_utility",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有韩国旧城区地下健身教练的气质，环境指向旧健身房，以橡胶与旧金属和石灰、深蓝配色作为主题基础，以小店招牌、旧钥匙、门牌作为少量集中视觉母题。"
+    },
+    "themePromptHint": "整体带有韩国旧城区地下健身教练的气质，环境指向旧健身房，以橡胶与旧金属和石灰、深蓝配色作为主题基础，以小店招牌、旧钥匙、门牌作为少量集中视觉母题。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "presence": "medium",
+    "baseType": "cropped jacket",
+    "silhouette": "heavy upper body",
+    "length": "hip length",
+    "cutLanguage": "wrap style",
+    "designFocus": {
+      "primary": "hem",
+      "secondary": "hood"
+    },
+    "structuralFeature": [
+      "large pocket"
+    ],
+    "material": "soft knit",
+    "finish": "low texture",
+    "wearState": "open",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "underground_fitness_trainer",
+      "themeLabel": "地下健身教练",
+      "regionContext": "korean_old_district",
+      "regionLabel": "韩国旧城区",
+      "environmentFlavor": "旧健身房",
+      "environmentKeywords": [
+        "坡道旧街",
+        "小店门口",
+        "砖墙",
+        "社区巷口"
+      ],
+      "visualMotifs": [
+        "小店招牌",
+        "旧钥匙",
+        "门牌"
+      ],
+      "materialMood": "橡胶与旧金属",
+      "materialHints": [
+        "布带",
+        "帆布",
+        "厚针织",
+        "羊毛"
+      ],
+      "colorHints": [
+        "石灰",
+        "深蓝",
+        "旧白",
+        "棕灰"
+      ],
+      "structuralHints": [
+        "短外套",
+        "简洁开合",
+        "宽松裤",
+        "圆润领口"
+      ],
+      "motifHints": [
+        "门牌",
+        "小店招牌",
+        "旧钥匙"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 0,
+      "modernityLevel": "fantasy_urban",
+      "styleHint": "sports_utility",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有韩国旧城区地下健身教练的气质，环境指向旧健身房，以橡胶与旧金属和石灰、深蓝配色作为主题基础，以小店招牌、旧钥匙、门牌作为少量集中视觉母题。"
+    },
+    "themeMotifs": [
+      "小店招牌",
+      "旧钥匙"
+    ],
+    "materialMood": "橡胶与旧金属",
+    "promptFragment": "medium cropped jacket, heavy upper body silhouette, hip length, wrap style cut, soft knit with low texture, main focus hem, secondary focus hood, large structure: large pocket, theme motifs: 小店招牌 / 旧钥匙, material mood: 橡胶与旧金属, open, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "underground_fitness_trainer",
+      "themeLabel": "地下健身教练",
+      "regionContext": "korean_old_district",
+      "regionLabel": "韩国旧城区",
+      "environmentFlavor": "旧健身房",
+      "environmentKeywords": [
+        "坡道旧街",
+        "小店门口",
+        "砖墙",
+        "社区巷口"
+      ],
+      "visualMotifs": [
+        "小店招牌",
+        "旧钥匙",
+        "门牌"
+      ],
+      "materialMood": "橡胶与旧金属",
+      "materialHints": [
+        "布带",
+        "帆布",
+        "厚针织",
+        "羊毛"
+      ],
+      "colorHints": [
+        "石灰",
+        "深蓝",
+        "旧白",
+        "棕灰"
+      ],
+      "structuralHints": [
+        "短外套",
+        "简洁开合",
+        "宽松裤",
+        "圆润领口"
+      ],
+      "motifHints": [
+        "门牌",
+        "小店招牌",
+        "旧钥匙"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 0,
+      "modernityLevel": "fantasy_urban",
+      "styleHint": "sports_utility",
+      "avoidIfNotSelected": [
+        "神社",
+        "鸟居",
+        "京都"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有韩国旧城区地下健身教练的气质，环境指向旧健身房，以橡胶与旧金属和石灰、深蓝配色作为主题基础，以小店招牌、旧钥匙、门牌作为少量集中视觉母题。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "sports_utility",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "bottomContext": {
+      "climateInfluence": [
+        "humid",
+        "rainy"
+      ],
+      "presentationMode": "off_duty_mode",
+      "lifestyleInfluence": [
+        "athletic",
+        "street",
+        "casual"
+      ]
+    },
+    "presence": "developed",
+    "baseType": "simple fitted pants",
+    "silhouette": "sturdy workwear",
+    "length": "full length",
+    "bottomLengthPreference": {
+      "legExposureLevel": "covered",
+      "preferredLength": "full_length",
+      "lengthReason": "full length selected for stable lower-body support; context: humid, rainy, off_duty_mode, athletic, street"
+    },
+    "sockVisibilityProfile": {
+      "sockVisibility": "hidden",
+      "sockColor": "white",
+      "sockLength": "crew_socks",
+      "sockReason": "full-length trousers cover most of the sock, so white socks do not need emphasis"
+    },
+    "waistStructure": "broad waistband",
+    "legStructure": "side seam emphasis",
+    "hemTreatment": "rolled hem",
+    "material": "dry woven fabric",
+    "wearState": "tidy workwear",
+    "designFocus": [
+      "knee area"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "小店招牌 at side seam",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "simple fitted pants, sturdy workwear silhouette, full length, leg exposure covered, white socks hidden crew_socks, broad waistband, side seam emphasis, rolled hem, dry woven fabric, tidy workwear, focus knee area, single echo placement: 小店招牌 at side seam, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "intensity": "轻都市奇幻",
+    "source": "underground_fitness_trainer",
+    "regionContext": "korean_old_district",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  }
+}

@@ -1,0 +1,12 @@
+Use case: stylized-concept
+Asset type: character body-style generation test
+Primary request: Generate a new full-body original male character using the provided reference image only as a body-style and rendering anchor. Do not copy the exact identity, face, outfit, or pose from the reference.
+Input image: The visible reference image is a body-style anchor for proportions, line quality, shading style, and clean character-sheet presentation.
+Subject: A friendly, powerful adult male original character with a stocky heavyweight build, very broad shoulders, thick neck, massive arms, large hands, sturdy torso, and grounded legs. He has short dark hair, confident warm expression, and a relaxed upright stance.
+Style/medium: polished 2D anime/cartoon character illustration, clean thick black outlines, simplified expressive facial features, smooth cel shading, soft skin highlights, subtle muscle definition, appealing character-design sheet quality.
+Composition/framing: full-body front-facing three-quarter view, centered, standing pose, entire body visible from head to shoes, generous white margins, no cropping.
+Clothing: simple casual workwear distinct from the reference: dark green short-sleeve button shirt worn open over a muted gray tee, dark navy utility pants, black work boots, simple belt.
+Lighting/mood: clean studio lighting, bright neutral mood, soft shadows only on the character forms.
+Color palette: warm skin tones, dark hair, muted practical clothing colors, white background.
+Constraints: Preserve the reference's general body-style language: exaggerated broad upper body, thick limbs, large hands, compact heroic cartoon proportions, clean line art, soft cel shading. Create an original character, not a duplicate. No text, no watermark, no logo, no background scene.
+Avoid: photorealism, thin body, overly sharp comic-book rendering, copied white tank top and gray slacks, copied facial identity, cropped feet, extra limbs, malformed hands.

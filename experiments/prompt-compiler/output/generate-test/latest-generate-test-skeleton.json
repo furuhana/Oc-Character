@@ -1,0 +1,77 @@
+{
+  "preset": "experiments/prompt-compiler/GENERATE_TEST_PRESET.md",
+  "mode": "exploration",
+  "count": 1,
+  "referenceImagePath": "experiments/prompt-compiler/assets/reference/body-style-anchor.png",
+  "absoluteReferenceImagePath": "E:\\wk\\GitHub\\Oc-Character\\experiments\\prompt-compiler\\assets\\reference\\body-style-anchor.png",
+  "imageGeneration": {
+    "status": "completed",
+    "tool": "built-in image_gen",
+    "sourceGeneratedImage": "C:\\Users\\m\\.codex\\generated_images\\019ea295-0bfe-7390-85f3-b96b2c72324b\\ig_0bd7ab0924531c11016a2586fc9df0819889ad414bd79af46a.png",
+    "workspaceLatestImage": "experiments/prompt-compiler/output/generate-test/latest-generate-test-image.png",
+    "workspaceArchiveImage": "experiments/prompt-compiler/output/generate-test/imagegen/generate-test-06-mountain-cable-station-battery-keeper.png"
+  },
+  "tests": [
+    {
+      "testId": "Test 01",
+      "theme": "mountain_cable_station_battery_keeper",
+      "occupation": "alpine cable-station backup battery keeper",
+      "regionContext": "alpine_service_town",
+      "personalityCore": "calm, practical, protective, quietly reliable",
+      "presentationMode": "daily_portrait_mode",
+      "derivedInfluenceSummary": [
+        "cold morning service route",
+        "cable-car maintenance shed",
+        "backup battery cabinets",
+        "tension dials",
+        "rail guides",
+        "pine-line mountain station",
+        "low-noise practical workwear"
+      ],
+      "compositionLayer": {
+        "sourceMotifs": [
+          "battery packs",
+          "cable guide rails",
+          "tension dial arcs",
+          "maintenance belt structure"
+        ],
+        "garmentTranslation": [
+          "large rectangular chest panels",
+          "broad shoulder guards",
+          "rounded dial-like seam arcs",
+          "reinforced waist blocks",
+          "simple vertical rail-like seams",
+          "two practical pockets"
+        ],
+        "detailDensity": "medium_low",
+        "shapeHierarchy": "large_shape_dominant",
+        "visualFocusCount": "one_main_one_secondary"
+      },
+      "outfit": {
+        "innerwear": "visible white fitted inner top as body anchor",
+        "outerwear": "open cropped insulated utility vest or short maintenance jacket",
+        "bottom": "full-length straight service trousers",
+        "sockVisibility": "hidden",
+        "shoes": "sturdy dark work shoes",
+        "palette": [
+          "warm off-white",
+          "muted graphite",
+          "pine green",
+          "faded safety yellow",
+          "cold blue gray"
+        ]
+      },
+      "candidateQualityFilter": {
+        "passed": true,
+        "appealScore": 8,
+        "noveltyScore": 8,
+        "coherenceScore": 8,
+        "visualPotentialScore": 8,
+        "regressionSimilarityPenalty": 0,
+        "riskNotes": [],
+        "rejectReason": null
+      },
+      "promptPackPath": "experiments/prompt-compiler/output/generate-test/latest-generate-test-prompt-pack.md"
+    }
+  ]
+}

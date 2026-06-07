@@ -1,0 +1,651 @@
+{
+  "version": "2.0-skeleton-mvp",
+  "seed": "full-integrated-test-1264882134",
+  "designLanguage": {
+    "shapeHierarchy": "large_shape_dominant",
+    "silhouettePriority": "high",
+    "detailDensity": "medium_low",
+    "readability": "high",
+    "ornamentScale": "medium_large",
+    "visualFocusCount": "one_main_one_secondary",
+    "surfaceNoiseLevel": "controlled",
+    "segmentationLevel": "controlled",
+    "motifStrength": "strong_single_motif",
+    "graphicClarity": "high",
+    "complexityBudget": "moderate"
+  },
+  "stylePreferenceLayer": {
+    "moduleName": "stylePreferenceLayer",
+    "status": "minimal-global-style-preference",
+    "lineQuality": "京都动画式清爽线条",
+    "shadowStyle": "干净赛璐璐阴影"
+  },
+  "themeDirectionLayer": {
+    "moduleName": "themeDirectionLayer",
+    "status": "active",
+    "themeCategory": "book_repair_binder",
+    "themeLabel": "旧书修复师",
+    "regionContext": "north_african_medina",
+    "regionLabel": "北非老城",
+    "environmentFlavor": "市场阴影",
+    "environmentKeywords": [
+      "老城巷道",
+      "拱门",
+      "白墙",
+      "市场阴影",
+      "石阶"
+    ],
+    "visualMotifs": [
+      "拱门牌",
+      "纸片",
+      "街灯"
+    ],
+    "materialMood": "厚布与纸页",
+    "materialHints": [
+      "黄铜",
+      "纸页",
+      "棉布",
+      "皮革"
+    ],
+    "colorHints": [
+      "砂白",
+      "靛蓝",
+      "土黄",
+      "旧金",
+      "深棕"
+    ],
+    "structuralHints": [
+      "宽松外层",
+      "长身直线",
+      "开襟",
+      "腰带"
+    ],
+    "motifHints": [
+      "拱门牌",
+      "铜扣",
+      "护符",
+      "街灯"
+    ],
+    "fantasyFlavor": "轻都市奇幻",
+    "culturalInfluenceLevel": 2,
+    "modernityLevel": "traditional_modern",
+    "styleHint": "soft_daily",
+    "avoidIfNotSelected": [
+      "神社",
+      "京都",
+      "鸟居"
+    ],
+    "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+    "themeSummary": "整体带有北非老城旧书修复师的气质，环境指向市场阴影，以厚布与纸页和砂白、靛蓝配色作为主题基础，以拱门牌、纸片、街灯作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+  },
+  "outfitCoherenceCheck": {
+    "moduleName": "outfitCoherenceCheck",
+    "status": "active",
+    "scope": "topModule + outerwearModule + themeDirectionLayer only",
+    "primaryStyleSource": "soft_daily",
+    "secondaryStyleSource": "traditional_modern",
+    "dominantModule": "outerwearModule",
+    "supportingModule": "topModule",
+    "culturalInfluenceRuleApplied": "culturalInfluenceLevel 2: one upper-body module may carry visible traditional structure; the other should stay modern and simple.",
+    "motifMainPlacement": "外套肩部或领口区域",
+    "motifEchoPlacement": "腰带或下摆边缘的一处小呼应",
+    "reducedModules": [
+      "topModule"
+    ],
+    "topComplexityAdjusted": true,
+    "outerwearComplexityAdjusted": false,
+    "promptCoherenceNotes": [
+      "Outerwear presence is medium/heavy, so outerwear becomes the dominant upper-body visual.",
+      "Top module should keep only one main structural idea and avoid competing details.",
+      "Because cultural level is 2, only one upper-body module should carry visible traditional structure.",
+      "Avoid stacking traditional top structure with strong outerwear silhouette language.",
+      "Theme motifs are limited to one main placement and one echo placement."
+    ],
+    "warningMessages": [
+      "outerwear is medium/heavy, so topModule should support instead of competing",
+      "culturalInfluenceLevel 2 should not make both top and outerwear strongly traditional/complex",
+      "avoid stacking traditional top structure with strong outerwear cape/hood/layer language",
+      "motifs should be limited to one main placement and one echo placement"
+    ],
+    "styleSummary": "整体以日常生活感为主，辅以传统现代混合，外套负责主视觉，内搭降低复杂度，只做结构衬托，拱门牌和纸片元素集中在外套肩部或领口区域，腰带或下摆边缘的一处小呼应。"
+  },
+  "characterLayer": {
+    "moduleName": "characterLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "role": "adult male original character",
+    "ageRead": "mature adult",
+    "presence": "sturdy, grounded, broad-shouldered"
+  },
+  "bodyLayer": {
+    "moduleName": "bodyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "bodyType": "normal adult male proportion",
+    "build": "strong, thick, mature physique",
+    "posture": "stable standing pose"
+  },
+  "faceLayer": {
+    "moduleName": "faceLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "faceType": "mature masculine face",
+    "hair": "simple readable hairstyle",
+    "keyFeature": "clear facial silhouette"
+  },
+  "expressionLayer": {
+    "moduleName": "expressionLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "expression": "calm focused expression",
+    "intensity": "restrained"
+  },
+  "topModule": {
+    "moduleName": "topModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "designLimits": {
+      "focusLimit": 2,
+      "detailLimit": 2,
+      "structureLimit": 2,
+      "shouldPreferLargeShapes": true,
+      "shouldReduceNoise": true
+    },
+    "baseArchetype": "交领短衫",
+    "baseCategory": "traditional",
+    "culturalAdaptationLevel": {
+      "level": 2,
+      "label": "传统基础款现代化",
+      "description": "传统基础款用现代材质、短句式和都市比例改写。"
+    },
+    "traditionalInfluences": [
+      "披挂式肩部",
+      "腰间束带"
+    ],
+    "silhouette": "落肩",
+    "cutLanguage": "分层",
+    "materialLanguage": "帆布",
+    "closureSystem": "纽扣",
+    "designFocus": [
+      "帽子",
+      "背部"
+    ],
+    "structuralFeatures": [
+      "隐藏口袋结构",
+      "可收纳帽"
+    ],
+    "detailComponents": [
+      "袖袢",
+      "小型挂环"
+    ],
+    "wearState": "完全闭合",
+    "personalHabit": "喜欢穿大一码",
+    "influenceSource": "花匠",
+    "influenceMaterials": [
+      "柔软水管感饰边",
+      "深色皮革",
+      "护理良好的银色金属"
+    ],
+    "influenceDetails": [
+      "叶脉状压线",
+      "园艺工具形挂环",
+      "深红蔷薇小徽章"
+    ],
+    "constructionVerbs": [
+      "压线",
+      "收束腰线",
+      "分段固定",
+      "拼接",
+      "作为肩线"
+    ],
+    "judgement": {
+      "visualNoiseLevel": "中",
+      "formality": "休闲",
+      "layeringDepth": "多层",
+      "mobility": "高",
+      "fantasyIntensity": "低",
+      "cleanliness": "干净"
+    },
+    "avoid": [
+      "不要大面积绿色",
+      "不要画成围裙",
+      "不要只堆花朵"
+    ],
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "book_repair_binder",
+      "themeLabel": "旧书修复师",
+      "regionContext": "north_african_medina",
+      "regionLabel": "北非老城",
+      "environmentFlavor": "市场阴影",
+      "environmentKeywords": [
+        "老城巷道",
+        "拱门",
+        "白墙",
+        "市场阴影",
+        "石阶"
+      ],
+      "visualMotifs": [
+        "拱门牌",
+        "纸片",
+        "街灯"
+      ],
+      "materialMood": "厚布与纸页",
+      "materialHints": [
+        "黄铜",
+        "纸页",
+        "棉布",
+        "皮革"
+      ],
+      "colorHints": [
+        "砂白",
+        "靛蓝",
+        "土黄",
+        "旧金",
+        "深棕"
+      ],
+      "structuralHints": [
+        "宽松外层",
+        "长身直线",
+        "开襟",
+        "腰带"
+      ],
+      "motifHints": [
+        "拱门牌",
+        "铜扣",
+        "护符",
+        "街灯"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 2,
+      "modernityLevel": "traditional_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有北非老城旧书修复师的气质，环境指向市场阴影，以厚布与纸页和砂白、靛蓝配色作为主题基础，以拱门牌、纸片、街灯作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+    },
+    "themePromptHint": "整体带有北非老城旧书修复师的气质，环境指向市场阴影，以厚布与纸页和砂白、靛蓝配色作为主题基础，以拱门牌、纸片、街灯作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+  },
+  "outerwearModule": {
+    "moduleName": "outerwearModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "presence": "medium",
+    "baseType": "utility vest",
+    "silhouette": "A-line",
+    "length": "waist length",
+    "cutLanguage": "panel cut",
+    "designFocus": {
+      "primary": "hood",
+      "secondary": "back panel"
+    },
+    "structuralFeature": [
+      "wide placket"
+    ],
+    "material": "thick jersey",
+    "finish": "flat color blocks",
+    "wearState": "half open",
+    "detailScale": "medium_large",
+    "readabilityRule": "low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus",
+    "avoidanceRule": "avoid high-frequency trims, tiny straps, tiny charms, dense seams, and small patterns",
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "book_repair_binder",
+      "themeLabel": "旧书修复师",
+      "regionContext": "north_african_medina",
+      "regionLabel": "北非老城",
+      "environmentFlavor": "市场阴影",
+      "environmentKeywords": [
+        "老城巷道",
+        "拱门",
+        "白墙",
+        "市场阴影",
+        "石阶"
+      ],
+      "visualMotifs": [
+        "拱门牌",
+        "纸片",
+        "街灯"
+      ],
+      "materialMood": "厚布与纸页",
+      "materialHints": [
+        "黄铜",
+        "纸页",
+        "棉布",
+        "皮革"
+      ],
+      "colorHints": [
+        "砂白",
+        "靛蓝",
+        "土黄",
+        "旧金",
+        "深棕"
+      ],
+      "structuralHints": [
+        "宽松外层",
+        "长身直线",
+        "开襟",
+        "腰带"
+      ],
+      "motifHints": [
+        "拱门牌",
+        "铜扣",
+        "护符",
+        "街灯"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 2,
+      "modernityLevel": "traditional_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有北非老城旧书修复师的气质，环境指向市场阴影，以厚布与纸页和砂白、靛蓝配色作为主题基础，以拱门牌、纸片、街灯作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+    },
+    "themeMotifs": [
+      "拱门牌",
+      "纸片"
+    ],
+    "materialMood": "厚布与纸页",
+    "promptFragment": "medium utility vest, A-line silhouette, waist length, panel cut cut, thick jersey with flat color blocks, main focus hood, secondary focus back panel, large structure: wide placket, theme motifs: 拱门牌 / 纸片, material mood: 厚布与纸页, half open, leave the white fitted top partially visible, medium_large details, low-to-medium detail density; large-shape dominant, high readability, one main focus plus one secondary focus"
+  },
+  "bottomModule": {
+    "moduleName": "bottomModule",
+    "status": "active",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "themeDirectionLayer": {
+      "moduleName": "themeDirectionLayer",
+      "status": "active",
+      "themeCategory": "book_repair_binder",
+      "themeLabel": "旧书修复师",
+      "regionContext": "north_african_medina",
+      "regionLabel": "北非老城",
+      "environmentFlavor": "市场阴影",
+      "environmentKeywords": [
+        "老城巷道",
+        "拱门",
+        "白墙",
+        "市场阴影",
+        "石阶"
+      ],
+      "visualMotifs": [
+        "拱门牌",
+        "纸片",
+        "街灯"
+      ],
+      "materialMood": "厚布与纸页",
+      "materialHints": [
+        "黄铜",
+        "纸页",
+        "棉布",
+        "皮革"
+      ],
+      "colorHints": [
+        "砂白",
+        "靛蓝",
+        "土黄",
+        "旧金",
+        "深棕"
+      ],
+      "structuralHints": [
+        "宽松外层",
+        "长身直线",
+        "开襟",
+        "腰带"
+      ],
+      "motifHints": [
+        "拱门牌",
+        "铜扣",
+        "护符",
+        "街灯"
+      ],
+      "fantasyFlavor": "轻都市奇幻",
+      "culturalInfluenceLevel": 2,
+      "modernityLevel": "traditional_modern",
+      "styleHint": "soft_daily",
+      "avoidIfNotSelected": [
+        "神社",
+        "京都",
+        "鸟居"
+      ],
+      "regionRule": "regionContext gives color, material, street flavor, small structure hints, and motifs; it is not a costume generator.",
+      "themeSummary": "整体带有北非老城旧书修复师的气质，环境指向市场阴影，以厚布与纸页和砂白、靛蓝配色作为主题基础，以拱门牌、纸片、街灯作为少量集中视觉母题，只让地域结构做现代化转译，不走传统服装套装。"
+    },
+    "outfitCoherenceCheck": {
+      "primaryStyleSource": "soft_daily",
+      "dominantModule": "outerwearModule",
+      "supportingModule": "topModule"
+    },
+    "bottomContext": {
+      "climateInfluence": [
+        "summer"
+      ],
+      "presentationMode": "daily_portrait_mode",
+      "lifestyleInfluence": [
+        "street",
+        "casual"
+      ]
+    },
+    "presence": "developed",
+    "baseType": "relaxed shorts",
+    "silhouette": "relaxed",
+    "length": "above knee",
+    "bottomLengthPreference": {
+      "legExposureLevel": "knee_visible",
+      "preferredLength": "above_knee",
+      "lengthReason": "knee-visible shorts direction selected because climate, lifestyle, or patrol/work context supports practical leg exposure; context: summer, daily_portrait_mode, street, casual, book_repair_binder"
+    },
+    "sockVisibilityProfile": {
+      "sockVisibility": "dominant_visible",
+      "sockColor": "white",
+      "sockLength": "knee_high_socks",
+      "sockReason": "shorts expose the lower leg, so clean white socks become part of the lower-body design"
+    },
+    "waistStructure": "clean waistband",
+    "legStructure": "clean leg line",
+    "hemTreatment": "tucked into footwear",
+    "material": "soft blended fabric",
+    "wearState": "relaxed daily",
+    "designFocus": [
+      "hem / ankle"
+    ],
+    "motifUsage": "single echo placement",
+    "motifEcho": "拱门牌 at hem edge",
+    "complexityLevel": "simple",
+    "role": "support full-body silhouette without competing with upper body",
+    "promptFragment": "relaxed shorts, relaxed silhouette, above knee, leg exposure knee_visible, white socks dominant_visible knee_high_socks, clean waistband, clean leg line, tucked into footwear, soft blended fabric, relaxed daily, focus hem / ankle, single echo placement: 拱门牌 at hem edge, simple complexity"
+  },
+  "footwearModule": {
+    "moduleName": "footwearModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "footwear placeholder",
+    "silhouette": "stable practical shoes",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "accessoryModule": {
+    "moduleName": "accessoryModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "accessory placeholder",
+    "visualFocus": "one restrained accessory area",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "weaponModule": {
+    "moduleName": "weaponModule",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "itemType": "weapon placeholder",
+    "silhouette": "single readable prop silhouette",
+    "detailLevel": "minimal until deep module pass"
+  },
+  "fantasyLayer": {
+    "moduleName": "fantasyLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "intensity": "轻都市奇幻",
+    "source": "book_repair_binder",
+    "regionContext": "north_african_medina",
+    "rule": "support the outfit and prop design without overwhelming the character"
+  },
+  "styleLayer": {
+    "moduleName": "styleLayer",
+    "status": "skeleton",
+    "designLanguage": {
+      "shapeHierarchy": "large_shape_dominant",
+      "silhouettePriority": "high",
+      "detailDensity": "medium_low",
+      "readability": "high",
+      "ornamentScale": "medium_large",
+      "visualFocusCount": "one_main_one_secondary",
+      "surfaceNoiseLevel": "controlled",
+      "segmentationLevel": "controlled",
+      "motifStrength": "strong_single_motif",
+      "graphicClarity": "high",
+      "complexityBudget": "moderate"
+    },
+    "renderStyle": "clean TV animation cel style",
+    "promptDiscipline": "large shapes, clear blocks, controlled detail density"
+  }
+}
